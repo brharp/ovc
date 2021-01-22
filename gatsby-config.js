@@ -36,6 +36,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-preact`,
     {
       resolve: `gatsby-transformer-sharp`,
       options: {
@@ -99,7 +100,14 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-asset-path`,
-    }
+    },
+    {
+      resolve: "gatsby-plugin-google-tagmanager",
+      options: {
+        id: "GTM-NRSSDKW",
+        includeInDevelopment: false,
+      },
+    },
   ],
   mapping: {
     "node__article.fields.alias": `PathAlias`,
