@@ -101,19 +101,22 @@ exports.createSchemaCustomization = ({ actions }) => {
 	  | taxonomy_term__degrees
 	  | taxonomy_term__topics
 	  | taxonomy_term__units
+    | taxonomy_term__testimonial_type
 
 	union widgetParagraphUnion =
-      paragraph__link_item
-      | paragraph__links_items
-      | paragraph__call_to_action
+  paragraph__general_text
+    | paragraph__link_item
+    | paragraph__links_items
+    | paragraph__call_to_action
 	  | paragraph__lead_paragraph
-      | paragraph__links_widget
+    | paragraph__links_widget
 	  | paragraph__media_text
 	  | paragraph__section
 
 
     union widgetSectionParagraphUnion =
-	  paragraph__link_item
+	  paragraph__general_text
+    | paragraph__link_item
 	  | paragraph__links_items
 	  | paragraph__call_to_action
 	  | paragraph__lead_paragraph
@@ -334,6 +337,7 @@ exports.createSchemaCustomization = ({ actions }) => {
         body: BodyFieldWithSummary
         field_testimonial_person_desc: String
         field_hero_image: ImageField
+        field_home_profile: FieldLink
         relationships: node__testimonialRelationships
         fields: node__testimonialFields
     }
@@ -500,6 +504,11 @@ exports.createSchemaCustomization = ({ actions }) => {
       drupal_internal__tid: Int
       name: String
       description: TaxonomyDescription
+    }
+    type taxonomy_term__testimonial_type implements Node & TaxonomyInterface {
+      drupal_id: String
+      drupal_internal__tid: Int
+      name: String
     }
     type taxonomy_term__topics implements Node & TaxonomyInterface {
       drupal_id: String
