@@ -18,7 +18,6 @@ module.exports = {
 			},
 		},
 		`gatsby-plugin-react-helmet`,
-		`gatsby-plugin-preact`,
 		{
 			resolve: `gatsby-transformer-sharp`,
 			options: {
