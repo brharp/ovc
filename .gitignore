@@ -73,3 +73,6 @@ config/aliases/*.yml
 config/sitemaps/*.yml
 # Auto-generated sitemaps
 config/sitemaps/
+
+# Backup files
+*~
