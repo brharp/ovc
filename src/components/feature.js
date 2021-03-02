@@ -3,9 +3,10 @@ import React from "react"
 export default function Feature(props) {
     const zebra = props.index % 2;
     return (
-	    <div style={{
+	    <div key={`feature_${props.index}`} style={{
 		backgroundColor: zebra ? "var(--uog-red)" : "var(--uog-yellow)",
-		padding: "32px"
+		padding: "32px 32px 100px",
+		position: "relative"
 	    }}>
 	    <h2 style={{
 		color: zebra ? "white" : "#333",
@@ -19,7 +20,10 @@ export default function Feature(props) {
 	    }}>{props.description}</p>
 	    <a href="#" className="btn btn-outline-primary" style={{
 		color: zebra ? "white" : "black",
-		borderColor: zebra ? "white" : "#333"
+		borderColor: zebra ? "white" : "#333",
+		position: "absolute",
+		bottom: "32px",
+		textTransform: "uppercase"
 	    }}>See More</a>
 	    </div>
     )
