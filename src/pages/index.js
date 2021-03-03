@@ -1,50 +1,61 @@
+// Framework and plugin imports
 import Layout from '../components/layout';
 import React from 'react';
 import SEO from '../components/seo';
-import { StaticImage } from 'gatsby-plugin-image';
 import { graphql } from 'gatsby';
-import Feature from "../components/feature";
-import FeatureData from "../../content/features.yml";
+import { StaticImage } from 'gatsby-plugin-image';
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import styled from "styled-components";
+
+// Custom component imports
+import Feature from "../components/feature";
 import Article from "../components/article";
 import Rule from "../components/rule";
+
+// Data imports
+import FeatureData from "../../content/features.yml";
+
+// Style components
+const FeatureGrid = styled.div`
+  @media (min-width: 992px) {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2, 1fr);
+    opacity: 0.9;
+  }
+`
 
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <div className="banner" style={{position: "relative", zIndex: "1", overflow: "hidden"}}>
       <StaticImage src="../images/portico--banner.jpg" alt="" layout="fullWidth"
-		   style={{position:"absolute",width:"100%",height:"100%",zIndex:"-1"}}/>
+                   style={{position:"absolute",width:"100%",height:"100%",zIndex:"-1"}}/>
         <div className="container">
           <div style={{
                backgroundColor: "rgba(255,255,255,0.8)",
-	       margin: "50px auto 0",
+               margin: "50px auto 0",
                padding: "25px 100px 100px",
-	       width: "75%"
-	       }}>
+               width: "75%"
+            }}>
             <h1>@OVC</h1>
             <p>
-	      Canada's oldest veterinary college.
+      Canada's oldest veterinary college.
             </p>
           </div>
-	</div>
+  </div>
     </div>
     <div className="feature-wrapper" style={{position: "relative", zIndex: "1", overflow: "hidden"}}>
       <StaticImage src="../images/people.jpg" alt="" layout="fullWidth"
-		   style={{position:"absolute",width:"100%",height:"100%",zIndex:"-1"}}/>
-      <div className="feature-container"
-	   style={{
-	   display:"grid",
-	   gridTemplateColumns:"repeat(3,1fr)",
-	   gridTemplateRows:"repeat(2, 1fr)",
-	   opacity:"0.9"
-	   }}>
-	{FeatureData.map((data,index) => {
-        return <Feature index={index} title={data.title}
-			subtitle={data.subtitle}
-			description={data.description} />
-	})}
-      </div>
+                   style={{position:"absolute",width:"100%",height:"100%",zIndex:"-1"}}/>
+      <FeatureGrid>
+        {
+          FeatureData.map((data,index) => {
+            return <Feature index={index} title={data.title} subtitle={data.subtitle}
+                            description={data.description} />
+          })
+        }
+      </FeatureGrid>
     </div>
     <div className="news" style={{padding: "24px"}}>
       <h1>Featured news</h1>
