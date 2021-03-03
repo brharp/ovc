@@ -7,6 +7,7 @@ import Feature from "../components/feature";
 import FeatureData from "../../content/features.yml";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import Article from "../components/article";
+import Rule from "../components/rule";
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -45,8 +46,9 @@ const IndexPage = ({ data }) => (
 	})}
       </div>
     </div>
-    <div className="news" style={{padding: "24px" }}>
-    <h1>Featured news</h1>
+    <div className="news" style={{padding: "24px"}}>
+      <h1>Featured news</h1>
+      <Rule width="25%"/>
     <div className="row" >
       <div className="col-md-6">
 	{
