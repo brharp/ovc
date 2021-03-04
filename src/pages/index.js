@@ -20,7 +20,7 @@ import FeatureData from "../../content/features.yml";
 const FeatureGrid = styled.div`
   @media (min-width: 992px) {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 3fr 5fr 3fr;
     grid-template-rows: repeat(2, 1fr);
     opacity: 0.9;
   }
@@ -58,7 +58,7 @@ const IndexPage = ({ data }) => (
         }
       </FeatureGrid>
     </div>
-    <div className="news" style={{padding: "24px"}}>
+    <div className="news container" style={{paddingBottom: "24px"}}>
       <h1>Featured news</h1>
       <Rule width="25%"/>
     <div className="row" >
@@ -86,7 +86,7 @@ const IndexPage = ({ data }) => (
         </div>
       </div>
     </div>
-    <div className="feature-wrapper" style={{position: "relative", zIndex: "1", overflow: "hidden"}}>
+    <div style={{position: "relative", zIndex: "1", overflow: "hidden"}}>
       <StaticImage src="../images/university-centre.jpg" alt="" layout="fullWidth"
                    style={{position:"absolute",width:"100%",height:"100%",zIndex:"-1"}}/>
       <Events/>
