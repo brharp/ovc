@@ -4,13 +4,14 @@ import React from 'react';
 import SEO from '../components/seo';
 import { graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import { getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
 // Custom component imports
 import Feature from "../components/feature";
 import Article from "../components/article";
 import Rule from "../components/rule";
+import Events from "../components/events"
 
 // Data imports
 import FeatureData from "../../content/features.yml";
@@ -25,25 +26,25 @@ const FeatureGrid = styled.div`
   }
 `
 
+// Index page component
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <div className="banner" style={{position: "relative", zIndex: "1", overflow: "hidden"}}>
       <StaticImage src="../images/portico--banner.jpg" alt="" layout="fullWidth"
                    style={{position:"absolute",width:"100%",height:"100%",zIndex:"-1"}}/>
-        <div className="container">
-          <div style={{
-               backgroundColor: "rgba(255,255,255,0.8)",
-               margin: "50px auto 0",
-               padding: "25px 100px 100px",
-               width: "75%"
-            }}>
-            <h1>@OVC</h1>
-            <p>
-      Canada's oldest veterinary college.
-            </p>
-          </div>
-  </div>
+      <div className="container">
+        <div style={{
+             backgroundColor: "rgba(255,255,255,0.8)",
+             margin: "50px auto 0",
+             padding: "25px 100px 100px",
+             width: "75%"}}>
+          <h1>@OVC</h1>
+          <p>
+            Canada's oldest veterinary college.
+          </p>
+        </div>
+      </div>
     </div>
     <div className="feature-wrapper" style={{position: "relative", zIndex: "1", overflow: "hidden"}}>
       <StaticImage src="../images/people.jpg" alt="" layout="fullWidth"
@@ -62,33 +63,40 @@ const IndexPage = ({ data }) => (
       <Rule width="25%"/>
     <div className="row" >
       <div className="col-md-6">
-	{
-	  data.leadArticle.edges.map(({ node, index }) => {
-	    const image = getImage(node.relationships.field_image?.localFile.childImageSharp.gatsbyImageData)
- 	    const tags = node.relationships?.field_tags.map(({ name }) => name).join(", ")
-	    return <Article title={node.title} summary={node.body.processed}
-	                    tags={tags} image={image} lead={true}/>
-	  })
-	}
+        {
+          data.leadArticle.edges.map(({ node, index }) => {
+            const image = getImage(node.relationships.field_image?.localFile.childImageSharp.gatsbyImageData)
+            const tags = node.relationships?.field_tags.map(({ name }) => name).join(", ")
+            return <Article title={node.title} summary={node.body.processed}
+                            tags={tags} image={image} lead={true}/>
+          })
+        }
       </div>
       <div className="col-md-6" style={{borderLeft: "1px solid #eee", paddingLeft: "24px" }}>
-	{
-	  data.moreArticles.edges.map(({ node, index }) => {
-	    const image = getImage(node.relationships?.field_image.localFile.childImageSharp.gatsbyImageData)
- 	    const tags = node.relationships?.field_tags.map(({ name }) => name).join(", ")
-	    return <div key={index} style={{marginBottom: "32px"}}>
-	             <Article title={node.title} summary={node.body.processed}
-		              tags={tags} image={image}/>
-	           </div>
-	  })
-	}
+        {
+          data.moreArticles.edges.map(({ node, index }) => {
+            const image = getImage(node.relationships?.field_image.localFile.childImageSharp.gatsbyImageData)
+            const tags = node.relationships?.field_tags.map(({ name }) => name).join(", ")
+            return <div key={index} style={{marginBottom: "32px"}}>
+                     <Article title={node.title} summary={node.body.processed}
+                              tags={tags} image={image}/>
+                   </div>
+            })
+          }
+        </div>
       </div>
     </div>
+    <div className="feature-wrapper" style={{position: "relative", zIndex: "1", overflow: "hidden"}}>
+      <StaticImage src="../images/university-centre.jpg" alt="" layout="fullWidth"
+                   style={{position:"absolute",width:"100%",height:"100%",zIndex:"-1"}}/>
+      <Events/>
     </div>
   </Layout>
 )
 
 export default IndexPage
+
+const timeMin = '2021-03-03'
 
 export const query = graphql`
   fragment node__articleFragment on node__article {
@@ -136,4 +144,3 @@ export const query = graphql`
   }
 `
 
-// -*- create-lockfiles: nil; -*-
