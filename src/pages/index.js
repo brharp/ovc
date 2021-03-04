@@ -96,8 +96,6 @@ const IndexPage = ({ data }) => (
 
 export default IndexPage
 
-const timeMin = '2021-03-03'
-
 export const query = graphql`
   fragment node__articleFragment on node__article {
     fields {
