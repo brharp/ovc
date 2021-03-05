@@ -1,0 +1,30 @@
+footer:
+   sections:
+     -
+       heading: Connect
+       links:
+         -
+           title: Take a Tour
+           url: https://ovc.uoguelph.ca/
+         -
+           title: Contact
+           url: https://ovc.uoguelph.ca/
+         -
+           title: Intranet
+           url: https://ovc.uoguelph.ca/
+     -
+       heading: Learn
+       links:
+         - 
+            title: "@OVC"
+            url: https://ovc.uoguelph.ca/
+         -
+            title: Departments
+            url: https://ovc.uoguelph.ca/
+         -
+            title: Centres
+            url: https://ovc.uoguelph.ca/
+         -
+            title: People
+            url: https://ovc.uoguelph.ca/
+

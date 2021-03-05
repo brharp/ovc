@@ -3,8 +3,7 @@ import { graphql, StaticQuery } from "gatsby";
 import styled from "styled-components";
 
 const EventWrapper = styled.div`
-  background: rgba(0, 0, 0, .5);
-  padding: 64px 128px;
+  padding: 64px 24px;
 `
 
 const EventList = styled.ul`

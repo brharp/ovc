@@ -15,6 +15,7 @@ import Events from "../components/events"
 import News from "../components/news"
 
 // Data imports
+import IndexData from "../../content/index.yml";
 import FeatureData from "../../content/features.yml";
 
 // Style components
@@ -67,7 +68,27 @@ const IndexPage = ({ data }) => (
     <div style={{position: "relative", zIndex: "1", overflow: "hidden"}}>
       <StaticImage src="../images/university-centre.jpg" alt="" layout="fullWidth"
                    style={{position:"absolute",width:"100%",height:"100%",zIndex:"-1"}}/>
-      <Events/>
+      <div style={{background: "rgba(0, 0, 0, .5)"}}>
+        <div className="container">
+          <Events/>
+        </div>
+      </div>
+    </div>
+    <div className="container">
+      <div className="row">
+        {
+          IndexData.footer.sections.map((section, index) => {
+            return <div key={index} className="col-md-6">
+              <h2>{section.heading}</h2>
+                {
+                  section.links.map((link, index) => {
+                    return <li key={index}><a href={link.url}>{link.title}</a></li>
+                  })
+                }
+            </div>
+          })
+        }
+      </div>
     </div>
   </Layout>
 )
@@ -75,46 +96,10 @@ const IndexPage = ({ data }) => (
 export default IndexPage
 
 export const query = graphql`
-  fragment node__articleFragment on node__article {
-    fields {
-      slug
-    }
-    title
-    body {
-      processed
-    }
-    relationships {
-      field_image {
-        localFile {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-      }
-      field_tags {
-        id
-        name
-      }
-    }
-  }
   query {
     site {
       siteMetadata {
         title
-      }
-    }
-    leadArticle: allNodeArticle(limit: 1) {
-      edges {
-        node {
-          ...node__articleFragment
-        }
-      }
-    }
-    moreArticles: allNodeArticle(skip: 1) {
-      edges {
-        node {
-          ...node__articleFragment
-        }
       }
     }
   }
