@@ -12,6 +12,7 @@ import Feature from "../components/feature";
 import Article from "../components/article";
 import Rule from "../components/rule";
 import Events from "../components/events"
+import News from "../components/news"
 
 // Data imports
 import FeatureData from "../../content/features.yml";
@@ -61,30 +62,7 @@ const IndexPage = ({ data }) => (
     <div className="news container" style={{padding: "24px"}}>
       <h1>Featured news</h1>
       <Rule width="25%"/>
-    <div className="row" >
-      <div className="col-md-6">
-        {
-          data.leadArticle.edges.map(({ node, index }) => {
-            const image = getImage(node.relationships.field_image?.localFile.childImageSharp.gatsbyImageData)
-            const tags = node.relationships?.field_tags.map(({ name }) => name).join(", ")
-            return <Article title={node.title} summary={node.body.processed}
-                            tags={tags} image={image} lead={true}/>
-          })
-        }
-      </div>
-      <div className="col-md-6" style={{borderLeft: "1px solid #eee", paddingLeft: "24px" }}>
-        {
-          data.moreArticles.edges.map(({ node, index }) => {
-            const image = getImage(node.relationships?.field_image.localFile.childImageSharp.gatsbyImageData)
-            const tags = node.relationships?.field_tags.map(({ name }) => name).join(", ")
-            return <div key={index} style={{marginBottom: "32px"}}>
-                     <Article title={node.title} summary={node.body.processed}
-                              tags={tags} image={image}/>
-                   </div>
-            })
-          }
-        </div>
-      </div>
+      <News/>
     </div>
     <div style={{position: "relative", zIndex: "1", overflow: "hidden"}}>
       <StaticImage src="../images/university-centre.jpg" alt="" layout="fullWidth"
