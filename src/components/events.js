@@ -1,5 +1,5 @@
 import React from "react";
-import { StaticQuery } from "gatsby";
+import { graphql, StaticQuery } from "gatsby";
 import styled from "styled-components";
 
 const EventWrapper = styled.div`
