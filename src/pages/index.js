@@ -58,7 +58,7 @@ const IndexPage = ({ data }) => (
         }
       </FeatureGrid>
     </div>
-    <div className="news container" style={{paddingBottom: "24px"}}>
+    <div className="news container" style={{padding: "24px"}}>
       <h1>Featured news</h1>
       <Rule width="25%"/>
     <div className="row" >
