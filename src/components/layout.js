@@ -5,7 +5,6 @@ import Footer from './footer'
 import Header from './header'
 import '../styles/global.scss'
 
-
 const Layout = ({ children, date }) => (
       <>
         <main id="content" className="main-container">
