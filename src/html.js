@@ -13,10 +13,8 @@ export default function HTML(props) {
 					content="width=device-width, initial-scale=1, shrink-to-fit=no"
 				/>
 				{props.headComponents}
-				<script defer src="https://www.uoguelph.ca/includes/web-components/UofGHeader-dist.js"></script>
 			</head>
 			<body {...props.bodyAttributes}>
-				<uofg-header></uofg-header>
 				<SkipLink mainContent="#content" />
 				{props.preBodyComponents}
 				<noscript key="noscript" id="gatsby-noscript">

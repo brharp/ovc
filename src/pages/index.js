@@ -4,12 +4,10 @@ import React from 'react';
 import SEO from '../components/seo';
 import { graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import { getImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
 // Custom component imports
 import Feature from "../components/feature";
-import Article from "../components/article";
 import Rule from "../components/rule";
 import Events from "../components/events"
 import News from "../components/news"
@@ -54,13 +52,13 @@ const IndexPage = ({ data }) => (
       <FeatureGrid>
         {
           FeatureData.map((data,index) => {
-            return <Feature index={index} title={data.title} subtitle={data.subtitle}
+            return <Feature key={`feature_${index}`} index={index} title={data.title} subtitle={data.subtitle}
                             description={data.description} />
           })
         }
       </FeatureGrid>
     </div>
-    <div className="news container" style={{padding: "24px"}}>
+    <div className="news container" style={{paddingTop: "24px"}}>
       <h1>Featured news</h1>
       <Rule width="25%"/>
       <News/>

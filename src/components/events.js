@@ -3,7 +3,7 @@ import { graphql, StaticQuery } from "gatsby";
 import styled from "styled-components";
 
 const EventWrapper = styled.div`
-  padding: 64px 24px;
+  padding: 64px 0;
 `
 
 const EventList = styled.ul`
@@ -24,7 +24,7 @@ const EventListItem = styled.li`
 
 const EventDate = styled.div`
   padding: 12px;
-  border: solid 8px var(--uog-blue);
+  border: solid 8px var(--blue);
   text-transform: uppercase;
   text-align: center;
   color: white;
@@ -67,10 +67,10 @@ export default function Events(props) {
       render={data => {
         return (
           <EventWrapper>
-            <h2 style={{color: "var(--uog-yellow)"}}>Upcoming Events</h2>
+            <h2 style={{color: "var(--yellow)"}}>Upcoming Events</h2>
             <EventList>
               {
-                data.allNodeEvent?.edges.map(({ node, index }) => {
+                data.allNodeEvent?.edges.map(({ node }, index ) => {
                   return <EventListItem key={index}>
                              <EventDate>
                                <Month>{node.month}</Month>

@@ -14,7 +14,7 @@ export default function Article(props) {
 	        position: "absolute",
 		left: "0",
 		bottom: "24px",
-		background: "var(--uog-yellow)",
+		background: "var(--yellow)",
 		color: "#333",
 		padding: "8px 64px 8px 16px",
 		fontWeight: "bold",
@@ -24,7 +24,7 @@ export default function Article(props) {
 	</div>
 	<div className={`col-lg-${isLead?12:6}`}>
 	  <h3 style={{color: "#333", marginTop: "0"}}>{props.title}</h3>
-	  <Rule width="25%"/>
+	  <hr style={{marginLeft: 0, width: "25%"}}/>
 	  <p dangerouslySetInnerHTML={{__html: props.summary}}></p>
 	  <ReadMore/>
 	</div>

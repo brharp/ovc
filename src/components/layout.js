@@ -2,12 +2,14 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import DateModified from './dateModified'
 import Footer from './footer'
-import '../styles/global.css'
+import Header from './header'
+import '../styles/global.scss'
 
 
 const Layout = ({ children, date }) => (
       <>
         <main id="content" className="main-container">
+          <Header/>
           {children}
           <DateModified date={date}/>
         </main>
