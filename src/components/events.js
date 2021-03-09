@@ -67,7 +67,7 @@ export default function Events(props) {
       render={data => {
         return (
           <EventWrapper>
-            <h2 style={{color: "var(--yellow)"}}>Upcoming Events</h2>
+            <h1 style={{color: "var(--yellow)"}}>Upcoming Events</h1>
             <EventList>
               {
                 data.allNodeEvent?.edges.map(({ node }, index ) => {

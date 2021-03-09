@@ -3,6 +3,18 @@ import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import { getImage } from "gatsby-plugin-image";
 import Article from "../components/article";
+import { Container } from "react-bootstrap";
+import styled from "styled-components";
+
+const Rule = styled.hr`
+  margin-left: 0;
+  width: 25%;
+`
+
+const NewsContainer = styled(Container)`
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+`
 
 const NewsComponent = ({ data }) => {
   return (
@@ -48,6 +60,9 @@ const NewsComponent = ({ data }) => {
         }
       `}
       render={data => (
+        <NewsContainer>
+        <h1>Featured news</h1>
+        <Rule/>
         <div className="row" >
           <div className="col-md-6">
             {
@@ -72,6 +87,7 @@ const NewsComponent = ({ data }) => {
             }
           </div>
         </div>
+        </NewsContainer>
       )}
     />
   )

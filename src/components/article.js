@@ -1,6 +1,5 @@
 import React from "react";
 import { GatsbyImage } from "gatsby-plugin-image";
-import Rule from "./rule";
 import ReadMore from "./readmore";
 
 export default function Article(props) {

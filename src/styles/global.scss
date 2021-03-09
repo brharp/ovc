@@ -1,5 +1,5 @@
 
-// For reasons now lost to the sands of time, the base font
+// For reasons lost to the sands of time, the base font
 // size of the U of G home page has always been 10px.
 // As a result many global styles (including such things as
 // the global header) use HUGE (relative) font sizes to make
@@ -8,16 +8,27 @@
 // to restore a more reasonable 16px base font size.
 
 html { font-size: 10px; }
-$font-size-base:    1.6rem;
+$font-size-base: 1.6rem;
 
 
 // Color system
 
-$red:     #c20430;
-$yellow:  #ffc72a;
-$blue:    #69a3b9;
+$red:     #c20430;   // U of G red
+$yellow:  #ffc72a;   //   ""   yellow
+$blue:    #69a3b9;   //   ""   blue
 $primary: $red;
-$dark:    $red;
+$info:    $blue;
+
+// Bootstrap's color contrast function (color-yiq) utilizes the YIQ 
+// color space to automatically return a light (#fff) or dark (#111) 
+// contrast color based on the specified base color. If the color
+// contrast of the background color exceeds a threshold then a dark
+// foreground color is used. The default threshold (150) returns a 
+// light foreground color for U of G blue which does not meet WCAG 
+// color contrast requirements so we decrease the threshold a bit
+// to get dark text on a blue background.
+
+$yiq-contrasted-threshold: 122;
 
 
 // Typography
