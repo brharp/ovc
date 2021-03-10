@@ -6,6 +6,7 @@ import { graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
 // Custom component imports
+import Hero from "../components/hero";
 import Features from "../components/features";
 import Events from "../components/events"
 import News from "../components/news"
@@ -16,22 +17,7 @@ import QuickLinks from "../components/quicklinks"
 const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
-    <div className="banner" style={{position: "relative", zIndex: "1", overflow: "hidden"}}>
-      <StaticImage src="../images/portico--banner.jpg" alt="" layout="fullWidth"
-                   style={{position:"absolute",width:"100%",height:"100%",zIndex:"-1"}}/>
-      <div className="container">
-        <div style={{
-             backgroundColor: "rgba(255,255,255,0.8)",
-             margin: "50px auto 0",
-             padding: "25px 100px 100px",
-             width: "75%"}}>
-          <h1>@OVC</h1>
-          <p>
-            Canada's oldest veterinary college.
-          </p>
-        </div>
-      </div>
-    </div>
+    <Hero />
     <Features />
     <News/>
     <div style={{position: "relative", zIndex: "1", overflow: "hidden"}}>
@@ -54,6 +40,7 @@ export const query = graphql`
     site {
       siteMetadata {
         title
+        slogan
       }
     }
   }
