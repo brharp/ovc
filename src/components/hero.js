@@ -4,6 +4,14 @@ import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
 
+// Social icons
+import {
+  FaInstagram,
+  FaFacebookSquare,
+  FaTwitterSquare,
+  FaLinkedin
+} from "react-icons/fa";
+
 const Banner = styled.div`
   position: relative;
   overflow: hidden;
@@ -32,6 +40,28 @@ const Content = styled.div`
   margin-bottom: 8rem;
   font-size: 1.5em;
   border-bottom: 4px solid var(--yellow);
+    padding: 4rem;
+    background-color: rgba(0,0,0,.4);
+  @media (min-width: 992px) {
+  }
+`
+
+const Icons = styled.div`
+  font-size: 3em;
+  > h2  { color: var(--light); }
+  margin-bottom: 8rem;
+  // On large displays, rotate social icons 90 deg
+  @media (min-width: 992px) {
+    transform: rotate(-90deg);
+    margin-top: 60%;
+    position: absolute;
+    margin-bottom: 0;
+    > svg { transform: rotate(90deg); }
+  }
+`
+
+const Y = styled.span`
+  color: var(--yellow);
 `
 
 const HeroComponent = ( props ) =>
@@ -60,6 +90,15 @@ const HeroComponent = ( props ) =>
                 <h1>{ data.site.siteMetadata.title }</h1>
                 <p>{ data.site.siteMetadata.slogan }</p>
               </Content>
+            </Col>
+            <Col md>
+              <Icons>
+                <h2>Connect <Y>with OVC</Y></h2>
+                <FaInstagram/>
+                <FaLinkedin/>
+                <FaFacebookSquare />
+                <FaTwitterSquare />
+              </Icons>
             </Col>
           </Row>
         </Container>
