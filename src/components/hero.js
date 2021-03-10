@@ -36,32 +36,36 @@ const Shade = styled.div`
 `
 
 const Content = styled.div`
-  margin-top: 8rem;
-  margin-bottom: 8rem;
   font-size: 1.5em;
   border-bottom: 4px solid var(--yellow);
-    padding: 4rem;
-    background-color: rgba(0,0,0,.4);
-  @media (min-width: 992px) {
-  }
+  padding: 4rem;
+  margin-bottom: 2rem;
+  background-color: rgba(0,0,0,.4);
 `
 
 const Icons = styled.div`
   font-size: 3em;
+  padding-left: 15px;
+  padding-right: 15px;
   > h2  { color: var(--light); }
-  margin-bottom: 8rem;
   // On large displays, rotate social icons 90 deg
   @media (min-width: 992px) {
-    transform: rotate(-90deg);
-    margin-top: 60%;
+    transform:  translateY(-50%) rotate(-90deg);
+    top: 50%;
     position: absolute;
-    margin-bottom: 0;
+    right: 0;
     > svg { transform: rotate(90deg); }
   }
 `
 
 const Y = styled.span`
   color: var(--yellow);
+`
+
+const HeroContainer = styled(Container)`
+  position: relative;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 `
 
 const HeroComponent = ( props ) =>
@@ -83,23 +87,21 @@ const HeroComponent = ( props ) =>
                       style={{height: "100%"}} />
         </Cover>
         <Shade/>
-        <Container>
+        <Container style={{position: "relative"}}>
           <Row>
-            <Col md={9}>
+            <Col lg={9}>
               <Content>
                 <h1>{ data.site.siteMetadata.title }</h1>
                 <p>{ data.site.siteMetadata.slogan }</p>
               </Content>
             </Col>
-            <Col md>
-              <Icons>
-                <h2>Connect <Y>with OVC</Y></h2>
-                <FaInstagram/>
-                <FaLinkedin/>
-                <FaFacebookSquare />
-                <FaTwitterSquare />
-              </Icons>
-            </Col>
+            <Icons>
+              <h2>Connect <Y>with OVC</Y></h2>
+              <FaInstagram/>
+              <FaLinkedin/>
+              <FaFacebookSquare />
+              <FaTwitterSquare />
+            </Icons>
           </Row>
         </Container>
       </Banner>
