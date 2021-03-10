@@ -87,7 +87,7 @@ const HeroComponent = ( props ) =>
                       style={{height: "100%"}} />
         </Cover>
         <Shade/>
-        <Container style={{position: "relative"}}>
+        <HeroContainer>
           <Row>
             <Col lg={9}>
               <Content>
@@ -103,7 +103,7 @@ const HeroComponent = ( props ) =>
               <FaTwitterSquare />
             </Icons>
           </Row>
-        </Container>
+        </HeroContainer>
       </Banner>
     }
   />
