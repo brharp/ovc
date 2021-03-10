@@ -26,7 +26,7 @@ const NewsComponent = ({ data }) => {
           }
           title
           body {
-            processed
+            value
           }
           relationships {
             field_image {
@@ -69,7 +69,7 @@ const NewsComponent = ({ data }) => {
               data.leadArticle.edges.map(( { node }, index ) => {
                 const image = getImage(node.relationships.field_image?.localFile.childImageSharp.gatsbyImageData)
                 const tags = node.relationships?.field_tags.map(({ name }) => name).join(", ")
-                return <Article key={`lead_article_${index}`} title={node.title} summary={node.body.processed}
+                return <Article key={`lead_article_${index}`} title={node.title} summary={node.body.value}
                                 tags={tags} image={image} lead={true}/>
               })
             }
@@ -80,7 +80,7 @@ const NewsComponent = ({ data }) => {
                 const image = getImage(node.relationships?.field_image.localFile.childImageSharp.gatsbyImageData)
                 const tags = node.relationships?.field_tags.map(({ name }) => name).join(", ")
                 return <div key={`article_${index}`} style={{marginBottom: "32px"}}>
-                         <Article title={node.title} summary={node.body.processed}
+                         <Article title={node.title} summary={node.body.value}
                                   tags={tags} image={image}/>
                        </div>
               })
