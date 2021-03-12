@@ -24,7 +24,7 @@ export default function Article(props) {
 	<div className={`col-lg-${isLead?12:6}`}>
 	  <h3 style={{color: "#333", marginTop: "0"}}>{props.title}</h3>
 	  <hr style={{marginLeft: 0, width: "25%"}}/>
-	  <p dangerouslySetInnerHTML={{__html: props.summary}}></p>
+	  <div dangerouslySetInnerHTML={{__html: props.summary}}></div>
 	  <ReadMore/>
 	</div>
       </div>
