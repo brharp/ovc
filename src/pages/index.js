@@ -7,7 +7,7 @@ import { StaticImage } from 'gatsby-plugin-image';
 
 // Custom component imports
 import Hero from "../components/hero";
-import Features from "../components/features";
+import MoreInfo from "../components/moreinfo";
 import Events from "../components/events"
 import News from "../components/news"
 import QuickLinks from "../components/quicklinks"
@@ -18,7 +18,7 @@ const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <Hero />
-    <Features />
+    <MoreInfo />
     <News/>
     <div style={{position: "relative", zIndex: "1", overflow: "hidden"}}>
       <StaticImage src="../images/university-centre.jpg" alt="" layout="fullWidth"

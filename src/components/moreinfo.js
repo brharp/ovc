@@ -1,9 +1,9 @@
 import React from "react";
 import { StaticImage } from 'gatsby-plugin-image';
 import styled from "styled-components";
-import FeatureData from "../../content/features.yml"
+import MoreInfoData from "../../content/moreinfo.yml"
 
-const FeaturesWrapper = styled.div`
+const MoreInfoWrapper = styled.div`
   position: relative;
   z-index: 1;
   overflow: hidden;
@@ -18,7 +18,7 @@ const CoverImage = styled.div`
   }
 `
 
-const FeatureGrid = styled.div`
+const MoreInfoGrid = styled.div`
   @media (min-width: 992px) {
     display: grid;
     grid-template-columns: 3fr 5fr 3fr;
@@ -27,7 +27,7 @@ const FeatureGrid = styled.div`
   }
 `
 
-function Feature(props) {
+function MoreInfo(props) {
     const zebra = props.index % 2;
     return (
 	    <div key={`feature_${props.index}`} style={{
@@ -45,28 +45,28 @@ function Feature(props) {
 	    <p style={{
 		color: zebra ? "white" : "var(--dark)"
 	    }}>{props.description}</p>
-	    <a href="#" className={`btn btn-outline-${zebra?'light':'dark'}`}
+	    <a href="https://ovc.uoguelph.ca/" className={`btn btn-outline-${zebra?'light':'dark'}`}
 	        style={{ position: "absolute", bottom: "32px", textTransform: "uppercase"
 	    }}>See More</a>
 	    </div>
     )
 }
 
-const FeaturesComponent = ( props ) =>
-  <FeaturesWrapper>
+const MoreInfoComponent = ( props ) =>
+  <MoreInfoWrapper>
     <CoverImage>
       <StaticImage src="../images/people.jpg" alt="" layout="fullWidth"/>
     </CoverImage>
-    <FeatureGrid>
+    <MoreInfoGrid>
       {
-        FeatureData.map((data,index) => {
-          return <Feature key={`feature_${index}`} index={index} title={data.title} subtitle={data.subtitle}
+        MoreInfoData.map((data,index) => {
+          return <MoreInfo key={`feature_${index}`} index={index} title={data.title} subtitle={data.subtitle}
                           description={data.description} />
         })
       }
-    </FeatureGrid>
-  </FeaturesWrapper>
+    </MoreInfoGrid>
+  </MoreInfoWrapper>
 
-export default FeaturesComponent
+export default MoreInfoComponent
 
 

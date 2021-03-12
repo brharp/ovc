@@ -1,4 +1,5 @@
-
+const fs = require("fs")
+const yaml = require("js-yaml")
 const path = require(`path`)
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
@@ -15,9 +16,10 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions
-    const result = await graphql(
-	`
-	query {
+
+    // Create article pages
+    const result = await graphql(`
+        query {
 	    allNodeArticle {
 		edges {
 		    node {
@@ -27,8 +29,7 @@ exports.createPages = async ({ graphql, actions }) => {
 		    }
 		}
 	    }
-	}
-	`)
+	}`)
     result.data.allNodeArticle.edges.forEach(({ node }) => {
 	createPage({
 	    path: node.fields.slug,
@@ -37,5 +38,18 @@ exports.createPages = async ({ graphql, actions }) => {
 		slug: node.fields.slug,
 	    },
 	})
+    })
+
+    // Create portal pages
+    const portals = yaml.load(fs.readFileSync("./content/portal.yml", "utf-8"))
+    portals.forEach((element) => {
+      createPage({
+        path: element.path,
+        component: path.resolve(`./src/templates/portal.js`),
+        context: {
+          intro: element.intro,
+          blocks: element.blocks
+        },
+      })
     })
 }
