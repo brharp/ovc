@@ -7,6 +7,9 @@ const MoreInfoWrapper = styled.div`
   position: relative;
   z-index: 1;
   overflow: hidden;
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto;
 `
 
 const CoverImage = styled.div`
