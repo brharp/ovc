@@ -39,17 +39,4 @@ exports.createPages = async ({ graphql, actions }) => {
 	    },
 	})
     })
-
-    // Create portal pages
-    const portals = yaml.load(fs.readFileSync("./content/portal.yml", "utf-8"))
-    portals.forEach((element) => {
-      createPage({
-        path: element.path,
-        component: path.resolve(`./src/templates/portal.js`),
-        context: {
-          intro: element.intro,
-          blocks: element.blocks
-        },
-      })
-    })
 }
