@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
 import { Container, Row, Col } from "react-bootstrap"
-import content from "../../content/about.yml"
+import content from "../../content/explore/about.yml"
 
 const Section = styled.div`
   padding-top: 24px;

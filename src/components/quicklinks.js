@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
-import QuickLinksData from "../../content/quicklinks.yml"
 import { Container, Row, Col } from "react-bootstrap"
+import QuickLinksData from "../../content/home/quicklinks.yml"
 
 const QuickLinksContainer = styled(Container)`
   padding-top: 3rem;
