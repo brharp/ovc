@@ -1,25 +1,31 @@
-import React from "react";
-import styled from "styled-components";
-import { withPrefix } from "gatsby";
-import { Container, Row, Col } from "react-bootstrap";
-import content from "../../../content/explore/initiatives.yml";
+import React from "react"
+import styled from "styled-components"
+import { Container, Row, Col } from "react-bootstrap"
+import { StaticImage } from "gatsby-plugin-image"
+import content from "../../../content/explore/initiatives.yml"
 
 const Section = styled.div`
-  padding-top: 0;
-  padding-bottom: 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background: url(${withPrefix('/assets/backgrounds/initiatives.jpg')});
-  & .row > * {
+  display: grid;
+  & > * { 
+    grid-area: 1/1;
+    position: relative;
+  }
+`
+
+const Content = styled.div`
+  @media (min-width: 992px) {
+    display: grid;
+  }
+  & div {
     padding: 24px;
   }
-  & .row > :nth-child(even) {
+  & div:nth-child(even) {
     color: var(--dark);
     background-color: rgb(255 199 42 / 90%);
     & h3 { color: var(--dark); }
     & h4 { color: var(--red); }
   }
-  & .row > :nth-child(odd) {
+  & div:nth-child(odd) {
     color: var(--light);
     background-color: rgb(194 4 48 / 90%);
     & h3 { color: var(--light); }
@@ -35,7 +41,7 @@ const Initiative = (props) =>  {
   const links = initiative.links
   const color = props.index % 2 ? 'dark' : 'light'
   return (
-    <>
+    <div style={props.style}>
       <h3>{title}</h3>
       <h4>{subtitle}</h4>
       <p>{description}</p>
@@ -45,7 +51,7 @@ const Initiative = (props) =>  {
              className={`btn btn-outline-${color}`}
             >{data.title}</a>)
       }
-    </>
+    </div>
   )
 }
 
@@ -54,23 +60,15 @@ class Initiatives extends React.Component {
   render() {
     return (
       <Section>
+        <StaticImage src="./initiatives.jpg" layout="fullWidth" alt=""
+                     aspectRatio={3/1} />
         <Container>
-          <Row>
-            <Col md="4">
-              <Initiative index="0"/>
-            </Col>
-            <Col md="4">
-              <Initiative index="1"/>
-            </Col>
-          </Row>
-          <Row>
-            <Col className="offset-md-4">
-              <Initiative index="2"/>
-            </Col>
-            <Col>
-              <Initiative index="3"/>
-            </Col>
-          </Row>
+          <Content>
+            <Initiative index="0" style={{gridArea: "1/1"}} />
+            <Initiative index="1" style={{gridArea: "1/2"}} />
+            <Initiative index="2" style={{gridArea: "2/2"}} />
+            <Initiative index="3" style={{gridArea: "2/3"}} />
+          </Content>
         </Container>
       </Section>
     )
