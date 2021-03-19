@@ -2,8 +2,8 @@ import React from "react";
 import { withPrefix } from "gatsby";
 import styled from "styled-components";
 import { Container, Row, Col } from "react-bootstrap";
-import Dinkus from "./dinkus";
-import content from "../../content/explore/ideology.yml";
+import Dinkus from "../shared/dinkus";
+import content from "../../../content/explore/ideology.yml";
 
 const Section = styled.div`
   padding-top: 8rem;

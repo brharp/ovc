@@ -1,8 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import DateModified from './dateModified'
-import Footer from './footer'
-import Header from './header'
+import Footer from './shared/footer'
+import Header from './shared/header'
 import '../styles/global.scss'
 
 const Layout = ({ children, date }) => (

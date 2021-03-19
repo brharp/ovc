@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { withPrefix } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap";
-import content from "../../content/explore/initiatives.yml";
+import content from "../../../content/explore/initiatives.yml";
 
 const Section = styled.div`
   padding-top: 0;

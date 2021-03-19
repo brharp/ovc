@@ -1,7 +1,7 @@
 import React from "react";
 import { StaticImage } from 'gatsby-plugin-image';
 import styled from "styled-components";
-import MoreInfoData from "../../content/home/moreinfo.yml"
+import MoreInfoData from "../../../content/home/moreinfo.yml"
 
 const MoreInfoWrapper = styled.div`
   position: relative;

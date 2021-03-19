@@ -6,11 +6,11 @@ import { graphql } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 
 // Custom component imports
-import Hero from "../components/hero";
-import MoreInfo from "../components/moreinfo";
-import Events from "../components/events"
-import News from "../components/news"
-import QuickLinks from "../components/quicklinks"
+import Hero from "../components/home/hero";
+import MoreInfo from "../components/home/moreinfo";
+import Events from "../components/events/events"
+import News from "../components/news/news"
+import QuickLinks from "../components/home/quicklinks"
 
 
 // Index page component

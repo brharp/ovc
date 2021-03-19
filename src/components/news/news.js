@@ -2,9 +2,9 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import { getImage } from "gatsby-plugin-image";
-import Article from "../components/article";
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
+import Article from "./article";
 
 const Rule = styled.hr`
   margin-left: 0;
