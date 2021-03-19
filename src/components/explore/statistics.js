@@ -25,7 +25,7 @@ const Mask = styled.div`
 const Content = styled.div`
   display: grid;
   grid-area: 1/1;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   grid-gap: 32px;
   padding: 32px;
   justify-items: center;
