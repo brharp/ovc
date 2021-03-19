@@ -5,6 +5,7 @@ import Ideology from "../components/explore/ideology"
 import Leadership from "../components/explore/leadership"
 import Initiatives from "../components/explore/initiatives"
 import Numbers from "../components/explore/numbers"
+import Statistics from "../components/explore/statistics"
 import DeptsAndCentres from "../components/explore/deptscentres.js"
 import Centres from "../components/explore/centres"
 import HealthSciences from "../components/explore/hsc"
@@ -18,6 +19,7 @@ const ExplorePage = ( props ) => (
     <Leadership />
     <Initiatives />
     <Numbers />
+    <Statistics />
     <DeptsAndCentres />
     <Centres />
     <HealthSciences />
