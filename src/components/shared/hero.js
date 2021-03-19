@@ -13,7 +13,7 @@ const Mask = styled.div`
   grid-area: 1/1;
   justify-self: stretch;
   place-self: stretch;
-  padding: 4rem;
+  padding-bottom: 4rem;
 `
 
 const Content = styled.div`
