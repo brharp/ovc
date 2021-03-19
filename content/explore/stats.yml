@@ -1,0 +1,25 @@
+-
+  type: people
+  title: "# of DVM students"
+  value: 4
+-
+  type: ranking
+  title: College ranking
+  value: 9
+-
+  type: money
+  title: Faculty
+  value: $85,000
+-
+  type: people
+  title: "# of Research Chairs"
+  value: 4
+-
+  type: money
+  title: Total Research Funding
+  value: $85,000
+-
+  type: money
+  title: "# of Centres"
+  value: $85,000
+
