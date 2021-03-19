@@ -5,7 +5,7 @@ import content from "../../../content/explore/numbers.yml"
 class Numbers extends React.Component {
   render() {
     return (
-      <Pull title={content.title} description={content.description} />
+      <Pull title={content.title} body={content.description} />
     )
   }
 }

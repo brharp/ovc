@@ -31,7 +31,7 @@ const Title = styled.h1`
   justify-self: center;
 `
 
-const Description = styled.div`
+const Body = styled.div`
   text-align: justify;
 `
 
@@ -43,7 +43,7 @@ class Pull extends React.Component {
           <Content>
             <Title>{this.props.title}</Title>
             <Separator/>
-            <Description>{this.props.description}</Description>
+            <Body>{this.props.body}</Body>
           </Content>
         </Container>
       </Section>
