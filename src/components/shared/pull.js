@@ -30,7 +30,7 @@ class Pull extends React.Component {
       <Section>
         <Container>
           <Row>
-            <Col lg="2">
+            <Col lg="3">
               <h2>{this.props.title}</h2>
             </Col>
             <Col lg="7">

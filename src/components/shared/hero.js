@@ -1,12 +1,13 @@
-import React from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
+import React from "react"
+import { GatsbyImage } from "gatsby-plugin-image"
 import styled from "styled-components"
+import { Container } from "react-bootstrap"
 
 const Section = styled.div`
   display: grid;
 `
 
-const Shadow = styled.div`
+const Mask = styled.div`
   z-index: 10;
   display: grid;
   grid-area: 1/1;
@@ -34,7 +35,7 @@ const Content = styled.div`
 class Hero extends React.Component {
   render () {
     const align = this.props.align === Hero.AlignRight
-    const angle = align ? "315deg" : "45deg"
+    const angle = align ? "337.5deg" : "22.5deg"
     const text = align ? "right" : "left"
     const justify = align ? "end" : "start"
     const gradient = `linear-gradient(${angle}, black, transparent)`
@@ -46,11 +47,13 @@ class Hero extends React.Component {
                      aspectRatio={3/1}
                      alt=""
         />
-        <Shadow style={{background: gradient}}>
-          <Content style={{textAlign: text, justifySelf: justify}}>>
-            {this.props.children}
-          </Content>
-        </Shadow>
+        <Mask style={{background: gradient}}>
+          <Container style={{position: "relative", display: "grid"}}>
+            <Content style={{textAlign: text, justifySelf: justify}}>>
+              {this.props.children}
+            </Content>
+          </Container>
+        </Mask>
       </Section>
     )
   }
