@@ -42,7 +42,7 @@ class Hero extends React.Component {
     return (
       <Section>
         <GatsbyImage image={this.props.image}
-                     style={{gridArea: "1/1"}}
+                     style={{gridArea: "1/1", maxHeight: "600px"}}
                      layout="fullWidth"
                      aspectRatio={3/1}
                      alt=""

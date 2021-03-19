@@ -11,7 +11,7 @@ const Section = styled.div`
 const Background = (props) =>
   <StaticImage src="../../images/portico--banner.jpg"
                layout="fullWidth" aspectRatio={3/1} alt=""
-               style={{gridArea: "1/1"}} />
+               style={{gridArea: "1/1", maxHeight: "600px"}} />
 
 const Mask = styled.div`
   z-index: 1;
@@ -30,8 +30,8 @@ const Content = styled.div`
   padding: 32px;
   justify-items: center;
   align-items: center;
-  justify-content: space-evenly;
-  align-content: space-evenly;
+  justify-content: space-around;
+  align-content: space-around;
   height: 100%;
 `
 
