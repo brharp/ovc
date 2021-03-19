@@ -1,7 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { getImage } from "gatsby-plugin-image"
-import styled from "styled-components"
 import Hero from "../shared/hero"
 
 class Centres extends React.Component {
