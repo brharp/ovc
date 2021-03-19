@@ -8,6 +8,7 @@ import Numbers from "../components/explore/numbers"
 import DeptsAndCentres from "../components/explore/deptscentres.js"
 import Centres from "../components/explore/centres"
 import HealthSciences from "../components/explore/hsc"
+import News from "../components/news"
 
 // Explore page component
 const ExplorePage = ( props ) => (
@@ -20,6 +21,7 @@ const ExplorePage = ( props ) => (
     <DeptsAndCentres />
     <Centres />
     <HealthSciences />
+    <News />
   </Layout>
 )
 
