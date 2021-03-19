@@ -14,6 +14,7 @@ const Content = styled.div`
   padding-top: 32px;
   padding-bottom: 32px;
   grid-template-rows: auto;
+  align-items: center;
   @media (min-width: 992px) {
     grid-template-columns: 1fr 3fr 2fr;
   }
@@ -23,7 +24,6 @@ const Title = styled.h1`
   color: var(--light);
   align-self: center;
   justify-self: center;
-  text-align: center;
 `
 
 const Description = styled.div`
