@@ -9,7 +9,7 @@ const Section = styled.div`
   margin-left: auto;
   margin-right: auto;
   @media (min-width: 992px) {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   }
   & div:hover {
     background: rgba(255, 0, 0, 0.6);
@@ -33,7 +33,8 @@ const Content = styled.div`
   align-self: stretch;
   color: var(--light);
   background: rgba(0, 0, 0, 0.6);
-  transition: 1s;
+  transition: .5s;
+  transition-delay: .1s;
   & :hover { background: rgba(194, 4, 48, 0.6); }
   & h2 { 
     color: var(--light);
@@ -44,10 +45,10 @@ const Content = styled.div`
     align-self: stretch;
   }
   & h3 { color: var(--yellow); }
-  & p { transition: height 0.5s;  overflow: hidden;}
+  & p { transition: 1s;  overflow: hidden;}
   @media (min-width: 992px) {
-    & p { height: 0; }
-    & :hover p { height: 6em; }
+    & p { max-height: 0; }
+    & :hover p { max-height: 6em; }
   }
   display: flex;
   flex-direction: column;
