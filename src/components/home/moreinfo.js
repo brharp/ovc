@@ -47,8 +47,8 @@ const Content = styled.div`
   & p { transition: height 0.5s;  overflow: hidden;}
   @media (min-width: 992px) {
     & p { height: 0; }
+    & :hover p { height: 6em; }
   }
-  & :hover p { height: 6em; }
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
