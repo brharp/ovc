@@ -11,6 +11,9 @@ const Section = styled.div`
   @media (min-width: 992px) {
     grid-template-columns: repeat(3, 1fr);
   }
+  & div:hover {
+    background: rgba(255, 0, 0, 0.6);
+  }
 `
 
 const Box = styled.div`
@@ -27,16 +30,29 @@ const Content = styled.div`
   grid-area: 1/1;
   position: relative;
   padding: 24px;
-  align-self: end;
+  align-self: stretch;
   color: var(--light);
+  background: rgba(0, 0, 0, 0.6);
+  transition: 1s;
+  & :hover { background: rgba(194, 4, 48, 0.6); }
   & h2 { 
     color: var(--light);
     text-transform: uppercase;
     font-size: 3.5rem;
     border-bottom: 1px solid var(--light);
     padding-bottom: 1rem;
+    align-self: stretch;
   }
   & h3 { color: var(--yellow); }
+  & p { transition: height 0.5s;  overflow: hidden;}
+  @media (min-width: 992px) {
+    & p { height: 0; }
+  }
+  & :hover p { height: 6em; }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
 `
 
 function MoreInfo(props) {
@@ -44,7 +60,6 @@ function MoreInfo(props) {
       <Box>
         <StaticImage src="../../images/golden-retriever.jpg" alt=""
                      layout="fullWidth" style={{gridArea: "1/1"}} />
-        <Mask />
 	<Content>
           <h2>{props.title}</h2>
 	  <h3>{props.subtitle}</h3>
