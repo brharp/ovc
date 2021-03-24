@@ -12,9 +12,9 @@ module.exports = {
     author: 'The OVC Authors',
   },
   plugins: [
+    `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
     `gatsby-plugin-sass`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-react-helmet`,
@@ -63,5 +63,12 @@ module.exports = {
         includeInDevelopment: false,
       },
     },
+    `gatsby-transformer-yaml`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `./src/data/`,
+      }
+    }
   ],
 }

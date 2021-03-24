@@ -1,6 +1,5 @@
 import React from "react"
 import styled from "styled-components"
-import { Container, Row, Col } from "react-bootstrap"
 import Pull from "../shared/pull"
 import content from "../../../content/explore/about.yml"
 

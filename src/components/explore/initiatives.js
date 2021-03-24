@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Container, Row, Col } from "react-bootstrap"
+import { Container } from "react-bootstrap"
 import { StaticImage } from "gatsby-plugin-image"
 import content from "../../../content/explore/initiatives.yml"
 

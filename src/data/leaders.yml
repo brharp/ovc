@@ -1,0 +1,62 @@
+- unit: Ontario Veterinary College
+  title: Dean
+  name: Jeffrey Wichtel
+  bio: |
+    Lorem ipsum dolor sit amet. Est accusantium explicabo est beatae
+    eveniet sed labore similique. Maiores corrupti in earum voluptatem
+    ut consectetur voluptatem qui galisum aspernatur sit adipisci
+    perspiciatis! Qui asperiores doloremque ut voluptatem ullam et
+    sint nostrum sed tempora placeat id nemo deserunt qui dolores totam.
+- unit: Strategy and Planning 
+  title: Executive Director 
+  name: Ilya Bogorad
+  bio: |
+    Lorem ipsum dolor sit amet. Est accusantium explicabo est beatae
+    eveniet sed labore similique. Maiores corrupti in earum voluptatem
+    ut consectetur voluptatem qui galisum aspernatur sit adipisci
+    perspiciatis! Qui asperiores doloremque ut voluptatem ullam et
+    sint nostrum sed tempora placeat id nemo deserunt qui dolores totam.
+- unit: Students and Academic 
+  title: Associate Dean 
+  name: Joanne Hewson
+  bio: |
+    Lorem ipsum dolor sit amet. Est accusantium explicabo est beatae
+    eveniet sed labore similique. Maiores corrupti in earum voluptatem
+    ut consectetur voluptatem qui galisum aspernatur sit adipisci
+    perspiciatis! Qui asperiores doloremque ut voluptatem ullam et
+    sint nostrum sed tempora placeat id nemo deserunt qui dolores totam.
+- unit: Research and Graduate Studies 
+  title: Associate Dean 
+  name: Shayan Sharif
+  photo: ../images/shayan_sharif.png
+  bio: |
+    Shayan Sharif was appointed Associate Dean, Research and Graduate Studies
+    in September 2019.
+
+    A professor in OVC's Department of Pathobiology, Sharif holds a DVM from the
+    Faculty of Veterinary medicine, University of Tehran, as well as a PhD in
+    Immunology and Immunogenetics from Pathobiology at OVC. His main area
+    of study focus on how the chicken immune system interacts with and responds
+    to microbes, including immunity and vaccine development against Marek's
+    disease virus and avian influenza virus. Sharif's group is also interested in
+    poultry gut health and development of novel probiotics for control of enteric
+    pathogens in poultry.
+
+    The Associate Dean, Research and Graduate Studies works closely with the 
+    dean, associate deans and department chairs to advance OVC and the U of G
+    research and graduate training priorities, as well as to provide strategic 
+    leadership to support OVC's capactiy to conduct excellent research.
+  quote: |
+    OVC's Associate Dean, Research and Graduate Studies provides leadership to 
+    support OVC's capactiy to conduct excellent research and to advance OVC and
+    the University of Guelph's research and graduate training priorities.
+- unit: Clinical Program 
+  title: Associate Dean 
+  name: Stephanie Nykamp
+  bio: |
+    Lorem ipsum dolor sit amet. Est accusantium explicabo est beatae
+    eveniet sed labore similique. Maiores corrupti in earum voluptatem
+    ut consectetur voluptatem qui galisum aspernatur sit adipisci
+    perspiciatis! Qui asperiores doloremque ut voluptatem ullam et
+    sint nostrum sed tempora placeat id nemo deserunt qui dolores totam.
+
