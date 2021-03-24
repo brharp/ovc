@@ -1,4 +1,5 @@
-import { React, useState } from "react";
+import React from "react";
+import { useState } from "react"
 import { graphql, StaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components";
@@ -71,7 +72,7 @@ class Desktop extends React.Component {
                       gridArea: `${Math.floor(index/3)*2+1} / ${index%3+1}`,
                       padding: "1px"
                   }}>
-                  <Card style={{ borderLeft: "4px solid var(--red)" }}>
+                  <Card style={{ borderLeft: "4px solid var(--red)", height: "100%" }}>
                     <Card.Body>
                       <h4 className="text-dark">{node.unit}</h4>
                       <Card.Text>
@@ -99,7 +100,7 @@ class Desktop extends React.Component {
   }
 }
 
-function Example() {
+function ModalProfile (props) {
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -107,23 +108,24 @@ function Example() {
 
   return (
     <>
-      <Button variant="primary" onClick={handleShow}>
-        Launch demo modal
-      </Button>
+      <Card onClick={handleShow} style={{borderLeft: "4px solid var(--red)"}}>
+        <Card.Body>
+          <Card.Title>{props.name}</Card.Title>
+          <Card.Subtitle>{props.title}</Card.Subtitle>
+        </Card.Body>
+      </Card>
 
-      <Modal show={show} onHide={handleClose}>
+      <Modal show={show} onHide={handleClose} centered size="lg">
         <Modal.Header closeButton>
-          <Modal.Title>Modal heading</Modal.Title>
+          <Modal.Title>{props.name}</Modal.Title>
         </Modal.Header>
-        <Modal.Body>Woohoo, you're reading this text in a modal!</Modal.Body>
-        <Modal.Footer>
-          <Button variant="secondary" onClick={handleClose}>
-            Close
-          </Button>
-          <Button variant="primary" onClick={handleClose}>
-            Save Changes
-          </Button>
-        </Modal.Footer>
+        <Modal.Body>
+          <GatsbyImage image={getImage(props.photo)} layout="fullWidth" />
+          <h3>{props.name}</h3>
+          <h4>{props.title}</h4>
+          <p>{props.bio}</p>
+          <blockquote>{props.quote}</blockquote>
+        </Modal.Body>
       </Modal>
     </>
   );
@@ -141,17 +143,8 @@ class Mobile extends React.Component {
           }}>
           { 
             data.allLeadersYaml.edges.map(({node},index) => (
-            <Card>
-              <GatsbyImage image={getImage(node.photo)} layout="fullWidth" 
-                           className="card-img-top" />
-              <Card.Body>
-                <Card.Title>{node.name}</Card.Title>
-                <Card.Subtitle>{node.title}</Card.Subtitle>
-                <Button variant="primary">
-                  <FaAngleDown />
-                </Button>
-              </Card.Body>
-            </Card>
+              <ModalProfile key={index} name={node.name} title={node.title}
+                            photo={node.photo} bio={node.bio} quote={node.quote}/>
             ))
           }
         </Container>
