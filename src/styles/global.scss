@@ -43,6 +43,13 @@ $hr-border-width:   4px;
 $enable-rounded:  false;
 
 
+// Utilities
+
+// Set max height of element to zero on touch devices.
+// This depends on (no-)touchevents being set on the root (html) element.
+.no-touchevents .mh-notouch-0 { max-height: 0 }
+
+
 // Use Bootstrap
 
 @import "../../node_modules/bootstrap/scss/bootstrap";

@@ -8,8 +8,11 @@ const Section = styled.div`
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
+  @media (min-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
   @media (min-width: 992px) {
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
   }
   & div:hover {
     background: rgba(255, 0, 0, 0.6);
@@ -46,10 +49,7 @@ const Content = styled.div`
   }
   & h3 { color: var(--yellow); }
   & p { transition: 1s;  overflow: hidden;}
-  @media (min-width: 992px) {
-    & p { max-height: 0; }
-    & :hover p { max-height: 6em; }
-  }
+  & :hover p { max-height: 6em; }
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -64,7 +64,7 @@ function MoreInfo(props) {
 	<Content>
           <h2>{props.title}</h2>
 	  <h3>{props.subtitle}</h3>
-	  <p>{props.description}</p>
+	  <p className="mh-notouch-0">{props.description}</p>
 	  <a href="https://ovc.uoguelph.ca/" className='btn btn-lg btn-outline-light'>
 	    See More
 	  </a>
