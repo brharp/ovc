@@ -28,7 +28,7 @@ class About extends React.Component {
         <Links>
           {
             content.links.map((link, index) =>
-              <a key={index} href="" className="btn btn-block btn-light btn-lg">
+              <a key={index} href="https://ovc.uoguelph.ca" className="btn btn-block btn-light btn-lg">
                 {link.title}
               </a>)
           }

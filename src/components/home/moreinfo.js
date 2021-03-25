@@ -20,12 +20,6 @@ const Box = styled.div`
   display: grid;
 `
 
-const Mask = styled.div`
-  grid-area: 1/1;
-  background: rgba(0, 0, 0, 0.6);
-  position: relative;
-`
-
 const Content = styled.div`
   grid-area: 1/1;
   position: relative;
@@ -35,7 +29,7 @@ const Content = styled.div`
   background: rgba(0, 0, 0, 0.6);
   transition: .5s;
   transition-delay: .1s;
-  & :hover { background: rgba(194, 4, 48, 0.9); }
+  & :hover { background: rgba(194, 4, 48, 0.8); }
   & h2 { 
     color: var(--light);
     text-transform: uppercase;

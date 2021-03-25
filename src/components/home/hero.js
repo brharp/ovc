@@ -2,70 +2,74 @@ import React from "react";
 import { StaticQuery, graphql } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
-import { Container, Row, Col } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 
 // Social icons
 import {
   FaInstagram,
   FaFacebookSquare,
   FaTwitterSquare,
-  FaLinkedin
+  FaLinkedin,
+  FaYoutubeSquare
 } from "react-icons/fa";
 
-const Banner = styled.div`
-  position: relative;
-  overflow: hidden;
+const Section = styled.div`
+  display: grid;
+  justify-items: stretch;
   color: var(--light);
-  & h1 { font-size: 3em; }
-  & p { padding-top: 1rem; padding-bottom: 1rem; }
+  & h1 {
+    color: var(--light);
+    font-size: 3em;
+  }
+  & p { 
+    padding-top: 1rem;
+    padding-bottom 1rem;
+    font-weight: bold;
+  }
 `
 
-const Cover = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  z-index: -2;
+const GridContainer = styled(Container)`
+  display: grid;
 `
 
-const Shade = styled.div`
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.4);
-  z-index: -1;
+const Mask = styled.div`
+  grid-area: 1/1;
+  background-color: var(--red);
+  background: linear-gradient(157.5deg, var(--red) 30%, rgba(194,4,48,0.5));
+  position: relative;
+  justify-self: stretch;
+  display: grid;
 `
 
 const Content = styled.div`
-  font-size: 1.5em;
-  border-bottom: 4px solid var(--yellow);
-  padding: 4rem;
-  margin-bottom: 2rem;
-  background-color: rgba(0,0,0,.4);
+  font-size: 1.2em;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  @media (min-width: 1200px) {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 3fr 2fr;
+  }
+`
+
+const Masthead = styled.div`
+  grid-area: 1/1;
 `
 
 const Icons = styled.div`
-  font-size: 3em;
-  padding-left: 15px;
-  padding-right: 15px;
-  > h2  { color: var(--light); }
+  grid-area: 1/1/1/3;
+  justify-self: end;
+  > h3  { color: var(--light); }
+  & svg { font-size: 2.5em; }
   // On large displays, rotate social icons 90 deg
-  @media (min-width: 992px) {
-    transform:  translateY(-50%) rotate(-90deg);
-    top: 50%;
-    position: absolute;
-    right: 0;
+  @media (min-width: 1200px) {
+    transform:  rotate(-90deg);
     > svg { transform: rotate(90deg); }
   }
 `
 
-const Y = styled.span`
+const Yellow = styled.span`
   color: var(--yellow);
-`
-
-const HeroContainer = styled(Container)`
-  position: relative;
-  padding-top: 8rem;
-  padding-bottom: 8rem;
 `
 
 const HeroComponent = ( props ) =>
@@ -81,30 +85,29 @@ const HeroComponent = ( props ) =>
       }
     `}
     render={ ( data ) =>
-      <Banner>
-        <Cover>
-          <StaticImage src="../images/portico--banner.jpg" layout="fullWidth" 
-                      style={{height: "100%"}} />
-        </Cover>
-        <Shade/>
-        <HeroContainer>
-          <Row>
-            <Col lg={9}>
-              <Content>
+      <Section>
+        <StaticImage src="../../images/portico--banner.jpg" layout="fullWidth" 
+                     style={{gridArea: "1/1", maxHeight: "100%" }} />
+        <Mask>
+          <GridContainer>
+            <Content>
+              <Masthead>
                 <h1>{ data.site.siteMetadata.title }</h1>
                 <p>{ data.site.siteMetadata.slogan }</p>
-              </Content>
-            </Col>
-            <Icons>
-              <h2>Connect <Y>with OVC</Y></h2>
-              <FaInstagram/>
-              <FaLinkedin/>
-              <FaFacebookSquare />
-              <FaTwitterSquare />
-            </Icons>
-          </Row>
-        </HeroContainer>
-      </Banner>
+                <hr/>
+              </Masthead>
+              <Icons>
+                <h3>Connect <Yellow>with OVC</Yellow></h3>
+                <FaInstagram/>
+                <FaLinkedin/>
+                <FaFacebookSquare />
+                <FaTwitterSquare />
+                <FaYoutubeSquare />
+              </Icons>
+            </Content>
+          </GridContainer>
+        </Mask>
+      </Section>
     }
   />
 
