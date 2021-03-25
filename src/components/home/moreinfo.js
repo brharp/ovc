@@ -63,7 +63,8 @@ function MoreInfo(props) {
           <h2>{props.title}</h2>
 	  <h3>{props.subtitle}</h3>
 	  <p className="mh-notouch-0">{props.description}</p>
-	  <a href="https://ovc.uoguelph.ca/" className='btn btn-lg btn-outline-light'>
+	  <a href="https://ovc.uoguelph.ca/"
+	     className='btn btn-lg btn-outline-light stretched-link'>
 	    See More
 	  </a>
 	</Content>
