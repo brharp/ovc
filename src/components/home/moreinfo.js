@@ -14,9 +14,6 @@ const Section = styled.div`
   @media (min-width: 992px) {
     grid-template-columns: repeat(3, 1fr);
   }
-  & div:hover {
-    background: rgba(255, 0, 0, 0.6);
-  }
 `
 
 const Box = styled.div`
@@ -38,7 +35,7 @@ const Content = styled.div`
   background: rgba(0, 0, 0, 0.6);
   transition: .5s;
   transition-delay: .1s;
-  & :hover { background: rgba(194, 4, 48, 0.6); }
+  & :hover { background: rgba(194, 4, 48, 0.9); }
   & h2 { 
     color: var(--light);
     text-transform: uppercase;
@@ -47,7 +44,8 @@ const Content = styled.div`
     padding-bottom: 1rem;
     align-self: stretch;
   }
-  & h3 { color: var(--yellow); }
+  & h3 { color: var(--yellow); transition: .5s; }
+  & :hover h3 { color: var(--light); }
   & p { transition: 1s;  overflow: hidden;}
   & :hover p { max-height: 6em; }
   display: flex;
