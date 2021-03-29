@@ -34,8 +34,8 @@ const GridContainer = styled(Container)`
 
 const Mask = styled.div`
   grid-area: 1/1;
-  background-color: var(--red);
-  background: linear-gradient(157.5deg, var(--red) 30%, rgba(194,4,48,0.5));
+  background-color: black;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.2));
   position: relative;
   justify-self: stretch;
   display: grid;
@@ -47,7 +47,7 @@ const Content = styled.div`
   padding-bottom: 4rem;
   @media (min-width: 1200px) {
     display: grid;
-    align-items: center;
+    align-items: end;
     grid-template-columns: 3fr 2fr;
   }
 `
@@ -59,6 +59,7 @@ const Masthead = styled.div`
 const Icons = styled.div`
   grid-area: 1/1/1/3;
   justify-self: end;
+  align-self: center;
   > h3  { color: var(--light); }
   & svg { font-size: 2.5em; }
   // On large displays, rotate social icons 90 deg
