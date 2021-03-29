@@ -1,13 +1,17 @@
 import React from "react";
 import { StaticImage } from 'gatsby-plugin-image';
+import { Container } from "react-bootstrap"
 import styled from "styled-components";
 import MoreInfoData from "../../../content/home/moreinfo.yml"
 
 const Section = styled.div`
+  padding-top: 16px;
+  padding-bottom: 16px;
+`
+
+const Content = styled.div`
   display: grid;
-  max-width: 1920px;
-  margin-left: auto;
-  margin-right: auto;
+  grid-gap: 16px;
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -16,32 +20,30 @@ const Section = styled.div`
   }
 `
 
-const Box = styled.div`
+const Item = styled.div`
   display: grid;
 `
 
-const Content = styled.div`
+const ItemContent = styled.div`
   grid-area: 1/1;
   position: relative;
   padding: 24px;
   align-self: stretch;
   color: var(--light);
   background: rgba(0, 0, 0, 0.6);
-  transition: .5s;
-  transition-delay: .1s;
-  & :hover { background: rgba(194, 4, 48, 0.8); }
+  background: linear-gradient(45deg, black, transparent);
   & h2 { 
     color: var(--light);
-    text-transform: uppercase;
     font-size: 3.5rem;
     border-bottom: 1px solid var(--light);
     padding-bottom: 1rem;
     align-self: stretch;
   }
-  & h3 { color: var(--yellow); transition: .5s; }
-  & :hover h3 { color: var(--light); }
-  & p { transition: 1s;  overflow: hidden;}
-  & :hover p { max-height: 6em; }
+  & h3 {
+    color: var(--yellow);
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+  }
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -50,30 +52,32 @@ const Content = styled.div`
 
 function MoreInfo(props) {
     return (
-      <Box>
+      <Item>
         <StaticImage src="../../images/golden-retriever.jpg" alt=""
                      layout="fullWidth" style={{gridArea: "1/1"}} />
-	<Content>
+	<ItemContent>
           <h2>{props.title}</h2>
 	  <h3>{props.subtitle}</h3>
-	  <p className="mh-notouch-0">{props.description}</p>
-	  <a href="https://ovc.uoguelph.ca/"
-	     className='btn btn-lg btn-outline-light stretched-link'>
+	  <a href={props.link} className='btn btn-lg btn-primary stretched-link'>
 	    See More
 	  </a>
-	</Content>
-      </Box>
+	</ItemContent>
+      </Item>
     )
 }
 
 const MoreInfoComponent = ( props ) =>
   <Section>
-    {
-      MoreInfoData.map((data,index) => {
-        return <MoreInfo key={`feature_${index}`} index={index} title={data.title} subtitle={data.subtitle}
-                        description={data.description} />
-    })
-    }
+    <Container>
+      <Content>
+        {
+          MoreInfoData.map((data,index) => {
+            return <MoreInfo key={`feature_${index}`} index={index} title={data.title} subtitle={data.subtitle}
+                             description={data.description} />
+          })
+        }
+      </Content>
+    </Container>
   </Section>
 
 export default MoreInfoComponent
