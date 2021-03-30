@@ -3,41 +3,46 @@ const yaml = require('js-yaml')
 const path = require('path')
 const slugify = require('slugify')
 
+function isDrupalNode(node) {
+  return node.internal.owner === `gatsby-source-drupal` &&
+         node.internal.type.substring(0, 6) === `node__`
+}
+
 exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions
-    if (node.internal.type === `node__article`) {
-	const slug = slugify(node.title)
-	createNodeField({
-	    node,
-	    name: `slug`,
-	    value: slug,
-	})
+    if (isDrupalNode(node)) {
+      const slug = node.path.alias || '/node/' + node.drupal_internal__nid
+      createNodeField({
+        node,
+        name: `slug`,
+        value: slug,
+      })
     }
 }
 
 exports.createPages = async ({ graphql, actions }) => {
-    const { createPage } = actions
+  const { createPage } = actions
 
-    // Create article pages
-    const result = await graphql(`
-        query {
-	    allNodeArticle {
-		edges {
-		    node {
-			fields {
-			    slug
-			}
-		    }
-		}
-	    }
-	}`)
-    result.data.allNodeArticle.edges.forEach(({ node }) => {
-	createPage({
-	    path: node.fields.slug,
-	    component: path.resolve(`./src/templates/article.js`),
-	    context: {
-		slug: node.fields.slug,
-	    },
-	})
+  // Create article pages
+  const result = await graphql(`
+    query {
+      allNodeArticle {
+        edges {
+          node {
+            fields {
+              slug
+            }
+          }
+        }
+      }
+  }`)
+  result.data.allNodeArticle.edges.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve(`./src/templates/article.js`),
+      context: {
+        slug: node.fields.slug,
+      },
     })
+  })
 }
