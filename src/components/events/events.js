@@ -52,12 +52,12 @@ export default function Events(props) {
     <StaticQuery
       query={graphql`
         query {
-          allNodeEvent(sort: {fields: field_date, order: ASC}) {
+          allNodeEvent(sort: {fields: field_start_time, order: ASC}) {
             edges {
               node {
-                field_date
-                month: field_date(formatString: "MMM")
-                date: field_date(formatString: "D")
+                field_start_time
+                month: field_start_time(formatString: "MMM")
+                date: field_start_time(formatString: "D")
                 title
               }
             }

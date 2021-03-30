@@ -1,11 +1,12 @@
-const fs = require("fs")
-const yaml = require("js-yaml")
-const path = require(`path`)
+const fs = require('fs')
+const yaml = require('js-yaml')
+const path = require('path')
+const slugify = require('slugify')
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
     const { createNodeField } = actions
     if (node.internal.type === `node__article`) {
-	const slug = node.path.alias
+	const slug = slugify(node.title)
 	createNodeField({
 	    node,
 	    name: `slug`,
