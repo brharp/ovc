@@ -40,12 +40,21 @@ const Date = styled.div`
 
 const EventDetails = styled.div`
   font-weight: 700;
-  font-size: 1.2em;
+  font-size: 1em;
   background: white;
   padding: 1em;
   overflow: hidden;
+  display: grid;
 `
 
+const EventDetailsMask = styled.div`
+  background: linear-gradient(0deg,white,rgba(255,255,255,0.9) 30%, transparent 50%);
+  grid-area: 1/1;
+`
+
+const EventDetailsContent = styled.div`
+  grid-area: 1/1;
+`
 
 export default function Events(props) {
   return (
@@ -72,11 +81,16 @@ export default function Events(props) {
               {
                 data.allNodeEvent?.edges.map(({ node }, index ) => {
                   return <EventListItem key={index}>
-                             <EventDate>
-                               <Month>{node.month}</Month>
-                               <Date>{node.date}</Date>
-                             </EventDate>
-                           <EventDetails>{node.title}</EventDetails>
+                           <EventDate>
+                             <Month>{node.month}</Month>
+                             <Date>{node.date}</Date>
+                           </EventDate>
+                           <EventDetails>
+                             <EventDetailsContent>
+                               {node.title}
+                             </EventDetailsContent>
+                             <EventDetailsMask />
+                           </EventDetails>
                          </EventListItem>
                 })
               }
