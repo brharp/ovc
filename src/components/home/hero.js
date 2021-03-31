@@ -65,7 +65,7 @@ const Icons = styled.div`
   & svg { font-size: 2.5em; }
   // On large displays, rotate social icons 90 deg
   @media (min-width: 1200px) {
-    transform:  rotate(-90deg) translateX(4rem);
+    transform:  translate(8rem, -4rem) rotate(-90deg);
     > svg { transform: rotate(90deg); }
   }
 `
