@@ -5,8 +5,8 @@ import styled from "styled-components";
 import MoreInfoData from "../../../content/home/moreinfo.yml"
 
 const Section = styled.div`
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 16px;
+  padding-bottom: 16px;
   background: rgba(194, 4, 48, 0.03);
 `
 
@@ -23,6 +23,16 @@ const Content = styled.div`
 
 const Item = styled.div`
   display: grid;
+  overflow: hidden;
+  & .gatsby-image-wrapper {
+    transition: 0.5s;
+    //transform: scale(1.2);
+    transform: scale(1);
+  }
+  & :hover .gatsby-image-wrapper {
+    //transform: scale(1);
+    transform: scale(1.2);
+  }
 `
 
 const ItemContent = styled.div`
