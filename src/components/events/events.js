@@ -44,16 +44,19 @@ const EventDetails = styled.div`
   background: white;
   padding: 1em;
   overflow: hidden;
-  display: grid;
+  position: relative;
 `
 
 const EventDetailsMask = styled.div`
-  background: linear-gradient(0deg,white,rgba(255,255,255,0.9) 30%, transparent 50%);
-  grid-area: 1/1;
+  background: linear-gradient(0deg,white,transparent 2.5em);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 `
 
 const EventDetailsContent = styled.div`
-  grid-area: 1/1;
 `
 
 export default function Events(props) {
