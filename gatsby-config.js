@@ -51,12 +51,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-source-instagram`,
-      options: {
-        username: 'ontvetcollege',
-      },
-    },
-    {
       resolve: "gatsby-plugin-google-tagmanager",
       options: {
         id: "GTM-NRSSDKW",
