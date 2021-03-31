@@ -5,14 +5,14 @@ import styled from "styled-components";
 import MoreInfoData from "../../../content/home/moreinfo.yml"
 
 const Section = styled.div`
-  padding-top: 16px;
-  padding-bottom: 16px;
+  padding-top: 30px;
+  padding-bottom: 30px;
   background: rgba(194, 4, 48, 0.03);
 `
 
 const Content = styled.div`
   display: grid;
-  grid-gap: 16px;
+  grid-gap: 30px;
   @media (min-width: 768px) {
     grid-template-columns: repeat(2, 1fr);
   }
