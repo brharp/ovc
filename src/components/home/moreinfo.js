@@ -1,8 +1,8 @@
 import React from "react";
-import { StaticImage } from 'gatsby-plugin-image';
+import { StaticQuery, graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Container } from "react-bootstrap"
 import styled from "styled-components";
-import MoreInfoData from "../../../content/home/moreinfo.yml"
 
 const Section = styled.div`
   padding-top: 30px;
@@ -11,13 +11,11 @@ const Section = styled.div`
 `
 
 const Content = styled.div`
-  display: grid;
-  grid-gap: 30px;
-  @media (min-width: 768px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
   @media (min-width: 992px) {
-    grid-template-columns: repeat(3, 1fr);
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 350px);
+    grid-auto-rows: 350px;
   }
 `
 
@@ -26,12 +24,14 @@ const Item = styled.div`
   overflow: hidden;
   & .gatsby-image-wrapper {
     transition: 0.5s;
-    //transform: scale(1.2);
-    transform: scale(1);
   }
   & :hover .gatsby-image-wrapper {
-    //transform: scale(1);
-    transform: scale(1.2);
+    transform: scale(1.05);
+  }
+  @media (max-width: 992px) {
+    & :not(:last-child) {
+      margin-bottom: 30px;
+    }
   }
 `
 
@@ -46,14 +46,13 @@ const ItemContent = styled.div`
   & h2 { 
     color: var(--light);
     font-size: 3.5rem;
-    border-bottom: 1px solid var(--light);
-    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
     align-self: stretch;
   }
   & h3 {
     color: var(--yellow);
     font-size: 2.4rem;
-    margin-bottom: 1rem;
+    font-weight: normal;
   }
   display: flex;
   flex-direction: column;
@@ -62,13 +61,17 @@ const ItemContent = styled.div`
 `
 
 function MoreInfo(props) {
+    const p = [ [ 1, 2 ], [ 2, 4 ], [ 1, 3 ], [ 3, 4 ] ]
+    const i = props.index
+    const r = Math.floor(i/2) + 1
+    const c = p[ i % p.length ]
     return (
-      <Item>
-        <StaticImage src="../../images/golden-retriever.jpg" alt=""
+      <Item style={{gridArea: `${r}/${c[0]}/${r+1}/${c[1]}`}}>
+        <GatsbyImage image={getImage(props.image)} alt=""
                      layout="fullWidth" style={{gridArea: "1/1"}} />
 	<ItemContent>
-          <h2>{props.title}</h2>
 	  <h3>{props.subtitle}</h3>
+          <h2>{props.title}</h2>
 	  <a href={props.link} className='btn btn-lg btn-primary stretched-link'>
 	    See More
 	  </a>
@@ -77,20 +80,52 @@ function MoreInfo(props) {
     )
 }
 
-const MoreInfoComponent = ( props ) =>
-  <Section>
-    <Container>
-      <Content>
-        {
-          MoreInfoData.map((data,index) => {
-            return <MoreInfo key={`feature_${index}`} index={index} title={data.title} subtitle={data.subtitle}
-                             description={data.description} />
-          })
+
+
+
+class MoreInfoComponent extends React.Component {
+  render() {
+    return <StaticQuery
+      query={graphql`
+        query {
+          allFeaturesYaml {
+            edges {
+              node {
+                id
+                title
+                subtitle
+                description
+                image {
+                  childImageSharp {
+                    gatsbyImageData
+                  }
+                }
+              }
+            }
+          }
         }
-      </Content>
-    </Container>
-  </Section>
+      `}
+      render={(data) => 
+        <Section>
+          <Container>
+            <Content>
+              {
+                data.allFeaturesYaml.edges.map((data,index) => {
+                  return <MoreInfo key={`feature_${index}`}
+                                   index={index}
+                                   title={data.node.title}
+                                   subtitle={data.node.subtitle}
+                                   description={data.node.description}
+                                   image={data.node.image} />
+                })
+              }
+            </Content>
+          </Container>
+        </Section>
+      }
+    />
+  }
+}
 
 export default MoreInfoComponent
-
 

@@ -1,0 +1,24 @@
+- title: Explore
+  subtitle: Start your journey
+  description: Sign up for insider advice that can help you now and in the future.
+  image: ../images/cat.jpg
+- title: Learn
+  subtitle: Find your passion 
+  description: Sign up for insider advice that can help you now and in the future.
+  image: ../images/chicken.jpg
+- title: Work
+  subtitle: People are our power
+  description: Sign up for insider advice that can help you now and in the future.
+  image: ../images/dog.jpg
+- title: Collaborate
+  subtitle: Together we are stronger
+  description: Sign up for insider advice that can help you now and in the future.
+  image: ../images/frog.png
+- title: Get care
+  subtitle: Ensuring the best services
+  description: Sign up for insider advice that can help you now and in the future.
+  image: ../images/horse.jpg
+- title: Give
+  subtitle: Share our vision
+  description: Sign up for insider advice that can help you now and in the future.
+  image: ../images/sheep.jpg
