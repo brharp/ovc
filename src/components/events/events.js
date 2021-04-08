@@ -1,5 +1,6 @@
 import React from "react";
 import { graphql, StaticQuery } from "gatsby";
+import { StaticImage } from "gatsby-plugin-image";
 import styled from "styled-components";
 
 const EventWrapper = styled.div`
@@ -78,6 +79,11 @@ export default function Events(props) {
       `}
       render={data => {
         return (
+    <div style={{position: "relative", zIndex: "1", overflow: "hidden"}}>
+      <StaticImage src="../../images/university-centre.jpg" alt="" layout="fullWidth"
+                   style={{position:"absolute",width:"100%",height:"100%",zIndex:"-1"}}/>
+      <div style={{background: "rgba(0, 0, 0, .5)"}}>
+        <div className="container">
           <EventWrapper>
             <h1 style={{color: "var(--yellow)"}}>Upcoming Events</h1>
             <EventList>
@@ -99,6 +105,9 @@ export default function Events(props) {
               }
             </EventList>
           </EventWrapper>
+        </div>
+      </div>
+    </div>
         )
       }}
     />

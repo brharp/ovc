@@ -47,7 +47,7 @@ const ItemContent = styled.div`
   background: linear-gradient(90deg, black, rgba(0, 0, 0, .5) 350px, transparent);
   transition:  0.5s;
   & :hover {
-    background: linear-gradient(90deg, black, rgba(0, 0, 0, .5));
+    background: linear-gradient(90deg, black, rgba(0, 0, 0, .6) 350px);
     h3 {
       margin-bottom: 0.75rem;
     }

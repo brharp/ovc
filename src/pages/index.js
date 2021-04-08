@@ -3,7 +3,6 @@ import Layout from '../components/layout';
 import React from 'react';
 import SEO from '../components/seo';
 import { graphql } from 'gatsby';
-import { StaticImage } from 'gatsby-plugin-image';
 
 // Custom component imports
 import Hero from "../components/home/hero";
@@ -20,15 +19,7 @@ const IndexPage = ({ data }) => (
     <Hero />
     <MoreInfo />
     <News/>
-    <div style={{position: "relative", zIndex: "1", overflow: "hidden"}}>
-      <StaticImage src="../images/university-centre.jpg" alt="" layout="fullWidth"
-                   style={{position:"absolute",width:"100%",height:"100%",zIndex:"-1"}}/>
-      <div style={{background: "rgba(0, 0, 0, .5)"}}>
-        <div className="container">
-          <Events/>
-        </div>
-      </div>
-    </div>
+    <Events/>
     <QuickLinks/>
   </Layout>
 )
