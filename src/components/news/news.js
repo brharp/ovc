@@ -2,18 +2,36 @@
 import React from 'react';
 import { graphql, StaticQuery } from 'gatsby';
 import { getImage } from "gatsby-plugin-image";
-import { Container } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import styled from "styled-components";
 import Article from "./article";
 
 const Rule = styled.hr`
-  margin-left: 0;
-  width: 25%;
+  width: 100px;
 `
 
 const NewsContainer = styled(Container)`
   padding-top: 4rem;
   padding-bottom: 4rem;
+  & h1 {
+    text-align: center;
+    color: var(--dark);
+  }
+  & hr {
+    margin-left: auto;
+    margin-right: auto;
+  }
+`
+
+const Title = styled.div`
+  margin-top: 4rem;
+  margin-bottom: 8rem;
+`
+
+const Newsfeed = styled.div`
+  text-align: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 `
 
 const NewsComponent = ({ data }) => {
@@ -61,9 +79,11 @@ const NewsComponent = ({ data }) => {
       `}
       render={data => (
         <NewsContainer>
-        <h1>Featured news</h1>
-        <Rule/>
-        <div className="row" >
+          <Title>
+            <h1>Featured News</h1>
+            <Rule/>
+          </Title>
+        <div className="row">
           <div className="col-md-6">
             {
               data.leadArticle.edges.map(( { node }, index ) => {
@@ -74,7 +94,7 @@ const NewsComponent = ({ data }) => {
               })
             }
           </div>
-          <div className="col-md-6" style={{borderLeft: "1px solid #eee", paddingLeft: "24px" }}>
+          <div className="col-md-6">
             {
               data.moreArticles.edges.map(( { node }, index ) => {
                 const image = getImage(node.relationships?.field_image.localFile.childImageSharp.gatsbyImageData)
@@ -85,6 +105,11 @@ const NewsComponent = ({ data }) => {
                        </div>
               })
             }
+          <Newsfeed>
+	    <Button variant="outline-primary" size="lg">
+	      View Newsfeed
+	    </Button>
+	  </Newsfeed>
           </div>
         </div>
         </NewsContainer>

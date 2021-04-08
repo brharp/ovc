@@ -5,10 +5,10 @@ import ReadMore from "./readmore";
 export default function Article(props) {
     const isLead = props.lead
     return (
-      <div className="row">
+      <div className="row" style={{marginBottom: "3rem"}}>
 	<div className={`col-lg-${isLead?12:6}`}>
 	  <div style={{position: "relative"}}>
-	    <GatsbyImage image={props.image}/>
+	    <GatsbyImage image={props.image} />
 	    <small style={{
 	        position: "absolute",
 		left: "0",
@@ -23,8 +23,7 @@ export default function Article(props) {
 	</div>
 	<div className={`col-lg-${isLead?12:6}`}>
 	  <h3 style={{color: "#333", marginTop: "0"}}>{props.title}</h3>
-	  <hr style={{marginLeft: 0, width: "25%"}}/>
-	  <div dangerouslySetInnerHTML={{__html: props.summary}}></div>
+	  <p>{ props.summary }</p>
 	  <ReadMore/>
 	</div>
       </div>
