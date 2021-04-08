@@ -45,19 +45,27 @@ const ItemContent = styled.div`
   align-self: stretch;
   color: var(--light);
   background: linear-gradient(90deg, black, rgba(0, 0, 0, .5) 350px, transparent);
-  transition: 0.5s;
+  transition:  0.5s;
   & :hover {
     background: linear-gradient(90deg, black, rgba(0, 0, 0, .5));
+    h3 {
+      margin-bottom: 0.75rem;
+    }
+    h2 {
+      margin-bottom: 0.75rem;
+    }
   }
   & h2 { 
     color: var(--light);
     font-size: 3.5rem;
     align-self: stretch;
+    transition: 0.5s;
   }
   & h3 {
     color: var(--yellow);
     font-size: 2.4rem;
     font-weight: normal;
+    transition: 0.5s;
   }
   & a {
     color: var(--light);
