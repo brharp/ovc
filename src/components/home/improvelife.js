@@ -3,18 +3,19 @@ import { Container } from "react-bootstrap"
 import styled from "styled-components";
 
 const Section = styled.div`
-  padding-top: 30px;
+  padding-top: 60px;
   padding-bottom: 30px;
-  text-align: center;
   & h1 {
-    margin-top: 2rem;
     margin-bottom: 3rem;
+    text-align: center;
   }
   & p {
     max-width: 80ex;
-    text-align: center;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
   }
 `
 
