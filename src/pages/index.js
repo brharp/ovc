@@ -10,7 +10,7 @@ import ImproveLife from "../components/home/improvelife"
 import MoreInfo from "../components/home/moreinfo"
 import Events from "../components/events/events"
 import News from "../components/news/news"
-import QuickLinks from "../components/home/quicklinks"
+import Footer from "../components/home/footer"
 
 
 // Index page component
@@ -22,7 +22,7 @@ const IndexPage = ({ data }) => (
     <MoreInfo />
     <News/>
     <Events/>
-    <QuickLinks/>
+    <Footer/>
   </Layout>
 )
 
