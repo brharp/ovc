@@ -8,7 +8,7 @@ export default function Article(props) {
       <div className="row" style={{marginBottom: "3rem"}}>
 	<div className={`col-lg-${isLead?12:6}`}>
 	  <div style={{position: "relative"}}>
-	    <GatsbyImage image={props.image} />
+	    <GatsbyImage image={props.image} style={{maxWidth: "100%"}}/>
 	    <small style={{
 	        position: "absolute",
 		left: "0",
@@ -22,7 +22,7 @@ export default function Article(props) {
 	  </div>
 	</div>
 	<div className={`col-lg-${isLead?12:6}`}>
-	  <h3 style={{color: "#333", marginTop: "0"}}>{props.title}</h3>
+	  <h3 style={{ color: "var(--dark)" }}>{props.title}</h3>
 	  <p>{ props.summary }</p>
 	  <ReadMore/>
 	</div>

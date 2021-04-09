@@ -50,7 +50,12 @@ const NewsComponent = ({ data }) => {
             field_image {
               localFile {
                 childImageSharp {
-                  gatsbyImageData
+                  gatsbyImageData(
+                    width: 640,
+                    height: 480,
+                    transformOptions: {cropFocus: ENTROPY},
+                    layout: CONSTRAINED
+                  )
                 }
               }
             }
