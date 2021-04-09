@@ -6,6 +6,8 @@ import styled from "styled-components";
 
 const EventWrapper = styled.div`
   align-self: center;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 `
 
 const EventList = styled.ul`
@@ -105,7 +107,7 @@ export default function Events(props) {
         return (
           <Section>
             <StaticImage src="../../images/dog-banner.jpg" alt="" layout="fullWidth"
-                         style={{ maxHeight: "400px" }} />
+                         style={{ maxHeight: "500px" }} />
             <Mask>
               <GridContainer>
                 <EventWrapper>
