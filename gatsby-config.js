@@ -6,7 +6,7 @@
 
 module.exports = {
   siteMetadata: {
-    title: 'The OVC',
+    title: 'Ontario Veterinary College',
     description: 'The oldest veterinary school in Canada.',
     slogan: 'A world leader in advancing veterinary science, learning and research to improve the lives of animals, people and our planet.',
     author: 'The OVC Authors',

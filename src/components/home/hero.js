@@ -18,13 +18,14 @@ const Section = styled.div`
   justify-items: stretch;
   color: var(--light);
   & h1 {
-    color: var(--light);
+    color: var(--yellow);
     font-size: 3em;
   }
   & p { 
     padding-top: 1rem;
     padding-bottom 1rem;
     font-weight: bold;
+    font-size: 2.5rem;
   }
 `
 
@@ -49,7 +50,7 @@ const Content = styled.div`
   @media (min-width: 1200px) {
     display: grid;
     align-items: end;
-    grid-template-columns: 3fr 2fr;
+    grid-template-columns: 3fr 1fr;
   }
 `
 
@@ -96,7 +97,6 @@ const HeroComponent = ( props ) =>
               <Masthead>
                 <h1>{ data.site.siteMetadata.title }</h1>
                 <p>{ data.site.siteMetadata.slogan }</p>
-                <hr/>
               </Masthead>
               <Icons>
                 <h3>Connect <Yellow>with OVC</Yellow></h3>
