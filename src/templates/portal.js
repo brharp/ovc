@@ -4,11 +4,13 @@ import React from "react"
 import Layout from "../components/layout"
 import Banner from "../components/shared/banner"
 import Layers from "../components/shared/layers"
+import CallToAction from "../components/shared/calltoaction"
 
 class PortalPage extends React.Component {
   render() {
     const data = this.props.data
     const portal = data.portalsYaml
+    const cta = portal.cta
     return (
       <Layout>
         <Banner image={getImage(portal.image)}>
@@ -16,6 +18,11 @@ class PortalPage extends React.Component {
           <p>{portal.summary}</p>
         </Banner>
         <Layers topics={portal.sections} />
+        <CallToAction
+          title={cta.title}
+          url={cta.url}
+          image={getImage(cta.image)}
+          />
       </Layout>
     )
   }
@@ -38,7 +45,7 @@ export const query = graphql`
         url
         image {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
       }
