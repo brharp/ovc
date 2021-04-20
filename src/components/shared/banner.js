@@ -14,32 +14,30 @@ const Mask = styled.div`
   justify-self: stretch;
   place-self: stretch;
   padding-bottom: 4rem;
+  background: linear-gradient(22.5deg, black, transparent)
 `
 
 const Content = styled.div`
-  grid-area: 1/1;
-  align-self: end;
   color: var(--light);
-  & h2 {
-    font-size: 6.4rem;
+  font-size: 2.5rem;
+  & h1 {
     color: var(--yellow);
-  }
-  & h3 {
-    font-size: 4.2rem;
-    color: var(--white);
+    font-size: 8rem;
   }
   & .btn {
     margin-top: 1.5rem;
   }
 `
 
-class Hero extends React.Component {
+const Layout = styled.div`
+  grid-area: 1/1;
+  align-self: end;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+`
+
+class Banner extends React.Component {
   render () {
-    const align = this.props.align === Hero.AlignRight
-    const angle = align ? "337.5deg" : "22.5deg"
-    const text = align ? "right" : "left"
-    const justify = align ? "end" : "start"
-    const gradient = `linear-gradient(${angle}, black, transparent)`
     return (
       <Section>
         <GatsbyImage image={this.props.image}
@@ -48,11 +46,13 @@ class Hero extends React.Component {
                      aspectRatio={3/1}
                      alt=""
         />
-        <Mask style={{background: gradient}}>
-          <Container style={{position: "relative", display: "grid"}}>
-            <Content style={{textAlign: text, justifySelf: justify}}>
-              {this.props.children}
-            </Content>
+        <Mask>
+          <Container style={{display: "grid"}}>
+            <Layout>
+              <Content>
+                {this.props.children}
+              </Content>
+            </Layout>
           </Container>
         </Mask>
       </Section>
@@ -60,7 +60,5 @@ class Hero extends React.Component {
   }
 }
 
-Hero.AlignRight = "right"
-
-export default Hero
+export default Banner
 

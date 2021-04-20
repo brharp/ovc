@@ -45,4 +45,28 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+
+  // Create portal pages
+  const portals = await graphql(`
+    query {
+      allPortalsYaml {
+        edges {
+          node {
+            id
+            path
+          }
+        }
+      }
+    }
+  `)
+  portals.data.allPortalsYaml.edges.forEach(({ node }) => {
+    createPage({
+      path: node.path,
+      component: path.resolve(`./src/templates/portal.js`),
+      context: {
+        id: node.id,
+      },
+    })
+  })
 }
+

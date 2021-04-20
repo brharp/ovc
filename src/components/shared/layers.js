@@ -1,0 +1,95 @@
+import React from "react"
+import { getImage, GatsbyImage } from "gatsby-plugin-image"
+import styled from "styled-components"
+import { Container } from "react-bootstrap"
+
+const Section = styled.div`
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+`
+
+const Layout = styled.div`
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    & > * {
+      flex: 1;
+    }
+    & :nth-child(2n) {
+      flex-direction: row-reverse;
+    }
+  }
+`
+
+const Content = styled.div`
+  padding-top: 3rem;
+  padding-bottom: 1.5rem;
+  @media (min-width: 768px) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  & h2 {
+    margin-bottom: 1.5rem;
+  }
+  & h3 {
+    color: var(--dark);
+    margin-bottom: 1.5rem;
+    font-size: 2.5rem;
+  }
+  & p {
+    margin-bottom: 1.5rem;
+  }
+`
+
+class Topic extends React.Component {
+  render() {
+    return (
+      <Layout>
+        <GatsbyImage image={this.props.image}
+                     layout="fullWidth"
+                     alt="" />
+        <div>
+          <Content>
+            <h2>{this.props.title}</h2>
+            <h3>{this.props.subtitle}</h3>
+            <p>{this.props.summary}</p>
+            <p>
+            {
+              this.props.links.map((link, index) =>
+                <a href={link.url} className="btn btn-lg btn-primary">
+                  {link.title}
+                </a>
+              )
+            }
+            </p>
+          </Content>
+        </div>
+      </Layout>
+    )
+  }
+}
+
+class Layers extends React.Component {
+  render () {
+    return (
+      <Section>
+        <Container>
+          {
+            this.props.topics.map((topic, index) =>
+              <Topic key={`topic_${index}`}
+                     title={topic.title}
+                     subtitle={topic.subtitle}
+                     summary={topic.summary}
+                     image={getImage(topic.image)}
+                     links={topic.links} />
+            )
+          }
+        </Container>
+      </Section>
+    )
+  }
+}
+
+
+export default Layers
+

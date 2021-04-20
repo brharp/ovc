@@ -1,0 +1,30 @@
+- path: /collaborate
+  title: Collaborate
+  summary: The OVC as a long tradition of partnerships in research, development, teaching and learning. Working in collaboration with different industries can create a valuable network of organizations supporting each other across multiple disciplines.
+  image: ../images/labrador-retriever.jpg
+  cta:
+    - title: Contact to Collaborate
+      url: https://ovc.uoguelph.ca/
+      image: ../images/dog-banner.jpg
+  sections:
+    - title: Researchers
+      subtitle: The sectors of the OVC
+      image: ../images/labrador-retriever.jpg
+      summary: Lorem ipsum dolor sit amet consectetur adipiscing, elit congue vulputate accumsan facilisi molestie vivamus, malesuada pretium sapien fames suspendisse. Pellentesque cras gravida facilisis lectus nunc ut himenaeos felis consequat vitae id sed duis cum tristique senectus eu accumsan, integer iaculis bibendum egestas maecenas velit odio parturient praesent nibh facilisi justo mollis primis nisl libero. Feugiat maecenas elementum cursus risus hac vitae ultrices, ultricies dignissim ac ad scelerisque consequat nascetur mi, montes dui natoque proin convallis eget.
+      links:
+        - title: Explore Faculty
+          url: https://ovc.uoguelph.ca/
+    - title: Clients
+      subtitle: Ensuring the best services
+      image: ../images/labrador-retriever.jpg
+      summary: Lorem ipsum dolor sit amet consectetur adipiscing, elit congue vulputate accumsan facilisi molestie vivamus, malesuada pretium sapien fames suspendisse. Pellentesque cras gravida facilisis lectus nunc ut himenaeos felis consequat vitae id sed duis cum tristique senectus eu accumsan, integer iaculis bibendum egestas maecenas velit odio parturient praesent nibh facilisi justo mollis primis nisl libero. Feugiat maecenas elementum cursus risus hac vitae ultrices, ultricies dignissim ac ad scelerisque consequat nascetur mi, montes dui natoque proin convallis eget.
+      links:
+        - title: Explore Clinical Trials
+          url: https://ovc.uoguelph.ca/
+    - title: Industry
+      subtitle: Our network of cutting-edge facilities
+      image: ../images/labrador-retriever.jpg
+      summary: Lorem ipsum dolor sit amet consectetur adipiscing, elit congue vulputate accumsan facilisi molestie vivamus, malesuada pretium sapien fames suspendisse. Pellentesque cras gravida facilisis lectus nunc ut himenaeos felis consequat vitae id sed duis cum tristique senectus eu accumsan, integer iaculis bibendum egestas maecenas velit odio parturient praesent nibh facilisi justo mollis primis nisl libero. Feugiat maecenas elementum cursus risus hac vitae ultrices, ultricies dignissim ac ad scelerisque consequat nascetur mi, montes dui natoque proin convallis eget.
+      links:
+        - title: Explore Partners
+          url: https://ovc.uoguelph.ca/
