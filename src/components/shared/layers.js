@@ -55,7 +55,7 @@ class Topic extends React.Component {
             <p>{this.props.summary}</p>
             <p>
             {
-              this.props.links.map((link, index) =>
+              this.props.links?.map((link, index) =>
                 <a href={link.url} className="btn btn-lg btn-primary">
                   {link.title}
                 </a>

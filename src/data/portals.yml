@@ -28,3 +28,31 @@
       links:
         - title: Explore Partners
           url: https://ovc.uoguelph.ca/
+- path: /learn
+  title: Learn
+  summary: With faculty and administration sharing like-minded ideas on furthering animal care, research and innovative teaching methodologies, OVC offers a rich and intense learning environment to students. Teaching hospital and facilities specialize in large and small animals, with dedicated intensive and oncology care, mean the potential for hands-on and applied learning are endless.
+  image: ../images/learn/blackboard.jpg
+  cta:
+    title: Contact to Learn
+    url: https://ovc.uoguelph.ca/
+    image: ../images/learn/lecture-hall.jpg
+  sections:
+    - title: DVM Program
+      subtitle: 150 years of servicing our beloved animals.
+      image: ../images/learn/lecture.jpg
+      summary: Using a team based approach our many dedicated veterinary professions and technical staff are equipped to provide leading edge animal care using extensive and advanced diagnostic and treatment capabilities.
+    - title: Graduate Studies
+      subtitle: Ensuring the best services
+      image: ../images/learn/lecture.jpg
+      summary: Lorem ipsum dolor sit amet consectetur adipiscing, elit congue vulputate accumsan facilisi molestie vivamus, malesuada pretium sapien fames suspendisse. Pellentesque cras gravida facilisis lectus nunc ut himenaeos felis consequat vitae id sed duis cum tristique senectus eu accumsan, integer iaculis bibendum egestas maecenas velit odio parturient praesent nibh facilisi justo mollis primis nisl libero. Feugiat maecenas elementum cursus risus hac vitae ultrices, ultricies dignissim ac ad scelerisque consequat nascetur mi, montes dui natoque proin convallis eget.
+      links:
+        - title: Future Grad Student Page
+          url: https://ovc.uoguelph.ca/
+    - title: Bio-medical Science Major
+      subtitle: Our network of cutting-edge facilities
+      image: ../images/learn/lecture.jpg
+      summary: Lorem ipsum dolor sit amet consectetur adipiscing, elit congue vulputate accumsan facilisi molestie vivamus, malesuada pretium sapien fames suspendisse. Pellentesque cras gravida facilisis lectus nunc ut himenaeos felis consequat vitae id sed duis cum tristique senectus eu accumsan, integer iaculis bibendum egestas maecenas velit odio parturient praesent nibh facilisi justo mollis primis nisl libero. Feugiat maecenas elementum cursus risus hac vitae ultrices, ultricies dignissim ac ad scelerisque consequat nascetur mi, montes dui natoque proin convallis eget.
+      links:
+        - title: Explore Bio-medical Sciences
+          url: https://ovc.uoguelph.ca/
+
