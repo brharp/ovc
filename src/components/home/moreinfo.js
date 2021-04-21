@@ -14,8 +14,8 @@ const Content = styled.div`
   @media (min-width: 1200px) {
     display: grid;
     grid-gap: 30px;
-    grid-template-columns: repeat(3, 350px);
-    grid-auto-rows: 350px;
+    grid-template-columns: repeat(3, 436.66px);
+    grid-auto-rows: 436.66px;
   }
 `
 
