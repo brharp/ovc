@@ -6,6 +6,7 @@ import Banner from "../components/shared/banner"
 import Topics from "../components/shared/topics"
 import CallToAction from "../components/shared/calltoaction"
 import Resources from "../components/shared/resources"
+import Spotlight from "../components/shared/spotlight"
 
 class PortalPage extends React.Component {
   render() {
@@ -20,6 +21,7 @@ class PortalPage extends React.Component {
         </Banner>
         <Topics topics={portal.topics} />
         <Resources items={portal.resources} />
+        <Spotlight items={portal.spotlight} />
         <CallToAction
           title={cta.title}
           url={cta.url}
@@ -69,6 +71,20 @@ export const query = graphql`
         title
         icon
         description
+        links {
+          title
+          url
+        }
+      }
+      spotlight {
+        title
+        subtitle
+        description
+        image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
         links {
           title
           url
