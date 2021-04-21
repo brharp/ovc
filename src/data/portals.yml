@@ -55,4 +55,54 @@
       links:
         - title: Explore Bio-medical Sciences
           url: https://ovc.uoguelph.ca/
-
+  resources:
+    - title: Get Financial Aid
+      icon: fa-hand-holding-usd
+      description: Through bursaries, scholarships, and work study programs the OVC strives to ensure accessible education for students no matter their current financial standing.
+      links:
+        - title: Explore Financial Aid
+          url: https://ovc.uoguelph.ca/
+    - title: Experience
+      icon: fa-location-arrow
+      description: Educate veterinarians and scientists, create new knowledge and provide expert services to improve the health and well-being of animals, people, and the environment.
+      links:
+        - title: Explore Student Life
+          url: https://ovc.uoguelph.ca/
+    - title: Apply
+      icon: fa-graduation-cap
+      description: Opus Veterinum Civibus The Craft of the Veterinarian is for the Good of the Nation.
+      links:
+        - title: Explore Admissions
+          url: https://ovc.uoguelph.ca/
+- path: /care
+  title: Get Care
+  summary: The Ontario Veterinary College Health Sciences Centre is a network of specialty hospitals that provides services to over 16,000 companion animals, equine, farm animal and exotic species every year. Our team of experts carries expertise in areas such as Internal Medicine, oncology, and cardiology.
+  image: ../images/collaborate/labrador-retriever.jpg
+  cta:
+    title: Contact to Get Care
+    url: https://ovc.uoguelph.ca/
+    image: ../images/learn/lecture-hall.jpg
+  sections:
+    - title: The OVC Health Sciences Centre
+      subtitle: 150 years of servicing our beloved animals.
+      image: ../images/learn/lecture.jpg
+      summary: Using a team based approach our many dedicated veterinary professions and technical staff are equipped to provide leading edge animal care using extensive and advanced diagnostic and treatment capabilities.
+  resources:
+    - title: Referring Vets
+      icon: fa-asterisk
+      description: A world leader, integrating animal, human and environmental health through innovation, excellence and societal relevance.
+      links:
+        - title: Get a Referral
+          url: https://ovc.uoguelph.ca/
+    - title: Clients
+      icon: fa-location-arrow
+      description: Educate veterinarians and scientists, create new knowledge and provide expert services to improve the health and well-being of animals, people, and the environment.
+      links:
+        - title: Client Information
+          url: https://ovc.uoguelph.ca/
+    - title: Hospitals
+      icon: fa-hospital-symbol
+      description: Opus Veterinum Civibus The Craft of the Veterinarian is for the Good of the Nation.
+      links:
+        - title: Explore Hospitals
+          url: https://ovc.uoguelph.ca/

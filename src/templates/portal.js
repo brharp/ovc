@@ -5,6 +5,7 @@ import Layout from "../components/layout"
 import Banner from "../components/shared/banner"
 import Layers from "../components/shared/layers"
 import CallToAction from "../components/shared/calltoaction"
+import Resources from "../components/shared/resources"
 
 class PortalPage extends React.Component {
   render() {
@@ -18,6 +19,7 @@ class PortalPage extends React.Component {
           <p>{portal.summary}</p>
         </Banner>
         <Layers topics={portal.sections} />
+        <Resources items={portal.resources} />
         <CallToAction
           title={cta.title}
           url={cta.url}
@@ -58,6 +60,15 @@ export const query = graphql`
             gatsbyImageData
           }
         }
+        links {
+          title
+          url
+        }
+      }
+      resources {
+        title
+        icon
+        description
         links {
           title
           url
