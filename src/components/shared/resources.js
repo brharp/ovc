@@ -67,6 +67,7 @@ class Resources extends React.Component {
                 <Region key={`item_${index}`}>
                   <h2>
                     <Icon icon={item.icon} />
+                    <br/>
                     { item.title }
                   </h2>
                   <p>{ item.description }</p>
