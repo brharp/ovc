@@ -8,6 +8,7 @@ const Section = styled.div`
   & h1 {
     margin-bottom: 3rem;
     text-align: center;
+    font-size: 6rem;
   }
   & p {
     max-width: 80ex;
