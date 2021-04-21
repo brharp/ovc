@@ -69,7 +69,7 @@ class Topic extends React.Component {
   }
 }
 
-class Layers extends React.Component {
+class Topics extends React.Component {
   render () {
     return (
       <Section>
@@ -91,5 +91,5 @@ class Layers extends React.Component {
 }
 
 
-export default Layers
+export default Topics
 

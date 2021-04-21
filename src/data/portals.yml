@@ -6,7 +6,7 @@
     title: Contact to Collaborate
     url: https://ovc.uoguelph.ca/
     image: ../images/dog-banner.jpg
-  sections:
+  topics:
     - title: Researchers
       subtitle: The sectors of the OVC
       image: ../images/collaborate/labrador-retriever.jpg
@@ -36,7 +36,7 @@
     title: Contact to Learn
     url: https://ovc.uoguelph.ca/
     image: ../images/learn/lecture-hall.jpg
-  sections:
+  topics:
     - title: DVM Program
       subtitle: 150 years of servicing our beloved animals.
       image: ../images/learn/lecture.jpg
@@ -82,7 +82,7 @@
     title: Contact to Get Care
     url: https://ovc.uoguelph.ca/
     image: ../images/learn/lecture-hall.jpg
-  sections:
+  topics:
     - title: The OVC Health Sciences Centre
       subtitle: 150 years of servicing our beloved animals.
       image: ../images/learn/lecture.jpg

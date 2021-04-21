@@ -3,7 +3,7 @@ import { getImage} from "gatsby-plugin-image"
 import React from "react"
 import Layout from "../components/layout"
 import Banner from "../components/shared/banner"
-import Layers from "../components/shared/layers"
+import Topics from "../components/shared/topics"
 import CallToAction from "../components/shared/calltoaction"
 import Resources from "../components/shared/resources"
 
@@ -18,7 +18,7 @@ class PortalPage extends React.Component {
           <h1>{portal.title}</h1>
           <p>{portal.summary}</p>
         </Banner>
-        <Layers topics={portal.sections} />
+        <Topics topics={portal.topics} />
         <Resources items={portal.resources} />
         <CallToAction
           title={cta.title}
@@ -51,7 +51,7 @@ export const query = graphql`
           }
         }
       }
-      sections {
+      topics {
         title
         subtitle
         summary
