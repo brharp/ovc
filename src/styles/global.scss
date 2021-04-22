@@ -37,13 +37,24 @@ $headings-color:    $red;
 $hr-border-color:   $yellow;
 $hr-border-width:   4px;
 
+
 // Fonts
 
 $font-family-sans-serif: Roboto, Arial, sans-serif;
 
+
 // Options
 
 $enable-rounded:  false;
+
+
+// Buttons and forms
+
+$input-btn-padding-y: .5625rem;
+$input-btn-padding-x: 1.5rem;
+
+$input-btn-padding-y-lg: .75rem;
+$input-btn-padding-x-lg: 4rem;
 
 
 // Grid containers

@@ -16,7 +16,6 @@ const Section = styled.div`
 const Content = styled.div`
   & .btn {
     font-size: 3rem;
-    padding: 1.5rem 2rem;
   }
 `
 
@@ -39,7 +38,7 @@ class CallToAction extends React.Component {
           />
           <Layout>
             <Content>
-              <a href={this.props.url} className="btn btn-primary">
+              <a href={this.props.url} className="btn btn-lg btn-primary">
                 {this.props.title}
               </a>
             </Content>
