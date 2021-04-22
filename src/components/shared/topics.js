@@ -9,6 +9,11 @@ const Section = styled.div`
 `
 
 const Layout = styled.div`
+  display: grid;
+  grid-gap: 3rem;
+`
+
+const TopicLayout = styled.div`
   @media (min-width: 768px) {
     display: flex;
     flex-direction: row;
@@ -44,7 +49,7 @@ const Content = styled.div`
 class Topic extends React.Component {
   render() {
     return (
-      <Layout>
+      <TopicLayout>
         <GatsbyImage image={this.props.image}
                      layout="fullWidth"
                      alt="" />
@@ -64,7 +69,7 @@ class Topic extends React.Component {
             </p>
           </Content>
         </div>
-      </Layout>
+      </TopicLayout>
     )
   }
 }
@@ -74,16 +79,18 @@ class Topics extends React.Component {
     return (
       <Section>
         <Container>
-          {
-            this.props.topics.map((topic, index) =>
-              <Topic key={`topic_${index}`}
-                     title={topic.title}
-                     subtitle={topic.subtitle}
-                     summary={topic.summary}
-                     image={getImage(topic.image)}
-                     links={topic.links} />
-            )
-          }
+          <Layout>
+            {
+              this.props.topics.map((topic, index) =>
+                <Topic key={`topic_${index}`}
+                       title={topic.title}
+                       subtitle={topic.subtitle}
+                       summary={topic.summary}
+                       image={getImage(topic.image)}
+                       links={topic.links} />
+              )
+            }
+          </Layout>
         </Container>
       </Section>
     )
