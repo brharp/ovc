@@ -90,10 +90,6 @@ const Mask = styled.div`
   display: grid;
 `
 
-const GridContainer = styled(Container)`
-  display: grid;
-`
-
 export default function Events(props) {
   return (
     <StaticQuery
