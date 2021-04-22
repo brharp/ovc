@@ -33,7 +33,7 @@ class CallToAction extends React.Component {
       <Container>
         <Section>
           <GatsbyImage image={this.props.image}
-                     style={{gridArea: "1/1", maxHeight: "250px"}}
+                     style={{gridArea: "1/1", maxHeight: "200px"}}
                      layout="fullWidth"
                      alt=""
           />
