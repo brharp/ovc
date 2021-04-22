@@ -11,9 +11,18 @@ const Section = styled.div`
 `
 
 const Content = styled.div`
-  @media (min-width: 1200px) {
+  grid-gap: 3rem;
+  @media (max-width: 992px) {
+    & > :not(:last-child) {
+      margin-bottom: 3rem;
+    }
+  }
+  @media (min-width: 992px) {
     display: grid;
-    grid-gap: 30px;
+    grid-template-columns: repeat(3, 300px);
+    grid-auto-rows: 300px;
+  }
+  @media (min-width: 1432px) {
     grid-template-columns: repeat(3, 436.66px);
     grid-auto-rows: 436.66px;
   }
@@ -28,11 +37,6 @@ const Item = styled.div`
   & :hover {
     .gatsby-image-wrapper {
       transform: scale(1.05);
-    }
-  }
-  @media (max-width: 1200px) {
-    & :not(:last-child) {
-      margin-bottom: 30px;
     }
   }
 `

@@ -37,6 +37,9 @@ $headings-color:    $red;
 $hr-border-color:   $yellow;
 $hr-border-width:   4px;
 
+// Fonts
+
+$font-family-sans-serif: Roboto, Arial, sans-serif;
 
 // Options
 
@@ -49,12 +52,19 @@ $enable-rounded:  false;
 @import "../../node_modules/bootstrap/scss/variables";
 @import "../../node_modules/bootstrap/scss/mixins";
 
-$container-max-widths:
-(
+$container-max-widths: (
   sm: 540px,
   md: 720px,
   lg: 960px,
   xl: 1400px
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1432px
 );
 
 @import "../../node_modules/bootstrap/scss/root";
