@@ -6,8 +6,8 @@ import styled from "styled-components";
 import { FaAngleRight } from "react-icons/fa";
 
 const Section = styled.div`
-  padding-top: 30px;
-  padding-bottom: 30px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 `
 
 const Content = styled.div`

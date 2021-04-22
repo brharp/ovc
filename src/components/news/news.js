@@ -11,8 +11,8 @@ const Rule = styled.hr`
 `
 
 const NewsContainer = styled(Container)`
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  margin-top: 12rem;
+  margin-bottom: 3rem;
   & h1 {
     text-align: center;
     color: var(--dark);

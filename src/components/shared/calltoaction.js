@@ -5,6 +5,7 @@ import { Container } from "react-bootstrap"
 
 const Section = styled.div`
   display: grid;
+  margin-top: 3rem;
   margin-bottom: 3rem;
   & > * {
     position: relative;

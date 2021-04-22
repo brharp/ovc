@@ -6,8 +6,8 @@ import Connect from "./connect"
 import Accreditations from "./accreditations"
 
 const Section = styled.div`
-  padding-top: 30px;
-  padding-bottom: 30px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 `
 
 const Template = styled.div`

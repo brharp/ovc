@@ -18,8 +18,8 @@ const Icons = {
 }
 
 const Section = styled.div`
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 `
 
 const Layout = styled.div`
