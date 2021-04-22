@@ -8,11 +8,15 @@ const EventWrapper = styled.div`
   align-self: center;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  @media (min-width: 1432px) {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
 `
 
 const EventList = styled.ul`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+  grid-template-columns: repeat(auto-fill, minmax(300px,1fr));
   grid-gap: 1rem;
   padding: 1em 0;
   margin: 0;
@@ -65,7 +69,11 @@ const EventDetailsContent = styled.div`
 `
 
 const Section = styled.div`
-  display: grid;
+  position: relative;
+  overflow: hidden;
+  max-width: 1368px;
+  margin-left: auto;
+  margin-right: auto;
   h2 {
     color: var(--light);
     text-shadow: var(--dark) 2px 2px;
@@ -106,10 +114,17 @@ export default function Events(props) {
       render={data => {
         return (
           <Section>
-            <StaticImage src="../../images/dog-banner.jpg" alt="" layout="fullWidth"
-                         style={{ maxHeight: "500px" }} />
-            <Mask>
-              <GridContainer>
+            <StaticImage src="../../images/dog-banner.jpg"
+                         alt=""
+                         layout="fixed"
+                         style={{
+                           position: "absolute",
+                           top: "50%",
+                           left: "50%",
+                           transform: "translateX(-50%) translateY(-50%)"
+                         }} />
+              <Mask>
+            <Container>
                 <EventWrapper>
                   <h2>Upcoming Events</h2>
                   <EventList>
@@ -131,8 +146,8 @@ export default function Events(props) {
                     }
                   </EventList>
                 </EventWrapper>
-              </GridContainer>
-            </Mask>
+            </Container>
+              </Mask>
           </Section>
         )
       }}
