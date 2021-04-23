@@ -76,12 +76,15 @@ class Topic extends React.Component {
 
 class Topics extends React.Component {
   render () {
+    if (!this.props.topics) {
+      return <></>
+    }
     return (
       <Section>
         <Container>
           <Layout>
             {
-              this.props.topics.map((topic, index) =>
+              this.props.topics?.map((topic, index) =>
                 <Topic key={`topic_${index}`}
                        title={topic.title}
                        subtitle={topic.subtitle}
