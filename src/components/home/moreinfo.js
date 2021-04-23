@@ -1,5 +1,5 @@
 import React from "react";
-import { StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql, Link } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Container } from "react-bootstrap"
 import styled from "styled-components";
@@ -107,9 +107,9 @@ function MoreInfo(props) {
 	  <TextBox>
 	    <h3>{props.subtitle}</h3>
             <h2>{props.title}</h2>
-	    <a href={props.link} className='stretched-link'>
+            <Link to={props.link} className='stretched-link'>
 	      See More <FaAngleRight />
-	    </a>
+	    </Link>
 	  </TextBox>
 	</ItemContent>
       </Item>

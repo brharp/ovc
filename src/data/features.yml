@@ -2,29 +2,29 @@
   subtitle: Start your journey
   description: Sign up for insider advice that can help you now and in the future.
   image: ../images/home/cat.jpg
-  link: https://ovc.uoguelph.ca/
+  link: /explore
 - title: Learn
   subtitle: Find your passion 
   description: Sign up for insider advice that can help you now and in the future.
   image: ../images/home/chicken.jpg
-  link: https://ovc.uoguelph.ca/
+  link: /learn
 - title: Work
   subtitle: People are our power
   description: Sign up for insider advice that can help you now and in the future.
   image: ../images/home/dog.jpg
-  link: https://ovc.uoguelph.ca/
+  link: /work
 - title: Collaborate
   subtitle: Together we are stronger
   description: Sign up for insider advice that can help you now and in the future.
   image: ../images/home/frog.png
-  link: https://ovc.uoguelph.ca/
+  link: /collaborate
 - title: Get care
   subtitle: Ensuring the best services
   description: Sign up for insider advice that can help you now and in the future.
   image: ../images/home/horse.jpg
-  link: https://ovc.uoguelph.ca/
+  link: /care
 - title: Give
   subtitle: Share our vision
   description: Sign up for insider advice that can help you now and in the future.
   image: ../images/home/sheep.jpg
-  link: https://ovc.uoguelph.ca/
+  link: /give
