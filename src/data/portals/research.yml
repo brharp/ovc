@@ -1,0 +1,29 @@
+path: /research
+title: Research
+summary: |
+  OVC is and continuously strives to be an exemplary world leader in innovative,
+  collaborative research that improves the health and well-being of animals, 
+  humans, and the environment.
+image: ../../images/research/laboratory.jpg
+cta:
+  title: Contact to Research
+  url: https://ovc.uoguelph.ca/
+  image: ../../images/research/contact-research.jpg
+spotlight:
+  - title: Historical Achievements
+    subtitle: A network dedicated to solving problems
+    description: |
+      OVC faculty members are also affiliated with a number of other centres
+      and institutes at the institutional, national, and international levels,
+      where they contribute their extensive breadth and depth of expertise to
+      address complex problems.
+    image: ../../images/research/historical.jpg
+    links:
+      - title: Explore the Vault
+        url: https://ovc.uoguelph.ca/
+topics:
+  - title: The OVC Health Sciences Centre
+    subtitle: 150 years of servicing our beloved animals.
+    image: ../../images/learn/lecture.jpg
+    summary: Using a team based approach our many dedicated veterinary professions and technical staff are equipped to provide leading edge animal care using extensive and advanced diagnostic and treatment capabilities.
+
