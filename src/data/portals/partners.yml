@@ -1,0 +1,31 @@
+path: /partners
+title: Our Partners
+summary: |
+  OVC is and continuously strives to be an exemplary world leader in innovative,
+  collaborative research that improves the health and well-being of animals, 
+  humans, and the environment.
+image: ../../images/research/laboratory.jpg
+cta:
+  title: Contact to Research
+  url: https://ovc.uoguelph.ca/
+  image: ../../images/research/contact-research.jpg
+partners:
+  title: Our Partners
+  subtitle: A network dedicated to solving problems
+  description: |
+    Lorem ipsum dolor sit amet consectetur adipiscing, elit congue
+    vulputate accumsan facilisi molestie vivamus, malesuada pretium
+    sapien fames suspendisse.
+  logos:
+    - image: ../../images/partners/hhgg.png
+    - image: ../../images/partners/hhgg.png
+    - image: ../../images/partners/hhgg.png
+    - image: ../../images/partners/hhgg.png
+    - image: ../../images/partners/hhgg.png
+    - image: ../../images/partners/hhgg.png
+    - image: ../../images/partners/hhgg.png
+    - image: ../../images/partners/hhgg.png
+    - image: ../../images/partners/hhgg.png
+    - image: ../../images/partners/hhgg.png
+    - image: ../../images/partners/hhgg.png
+

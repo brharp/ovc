@@ -7,6 +7,7 @@ import Topics from "../components/shared/topics"
 import CallToAction from "../components/shared/calltoaction"
 import Resources from "../components/shared/resources"
 import Spotlight from "../components/shared/spotlight"
+import Partners from "../components/shared/partners"
 
 class PortalPage extends React.Component {
   render() {
@@ -22,6 +23,7 @@ class PortalPage extends React.Component {
         <Topics topics={portal.topics} />
         <Resources items={portal.resources} />
         <Spotlight items={portal.spotlight} />
+        <Partners partners={portal.partners} />
         <CallToAction
           title={cta.title}
           url={cta.url}
@@ -74,6 +76,21 @@ export const query = graphql`
         links {
           title
           url
+        }
+      }
+      partners {
+        title
+        subtitle
+        description
+        logos {
+          image {
+            childImageSharp {
+              gatsbyImageData(
+                transformOptions: {grayscale: true},
+                layout: CONSTRAINED
+              )
+            }
+          }
         }
       }
       spotlight {
