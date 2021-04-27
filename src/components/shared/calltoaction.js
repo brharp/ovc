@@ -1,5 +1,5 @@
 import React from "react"
-import { GatsbyImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { Container } from "react-bootstrap"
 
@@ -29,18 +29,19 @@ const Layout = styled.div`
 
 class CallToAction extends React.Component {
   render () {
+    const cta = this.props.cta
     return (
       <Container>
         <Section>
-          <GatsbyImage image={this.props.image}
+          <GatsbyImage image={getImage(cta.image)}
                      style={{gridArea: "1/1", maxHeight: "200px"}}
                      layout="fullWidth"
                      alt=""
           />
           <Layout>
             <Content>
-              <a href={this.props.url} className="btn btn-lg btn-primary">
-                {this.props.title}
+              <a href={cta.url} className="btn btn-lg btn-primary">
+                {cta.title}
               </a>
             </Content>
           </Layout>

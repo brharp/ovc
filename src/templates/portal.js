@@ -14,23 +14,18 @@ class PortalPage extends React.Component {
   render() {
     const data = this.props.data
     const portal = data.portalsYaml
-    const cta = portal.cta
     return (
       <Layout>
         <Banner image={getImage(portal.image)}>
           <h1>{portal.title}</h1>
           <p>{portal.summary}</p>
         </Banner>
-        <Topics topics={portal.topics} />
-        <Resources items={portal.resources} />
-        <Spotlight items={portal.spotlight} />
-        <Partners partners={portal.partners} />
+        { portal.topics && <Topics topics={portal.topics} /> }
+        { portal.resources && <Resources items={portal.resources} /> }
+        { portal.spotlight && <Spotlight items={portal.spotlight} /> }
+        { portal.partners && <Partners partners={portal.partners} /> }
         { portal.process && <Process process={portal.process} /> }
-        <CallToAction
-          title={cta.title}
-          url={cta.url}
-          image={getImage(cta.image)}
-          />
+        { portal.cta && <CallToAction cta={portal.cta} /> }
       </Layout>
     )
   }
