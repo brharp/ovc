@@ -8,6 +8,7 @@ import CallToAction from "../components/shared/calltoaction"
 import Resources from "../components/shared/resources"
 import Spotlight from "../components/shared/spotlight"
 import Partners from "../components/shared/partners"
+import Process from "../components/shared/process"
 
 class PortalPage extends React.Component {
   render() {
@@ -24,6 +25,7 @@ class PortalPage extends React.Component {
         <Resources items={portal.resources} />
         <Spotlight items={portal.spotlight} />
         <Partners partners={portal.partners} />
+        { portal.process && <Process process={portal.process} /> }
         <CallToAction
           title={cta.title}
           url={cta.url}
@@ -105,6 +107,22 @@ export const query = graphql`
         links {
           title
           url
+        }
+      }
+      process {
+        title
+        subtitle
+        steps {
+          step
+          title
+          content
+        }
+        help {
+          title
+          link {
+            title
+            url
+          }
         }
       }
     }
