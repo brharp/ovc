@@ -33,10 +33,10 @@ class Accreditations extends React.Component {
           <li>OVC faculty are also affiliated with a number of other centres and institutes.</li>
         </ul>
         <Logos>
-          <StaticImage src="../../images/home/coe_logo.png"
+          <StaticImage alt="COE Logo" src="../../images/home/coe_logo.png" 
                        transformOptions={{grayscale: true}}
                        />
-          <StaticImage src="../../images/home/aaha_logo_accredited.png" 
+          <StaticImage alt="AAHA Logo" src="../../images/home/aaha_logo_accredited.png" 
                        transformOptions={{grayscale: true}}
                        />
         </Logos>

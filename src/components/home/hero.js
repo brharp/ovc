@@ -89,7 +89,7 @@ const HeroComponent = ( props ) =>
     `}
     render={ ( data ) =>
       <Section>
-        <StaticImage src="../../images/home/pet-surgery.jpg" layout="fullWidth" 
+        <StaticImage src="../../images/home/pet-surgery.jpg" alt="" layout="fullWidth" 
                      style={{gridArea: "1/1", maxHeight: "500px" }} />
         <Mask>
           <GridContainer>
