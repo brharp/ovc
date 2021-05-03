@@ -25,6 +25,13 @@ class UgHeader extends HTMLElement {
     this.import("//www.uoguelph.ca/web-components/UofGHeader-dist.js");
     let _header = document.createElement('uofg-header');
     this.shadow.appendChild(_header);
+    window.addEventListener('scroll', (e) => {
+      if (document.documentElement.scrollTop === 0) {
+        if (document.documentElement.clientWidth > 1024) {
+          _header.switchToDesktop();
+        }
+      }
+    });
   }
 }
 
