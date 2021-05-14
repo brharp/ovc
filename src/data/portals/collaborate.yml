@@ -8,23 +8,23 @@ cta:
   image: ../../images/dog-banner.jpg
 topics:
   - title: Researchers
-    subtitle: The sectors of the OVC
+    subtitle: Focus on innovation
     image: ../../images/collaborate/labrador-retriever.jpg
-    summary: Lorem ipsum dolor sit amet consectetur adipiscing, elit congue vulputate accumsan facilisi molestie vivamus, malesuada pretium sapien fames suspendisse. Pellentesque cras gravida facilisis lectus nunc ut himenaeos felis consequat vitae id sed duis cum tristique senectus eu accumsan, integer iaculis bibendum egestas maecenas velit odio parturient praesent nibh facilisi justo mollis primis nisl libero. Feugiat maecenas elementum cursus risus hac vitae ultrices, ultricies dignissim ac ad scelerisque consequat nascetur mi, montes dui natoque proin convallis eget.
+    summary: With an innovative, collaborative approach aimed at improving the health and well-being of animals, humans, and our ecosystems, research at OVC covers a broad range of disciplines. Our research strength stems from our collective expertise, collaborative partnerships, and a solid research infrastructure that have helped us grow world-class research programs.
     links:
       - title: Explore Faculty
         url: https://ovc.uoguelph.ca/
   - title: Clients
-    subtitle: Ensuring the best services
+    subtitle: Translational and transformative
     image: ../../images/collaborate/labrador-retriever.jpg
-    summary: Lorem ipsum dolor sit amet consectetur adipiscing, elit congue vulputate accumsan facilisi molestie vivamus, malesuada pretium sapien fames suspendisse. Pellentesque cras gravida facilisis lectus nunc ut himenaeos felis consequat vitae id sed duis cum tristique senectus eu accumsan, integer iaculis bibendum egestas maecenas velit odio parturient praesent nibh facilisi justo mollis primis nisl libero. Feugiat maecenas elementum cursus risus hac vitae ultrices, ultricies dignissim ac ad scelerisque consequat nascetur mi, montes dui natoque proin convallis eget.
+    summary: A leader in translational medicine, we are focused on the health and well-being of the animals in our care and continually seek opportunities to advance care and ultimately influence both animal and human health.
     links:
       - title: Explore Clinical Trials
         url: https://ovc.uoguelph.ca/
   - title: Industry
-    subtitle: Our network of cutting-edge facilities
+    subtitle: Collaborative partnerships, collective expertise
     image: ../../images/collaborate/labrador-retriever.jpg
-    summary: Lorem ipsum dolor sit amet consectetur adipiscing, elit congue vulputate accumsan facilisi molestie vivamus, malesuada pretium sapien fames suspendisse. Pellentesque cras gravida facilisis lectus nunc ut himenaeos felis consequat vitae id sed duis cum tristique senectus eu accumsan, integer iaculis bibendum egestas maecenas velit odio parturient praesent nibh facilisi justo mollis primis nisl libero. Feugiat maecenas elementum cursus risus hac vitae ultrices, ultricies dignissim ac ad scelerisque consequat nascetur mi, montes dui natoque proin convallis eget.
+    summary: Together we are stronger Using a science-based approach to cutting-edge discovery, we value collaborations and partnerships to help us solve critical local and global health issues.
     links:
       - title: Explore Partners
         url: https://ovc.uoguelph.ca/
