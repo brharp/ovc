@@ -11,23 +11,25 @@ topics:
     subtitle: 150 years of servicing our beloved animals.
     image: ../../images/learn/lecture.jpg
     summary: Using a team based approach our many dedicated veterinary professions and technical staff are equipped to provide leading edge animal care using extensive and advanced diagnostic and treatment capabilities.
+    links: 
+      - title: Explore the HSC
+        url: https://www.ovchsc.ca/
 resources:
   - title: Referring Vets
     icon: fa-asterisk
-    description: A world leader, integrating animal, human and environmental health through innovation, excellence and societal relevance.
+    description: Looking to refer a patient to our services? Get in touch with one of our hospital centres to get the treatment your client deserves. 
     links:
       - title: Get a Referral
-        url: https://ovc.uoguelph.ca/
+        url: https://www.ovchsc.ca/referringveterinarianinformation/
   - title: Clients
     icon: fa-location-arrow
-    description: Educate veterinarians and scientists, create new knowledge and provide expert services to improve the health and well-being of animals, people, and the environment.
-    links:
+    description: Our hospitals require a referral from a veterinarian, once recommended treatment at our centres comes bring up some common questions. Learn more about the details of being a client at the HSC. 
       - title: Client Information
-        url: https://ovc.uoguelph.ca/
+        url: https://www.ovchsc.ca/client-information/
   - title: Hospitals
     icon: fa-hospital-symbol
-    description: Opus Veterinum Civibus The Craft of the Veterinarian is for the Good of the Nation.
+    description: The OVC Health Sciences Centre is composed of six hospitals providing world-class care by a team of veterinarians of different specialties.  
     links:
       - title: Explore Hospitals
-        url: https://ovc.uoguelph.ca/
+        url: https://www.ovchsc.ca/about-us/companion-animal-hospital/
 
