@@ -1,7 +1,7 @@
 path: /care
 title: Get Care
 summary: The Ontario Veterinary College Health Sciences Centre is a network of specialty hospitals that provides services to over 16,000 companion animals, equine, farm animal and exotic species every year. Our team of experts carries expertise in areas such as Internal Medicine, oncology, and cardiology.
-image: ../../images/collaborate/Cardio_operating room.jpeg
+image: ../../images/care/Cardio_operating room.jpeg
 cta:
   title: Contact to Get Care
   url: https://ovc.uoguelph.ca/
@@ -9,7 +9,7 @@ cta:
 topics:
   - title: The OVC Health Sciences Centre
     subtitle: 150 years of servicing our beloved animals.
-    image: ../../images/learn/IMG_4378.JPG
+    image: ../../images/care/IMG_4378.JPG
     summary: Using a team based approach our many dedicated veterinary professions and technical staff are equipped to provide leading edge animal care using extensive and advanced diagnostic and treatment capabilities.
     links: 
       - title: Explore the HSC
