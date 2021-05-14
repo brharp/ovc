@@ -11,6 +11,9 @@ topics:
     subtitle: 150 years of servicing our beloved animals.
     image: ../../images/care/IMG_4378.JPG
     summary: Using a team based approach our many dedicated veterinary professions and technical staff are equipped to provide leading edge animal care using extensive and advanced diagnostic and treatment capabilities.
+    links:
+      - title: Get a Referral
+        url: https://www.ovchsc.ca/referringveterinarianinformation/
 resources:
   - title: Referring Vets
     icon: fa-asterisk
