@@ -10,6 +10,7 @@ import Spotlight from "../components/shared/spotlight"
 import Partners from "../components/shared/partners"
 import Process from "../components/shared/process"
 import Testimonials from "../components/shared/testimonials"
+import Features from "../components/shared/features"
 
 class PortalPage extends React.Component {
   render() {
@@ -22,6 +23,7 @@ class PortalPage extends React.Component {
           <p>{portal.summary}</p>
         </Banner>
         { portal.topics && <Topics topics={portal.topics} /> }
+        { portal.features && <Features features={portal.features} /> }
         { portal.testimonials && <Testimonials testimonials={portal.testimonials} /> }
         { portal.resources && <Resources items={portal.resources} /> }
         { portal.spotlight && <Spotlight items={portal.spotlight} /> }
@@ -132,6 +134,18 @@ export const query = graphql`
               gatsbyImageData
             }
           }
+        }
+      }
+      features {
+        title
+        image {
+          childImageSharp {
+            gatsbyImageData(layout: FIXED)
+          }
+        }
+        items {
+          title
+          description
         }
       }
     }
