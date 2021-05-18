@@ -26,7 +26,7 @@ class ImproveLife extends React.Component {
       <Section>
         <Container>
           <h1>Improve Life With Us.</h1>
-          <p>Lorem ipsum dolor sit amet consectetur adipiscing elit class vestibulum fringilla diam orci phasellus, quis convallis euismod sollicitudin pretium dictum habitasse consequat eleifend interdum mollis. Massa gravida potenti inceptos purus pulvinar euismod ante conubia sagittis dictum, metus nisl ultricies tristique sapien arcu nullam habitant hendrerit integer, mus aenean nibh cras nec mattis nulla ac proin. Donec ligula vitae phasellus conubia aptent laoreet praesent, nibh lacinia euismod ac egestas scelerisque feugiat, hac netus accumsan facilisis torquent fusce.</p>
+          <p>At the Ontario Veterinary College, we are educating the next generation of health leaders, fueling discovery and providing our expertise to improve health and well-being across our world. Discover how you can contribute to the ever-evolving world of medicine, care, scientific discovery, and community.</p>
         </Container>
       </Section>
     )
