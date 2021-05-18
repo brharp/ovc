@@ -1,10 +1,30 @@
+import { graphql } from "gatsby"
 import React from "react"
 import Layout from "../components/layout"
 
-export default function ArticlePage() {
+class ArticlePage extends React.Component
+{
+  render() {
+    const data = this.props.data
+    const article = data.nodeArticle
     return (
-	    <Layout>
-	    <div>Article content...</div>
-	    </Layout>
+      <Layout>
+        <div dangerouslySetInnerHTML={{__html: article.body.value}}></div>
+      </Layout>
     )
+  }
 }
+
+export default ArticlePage
+
+export const query = graphql`
+  query ($id: String) {
+    nodeArticle(id: {eq: $id}) {
+      title
+      body {
+        value
+      }
+    }
+  }
+`
+

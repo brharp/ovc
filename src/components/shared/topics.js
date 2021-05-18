@@ -55,18 +55,17 @@ class Topic extends React.Component {
                      alt="" />
         <div>
           <Content>
-            <h2>{this.props.title}</h2>
-            <h3>{this.props.subtitle}</h3>
-            <p>{this.props.summary}</p>
-            <p>
+            <h2>{this.props.heading}</h2>
+            <h3>{this.props.subheading}</h3>
+            <p>{this.props.copy}</p>
             {
-              this.props.links?.map((link, index) =>
-                <a href={link.url} className="btn btn-lg btn-primary">
-                  {link.title}
+              this.props.link &&
+              <p>
+                <a href={this.props.link.uri} className="btn btn-lg btn-primary">
+                  {this.props.link.title}
                 </a>
-              )
+              </p>
             }
-            </p>
           </Content>
         </div>
       </TopicLayout>
@@ -76,9 +75,6 @@ class Topic extends React.Component {
 
 class Topics extends React.Component {
   render () {
-    if (!this.props.topics) {
-      return <></>
-    }
     return (
       <Section>
         <Container>
@@ -86,11 +82,11 @@ class Topics extends React.Component {
             {
               this.props.topics?.map((topic, index) =>
                 <Topic key={`topic_${index}`}
-                       title={topic.title}
-                       subtitle={topic.subtitle}
-                       summary={topic.summary}
-                       image={getImage(topic.image)}
-                       links={topic.links} />
+                       heading={topic.field_heading}
+                       subheading={topic.field_subheading}
+                       copy={topic.field_copy}
+                       image={getImage(topic.relationships.field_image.localFile)}
+                       link={topic.field_link} />
               )
             }
           </Layout>

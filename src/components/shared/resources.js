@@ -55,29 +55,26 @@ class Icon extends React.Component {
 
 class Resources extends React.Component {
   render() {
-    const items = this.props.items || [];
-    if (items.length === 0)
-      return <></>
-    else return (
+    const resources = this.props.resources
+    return (
       <Section>
         <Container>
           <Layout>
             {
-              this.props.items?.map((item, index) => 
+              resources.map((item, index) => 
                 <Region key={`item_${index}`}>
                   <h2>
-                    <Icon icon={item.icon} />
+                    <Icon icon={item.field_icon} />
                     <br/>
-                    { item.title }
+                    { item.field_heading }
                   </h2>
-                  <p>{ item.description }</p>
+                  <p>{ item.field_copy }</p>
                   {
-                    item.links?.map((link, index) =>
-                      <a key={`item_link_${index}`} href={link.url}
+                    item.field_link &&
+                      <a href={item.field_link.uri}
                          className='btn btn-lg btn-outline-dark'>
-                        { link.title }
+                        { item.field_link.title }
                       </a>
-                    )
                   }
                 </Region>
               )

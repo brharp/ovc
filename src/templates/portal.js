@@ -13,19 +13,23 @@ import Process from "../components/shared/process"
 class PortalPage extends React.Component {
   render() {
     const data = this.props.data
-    const portal = data.portalsYaml
+    const portal = data.nodePortal
+    const topics = portal.relationships.field_topics
+    const resources = portal.relationships.field_resources
+    const process = portal.relationships.field_process
+    const call_to_action = portal.relationships.field_call_to_action
     return (
       <Layout>
-        <Banner image={getImage(portal.image)}>
+        <Banner image={getImage(portal.relationships.field_image.localFile)}>
           <h1>{portal.title}</h1>
-          <p>{portal.summary}</p>
+          <p dangerouslySetInnerHTML={{__html: portal.body.processed}}></p>
         </Banner>
-        { portal.topics && <Topics topics={portal.topics} /> }
-        { portal.resources && <Resources items={portal.resources} /> }
+        { topics && <Topics topics={topics} /> }
+        { resources && <Resources resources={resources} /> }
         { portal.spotlight && <Spotlight items={portal.spotlight} /> }
         { portal.partners && <Partners partners={portal.partners} /> }
-        { portal.process && <Process process={portal.process} /> }
-        { portal.cta && <CallToAction cta={portal.cta} /> }
+        { process && process.map((process, index) => <Process key={index} process={process} />) }
+        { call_to_action && call_to_action.map((cta, index) => <CallToAction key={index} cta={cta} />) }
       </Layout>
     )
   }
@@ -34,93 +38,75 @@ class PortalPage extends React.Component {
 export default PortalPage
 
 export const query = graphql`
-  query ($id: String) {
-    portalsYaml(id: {eq: $id}) {
-      title
-      summary
-      image {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
-        }
-      }
-      cta {
+    query ($id: String) {
+      nodePortal(id: {eq: $id}) {
         title
-        url
-        image {
-          childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
+        body {
+          processed
+        }
+        fields {
+          slug
+        }
+        relationships {
+          field_image {
+            ...file__fileFragment
           }
-        }
-      }
-      topics {
-        title
-        subtitle
-        summary
-        image {
-          childImageSharp {
-            gatsbyImageData
+          field_call_to_action {
+            field_link {
+              uri
+              title
+            }
+            relationships {
+              field_image {
+                ...file__fileFragment
+              }
+            }
           }
-        }
-        links {
-          title
-          url
-        }
-      }
-      resources {
-        title
-        icon
-        description
-        links {
-          title
-          url
-        }
-      }
-      partners {
-        title
-        subtitle
-        description
-        logos {
-          image {
-            childImageSharp {
-              gatsbyImageData(
-                transformOptions: {grayscale: true},
-                layout: CONSTRAINED
-              )
+          field_topics {
+            field_heading
+            field_subheading
+            field_copy
+            relationships {
+              field_image {
+                ...file__fileFragment
+              }
+            }
+            field_link {
+              title
+              uri
+            }
+          }
+          field_resources {
+            field_heading
+            field_subheading
+            field_icon
+            field_link {
+              title
+              uri
+            }
+          }
+          field_process {
+            field_heading
+            field_subheading
+            field_copy
+            relationships {
+              field_steps {
+                field_heading
+                field_subheading
+                field_copy
+              }
             }
           }
         }
       }
-      spotlight {
-        title
-        subtitle
-        description
-        image {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-        links {
-          title
-          url
-        }
-      }
-      process {
-        title
-        subtitle
-        steps {
-          step
-          title
-          content
-        }
-        help {
-          title
-          link {
-            title
-            url
-          }
+    }
+
+    fragment file__fileFragment on file__file {
+      localFile {
+        childImageSharp {
+          gatsbyImageData
         }
       }
     }
-  }
 `
 

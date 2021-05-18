@@ -29,6 +29,7 @@ exports.createPages = async ({ graphql, actions }) => {
       allNodeArticle {
         edges {
           node {
+            id
             fields {
               slug
             }
@@ -41,6 +42,7 @@ exports.createPages = async ({ graphql, actions }) => {
       path: node.fields.slug,
       component: path.resolve(`./src/templates/article.js`),
       context: {
+        id: node.id,
         slug: node.fields.slug,
       },
     })
@@ -49,19 +51,21 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create portal pages
   const portals = await graphql(`
     query {
-      allPortalsYaml {
+      allNodePortal {
         edges {
           node {
             id
-            path
+            fields {
+              slug
+            }
           }
         }
       }
     }
   `)
-  portals.data.allPortalsYaml.edges.forEach(({ node }) => {
+  portals.data.allNodePortal.edges.forEach(({ node }) => {
     createPage({
-      path: node.path,
+      path: node.fields.slug,
       component: path.resolve(`./src/templates/portal.js`),
       context: {
         id: node.id,

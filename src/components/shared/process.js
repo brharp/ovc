@@ -47,27 +47,27 @@ const Help = styled.div`
 
 class Process extends React.Component {
   render() {
-    if (!this.props.process) {
-      return <></>
-    }
     const process = this.props.process
+    const heading = process.field_heading
+    const subheading = process.field_subheading
+    const steps = process.relationships.field_steps
     return (
       <Container>
         <Section>
         <Steps>
-          <h2>{ process.title }</h2>
-          <h3>{ process.subtitle }</h3>
+          <h2>{ heading }</h2>
+          <h3>{ subheading }</h3>
           <Accordion>
             {
-              process.steps?.map((step, index) =>
+              steps?.map((step, index) =>
                 <Card>
                   <Card.Header>
                     <Accordion.Toggle as={Button} variant="link" eventKey={index+1}>
-                      <strong>{step.step}:</strong> {step.title}
+                      <strong>{step.field_heading}:</strong> {step.field_subheading}
                     </Accordion.Toggle>
                   </Card.Header>
                   <Accordion.Collapse eventKey={index+1}>
-                    <Card.Body>{step.content}</Card.Body>
+                    <Card.Body>{step.field_copy}</Card.Body>
                   </Accordion.Collapse>
                 </Card>
               )

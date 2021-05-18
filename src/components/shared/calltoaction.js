@@ -30,18 +30,20 @@ const Layout = styled.div`
 class CallToAction extends React.Component {
   render () {
     const cta = this.props.cta
+    const image = getImage(cta.relationships.field_image.localFile)
+    const link = cta.field_link
     return (
       <Container>
         <Section>
-          <GatsbyImage image={getImage(cta.image)}
+          <GatsbyImage image={image}
                      style={{gridArea: "1/1", maxHeight: "200px"}}
                      layout="fullWidth"
                      alt=""
           />
           <Layout>
             <Content>
-              <a href={cta.url} className="btn btn-lg btn-primary">
-                {cta.title}
+              <a href={link.uri} className="btn btn-lg btn-primary">
+                {link.title}
               </a>
             </Content>
           </Layout>
