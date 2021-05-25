@@ -38,6 +38,7 @@ resources:
   - title: Life on Campus
     icon: fa-graduation-cap
     description: Being part of the OVC Campus community connects you with other like-minded people from all over the world who share a passion for veterinary medicine.      
+    links:
       - title: Explore Student Life
         url: https://www.uoguelph.ca/studentexperience/
   - title: Apply
