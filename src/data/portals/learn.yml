@@ -18,12 +18,14 @@ topics:
     subtitle: Road to innovation and discovery
     image: ../../images/learn/lecture.jpg
     summary: Never has innovation and science-based discovery been more critical to the health and sustainability of our world. Pursue your passion with OVC’s research-intensive approach and commitment to innovation and leadership in One Health and veterinary and biomedical sciences.    links:
+    links:
       - title: Future Grad Student Page
         url: http://www.ovc.uoguelph.ca/research/en/researchtrainingopportunities/futuregraduatestudents.asp
   - title: Bio-medical Science Major
     subtitle: Choose your pathway
     image: ../../images/learn/lecture.jpg
     summary: The pathway for students focused on a future career in health sciences. A unique foundation in both animal and human health sets our program apart, providing a solid academic base for students who have ambitions in health sciences, whether veterinary or human    links:
+    links:
       - title: Explore BIOM Major
         url: https://ovc.uoguelph.ca/biomedical-science-major
 resources:
