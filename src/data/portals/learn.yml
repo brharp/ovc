@@ -7,10 +7,12 @@ cta:
   url: https://ovc.uoguelph.ca/
   image: ../../images/learn/lecture-hall.jpg
 topics:
-  - title: DVM 
-    subtitle: 150 years of servicing our beloved animals.
+  - title: DVM Program
+    subtitle: Find your calling
     image: ../../images/learn/lecture.jpg
-    summary: Using a team based approach our many dedicated veterinary professions and technical staff are equipped to provide leading edge animal care using extensive and advanced diagnostic and treatment capabilities.
+    summary: The study of veterinary medicine is a dynamic blend of science, technology and experience. At OVC, students can follow their passion, find their calling, and discover how they can contribute to the ever-evolving world of medicine, care, scientific discovery, and community.
+  - title: Explore the DVM Program
+        url: http://www.ovc.uoguelph.ca/recruitment/en/index.asp
   - title: Graduate Studies
     subtitle: Ensuring the best services
     image: ../../images/learn/lecture.jpg
