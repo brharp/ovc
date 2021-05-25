@@ -34,12 +34,12 @@ resources:
       - title: Explore Financial Aid Options
         url: https://ovc.uoguelph.ca/dvm/financial
   - title: Life on Campus
-    icon: fa-location-arrow
+    icon: fa-graduation-cap
     description: Being part of the OVC Campus community connects you with other like-minded people from all over the world who share a passion for veterinary medicine.      
       - title: Explore Student Life
         url: https://www.uoguelph.ca/studentexperience/
   - title: Apply
-    icon: fa-graduation-cap
+    icon: fa-location-arrow
     description: Ready to be part of a world-class network of researchers contributing to the world of veterinary medicine? Find out more details about the admission process. 
     links:
       - title: Explore Admissions
