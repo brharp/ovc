@@ -7,7 +7,7 @@ cta:
   url: https://ovc.uoguelph.ca/
   image: ../../images/learn/lecture-hall.jpg
 topics:
-  - title: DVM Program
+  - title: Doctor of Veterinary Medicine Program
     subtitle: Find your calling
     image: ../../images/learn/lecture.jpg
     summary: The study of veterinary medicine is a dynamic blend of science, technology and experience. At OVC, students can follow their passion, find their calling, and discover how they can contribute to the ever-evolving world of medicine, care, scientific discovery, and community.
@@ -15,35 +15,32 @@ topics:
       - title: Explore the DVM Program
         url: http://www.ovc.uoguelph.ca/recruitment/en/index.asp
   - title: Graduate Studies
-    subtitle: Ensuring the best services
+    subtitle: Road to innovation and discovery
     image: ../../images/learn/lecture.jpg
-    summary: Lorem ipsum dolor sit amet consectetur adipiscing, elit congue vulputate accumsan facilisi molestie vivamus, malesuada pretium sapien fames suspendisse. Pellentesque cras gravida facilisis lectus nunc ut himenaeos felis consequat vitae id sed duis cum tristique senectus eu accumsan, integer iaculis bibendum egestas maecenas velit odio parturient praesent nibh facilisi justo mollis primis nisl libero. Feugiat maecenas elementum cursus risus hac vitae ultrices, ultricies dignissim ac ad scelerisque consequat nascetur mi, montes dui natoque proin convallis eget.
-    links:
+    summary: Never has innovation and science-based discovery been more critical to the health and sustainability of our world. Pursue your passion with OVC’s research-intensive approach and commitment to innovation and leadership in One Health and veterinary and biomedical sciences.    links:
       - title: Future Grad Student Page
-        url: https://ovc.uoguelph.ca/
+        url: http://www.ovc.uoguelph.ca/research/en/researchtrainingopportunities/futuregraduatestudents.asp
   - title: Bio-medical Science Major
-    subtitle: Our network of cutting-edge facilities
+    subtitle: Choose your pathway
     image: ../../images/learn/lecture.jpg
-    summary: Lorem ipsum dolor sit amet consectetur adipiscing, elit congue vulputate accumsan facilisi molestie vivamus, malesuada pretium sapien fames suspendisse. Pellentesque cras gravida facilisis lectus nunc ut himenaeos felis consequat vitae id sed duis cum tristique senectus eu accumsan, integer iaculis bibendum egestas maecenas velit odio parturient praesent nibh facilisi justo mollis primis nisl libero. Feugiat maecenas elementum cursus risus hac vitae ultrices, ultricies dignissim ac ad scelerisque consequat nascetur mi, montes dui natoque proin convallis eget.
-    links:
-      - title: Explore Bio-medical Sciences
-        url: https://ovc.uoguelph.ca/
+    summary: The pathway for students focused on a future career in health sciences. A unique foundation in both animal and human health sets our program apart, providing a solid academic base for students who have ambitions in health sciences, whether veterinary or human    links:
+      - title: Explore BIOM Major
+        url: https://ovc.uoguelph.ca/biomedical-science-major
 resources:
   - title: Get Financial Aid
     icon: fa-hand-holding-usd
     description: Through bursaries, scholarships, and work study programs the OVC strives to ensure accessible education for students no matter their current financial standing.
     links:
-      - title: Explore Financial Aid
-        url: https://ovc.uoguelph.ca/
-  - title: Experience
+      - title: Explore Financial Aid Options
+        url: https://ovc.uoguelph.ca/dvm/financial
+  - title: Life on Campus
     icon: fa-location-arrow
-    description: Educate veterinarians and scientists, create new knowledge and provide expert services to improve the health and well-being of animals, people, and the environment.
-    links:
+    description: Being part of the OVC Campus community connects you with other like-minded people from all over the world who share a passion for veterinary medicine.      
       - title: Explore Student Life
-        url: https://ovc.uoguelph.ca/
+        url: https://www.uoguelph.ca/studentexperience/
   - title: Apply
     icon: fa-graduation-cap
-    description: Opus Veterinum Civibus The Craft of the Veterinarian is for the Good of the Nation.
+    description: Ready to be part of a world-class network of researchers contributing to the world of veterinary medicine? Find out more details about the admission process. 
     links:
       - title: Explore Admissions
-        url: https://ovc.uoguelph.ca/
+        url: https://ovc.uoguelph.ca/biomedical-science-major/admission
