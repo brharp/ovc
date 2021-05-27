@@ -19,6 +19,10 @@ $blue:    #69a3b9;   //   ""   blue
 $primary: $red;
 $info:    $blue;
 
+.bg-black-50 {
+  background: rgba(0, 0, 0, 0.5);
+}
+
 // Bootstrap's color contrast function (color-yiq) utilizes the YIQ 
 // color space to automatically return a light (#fff) or dark (#111) 
 // contrast color based on the specified base color. If the color
@@ -47,6 +51,7 @@ $font-family-sans-serif: Roboto, Arial, sans-serif;
 // Options
 
 $enable-rounded:  false;
+$enable-gradients: true;
 
 
 // Buttons and forms

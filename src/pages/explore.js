@@ -2,7 +2,6 @@ import React from 'react'
 import Layout from '../components/layout'
 import About from "../components/explore/about"
 import Ideology from "../components/explore/ideology"
-import Leadership from "../components/explore/leadership"
 import Initiatives from "../components/explore/initiatives"
 import Numbers from "../components/explore/numbers"
 import Statistics from "../components/explore/statistics"
@@ -16,7 +15,6 @@ const ExplorePage = ( props ) => (
   <Layout>
     <About />
     <Ideology />
-    <Leadership />
     <Initiatives />
     <Numbers />
     <Statistics />

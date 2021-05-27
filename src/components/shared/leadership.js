@@ -1,6 +1,5 @@
 import React from "react";
 import { useContext } from "react"
-import { graphql, StaticQuery } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components";
 import { Accordion, AccordionContext, useAccordionToggle, Button, Container, Card } from "react-bootstrap";
@@ -89,13 +88,15 @@ class Responsive extends React.Component {
     return (
       <Section className={this.props.className}>
         <Container>
+          <h2>{data.title}</h2>
+          <h3>{data.subtitle}</h3>
           <Accordion style={{
               display: "grid",
               gridTemplateColumns: `repeat(${cols}, 1fr)`,
               gridGap: "16px",
             }}>
             {
-              data.allLeadersYaml.edges.map(({node},index) => (
+              data.children.map((node,index) => (
               <>
                 <div key={`t_${index}`} style={{
                       gridArea: `${Math.floor(index/cols)*2+1} / ${index%cols+1}`
@@ -130,34 +131,14 @@ class Responsive extends React.Component {
 
 class Leadership extends React.Component {
   render() {
-    return <StaticQuery
-      query={graphql`
-        query {
-          allLeadersYaml {
-            edges {
-              node {
-                id        
-                name
-                title
-                unit
-                bio
-                quote
-                photo {
-                  childImageSharp {
-                    gatsbyImageData
-                  }
-                }
-              }
-            }
-          }
-        }
-      `}
-      render={(data) => <>
+    const data = this.props.data
+    return (
+      <>
         <Responsive data={data} columns="3" className="d-none d-lg-block" />
         <Responsive data={data} columns="2" className="d-none d-md-block d-lg-none" />
         <Responsive data={data} columns="1" className="d-md-none" />
-      </>}
-    />
+      </>
+    )
   }
 }
 
