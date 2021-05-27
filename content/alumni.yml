@@ -1,5 +1,5 @@
 banner:
-  heading: OVC Alumni
+  title: OVC Alumni
   lead: You are a student...
 spotlight:
   label: Alumni Spotlight
@@ -8,6 +8,9 @@ spotlight:
   link:
     title: Read More
     url: https://ovc.uoguelph.ca/
+welcome:
+  heading: Welcome OVC Alumni
+  copy: Our reputation as a world-ranking college...
 contact:
   heading: Update Your Contact Info
   copy: Stay connected ...
@@ -53,7 +56,19 @@ board_members:
   link:
     title: View Board Members
     url: https://ovc.uoguelph.ca/
-
-
-
+donate:
+  heading: Donate
+  copy: See how you can participate in the research at OVC
+  link:
+    title: Donate Now
+    url: https://ovc.uoguelph.ca
+alumni_connect:
+  heading: Connect With Us
+  copy: Do you have a great story to share ...
+  link:
+    title: View Contact Info
+    url: https://ovc.uoguelph.ca
+cta:
+  title: Contact Alumni
+  url: https://ovc.uoguelph.ca
 

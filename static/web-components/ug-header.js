@@ -11,10 +11,10 @@ class UgHeader extends HTMLElement {
     _import.setAttribute('src', url);
     this.shadow.appendChild(_import);
   }
-  addStyle(rule) {
+  addStyle(root, rule) {
     let _style = document.createElement('style');
     _style.innerHTML=rule;
-    this.shadow.appendChild(_style);
+    root.appendChild(_style);
   }
   constructor() {
     super();

@@ -1,27 +1,20 @@
 
-// For reasons lost to the sands of time, the base font
-// size of the U of G home page has always been 10px.
-// As a result many global styles (including such things as
-// the global header) use HUGE (relative) font sizes to make
-// the text readable. To compensate we set the base size to
-// the original 10px and adjust the base font size to 1.6rem
-// to restore a more reasonable 16px base font size.
-
-html { font-size: 10px; }
-$font-size-base: 1.6rem;
-
-
 // Color system
 
 $red:     #c20430;   // U of G red
 $yellow:  #ffc72a;   //   ""   yellow
 $blue:    #69a3b9;   //   ""   blue
+$black:   #000000;
+
+$theme-colors: (
+  "red":     $red,    // U of G red
+  "yellow":  $yellow, //   ""   yellow
+  "blue":    $blue,   //   ""   blue
+);
+
 $primary: $red;
 $info:    $blue;
 
-.bg-black-50 {
-  background: rgba(0, 0, 0, 0.5);
-}
 
 // Bootstrap's color contrast function (color-yiq) utilizes the YIQ 
 // color space to automatically return a light (#fff) or dark (#111) 
@@ -51,7 +44,6 @@ $font-family-sans-serif: Roboto, Arial, sans-serif;
 // Options
 
 $enable-rounded:  false;
-$enable-gradients: true;
 
 
 // Buttons and forms
@@ -63,11 +55,8 @@ $input-btn-padding-y-lg: .75rem;
 $input-btn-padding-x-lg: 4rem;
 
 
-// Grid containers
 
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/mixins";
+// Grid containers
 
 $container-max-widths: (
   sm: 540px,
@@ -84,38 +73,152 @@ $grid-breakpoints: (
   xl: 1432px
 );
 
-@import "../../node_modules/bootstrap/scss/root";
-@import "../../node_modules/bootstrap/scss/reboot";
-@import "../../node_modules/bootstrap/scss/type";
-@import "../../node_modules/bootstrap/scss/images";
-@import "../../node_modules/bootstrap/scss/code";
-@import "../../node_modules/bootstrap/scss/grid";
-@import "../../node_modules/bootstrap/scss/tables";
-@import "../../node_modules/bootstrap/scss/forms";
-@import "../../node_modules/bootstrap/scss/buttons";
-@import "../../node_modules/bootstrap/scss/transitions";
-@import "../../node_modules/bootstrap/scss/dropdown";
-@import "../../node_modules/bootstrap/scss/button-group";
-@import "../../node_modules/bootstrap/scss/input-group";
-@import "../../node_modules/bootstrap/scss/custom-forms";
-@import "../../node_modules/bootstrap/scss/nav";
-@import "../../node_modules/bootstrap/scss/navbar";
-@import "../../node_modules/bootstrap/scss/card";
-@import "../../node_modules/bootstrap/scss/breadcrumb";
-@import "../../node_modules/bootstrap/scss/pagination";
-@import "../../node_modules/bootstrap/scss/badge";
-@import "../../node_modules/bootstrap/scss/jumbotron";
-@import "../../node_modules/bootstrap/scss/alert";
-@import "../../node_modules/bootstrap/scss/progress";
-@import "../../node_modules/bootstrap/scss/media";
-@import "../../node_modules/bootstrap/scss/list-group";
-@import "../../node_modules/bootstrap/scss/close";
-@import "../../node_modules/bootstrap/scss/toasts";
-@import "../../node_modules/bootstrap/scss/modal";
-@import "../../node_modules/bootstrap/scss/tooltip";
-@import "../../node_modules/bootstrap/scss/popover";
-@import "../../node_modules/bootstrap/scss/carousel";
-@import "../../node_modules/bootstrap/scss/spinners";
-@import "../../node_modules/bootstrap/scss/utilities";
-@import "../../node_modules/bootstrap/scss/print";
 
+// Components
+
+.cover {
+  position: relative;
+  overflow: hidden;
+}
+
+.cover-img {
+  position: absolute;
+  transform: translateX(-50%) translateY(-50%);
+  width: 100% !important;
+  top: 50%;
+  left: 50%;
+}
+
+.cover-img-overlay {
+  position: relative;
+}
+
+
+
+// Adjust relative sizes for 10px base font size.
+
+html { font-size: 10px; }
+$spacer: 1.6rem;
+$paragraph-margin-bottom:   1.6rem;
+$border-radius:               .4rem;
+$border-radius-lg:            .48rem;
+$border-radius-sm:            3.2rem;
+$rounded-pill:                80rem;
+$box-shadow-sm:               0 .2rem .4rem rgba($black, .075);
+$box-shadow:                  0 .8rem 1.6rem rgba($black, .15);
+$box-shadow-lg:               0 1.6rem 4.8rem rgba($black, .175);
+$font-size-base:              1.6rem; // Assumes the browser default, typically `16px`
+$display1-size:               9.6rem;
+$display2-size:               8.8rem;
+$display3-size:               7.2rem;
+$display4-size:               5.6rem;
+$kbd-box-shadow:              inset 0 -.16rem 0 rgba($black, .25);
+$list-inline-padding:         .8rem;
+$table-cell-padding:          1.2rem;
+$table-cell-padding-sm:       .48rem;
+//$input-btn-padding-y:         .6rem;
+//$input-btn-padding-x:         1.2rem;
+$input-btn-focus-width:       .32rem;
+$input-btn-padding-y-sm:      .4rem;
+$input-btn-padding-x-sm:      .8rem;
+//$input-btn-padding-y-lg:      .8rem;
+//$input-btn-padding-x-lg:      1.6rem;
+$btn-block-spacing-y:         .8rem;
+$label-margin-bottom:                   .8rem;
+$form-text-margin-top:                  .4rem;
+$form-check-input-gutter:                2rem;
+$form-check-input-margin-y:             .48rem;
+$form-check-input-margin-x:             .4rem;
+$form-check-inline-margin-x:           1.2rem;
+$form-check-inline-input-margin-x:      .5rem;
+$form-group-margin-bottom:             1.6rem;
+$custom-control-gutter:                 .8rem;
+$custom-control-spacer-x:              1.6rem;
+$custom-control-indicator-size:        1.6rem;
+$custom-select-indicator-padding:   1.6rem; // Extra padding to account for the presence of the background-image based indicator
+$custom-range-track-height:         .8rem;
+$custom-range-track-border-radius:  1.6rem;
+$custom-range-track-box-shadow:     inset 0 .4rem .4rem rgba($black, .1);
+$custom-range-thumb-width:                   1.6rem;
+$custom-range-thumb-border-radius:           1.6rem;
+$custom-range-thumb-box-shadow:              0 .16rem .4rem rgba($black, .1);
+$nav-link-padding-y:                .8rem;
+$nav-link-padding-x:                1.6rem;
+$navbar-nav-link-padding-x:         .8rem;
+$navbar-toggler-padding-y:          .4rem;
+$navbar-toggler-padding-x:          1.2rem;
+$dropdown-min-width:                16rem;
+$dropdown-padding-y:                .8rem;
+$dropdown-spacer:                   .2rem;
+$dropdown-box-shadow:               0 .8rem 1.6rem rgba($black, .175);
+$dropdown-item-padding-y:           .4rem;
+$dropdown-item-padding-x:           2.4rem;
+$pagination-padding-y:              .8rem;
+$pagination-padding-x:              1.2rem;
+$pagination-padding-y-sm:           .4rem;
+$pagination-padding-x-sm:           .8rem;
+$pagination-padding-y-lg:           1.2rem;
+$pagination-padding-x-lg:           2.4rem;
+$jumbotron-padding:                 3.2rem;
+$card-spacer-y:                     1.2rem;
+$card-spacer-x:                     2rem;
+$card-img-overlay-padding:          2rem;
+$card-columns-gap:                  2rem;
+$tooltip-padding-y:                 .4rem;
+$tooltip-padding-x:                 .8rem;
+$tooltip-arrow-width:               1.28rem;
+$tooltip-arrow-height:              .64rem;
+$popover-box-shadow:                0 .4rem .8rem rgba($black, .2);
+$popover-header-padding-y:          .8rem;
+$popover-header-padding-x:          1.2rem;
+$popover-arrow-width:               1.6rem;
+$popover-arrow-height:              .8rem;
+$toast-padding-x:                   1.2rem;
+$toast-padding-y:                   .4rem;
+$toast-font-size:                   1.4rem;
+$toast-border-radius:               .4rem;
+$toast-box-shadow:                  0 .4rem 1.2rem rgba($black, .1);
+$badge-pill-border-radius:          16rem;
+$modal-inner-padding:               1.6rem;
+$modal-footer-margin-between:       .8rem;
+$modal-dialog-margin:               .8rem;
+$modal-dialog-margin-y-sm-up:       2.4rem;
+$modal-content-box-shadow-xs:       0 .4rem .8rem rgba($black, .5);
+$modal-content-box-shadow-sm-up:    0 .8rem 1.6rem rgba($black, .5);
+$modal-header-padding-y:            1.6rem;
+$modal-header-padding-x:            1.6rem;
+$alert-padding-y:                   1.2rem;
+$alert-padding-x:                   2rem;
+$alert-margin-bottom:               1.6rem;
+$progress-height:                   1.6rem;
+$progress-box-shadow:               inset 0 .16rem .16rem rgba($black, .1);
+$list-group-item-padding-y:         1.2rem;
+$list-group-item-padding-x:         2rem;
+$thumbnail-padding:                 .4rem;
+$breadcrumb-padding-y:              1.2rem;
+$breadcrumb-padding-x:              1.6rem;
+$breadcrumb-item-padding:           .8rem;
+$breadcrumb-margin-bottom:          1.6rem;
+$spinner-width:         3.2rem;
+$spinner-width-sm:        1.6rem;
+$kbd-padding-y:                     .32rem;
+$kbd-padding-x:                     .64rem;
+
+
+// Bring in Bootstrap
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+
+// Custom
+
+.btn-cta {
+  font-size: 3rem;
+  padding: .75rem 4rem;
+}
+
+.bg-black-50  { background-color: rgba(  0,   0,   0, .5); }
+.bg-white-50  { background-color: rgba(255, 255, 255, .5); }
+.bg-red-80    { background-color: rgba(194,   4,  48, .8); }
+.bg-yellow-80 { background-color: rgba(255, 199,  42, .8); }
+.bg-blue-80   { background-color: rgba(105, 163, 185, .8); }
