@@ -3,8 +3,8 @@ import { Container } from "react-bootstrap"
 import styled from "styled-components";
 
 const Section = styled.div`
-  margin-top: 6rem;
-  margin-bottom: 6rem;
+  margin-top: 15rem;
+  margin-bottom: 15rem;
   & h1 {
     margin-bottom: 3rem;
     text-align: center;
