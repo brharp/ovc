@@ -118,20 +118,6 @@ export const query = graphql`
           }
         }
       }
-      spotlight {
-        title
-        subtitle
-        description
-        image {
-          childImageSharp {
-            gatsbyImageData
-          }
-        }
-        links {
-          title
-          url
-        }
-      }
       process {
         title
         subtitle

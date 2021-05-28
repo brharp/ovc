@@ -7,64 +7,108 @@ import {
   FaFileAlt,
   FaComments,
   FaAward,
-  FaNewspaper,
-  FaUsers
+  FaUsers,
+  FaNewspaper
 } from "react-icons/fa"
-import resources from '../../content/alumni.yml'
 
 
-const Banner = (props) =>
-  <div className="cover">
-    <StaticImage className="cover-img" src="../images/university-centre.jpg" alt="" layout="fixed" />
-    <div className="cover-img-overlay jumbotron mb-0 bg-black-50">
-      <div class="container">
-        <h1 class="display-3 text-warning font-weight-bold">{props.title}</h1>
-        <p class="text-light lead">{props.lead}</p>
-      </div>
-    </div>
-  </div>
+
+const welcome = [
+  {
+    icon: FaUserCircle,
+    heading: "Update Your Contact Info",
+    copy: "Stay connected ...",
+    link: {
+      title: "Connect", url: "https://ovc.uoguelph.ca/"
+    }
+  },
+  {
+    icon: FaFileAlt,
+    heading: "Volunteer or Host a Student",
+    copy: "Pay it forward...",
+    link: {
+      title: "Find Out More", url: "https://ovc.uoguelph.ca/" 
+    }
+  },
+  {
+    icon: FaComments,
+    heading: "Connect with Your Class",
+    copy: "We can help you find ...",
+    link: {
+      title: "Email Your Request", url: "https://ovc.uoguelph.ca/" 
+    }
+  },
+  {
+    icon: FaGraduationCap,
+    heading: "Request a Copy of Your Degree",
+    copy: "Misplaced your degree...",
+    link: {
+      title: "Order a Copy of Your Degree", url: "https://ovc.uoguelph.ca/" 
+    }
+  }
+]
 
 
-const WelcomeRow = (props) =>
-  <div className="col">
-    <div className="media m-4">
-      <props.icon className="display-4 text-danger mx-4"/>
-      <div className="media-body">
-        <h3 className="text-dark">{props.heading}</h3>
-        <hr className="border-danger w-25 mx-0"/>
-        <p>{props.copy}</p>
-        <a href={props.link.url}>
-          {props.link.title}
-        </a>
-      </div>
-    </div>
-  </div>
-
-
-const AssocRow = (props) =>
-  <div className={`card ${props.className}`}>
-    <props.icon className="card-img-top display-4 text-danger mt-4"/>
-    <div className="card-body">
-      <h3 className="card-title text-dark">
-        {props.info.heading}
-      </h3>
-      <p className="card-text">
-        {props.info.copy}
-      </p>
-    </div>
-    <div className="card-footer">
-      <a className={`btn ${props.linkClasses}`}
-         href={props.info.link.url}>
-        {props.info.link.title}
-      </a>
-    </div>
-  </div>
+const alumni_association = [
+  {
+    icon: FaAward,
+    className: "bg-light",
+    linkClasses: "btn-outline-primary",
+    heading: "Award Nominations",
+    copy: "Through bursaries, scholarships, and work study programs the",
+    link: {
+      title: "View Award Winners",
+      url: "https://ovc.uoguelph.ca/"
+    }
+  },
+  {
+    icon: FaNewspaper,
+    className: "bg-blue-80",
+    linkClasses: "btn-outline-dark",
+    heading: "Annual Report",
+    copy: "Educate vetrinarians and scientists, create new knowledge and provide expert services to.",
+    link: {
+      title: "View Annual Report",
+      url: "https://ovc.uoguelph.ca/"
+    }
+  },
+  {
+    icon: FaUsers,
+    className: "bg-light",
+    linkClasses: "btn-outline-primary",
+    heading: "OVCAA Board Members",
+    copy: "Opus Veterinum Civibus: The Craft of the Veterinarian is for the Good of the Nation",
+    link: {
+      title: "View Board Members",
+      url: "https://ovc.uoguelph.ca/"
+    }
+  }
+]
 
 
 
 const AlumniPage = ( props ) => <Layout>
 
-  <Banner title={resources.banner.title} lead={resources.banner.lead}/>
+  <div className="cover">
+    <StaticImage className="cover-img" src="../images/university-centre.jpg" alt="" layout="fixed" />
+    <div className="cover-img-overlay jumbotron mb-0 bg-black-50">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-8">
+            <h1 className="display-3 text-warning font-weight-bold">
+              OVC Alumni
+            </h1>
+            <p className="text-light lead">
+              You are a student for a few short years, and you are a member of our
+              alumni family for life. Graduates of the Ontario Veterinar College are
+              spread across the globe, and their impact can be felt on every aspect of
+              animal, human and environmental health.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
   {/* content */}
   <div className="container">
@@ -78,17 +122,19 @@ const AlumniPage = ( props ) => <Layout>
             <div className="col-md-6 bg-black-50 p-4">
               <div className="p-4">
                 <p className="text-warning">
-                  <strong>{resources.spotlight.label}</strong>
+                  <strong>Alumni Spotlight</strong>
                 </p>
                 <h2 className="text-light">
-                  {resources.spotlight.heading}
+                  OVC Expert Recognized for Work In Promoting Human-Animal Bond
                 </h2>
                 <p className="lead text-light">
-                  {resources.spotlight.copy}
+                  A veterinary clinical commmunication expert a the University of 
+                  Guelph's Ontario Vetrinary College (OVC) has been recognized 
+                  for his work in protecting and promoting the human-animal bond.
                 </p>
                 <p>
-                  <a className="btn btn-primary" href={resources.spotlight.link.url}>
-                    {resources.spotlight.link.title}
+                  <a className="btn btn-primary" href="https://ovc.uoguelph.ca">
+                    Read More
                   </a>
                 </p>
               </div>
@@ -113,10 +159,13 @@ const AlumniPage = ( props ) => <Layout>
                   className="mx-4 display-2 text-info"/>
                 <div className="mt-2 media-body">
                   <h2 className="text-light">
-                    {resources.welcome.heading}
+                    Welcome OVC Alumni
                   </h2>
                   <p className="text-light lead">
-                    {resources.welcome.copy}
+                    Our reputation as a world-ranking college of veterinary medicine is
+                    connected to the many successes of our esteemed alumni. Wherever
+                    your OVC degree takes you, please remember that you are always 
+                    welcome home.
                   </p>
                 </div>
               </div>
@@ -126,33 +175,23 @@ const AlumniPage = ( props ) => <Layout>
       </div>
     </div>
 
-    {/* WelcomeRows */}
+    {/* Welcome Rows */}
     <div className="container">
       <div className="row">
-        <WelcomeRow icon={FaUserCircle}
-                 heading={resources.contact.heading}
-                 copy={resources.contact.copy}
-                 link={resources.contact.link}
-               />
-        <WelcomeRow icon={FaFileAlt}
-                 heading={resources.volunteer.heading}
-                 copy={resources.volunteer.copy}
-                 link={resources.volunteer.link}
-               />
-      </div>
-    </div>
-    <div className="container bg-light">
-      <div className="row py-4">
-        <WelcomeRow icon={FaComments}
-                 heading={resources.connect.heading}
-                 copy={resources.connect.copy}
-                 link={resources.connect.link}
-               />
-        <WelcomeRow icon={FaGraduationCap}
-                 heading={resources.records.heading}
-                 copy={resources.records.copy}
-                 link={resources.records.link}
-               />
+        { welcome.map((item, index) =>
+            <div className="col-md-6">
+              <div className="media m-4">
+                <item.icon className="display-4 text-danger mx-4"/>
+                <div className="media-body">
+                  <h3 className="text-dark">{item.heading}</h3>
+                  <hr className="border-danger w-25 mx-0"/>
+                  <p>{item.copy}</p>
+                  <a href={item.link.url}>
+                    {item.link.title}
+                  </a>
+                </div>
+              </div>
+            </div> )}
       </div>
     </div>
 
@@ -167,10 +206,10 @@ const AlumniPage = ( props ) => <Layout>
           <div className="row h-100 justify-content-end align-content-end">
             <div className="p-4 text-right">
               <h2 className="display-4 text-warning font-weight-bold">
-                {resources.association.heading}
+                OVC Alumni Association
               </h2>
               <p className="text-light lead">
-                {resources.association.subheading}
+                Stay connected with your class and your school.
               </p>
             </div>
           </div>
@@ -180,21 +219,27 @@ const AlumniPage = ( props ) => <Layout>
 
     {/* Info Cards */}
     <div className="card-group my-4 text-center">
-      <AssocRow icon={FaAward}
-                info={resources.awards}
-                className="bg-light"
-                linkClasses="btn-outline-primary"
-          />
-      <AssocRow icon={FaNewspaper}
-                info={resources.annual_report}
-                className="bg-blue-80"
-                linkClasses="btn-outline-dark"
-          />
-      <AssocRow icon={FaUsers}
-                info={resources.board_members}
-                className="bg-light"
-                linkClasses="btn-outline-primary"
-          />
+      {
+        alumni_association.map((item, index) =>
+          <div key={index} className={`card ${item.className}`}>
+            <item.icon className="card-img-top display-4 text-danger mt-4"/>
+            <div className="card-body">
+              <h3 className="card-title text-dark">
+                {item.heading}
+              </h3>
+              <p className="card-text">
+                {item.copy}
+              </p>
+            </div>
+            <div className="card-footer">
+              <a className={`btn ${item.linkClasses}`}
+                 href={item.link.url}>
+                {item.link.title}
+              </a>
+            </div>
+          </div>
+        )
+      }
     </div>
 
 
@@ -205,15 +250,15 @@ const AlumniPage = ( props ) => <Layout>
             <StaticImage className="card-img" src="../images/people.jpg" alt=""/>
             <div className="card-img-overlay p-4 bg-red-80">
               <h2 className="text-light card-title">
-                {resources.donate.heading}
+                Donate
               </h2>
               <p className="text-light">
-                {resources.donate.copy}
+                See how you can participate in the research at OVC.
               </p>
               <p>
                 <a className="btn btn-outline-light" 
-                  href="{resources.donate.link.url}">
-                  {resources.donate.link.title}
+                  href="https://ovc.uoguelph.ca">
+                  Donate Now
                 </a>
               </p>
             </div>
@@ -224,15 +269,17 @@ const AlumniPage = ( props ) => <Layout>
             <StaticImage className="card-img" src="../images/people.jpg" alt=""/>
             <div className="card-img-overlay bg-yellow-80">
               <h2 class="text-dark card-title">
-                {resources.alumni_connect.heading}
+                Connect With Us
               </h2>
               <p className="text-dark">
-                {resources.alumni_connect.copy}
+                Do you have a great story to share about an OVC graduate you think we should hear 
+                about? Do you want to speak to someone about how to get involved iwth the OVC 
+                Alumni Association of thow to organize a reunion of your class?
               </p>
               <p>
                 <a className="btn btn-outline-dark" 
-                  href="{resources.alumni_connect.link.url}">
-                  {resources.alumni_connect.link.title}
+                  href="https://ovc.uoguelph.ca">
+                  View Contact Info
                 </a>
               </p>
             </div>
