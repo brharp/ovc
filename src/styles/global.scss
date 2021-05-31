@@ -82,7 +82,7 @@ $grid-breakpoints: (
 }
 
 .cover-img {
-  position: absolute;
+  position: absolute !important;
   transform: translateX(-50%) translateY(-50%);
   width: 100% !important;
   top: 50%;
