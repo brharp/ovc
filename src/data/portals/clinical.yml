@@ -15,8 +15,8 @@ process:
   title: How to Participate in a Clinical Trial
   subtitle: Follow the step by step process to get involved.
   steps:
-    - step: Step 1
-      title: Look for options
+    - step: Step 1:
+      title: Look for options 
       content: |
         Lorem ipsum dolor sit amet consectetur adipiscing, elit congue
         vulputate accumsan facilisi molestie vivamus, malesuada pretium
