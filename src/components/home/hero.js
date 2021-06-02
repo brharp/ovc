@@ -90,7 +90,7 @@ const HeroComponent = ( props ) =>
     render={ ( data ) =>
       <Section>
         <StaticImage src="../../images/home/2979_ovcWINDOW_05.jpg" alt="Image of front arch of the Ontario Vet College" layout="fullWidth" 
-                     style={{gridArea: "1/1", maxHeight: "800px" }} />
+                     style={{gridArea: "1/1", maxHeight: "600px" }} />
         <Mask>
           <GridContainer>
             <Content>
