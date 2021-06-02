@@ -89,11 +89,11 @@ const alumni_association = [
 
 const AlumniPage = ( props ) => <Layout>
 
-  <div className="cover">
+  <div className="cover" style={{height: "600px"}}>
     <StaticImage className="cover-img" src="../images/university-centre.jpg" alt="" layout="fixed" />
-    <div className="cover-img-overlay jumbotron mb-0 bg-black-50">
-      <div className="container">
-        <div className="row">
+    <div className="cover-img-overlay jumbotron mb-0 bg-black-50 h-100">
+      <div className="container h-100">
+        <div className="row h-100 align-content-end">
           <div className="col-md-8">
             <h1 className="display-3 text-warning font-weight-bold">
               OVC Alumni
