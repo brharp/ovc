@@ -89,16 +89,17 @@ const alumni_association = [
 
 const AlumniPage = ( props ) => <Layout>
 
-  <div className="cover" style={{height: "600px"}}>
-    <StaticImage className="cover-img" src="../images/university-centre.jpg" alt="" layout="fixed" />
-    <div className="cover-img-overlay jumbotron mb-0 bg-black-50 h-100">
+  <div className="cover">
+    <StaticImage className="cover-img" src="../images/university-centre.jpg" alt="" 
+                 layout="fullWidth" style={{height: "600px"}}/>
+    <div className="cover-img-overlay py-4 m-0 bg-black-50 h-100">
       <div className="container h-100">
         <div className="row h-100 align-content-end">
           <div className="col-md-8">
             <h1 className="display-3 text-warning font-weight-bold">
               OVC Alumni
             </h1>
-            <p className="text-light lead">
+            <p className="text-light lead font-weight-bold">
               You are a student for a few short years, and you are a member of our
               alumni family for life. Graduates of the Ontario Veterinar College are
               spread across the globe, and their impact can be felt on every aspect of
@@ -115,7 +116,7 @@ const AlumniPage = ( props ) => <Layout>
 
     {/* Alumni Spotlight */}
     <div className="cover my-4">
-      <StaticImage src="../images/people.jpg" layout="fixed" alt="" className="cover-img" />
+      <StaticImage src="../images/people.jpg" alt="" className="cover-img" />
       <div className="cover-img-overlay p-0">
         <div className="container h-100">
           <div className="row h-100 align-content-end justify-content-start">
@@ -147,13 +148,13 @@ const AlumniPage = ( props ) => <Layout>
     {/* Welcome OVC Alumni */}
     <div className="cover my-4">
       <StaticImage src="../images/dog-banner.jpg"
-                   className="cover-img" layout="fixed"
+                   className="cover-img" layout="fullWidth"
                    alt="">
       </StaticImage>
       <div className="cover-img-overlay p-0">
         <div className="container h-100">
           <div className="row h-100">
-            <div className="col-md-8 bg-black-50 p-4">
+            <div className="col-md-8 bg-black-50 p-4 d-flex align-items-center">
               <div className="media ">
                 <FaGraduationCap 
                   className="mx-4 display-2 text-info"/>
@@ -198,7 +199,7 @@ const AlumniPage = ( props ) => <Layout>
     {/* OVC Alumni Association */}
     <div className="cover my-4">
       <StaticImage src="../images/dog-banner.jpg"
-                   className="cover-img" layout="fixed"
+                   className="cover-img"
                    alt="">
       </StaticImage>
       <div className="cover-img-overlay bg-black-50 ">

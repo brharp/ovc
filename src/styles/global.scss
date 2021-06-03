@@ -77,19 +77,16 @@ $grid-breakpoints: (
 // Components
 
 .cover {
-  position: relative;
+  display: grid;
   overflow: hidden;
 }
 
 .cover-img {
-  position: absolute !important;
-  transform: translateX(-50%) translateY(-50%);
-  width: 100% !important;
-  top: 50%;
-  left: 50%;
+  grid-area: 1/1;
 }
 
 .cover-img-overlay {
+  grid-area: 1/1;
   position: relative;
 }
 

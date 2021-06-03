@@ -22,16 +22,17 @@ const ExplorePage = ( props ) => (
   <Layout>
 
     {/* Banner */}
-    <div className="cover" style={{height: "600px"}}>
-      <StaticImage className="cover-img" src="../images/university-centre.jpg" alt="" layout="fixed" />
-      <div className="cover-img-overlay jumbotron mb-0 bg-black-50 h-100">
+    <div className="cover">
+      <StaticImage className="cover-img" src="../images/university-centre.jpg" alt="" 
+                   layout="fullWidth" style={{height: "600px"}}/>
+      <div className="cover-img-overlay py-4 m-0 bg-black-50 h-100">
         <div className="container h-100">
           <div className="row h-100 align-content-end">
             <div className="col-md-8">
               <h1 className="display-3 text-warning font-weight-bold">
                 Explore OVC
               </h1>
-              <p className="text-light lead">
+              <p className="text-light lead font-weight-bold">
                 The Ontario Vetrinary College (OVC) at the University of Guelph is a
                 world leader in advancing veterinary science, learning and research to
                 improve the lives of animals, people and our plant. With a focus on
@@ -85,7 +86,7 @@ const ExplorePage = ( props ) => (
     <div className="container my-4">
       <div className="cover my-4">
         <StaticImage src="../images/dog-banner.jpg"
-                     className="cover-img" layout="fixed"
+                     className="cover-img" 
                      alt="">
         </StaticImage>
         <div className="cover-img-overlay bg-black-50 ">

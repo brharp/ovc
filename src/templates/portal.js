@@ -35,8 +35,12 @@ class PortalPage extends React.Component {
     const data = this.props.data
     const portal = data.portalsYaml
     const header = <Banner image={getImage(portal.image)}>
-          <h1>{portal.title}</h1>
-          <p>{portal.summary}</p>
+          <h1 className="display-3 text-warning font-weight-bold">
+            {portal.title}
+          </h1>
+          <p className="text-light lead font-weight-bold mb-4">
+            {portal.summary}
+          </p>
         </Banner>
     const content = <>
         { portal.topics && <Topics topics={portal.topics} /> }
@@ -148,7 +152,7 @@ export const query = graphql`
         title
         image {
           childImageSharp {
-            gatsbyImageData(layout: FIXED)
+            gatsbyImageData(layout: FULL_WIDTH)
           }
         }
         items {
@@ -166,7 +170,7 @@ export const query = graphql`
           bio
           photo {
             childImageSharp {
-              gatsbyImageData
+              gatsbyImageData(layout: FIXED)
             }
           }
         }
