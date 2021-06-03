@@ -11,6 +11,14 @@ cta:
   title: Contact Clinical Trials
   url: https://ovc.uoguelph.ca/
   image: ../../images/research/contact-research.jpg
+topics:
+  - title: Doctor of Veterinary Medicine Program
+    subtitle: Find your calling
+    image: ../../images/learn/"Student veterinarians using tablets 122017 IMG_2494.jpg"
+    summary: The study of veterinary medicine is a dynamic blend of science, technology and experience. At OVC, students can follow their passion, find their calling, and discover how they can contribute to the ever-evolving world of medicine, care, scientific discovery, and community.
+    links:      
+      - title: Explore the DVM Program
+        url: http://www.ovc.uoguelph.ca/recruitment/en/index.asp
 process:
   title: How to Participate in a Clinical Trial
   subtitle: Follow the step by step process to get involved.
