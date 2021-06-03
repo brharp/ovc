@@ -1,18 +1,13 @@
 import React from "react";
+import { StaticQuery, graphql } from "gatsby"
 import { useContext } from "react"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components";
-import { Accordion, AccordionContext, useAccordionToggle, Button, Container, Card } from "react-bootstrap";
+import { Accordion, AccordionContext, useAccordionToggle, Button, Card } from "react-bootstrap";
 import { FaAngleDown } from "react-icons/fa"
 
-const Section = styled.div`
-  padding-top: 24px;
-  padding-bottom: 24px;
-  & .toggle.open {
-    background: var(--red);
-    color: var(--light);
-  }
-`
+
+
 
 const StyledProfile = styled.div`
   display: grid;
@@ -39,26 +34,6 @@ const StyledQuote = styled.div`
   grid-area: quote;
 `
 
-class Profile extends React.Component {
-  render() {
-    console.log(this.props.photo)
-    return (
-      <StyledProfile>
-        <GatsbyImage image={getImage(this.props.photo)} layout="fullWidth"
-                     style={{gridArea: "photo" }}
-          />
-        <StyledBio style={{gridArea: "bio" }}>
-          <h3>{this.props.name}</h3>
-          <h4>{this.props.title}</h4>
-          <p>{this.props.bio}</p>
-        </StyledBio>
-        <StyledQuote>
-          {this.props.quote}
-        </StyledQuote>
-      </StyledProfile>
-    )
-  }
-}
 
 function Expander({ children, eventKey, callback }) {
   const currentEventKey = useContext(AccordionContext);
@@ -83,62 +58,88 @@ function Expander({ children, eventKey, callback }) {
 
 class Responsive extends React.Component {
   render() {
-    const data = this.props.data
     const cols = parseInt(this.props.columns)
+    const data = this.props.data
     return (
-      <Section className={this.props.className}>
-        <Container>
-          <h2>{data.title}</h2>
-          <h3>{data.subtitle}</h3>
-          <Accordion style={{
-              display: "grid",
-              gridTemplateColumns: `repeat(${cols}, 1fr)`,
-              gridGap: "16px",
-            }}>
-            {
-              data.children.map((node,index) => (
-              <>
-                <div key={`t_${index}`} style={{
-                      gridArea: `${Math.floor(index/cols)*2+1} / ${index%cols+1}`
-                  }}>
-                  <Card style={{ borderLeft: "4px solid var(--red)", height: "100%" }}>
-                    <Card.Body>
-                      <h4 className="text-dark">{node.unit}</h4>
-                      <Card.Text>
-                        <h6>{node.title}</h6>
-                        <h6>{node.name}</h6> 
-                      </Card.Text>
-                    </Card.Body>
-                    <Expander as={Button} variant="link" eventKey={`${index}`}>
-                      <FaAngleDown />
-                    </Expander>
-                  </Card>
-                </div>
-                <Accordion.Collapse key={index} eventKey={`${index}`}
-                  style={{ gridArea: `${Math.floor(index/cols)*2+2} / 1 / ${Math.floor(index/cols)*2+2} / ${cols+1}` }}>
-                  <Profile name={node.name} title={node.title} unit={node.unit}
-                           bio={node.bio} quote={node.quote} photo={node.photo} />
-                </Accordion.Collapse>
-                </>
-              ))
-            }
-          </Accordion>
-        </Container>
-      </Section>
+      <div className={this.props.className}>
+      <Accordion style={{
+          display: "grid",
+          gridTemplateColumns: `repeat(${cols}, 1fr)`,
+          gridGap: "16px",
+        }}>
+        {
+          data.allLeadersYaml.edges.map(({node},index) => (
+          <>
+            <div key={`t_${index}`} style={{
+                  gridArea: `${Math.floor(index/cols)*2+1} / ${index%cols+1}`
+              }}>
+              <Card style={{ borderLeft: "4px solid var(--red)", height: "100%" }}>
+                <Card.Body>
+                  <h4 className="text-dark">{node.unit}</h4>
+                  <Card.Text>
+                    <h6>{node.title}</h6>
+                    <h6>{node.name}</h6> 
+                  </Card.Text>
+                </Card.Body>
+                <Expander as={Button} variant="link" eventKey={`${index}`}>
+                  <FaAngleDown />
+                </Expander>
+              </Card>
+            </div>
+            <Accordion.Collapse key={index} eventKey={`${index}`}
+              style={{ gridArea: `${Math.floor(index/cols)*2+2} / 1 / ${Math.floor(index/cols)*2+2} / ${cols+1}` }}>
+              <StyledProfile>
+                <GatsbyImage image={getImage(node.photo)} layout="fullWidth"
+                             style={{gridArea: "photo" }}
+                  />
+                <StyledBio style={{gridArea: "bio" }}>
+                  <h3>{node.name}</h3>
+                  <h4>{node.title}</h4>
+                  <p>{node.bio}</p>
+                </StyledBio>
+                <StyledQuote>
+                  {node.quote}
+                </StyledQuote>
+              </StyledProfile>
+            </Accordion.Collapse>
+            </>
+          ))
+        }
+      </Accordion>
+      </div>
     )
   }
 }
 
 class Leadership extends React.Component {
   render() {
-    const data = this.props.data
-    return (
+    return <StaticQuery query={graphql`
+      query {
+        allLeadersYaml {
+          edges {
+            node {
+              unit
+              name
+              title
+              bio
+              quote
+              photo {
+                childImageSharp {
+                  gatsbyImageData
+                }
+              }
+            }
+          }
+        }
+      }
+    `} render={data => (
       <>
         <Responsive data={data} columns="3" className="d-none d-lg-block" />
         <Responsive data={data} columns="2" className="d-none d-md-block d-lg-none" />
         <Responsive data={data} columns="1" className="d-md-none" />
       </>
-    )
+    )}
+    ></StaticQuery>
   }
 }
 

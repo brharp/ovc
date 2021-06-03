@@ -11,7 +11,6 @@ import Partners from "../components/shared/partners"
 import Process from "../components/shared/process"
 import Testimonials from "../components/shared/testimonials"
 import Features from "../components/shared/features"
-import Leadership from "../components/shared/leadership"
 import Statistics from "../components/shared/statistics"
 
 
@@ -41,7 +40,6 @@ class PortalPage extends React.Component {
         </Banner>
     const content = <>
         { portal.topics && <Topics topics={portal.topics} /> }
-        { portal.leadership && <Leadership data={portal.leadership} /> }
         { portal.features && <Features features={portal.features} /> }
         <div className="container">
         { portal.statistics && <Statistics children={portal.statistics.children} /> }
