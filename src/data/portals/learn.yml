@@ -5,7 +5,7 @@ image: ../../images/learn/MicrosoftTeams-image.png
 cta:
   title: Contact to Learn
   url: https://ovc.uoguelph.ca/
-  image: ../../images/learn/contact.png
+  image: ../../images/contact.png
 topics:
   - title: Doctor of Veterinary Medicine Program
     subtitle: Find your calling
