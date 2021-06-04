@@ -18,15 +18,10 @@ process:
     - step: "Step 1:"
       title: Look for options 
       content: |
-        Lorem ipsum dolor sit amet consectetur adipiscing, elit congue
-        vulputate accumsan facilisi molestie vivamus, malesuada pretium
-        sapien fames suspendisse. Pellentesque cras gravida facilisis
-        lectus nunc ut himenaeos felis consequat vitae id sed duis cum
-        tristique senectus eu accumsan, integer iaculis bibendum egestas
-        maecenas velit odio parturient praesent nibh facilisi justo
-        mollis primis nisl libero. Feugiat maecenas elementum cursus
-        risus hac vitae ultrices, ultricies dignissim ac ad scelerisque
-        consequat nascetur mi, montes dui natoque proin convallis eget.
+Once you have a diagnosis of your pet’s condition, your search for a clinical trial can begin! Talk to your veterinarian about your interest in companion animal trials and they can help determine suitability for enrolling. 
+
+A full list of our current clinical trials can be found <a href="http://ovchealthscience.icreate4.esolutionsgroup.ca/en/aboutovchealthsciences/ClinicalTrials.asp>here</a>
+"<a href="https://ebusiness.avma.org/aahsd/study_search.aspx">AVMA Animal Health Studies Database </a> a searchable database of publicly and privately funded veterinary clinical trials being performed in Canada and the United States."     
     - step: "Step 2"
       title: Look for options
       content: |
