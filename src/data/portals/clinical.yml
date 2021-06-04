@@ -33,7 +33,7 @@ process:
       title: Contact the study organizers. 
       content: |
          If you think your pet may be a suitable candidate for a particular study at the Ontario Veterinary College or you wish to obtain more information regarding a study(s) please contact Dr. Vicky Sabine (Clinical Trials Coordinator) at ovc.clinicaltrials@uoguelph.ca or the contact name listed on the study page
-     - step: "Step 5"
+    - step: "Step 5"
       title: Get enrolled!
       content: |
         Veterinary clinical trials are voluntary, your pet cannot be enrolled into a trial without your knowledge or permission.  The enrollment process with the OVC Clinical Trials team, will provide the information for you to understand the study and your responsibilities.  In addition to the consent document and study information sheet, the process may involve recruitment materials, verbal instructions and further questions regarding your pet.    
