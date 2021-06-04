@@ -26,29 +26,13 @@ A full list of our current clinical trials can be found
       content: |
         Lorem step 3
     - step: "Step 3"
-      title: Look for options
+      title: Review the study information sheet. 
       content: |
-        Lorem ipsum dolor sit amet consectetur adipiscing, elit congue
-        vulputate accumsan facilisi molestie vivamus, malesuada pretium
-        sapien fames suspendisse. Pellentesque cras gravida facilisis
-        lectus nunc ut himenaeos felis consequat vitae id sed duis cum
-        tristique senectus eu accumsan, integer iaculis bibendum egestas
-        maecenas velit odio parturient praesent nibh facilisi justo
-        mollis primis nisl libero. Feugiat maecenas elementum cursus
-        risus hac vitae ultrices, ultricies dignissim ac ad scelerisque
-        consequat nascetur mi, montes dui natoque proin convallis eget.
+Clinical trials follow a study protocol which describes the study objectives and plan of action.   The protocol has been approved by the University of Guelph Animal Care Committee and OVC Companion Animal Hospital. Each protocol is designed with the health of your pet in mind whilst ensuring that researchers are able to obtain important study information. Review the protocol information provided by the OVC Clinical trials team. Questions to the team/veterinarian are encouraged! 
     - step: "Step 4"
-      title: Look for options
+      title: Contact the study organizers. 
       content: |
-        Lorem ipsum dolor sit amet consectetur adipiscing, elit congue
-        vulputate accumsan facilisi molestie vivamus, malesuada pretium
-        sapien fames suspendisse. Pellentesque cras gravida facilisis
-        lectus nunc ut himenaeos felis consequat vitae id sed duis cum
-        tristique senectus eu accumsan, integer iaculis bibendum egestas
-        maecenas velit odio parturient praesent nibh facilisi justo
-        mollis primis nisl libero. Feugiat maecenas elementum cursus
-        risus hac vitae ultrices, ultricies dignissim ac ad scelerisque
-        consequat nascetur mi, montes dui natoque proin convallis eget.
+If you think your pet may be a suitable candidate for a particular study at the Ontario Veterinary College or you wish to obtain more information regarding a study(s) please contact Dr. Vicky Sabine (Clinical Trials Coordinator) at ovc.clinicaltrials@uoguelph.ca or the contact name listed on the study page
      - step: "Step 5"
       title: Get enrolled!
       content: |
