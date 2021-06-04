@@ -17,10 +17,7 @@ process:
   steps:
     - step: "Step 1"
       title: Look for options 
-      content: |
-Once you have a diagnosis of your pet’s condition, your search for a clinical trial can begin! Talk to your veterinarian about your interest in companion animal trials and they can help determine suitability for enrolling. 
-
-A full list of our current clinical trials can be found     
+      content: | 
     - step: "Step 2"
       title: Look for options
       content: |
