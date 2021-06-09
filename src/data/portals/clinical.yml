@@ -12,11 +12,11 @@ cta:
   url: https://ovc.uoguelph.ca/
   image: ../../images/contact.png
 topics:
-  - title: Centres and Institutes
-    subtitle: Our network of cutting-edge facilities
-    image: ../../images/learn/lecture.jpg
-    summary: OVC is home to four world-leading research centres and institutes that catalyze discovery and innovation by promoting collaboration, creating efficiencies in the research process, translating results to internal and external audiences, and magnifying research impact. These centres and institutes are pillars of research excellence in the College that reflect the substantial and internationally recognized expertise of OVC faculty members.
-    links:      
+  title: Centres and Institutes
+  subtitle: Our network of cutting-edge facilities
+  image: ../../images/learn/lecture.jpg
+  summary: OVC is home to four world-leading research centres and institutes that catalyze discovery and innovation by promoting collaboration, creating efficiencies in the research process, translating results to internal and external audiences, and magnifying research impact. These centres and institutes are pillars of research excellence in the College that reflect the substantial and internationally recognized expertise of OVC faculty members.
+  links:      
       - title: Explore Centres & Institutes
         url: http://www.ovc.uoguelph.ca/recruitment/en/index.asp
 process:
