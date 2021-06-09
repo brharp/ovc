@@ -9,7 +9,7 @@ cta:
 topics:
   - title: Doctor of Veterinary Medicine Program
     subtitle: Find your calling
-    image: ../../images/learn/micropipetting_students.jpg
+    image: ../../images/learn/vet_screens.jpg
     summary: The study of veterinary medicine is a dynamic blend of science, technology and experience. At OVC, students can follow their passion, find their calling, and discover how they can contribute to the ever-evolving world of medicine, care, scientific discovery, and community.
     links:      
       - title: Explore the DVM Program
@@ -23,7 +23,7 @@ topics:
         url: http://www.ovc.uoguelph.ca/research/en/researchtrainingopportunities/futuregraduatestudents.asp
   - title: Bio-medical Science Major
     subtitle: Choose your pathway
-    image: ../../images/learn/vet_screens.jpg
+    image: ../../images/learn/micropipetting_students.jpg
     summary: The pathway for students focused on a future career in health sciences. A unique foundation in both animal and human health sets our program apart, providing a solid academic base for students who have ambitions in health sciences, whether veterinary or human.
     links:
       - title: Explore BIOM Major
