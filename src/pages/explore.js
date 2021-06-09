@@ -1,18 +1,55 @@
 import React from 'react'
 import Layout from '../components/layout'
 import { StaticImage } from "gatsby-plugin-image"
-import { FaGraduationCap } from "react-icons/fa"
-import Leadership from "../components/shared/leadership"
 
-import About from "../components/explore/about"
-import Ideology from "../components/explore/ideology"
-import Initiatives from "../components/explore/initiatives"
-import Numbers from "../components/explore/numbers"
-import Statistics from "../components/explore/statistics"
-import DeptsAndCentres from "../components/explore/deptscentres.js"
-import Centres from "../components/explore/centres"
-import HealthSciences from "../components/explore/hsc"
-import News from "../components/news/news"
+import Leadership from "../components/shared/leadership"
+import InsideOVC from "../blocks/insideovc"
+
+import { 
+  FaUsers, 
+  FaHandHoldingHeart, 
+  FaFlask, 
+  FaGlobeAfrica, 
+  FaCanadianMapleLeaf, 
+  FaGraduationCap 
+} from "react-icons/fa"
+
+
+
+const initiatives = [
+  {
+    icon: FaUsers,
+    heading: "Our College, Our Community",
+    copy: "Ensuring our college fully embraces and reflects the diversity of the communities we serve and commits to welcoming and respectful workplace culture",
+  },
+  {
+    icon: FaHandHoldingHeart,
+    heading: "The Veterinary Healthcare Revolution",
+    copy: "Preparing our students to thrive and lead the veterinary primary healthcare teams of the future",
+  },
+  {
+    icon: FaFlask,
+    heading: "Discovery in Translation",
+    copy: "Enhancing our impact in translational, comparative and clinical research and training",
+  },
+  {
+    icon: FaGlobeAfrica,
+    heading: "Global Health - One Health",
+    copy: "Growing our international partnerships and impact to address complex global health challenges",
+  },
+  {
+    icon: FaCanadianMapleLeaf,
+    heading: "For the Good of the Nation",
+    copy: "Growing our veterinary healthcase workforce to address the evolving health, welfare, food safety and security needs of Ontario and Canada",
+  },
+  {
+    icon: FaGraduationCap,
+    heading: "Unleashing Scholarship",
+    copy: "Expanding high-calibre research and graduate training to grow impact and enhance our global standing",
+  }
+]
+
+
 
 
 
@@ -107,15 +144,112 @@ const ExplorePage = ( props ) => (
       <Leadership />
     </div>
 
-    <About />
-    <Ideology />
-    <Initiatives />
-    <Numbers />
-    <Statistics />
-    <DeptsAndCentres />
-    <Centres />
-    <HealthSciences />
-    <News />
+
+
+    {/* Strategic Initiatives */}
+    <div className="container my-4">
+      <div className="cover my-4">
+        <StaticImage src="../images/dog-banner.jpg"
+                     className="cover-img" 
+                     alt="">
+        </StaticImage>
+        <div className="cover-img-overlay bg-black-50 ">
+          <div className="container h-100">
+            <div className="row h-100 justify-content-end align-content-end">
+              <div className="p-4 text-right">
+                <h2 className="display-4 text-warning font-weight-bold">
+                  OVC Strategic Initiatives
+                </h2>
+                <p className="text-light lead font-weight-bold">
+                  Improving life by creating healthier futures for animals,
+                  people and the environment.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="row">
+        {
+          initiatives.map((item, index) =>
+            <div className="col-md-6">
+              <div className="media m-4">
+                <item.icon className="display-4 text-danger mx-4"/>
+                <div className="media-body">
+                  <h3 className="text-dark">{item.heading}</h3>
+                  <hr className="border-danger w-25 mx-0"/>
+                  <p>{item.copy}</p>
+                </div>
+              </div>
+            </div>
+          )
+        }
+      </div>
+      <p className="text-center py-4">
+        <a href="https://ovc.uoguelph.ca" className="btn btn-lg btn-primary">
+          Learn more about OVC's Strategic Intiatives
+        </a>
+      </p>
+    </div>
+
+
+
+
+    <InsideOVC />
+
+
+
+    {/* Our Structure */}
+    <div className="container">
+      <div className="row py-4">
+        <div className="col-md-7 order-md-2">
+          <StaticImage src="../images/dog-banner.jpg" />
+        </div>
+        <div className="col-md-5">
+          <h2>Our Structure</h2>
+          <h3 className="text-dark">The sum of our parts</h3>
+          <p>
+            The Ontario Veterinary College is organized into four
+            dynamic academic departments, along with world-leading
+            research centres and institutes that promote collaboration,
+            catalyze discovery and reflect the internationally
+            recognized expertise of our faculty and researchers.
+          </p>
+          <p>
+            <a href="https://ovc.uoguelph.ca" className="btn btn-primary btn-lg">
+              Explore Departments &amp; Centres
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+    {/* Our Success */}
+    <div className="container">
+      <div className="row py-4">
+        <div className="col-md-7">
+          <StaticImage src="../images/dog-banner.jpg" />
+        </div>
+        <div className="col-md-5">
+          <h2>Our Success</h2>
+          <h3 className="text-dark">Building the pathway of discovery</h3>
+          <p>
+            The Ontario Veterinary College established in 1862 in
+            Toronto, is the oldest veterinary college in Canada and the
+            United States and the only veterinary college in Ontario.
+            OVC graduates almost one-third of all Canadian-educated
+            veterinarians.
+          </p>
+          <p>
+            <a href="https://ovc.uoguelph.ca" className="btn btn-primary btn-lg">
+              Explore the Vault
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+
   </Layout>
 )
 
