@@ -4,7 +4,8 @@ summary: |
   OVC is and continuously strives to be an exemplary world leader in innovative,
   collaborative research that improves the health and well-being of animals, 
   humans, and the environment.
-image: ../../images/research/laboratory.jpg
+image: ../../images/research/Research_banner_image.tiff
+
 cta:
   title: Contact to Research
   url: https://ovc.uoguelph.ca/
@@ -13,10 +14,25 @@ topics:
   - title: Centres and Institutes
     subtitle: Our network of cutting-edge facilities
     image: ../../images/learn/lecture.jpg
-    summary: Using a team based approach our many dedicated veterinary professions and technical staff are equipped to provide leading edge animal care using extensive and advanced diagnostic and treatment capabilities.
-topics:
+    summary: OVC is home to four world-leading research centres and institutes that catalyze discovery and innovation by promoting collaboration, creating efficiencies in the research process, translating results to internal and external audiences, and magnifying research impact. These centres and institutes are pillars of research excellence in the College that reflect the substantial and internationally recognized expertise of OVC faculty members.
+    links:      
+      - title: Explore Centres & Institutes
+        url: http://www.ovc.uoguelph.ca/recruitment/en/index.asp
   - title: Centres and Institutes
     subtitle: Our network of cutting-edge facilities
     image: ../../images/learn/lecture.jpg
-    summary: Using a team based approach our many dedicated veterinary professions and technical staff are equipped to provide leading edge animal care using extensive and advanced diagnostic and treatment capabilities.
-
+    summary: OVC is home to four world-leading research centres and institutes that catalyze discovery and innovation by promoting collaboration, creating efficiencies in the research process, translating results to internal and external audiences, and magnifying research impact. These centres and institutes are pillars of research excellence in the College that reflect the substantial and internationally recognized expertise of OVC faculty members.
+    links:      
+      - title: Explore Centres & Institutes
+        url: http://www.ovc.uoguelph.ca/recruitment/en/index.asp  - title: Centres and Institutes
+    subtitle: Our network of cutting-edge facilities
+    image: ../../images/learn/lecture.jpg
+    summary: OVC is home to four world-leading research centres and institutes that catalyze discovery and innovation by promoting collaboration, creating efficiencies in the research process, translating results to internal and external audiences, and magnifying research impact. These centres and institutes are pillars of research excellence in the College that reflect the substantial and internationally recognized expertise of OVC faculty members.
+    links:      
+      - title: Explore Centres & Institutes
+        url: http://www.ovc.uoguelph.ca/recruitment/en/index.asp
+  help:
+    title: Still have questions?
+    link:
+      title: View FAQ
+      url: https://ovc.uoguelph.ca/
