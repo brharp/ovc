@@ -39,4 +39,8 @@ process:
         Veterinary clinical trials are voluntary, your pet cannot be enrolled into a trial without your knowledge or permission.  The enrollment process with the OVC Clinical Trials team, will provide the information for you to understand the study and your responsibilities.  In addition to the consent document and study information sheet, the process may involve recruitment materials, verbal instructions and further questions regarding your pet.    
 
         You must sign the client consent document to enroll your pet in a trial and a copy of the signed consent form will be provided for your records. Owners may withdraw their pet from a study at any time, even if study participation has not finished. The clinical care of your pet is not compromised regardless of study participation status although financial incentives often require completion of the study protocol.
-
+  help:
+    title: Still have questions?
+    link:
+      title: View FAQ
+      url: https://ovc.uoguelph.ca/
