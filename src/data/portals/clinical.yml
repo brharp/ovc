@@ -12,11 +12,11 @@ cta:
   url: https://ovc.uoguelph.ca/
   image: ../../images/contact.png
 topics:
-  title: The Purpose of Clinical Trials
-  subtitle: Collaborating for the best care
-  image: ../../images/learn/lecture.jpg
-  summary: We want to provide the highest standard of care for your pet. Veterinary clinical trials are specifically designed to benefit your pet while advancing scientific knowledge. They allow us to discover new and improved ways to prevent disease, diagnose or treat existing patients and future patients in all specialties of veterinary medicine by thorough evaluation of new medical devices, diagnostic tests, surgical procedures and treatments.  
-  links:      
+  - title: The Purpose of Clinical Trials
+    subtitle: Collaborating for the best care
+    image: ../../images/learn/lecture.jpg
+    summary: We want to provide the highest standard of care for your pet. Veterinary clinical trials are specifically designed to benefit your pet while advancing scientific knowledge. They allow us to discover new and improved ways to prevent disease, diagnose or treat existing patients and future patients in all specialties of veterinary medicine by thorough evaluation of new medical devices, diagnostic tests, surgical procedures and treatments.  
+    links:      
       - title: Participate
         url: http://www.ovc.uoguelph.ca/recruitment/en/index.asp
 process:
