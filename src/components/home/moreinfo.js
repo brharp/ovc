@@ -52,10 +52,10 @@ const ItemContent = styled.div`
   & :hover {
     background: linear-gradient(90deg, black, rgba(0, 0, 0, .6) 350px);
     h3 {
-      margin-bottom: 0.75rem;
+      margin-bottom: 1.2rem;
     }
     h2 {
-      margin-bottom: 0.75rem;
+      margin-bottom: 1.2rem;
     }
   }
   & h2 { 
