@@ -148,41 +148,6 @@ export const query = graphql`
           }
         }
       }
-      features {
-        title
-        image {
-          childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
-          }
-        }
-        items {
-          title
-          description
-        }
-      }
-      leadership {
-        title
-        subtitle
-        children {
-          name
-          title
-          unit
-          bio
-          photo {
-            childImageSharp {
-              gatsbyImageData(layout: FIXED)
-            }
-          }
-        }
-      }
-      statistics {
-        title
-        subtitle
-        children {
-          title
-          figure
-        }
-      }
     }
   }
 `
