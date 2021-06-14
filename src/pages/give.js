@@ -5,66 +5,10 @@ import Layout from '../components/layout'
 import GiveOnline from "../components/blocks/giveonline"
 import GiveByMail from "../components/blocks/givebymail"
 import GiveByPhone from "../components/blocks/givebyphone"
-
-import {
-  FaPaw,
-  FaUsers,
-  FaHandHoldingHeart,
-  FaUserGraduate,
-} from "react-icons/fa"
-
-
-
-const options_for_giving = [
-  {
-    icon: FaPaw,
-    heading: "OVC Pet Trust",
-    copy: "Make a donation in memory of a pet or to celebrate a " +
-          "special occasion. Find out more about the ways we " +
-          "help the pets we love live longer healthier lives through " + 
-          "new discoveries, learning and healthcare.",
-    link: {
-      title: "Visit OVC Pet Trust",
-      url: "https://ovc.uoguelph.ca/"
-    }
-  },
-  {
-    icon: FaUsers,
-    heading: "OVC Alumni Association",
-    copy: "Stay connected through alumni events, news, volunteer, " +
-          "mentorship and continuing education opportunities " +
-          "through the OVC Alumni Association.",
-    link: {
-      title: "Learn More About OVCAA",
-      url: "https://ovc.uoguelph.ca/" 
-    }
-  },
-  {
-    icon: FaHandHoldingHeart,
-    heading: "Leave a Legacy",
-    copy: "Making a gift in your will to the Ontario Veterinary College " +
-          "is a meaningful way to make a powerful investment in " +
-          "the future of veterinary medicine.",
-    link: {
-      title: "Leave a Gift In Your Will",
-      url: "https://ovc.uoguelph.ca/" 
-    }
-  },
-  {
-    icon: FaUserGraduate,
-    heading: "Student Financial Support",
-    copy: "Supporting a student is an investment in the future of " +
-          "animal health and welfare. It also encourages students " +
-          "to follow their passion to help animals and serve our " +
-          "community.",
-    link: {
-      title: "Give a Scholarship",
-      url: "https://ovc.uoguelph.ca/" 
-    }
-  }
-]
-
-
+import GivePetTrust from "../components/blocks/givepettrust"
+import GiveAlumni from "../components/blocks/givealumni"
+import GiveLegacy from "../components/blocks/givelegacy"
+import GiveScholarship from "../components/blocks/givescholarship"
 
 
 const HowToGive = () => (
@@ -77,6 +21,24 @@ const HowToGive = () => (
     </div>
     <div className="card bg-light ml-sm-4 border-0">
       <GiveByPhone />
+    </div>
+  </div>
+)
+
+
+const OptionsForGiving = () => (
+  <div className="row">
+    <div className="col-md-6">
+      <GivePetTrust />
+    </div>
+    <div className="col-md-6">
+      <GiveAlumni />
+    </div>
+    <div className="col-md-6">
+      <GiveLegacy />
+    </div>
+    <div className="col-md-6">
+      <GiveScholarship />
     </div>
   </div>
 )
@@ -149,28 +111,7 @@ const GivePage = ( props ) => <Layout>
 
 
 
-    {/* Options for Giving */}
-    <div className="container">
-      <div className="row">
-        { options_for_giving.map((item, index) =>
-            <div className="col-md-6">
-              <div className="media m-4">
-                <item.icon className="display-4 text-danger mx-4"/>
-                <div className="media-body">
-                  <h3 className="text-dark">{item.heading}</h3>
-                  <hr className="border-danger w-25 mx-0"/>
-                  <p>{item.copy}</p>
-                  <a href={item.link.url}>
-                    {item.link.title}
-                  </a>
-                </div>
-              </div>
-            </div> )}
-      </div>
-    </div>
-
-
-
+    <OptionsForGiving />
     <HowToGive />
 
 
