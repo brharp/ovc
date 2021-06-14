@@ -2,14 +2,15 @@ import React from 'react'
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from '../components/layout'
 
+import GiveOnline from "../components/blocks/giveonline"
+import GiveByMail from "../components/blocks/givebymail"
+import GiveByPhone from "../components/blocks/givebyphone"
+
 import {
   FaPaw,
   FaUsers,
   FaHandHoldingHeart,
   FaUserGraduate,
-  FaGlobe,
-  FaEnvelope,
-  FaPhone,
 } from "react-icons/fa"
 
 
@@ -64,56 +65,35 @@ const options_for_giving = [
 ]
 
 
-const how_to_give = [
-  {
-    icon: FaGlobe,
-    className: "bg-light",
-    linkClasses: "btn-outline-primary",
-    heading: "Online",
-    copy: "Make a donation to support OVC online today with our safe, convenient and easy giving page.",
-    link: {
-      title: "View Give Page",
-      url: "https://ovc.uoguelph.ca/"
-    }
-  },
-  {
-    icon: FaEnvelope,
-    className: "bg-blue-50",
-    linkClasses: "btn-outline-dark",
-    heading: "By Mail",
-    copy: "Educate vetrinarians and scientists, create new knowledge and provide expert services to.",
-    link: {
-      title: "View Mailing Address",
-      url: "https://ovc.uoguelph.ca/"
-    }
-  },
-  {
-    icon: FaPhone,
-    className: "bg-light",
-    linkClasses: "btn-outline-primary",
-    heading: "Talk To Us",
-    copy: "We would love to hear from you. To discuss your donation or to donate over the phone with a credit card, wire or share transfer, please contact us below to speak to a member of the OVC Advancement Team.",
-    link: {
-      title: "View Contact Info",
-      url: "https://ovc.uoguelph.ca/"
-    }
-  }
-]
 
+
+const HowToGive = () => (
+  <div className="card-group my-4 text-center">
+    <div className="card bg-light mr-sm-4 border-0">
+      <GiveOnline />
+    </div>
+    <div className="card bg-blue-50 border-0">
+      <GiveByMail />
+    </div>
+    <div className="card bg-light ml-sm-4 border-0">
+      <GiveByPhone />
+    </div>
+  </div>
+)
 
 
 const GivePage = ( props ) => <Layout>
 
   <div className="cover" style={{height: "600px"}}>
-    <StaticImage className="cover-img" src="../images/university-centre.jpg" alt="" layout="fixed" />
-    <div className="cover-img-overlay jumbotron mb-0 bg-black-50 h-100">
+    <StaticImage className="cover-img" src="../images/university-centre.jpg" alt="" layout="fullWidth" />
+    <div className="cover-img-overlay py-4 m-0 bg-black-50 h-100">
       <div className="container h-100">
         <div className="row h-100 align-content-end">
           <div className="col-md-8">
             <h1 className="display-3 text-warning font-weight-bold">
               Give
             </h1>
-            <p className="text-light lead">
+            <p className="text-light lead font-weight-bold">
               Alumni, clients, corporate partners, donor and friends of the 
               Ontario Veterinary College enhance our capacity to be among the very best
               schools of veterinary medicine in the world, and to improve life by creating
@@ -191,32 +171,7 @@ const GivePage = ( props ) => <Layout>
 
 
 
-    {/* How to Give */}
-    <div className="card-group my-4 text-center">
-      {
-        how_to_give.map((item, index) =>
-          <div key={index} className={`card ${item.className}`}>
-            <item.icon className="card-img-top display-4 text-danger mt-4"/>
-            <div className="card-body">
-              <h3 className="card-title text-dark">
-                {item.heading}
-              </h3>
-              <p className="card-text">
-                {item.copy}
-              </p>
-            </div>
-            <div className="card-footer">
-              <a className={`btn ${item.linkClasses}`}
-                 href={item.link.url}>
-                {item.link.title}
-              </a>
-            </div>
-          </div>
-        )
-      }
-    </div>
-
-
+    <HowToGive />
 
 
     <div className="card border-0 overflow-hidden mb-4">
