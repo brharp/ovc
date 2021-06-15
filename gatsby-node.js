@@ -68,5 +68,20 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+
+
+  // Create basic pages
+  const pageQueryResult = await graphql(`
+    query { allNodePage { edges { node { fields { slug } } } } }
+  `)
+  pageQueryResult.data.allNodePage.edges.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve(`./src/templates/page.js`),
+      context: {
+        slug: node.fields.slug,
+      },
+    })
+  })
 }
 
