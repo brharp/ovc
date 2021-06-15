@@ -95,12 +95,14 @@ export default function Events(props) {
     <StaticQuery
       query={graphql`
         query {
-          allNodeEvent(sort: {fields: field_start_time, order: ASC}) {
+          allNodeEvent(sort: {fields: field_date___value, order: ASC}) {
             edges {
               node {
-                field_start_time
-                month: field_start_time(formatString: "MMM")
-                date: field_start_time(formatString: "D")
+                field_date {
+                  value
+                  month: value(formatString: "MMM")
+                  date: value(formatString: "D")
+                }
                 title
               }
             }
@@ -128,8 +130,8 @@ export default function Events(props) {
                       data.allNodeEvent?.edges.map(({ node }, index ) => {
                         return <EventListItem key={index}>
                                  <EventDate>
-                                   <Month>{node.month}</Month>
-                                   <Date>{node.date}</Date>
+                                   <Month>{node.field_date.month}</Month>
+                                   <Date>{node.field_date.date}</Date>
                                  </EventDate>
                                  <EventDetails>
                                    <EventDetailsContent>
