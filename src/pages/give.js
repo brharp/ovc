@@ -13,14 +13,14 @@ import GiveScholarship from "../components/blocks/givescholarship"
 
 
 const HowToGive = () => (
-  <div className="card-group my-4 text-center">
-    <div className="card bg-light mr-sm-4 border-0">
+  <div className="card-group my-4 text-center flex-gap-4">
+    <div className="card bg-light border-0">
       <GiveOnline />
     </div>
-    <div className="card bg-blue-50 border-0">
+    <div className="card bg-blue-50 border-0 ">
       <GiveByMail />
     </div>
-    <div className="card bg-light ml-sm-4 border-0">
+    <div className="card bg-light border-0 ">
       <GiveByPhone />
     </div>
   </div>

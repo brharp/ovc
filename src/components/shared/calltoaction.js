@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import styled from "styled-components"
 import { Container } from "react-bootstrap"
@@ -40,9 +41,9 @@ class CallToAction extends React.Component {
           />
           <Layout>
             <Content>
-              <a href={cta.url} className="btn btn-lg btn-primary">
+              <Link to={cta.url} className="btn btn-lg btn-primary">
                 {cta.title}
-              </a>
+              </Link>
             </Content>
           </Layout>
         </Section>
