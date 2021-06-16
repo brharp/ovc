@@ -1,13 +1,13 @@
 import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 
 
-const Banner = ({title}) => (
+const Banner = ({title, image}) => (
   <div className="cover">
-    <StaticImage className="cover-img" src="../images/university-centre.jpg" alt="" 
+    <GatsbyImage className="cover-img" image={image} alt="" 
                  layout="fullWidth" style={{height: "600px"}}/>
     <div className="cover-img-overlay py-4 m-0 bg-black-50 h-100">
       <div className="container h-100">
@@ -30,7 +30,7 @@ export default function Page({data}) {
     <Helmet>
       <title>{data.nodePage.title} | {data.site.siteMetadata.title}</title>
     </Helmet>
-    <Banner title={data.nodePage.title} />
+    <Banner title={data.nodePage.title} image={getBannerImage(data)} />
     <div className="container my-4" dangerouslySetInnerHTML={{__html: data.nodePage.body.processed}}></div>
     <div className="container my-4 pt-4">
       <p className="small">
@@ -56,6 +56,19 @@ export const query = graphql`
       fields {
         slug
       }
+      relationships {
+        field_hero_image {
+          relationships {
+            field_media_image {
+              localFile {
+                childImageSharp {
+                  gatsbyImageData(layout: FULL_WIDTH)
+                }
+              }
+            }
+          }
+        }
+      }
     }
     sitePlugin(name: {eq: "gatsby-source-drupal"}) {
       pluginOptions {
@@ -71,4 +84,9 @@ export const query = graphql`
     }
   }
 `
+
+function getBannerImage(data)
+{
+  return getImage(data.nodePage.relationships.field_hero_image?.relationships.field_media_image.localFile)
+}
 
