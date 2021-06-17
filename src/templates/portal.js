@@ -1,5 +1,5 @@
 import { graphql } from "gatsby"
-import { getImage} from "gatsby-plugin-image"
+import { GatsbyImage, getImage} from "gatsby-plugin-image"
 import React from "react"
 import Layout from "../components/layout"
 import Banner from "../components/shared/banner"
@@ -34,14 +34,19 @@ class PortalPage extends React.Component {
   render() {
     const data = this.props.data
     const portal = data.portalsYaml
-    const header = <Banner image={getImage(portal.image)}>
-          <h1 className="display-3 text-warning font-weight-bold">
+    const header =
+      <Banner>
+        <GatsbyImage image={getImage(portal.image)} className="cover-img"
+                   style={{height: "600px"}} alt="" />
+        <Banner.Overlay>
+          <Banner.Title>
             {portal.title}
-          </h1>
-          <p className="text-light lead font-weight-bold mb-4">
+          </Banner.Title>
+          <Banner.Text>
             {portal.summary}
-          </p>
-        </Banner>
+          </Banner.Text>
+        </Banner.Overlay>
+      </Banner>
     const content = <>
         { portal.topics && <Topics topics={portal.topics} /> }
         { portal.features && <Features features={portal.features} /> }
