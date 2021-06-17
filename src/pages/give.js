@@ -2,14 +2,13 @@ import React from 'react'
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from '../components/layout'
-
-import GiveOnline from "../components/blocks/giveonline"
-import GiveByMail from "../components/blocks/givebymail"
-import GiveByPhone from "../components/blocks/givebyphone"
-import GivePetTrust from "../components/blocks/givepettrust"
-import GiveAlumni from "../components/blocks/givealumni"
-import GiveLegacy from "../components/blocks/givelegacy"
-import GiveScholarship from "../components/blocks/givescholarship"
+import GiveOnline from "../components/blocks/give_online"
+import GiveByMail from "../components/blocks/give_bymail"
+import GiveByPhone from "../components/blocks/give_byphone"
+import GivePetTrust from "../components/blocks/give_pettrust"
+import GiveAlumni from "../components/blocks/give_alumni"
+import GiveLegacy from "../components/blocks/give_legacy"
+import GiveScholarship from "../components/blocks/give_scholarship"
 
 
 const HowToGive = () => (
