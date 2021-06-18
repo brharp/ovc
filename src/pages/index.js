@@ -16,7 +16,7 @@ import Footer from "../components/home/footer"
 // Index page component
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO title="Home" />
     <Hero />
     <ImproveLife />
     <MoreInfo />

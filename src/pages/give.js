@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 import GiveOnline from "../components/blocks/give_online"
 import GiveByMail from "../components/blocks/give_bymail"
 import GiveByPhone from "../components/blocks/give_byphone"
@@ -132,6 +133,7 @@ const Contact = () => (
 
 const GivePage = ( props ) => (
   <Layout>
+    <SEO title="Give" />
     <Banner />
     <div className="container">
       <Priorities />

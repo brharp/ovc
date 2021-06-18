@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Row, Col, Card, CardGroup } from "react-bootstrap"
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 import AlumniBanner from "../components/blocks/alumni_banner"
 import AlumniSpotlight from "../components/blocks/alumni_spotlight"
 import AlumniWelcome from "../components/blocks/alumni_welcome"
@@ -18,6 +19,7 @@ import AlumniContact from "../components/blocks/alumni_contact"
 
 const AlumniPage = () => (
   <Layout>
+    <SEO title="Alumni" />
     <AlumniBanner/>
     <Container>
       <AlumniSpotlight/>

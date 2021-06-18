@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 import { StaticImage } from "gatsby-plugin-image"
 import Leadership from "../components/shared/leadership"
 
@@ -291,6 +292,7 @@ const Success = () => (
 // Explore page component
 const Page = ( props ) => (
   <Layout>
+    <SEO title="Explore"/>
     <Banner />
     <Welcome />
     <Leaders />

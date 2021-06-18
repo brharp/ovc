@@ -2,6 +2,7 @@ import React from 'react'
 import { Container } from "react-bootstrap"
 
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 import Hero from "../components/shared/hero2"
 
 import ExpertsBanner from "../components/blocks/experts_banner"
@@ -10,6 +11,7 @@ import ExpertsContact from "../components/blocks/experts_contact"
 
 const ExpertsPage = ( props ) => (
   <Layout>
+    <SEO title="Experts" />
     <ExpertsBanner />
     <Container>
       <Hero>

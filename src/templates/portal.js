@@ -2,6 +2,7 @@ import { graphql } from "gatsby"
 import { GatsbyImage, getImage} from "gatsby-plugin-image"
 import React from "react"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
 import Banner from "../components/shared/banner"
 import Topics from "../components/shared/topics"
 import CallToAction from "../components/shared/calltoaction"
@@ -19,6 +20,7 @@ class Page extends React.Component {
     const page = this.props.page
 
     return <Layout>
+      <SEO title={page.title} />
 
       <header role="banner">
         { page.header }
@@ -60,7 +62,7 @@ class PortalPage extends React.Component {
         { portal.process && <Process process={portal.process} /> }
         { portal.cta && <CallToAction cta={portal.cta} /> }
         </>
-    return <Page page={{header: header, content: content}} />
+    return <Page page={{title: portal.title, header: header, content: content}} />
   }
 
 
