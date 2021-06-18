@@ -207,7 +207,7 @@ const Statistics = () => (
       </div>
     </div>
     <div className="cover">
-      <StaticImage src="portico--banner.jpg" alt="" className="cover-img" />
+      <StaticImage src="../images/portico--banner.jpg" alt="" className="cover-img" />
       <div className="cover-img-overlay bg-black-50 p-4">
         <div className="row">
           {[
