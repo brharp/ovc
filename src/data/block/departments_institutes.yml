@@ -1,0 +1,24 @@
+id: departments_institutes
+image: ../../images/university-centre.jpg
+title: Centres & Institutes
+subtitle: Our network of cutting edge facilities
+body: |
+  OVC is home to four world-leading research centres and institutes that
+  catalyze discovery and innovation by promoting collaboration, creating
+  efficiencies in the research process, translating results to internal
+  and external audiences, and magnifying research impact. These centres
+  and institutes are pillars of research excellence in the College that
+  reflect the substantial and internationally recognized expertise of
+  OVC faculty members.
+dropdown:
+  title: "Explore Centres & Institutes"
+  items:
+    - title: Patho
+      url: "https://ovc.uoguelph.ca/"
+    - title: Biomed
+      url: "https://ovc.uoguelph.ca/"
+    - title: Population Med
+      url: "https://ovc.uoguelph.ca/"
+    - title: Clinical Studies
+      url: "https://ovc.uoguelph.ca/"
+

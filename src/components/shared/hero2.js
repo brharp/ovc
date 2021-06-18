@@ -7,14 +7,8 @@ const Hero = ({children}) => (
   </>
 )
 
-Hero.Layer = ({children}) => (
-  <Row className="my-4">
-    {children}
-  </Row>
-)
-
-Hero.RowReverse = ({children}) => (
-  <Row className="my-4 flex-row-reverse">
+Hero.Layer = ({reverse, children}) => (
+  <Row className={`my-4${reverse?' flex-row-reverse':''}`}>
     {children}
   </Row>
 )
@@ -32,7 +26,7 @@ Hero.Body = ({children}) => (
 )
 
 Hero.Title = ({children}) => (
-  <h2 className="mt-2">
+  <h2>
     {children}
   </h2>
 )
