@@ -11,8 +11,8 @@ const render = ({id, title, body, link}) => (
 )
 
 const query = graphql`
-  query { 
-    blockYaml(id: {eq: "give_pet_trust"}) { 
+  query {
+    blockYaml(id: {eq: "give_pettrust"}) { 
       id
       title 
       body 
