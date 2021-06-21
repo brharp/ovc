@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Container } from "react-bootstrap"
-import Learn from "./learn"
+import HomeLearn from "../blocks/home_learn"
 import Connect from "./connect"
 import Accreditations from "./accreditations"
 
@@ -37,7 +37,7 @@ const Footer = ( props ) =>
     <Container>
       <Template>
         <Region>
-          <Learn />
+          <HomeLearn />
         </Region>
         <Region>
           <Connect />

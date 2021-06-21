@@ -1,0 +1,12 @@
+id: home_learn
+title: Learn More
+links:
+  - title: About
+    url: /explore
+  - title: Departments
+    url: /departments
+  - title: Centres
+    url: /research
+  - title: People
+    url: /experts
+

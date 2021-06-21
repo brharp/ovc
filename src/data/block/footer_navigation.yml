@@ -1,0 +1,14 @@
+id: footer_navigation
+title: Navigation
+links:
+  - title: Learn
+    url: /learn
+  - title: Work
+    url: /work
+  - title: Get Care
+    url: /care
+  - title: Collaborate
+    url: /collaborate
+  - title: Give
+    url: /give
+
