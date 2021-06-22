@@ -6,12 +6,24 @@ import { Jumbotron, Container, Row, Col } from "react-bootstrap"
 const row = ({ id, title, body, image }) => (
   <Col lg={true} className='py-4'>
     <Row>
-      <Col>
+      <Col md>
         <GatsbyImage image={getImage(image)} alt="" 
-                     className="rounded-circle border-info" 
-                     style={{borderStyle: "solid", borderWidth: "4px"}}/>
+                     className="rounded-circle"
+                     imgStyle={{
+                       transform: "rotate(-45deg)",
+                     }}
+                     style={{
+                       borderRadius: "50%",
+                       borderStyle: "solid",
+                       borderWidth: "8px",
+                       borderTopColor: "var(--blue)",
+                       borderRightColor: "var(--blue)",
+                       borderBottomColor: "rgba(0, 0, 0, 0)",
+                       borderLeftColor: "rgba(0, 0, 0, 0)",
+                       transform: "rotate(45deg)",
+                     }}/>
       </Col>
-      <Col>
+      <Col md>
         <blockquote className='blockquote font-italic'>
           {body}
         </blockquote>
