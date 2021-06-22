@@ -1,0 +1,51 @@
+import React from "react"
+import { StaticQuery, graphql, Link } from "gatsby"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Hero from "../shared/hero2"
+
+const render = ({ id, image, title, subtitle, body, link }) => (
+  <>
+    <Hero.Image>
+      <GatsbyImage image={getImage(image)} alt="" />
+    </Hero.Image>
+    <Hero.Body id={id}>
+      <Hero.Title>
+        {title}
+      </Hero.Title>
+      <Hero.Subtitle>
+        {subtitle}
+      </Hero.Subtitle>
+      <Hero.Text>
+        {body}
+      </Hero.Text>
+      <Link to={link.url} className="btn btn-primary btn-lg">
+        {link.title}
+      </Link>
+    </Hero.Body>
+  </>
+)
+
+const query = graphql`
+  query {
+    blockYaml(id: {eq: "work_opportunities"}) {
+      id
+      title
+      subtitle
+      body
+      link {
+        title
+        url
+      }
+      image {
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
+    }
+  }
+`
+
+export default function WorkOpportunities () {
+  return <StaticQuery query={query} render={({blockYaml}) => render(blockYaml)} />
+}
+

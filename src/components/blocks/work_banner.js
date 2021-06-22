@@ -19,7 +19,7 @@ const render = ({ id, image, title, body }) => (
 
 const query = graphql`
   query {
-    blockYaml(id: {eq: "alumni_banner"}) {
+    blockYaml(id: {eq: "work_banner"}) {
       id
       title
       body

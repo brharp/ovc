@@ -10,7 +10,6 @@ import Resources from "../components/shared/resources"
 import Spotlight from "../components/shared/spotlight"
 import Partners from "../components/shared/partners"
 import Process from "../components/shared/process"
-import Testimonials from "../components/shared/testimonials"
 import Features from "../components/shared/features"
 import Statistics from "../components/shared/statistics"
 
@@ -55,7 +54,6 @@ class PortalPage extends React.Component {
         <div className="container">
         { portal.statistics && <Statistics children={portal.statistics.children} /> }
         </div>
-        { portal.testimonials && <Testimonials testimonials={portal.testimonials} /> }
         { portal.resources && <Resources items={portal.resources} /> }
         { portal.spotlight && <Spotlight items={portal.spotlight} /> }
         { portal.partners && <Partners partners={portal.partners} /> }
@@ -140,18 +138,6 @@ export const query = graphql`
           link {
             title
             url
-          }
-        }
-      }
-      testimonials {
-        title
-        statements {
-          name
-          quote
-          photo {
-            childImageSharp {
-              gatsbyImageData
-            }
           }
         }
       }
