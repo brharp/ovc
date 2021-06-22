@@ -1,24 +1,18 @@
 id: experts_researchers
-image: ../../images/university-centre.jpg
+image: ../../images/man_in_lab.png
 title: Our Researchers
-subtitle: The sectors of the OVC
+subtitle: Catalyzing discovery, advancing knowledge
 body: |
-  OVC is home to four world-leading research centres and institutes
-  that catalyze discovery and innovation by promoting collaboration,
-  creating efficiencies in the research process, translating results to
-  internal and external audiences, and magnifying research impact.
-  These centres and institutes are pillars of research excellence in the
-  College that reflect the substantial and internationally recognized
-  expertise of OVC faculty members.
+  With a focus on collaboration and discovery, our world-renowned faculty and researchers enhancing impact and advancing innovation across veterinary, human and environmental health.
 dropdown:
   title: Explore by Department
   items:
-    - title: Patho
-      url: "https://ovc.uoguelph.ca/"
-    - title: Biomed
-      url: "https://ovc.uoguelph.ca/"
-    - title: Population Med
-      url: "https://ovc.uoguelph.ca/"
+    - title: Pathobiology
+      url: "https://ovc.uoguelph.ca/pathobiology/people/faculty"
+    - title: Biomededical Sciences
+      url: "https://ovc.uoguelph.ca/biomedical-sciences/people/faculty"
+    - title: Population Medicine
+      url: "https://ovc.uoguelph.ca/population-medicine/faculty"
     - title: Clinical Studies
-      url: "https://ovc.uoguelph.ca/"
+      url: "https://ovc.uoguelph.ca/clinical-studies/faculty"
 

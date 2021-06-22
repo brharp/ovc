@@ -1,24 +1,18 @@
 id: departments_academic
 image: ../../images/university-centre.jpg
 title: Academic Departments
-subtitle: The sectors of the OVC
+subtitle: Advancing Knowledge
 body: |
-  OVC is home to four world-leading research centres and institutes that
-  catalyze discovery and innovation by promoting collaboration, creating
-  efficiencies in the research process, translating results to internal
-  and external audiences, and magnifying research impact. These centres
-  and institutes are pillars of research excellence in the College that
-  reflect the substantial and internationally recognized expertise of
-  OVC faculty members.
+  Internationally renowned researchers in our four academic departments are advancing knowledge to improve life across veterinary, human and environmental health. Our experts work within individual animal health and welfare, to population and public health, translational biomedical discovery, veterinary and comparative pathology, infectious disease and immunology.
 dropdown:
   title: Explore by Department
   items:
-    - title: Patho
-      url: "https://ovc.uoguelph.ca/"
-    - title: Biomed
-      url: "https://ovc.uoguelph.ca/"
-    - title: Population Med
-      url: "https://ovc.uoguelph.ca/"
+    - title: Pathobiology
+      url: "https://ovc.uoguelph.ca/pathobiology"
+    - title: Biomedical Sciences
+      url: "https://ovc.uoguelph.ca/population-medicine"
+    - title: Population Medicine
+      url: "https://ovc.uoguelph.ca/biomedical-sciences"
     - title: Clinical Studies
-      url: "https://ovc.uoguelph.ca/"
+      url: "https://ovc.uoguelph.ca/clinical-studies"
 
