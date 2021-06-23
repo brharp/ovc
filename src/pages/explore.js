@@ -175,7 +175,7 @@ const Initiatives = () => (
       }
     </div>
     <p className="text-center py-4">
-      <a href="https://ovc.uoguelph.ca" className="btn btn-lg btn-primary">
+      <a href="https://ovc.uoguelph.ca/strategic-planning/" className="btn btn-lg btn-primary">
         Learn more about OVC's Strategic Intiatives
       </a>
     </p>
@@ -279,7 +279,7 @@ const Success = () => (
           veterinarians.
         </p>
         <p>
-          <a href="https://ovc.uoguelph.ca" className="btn btn-primary btn-lg">
+          <a href="https://barkerveterinarymuseum.uoguelph.ca/blog/" className="btn btn-primary btn-lg">
             Explore the Vault
           </a>
         </p>
