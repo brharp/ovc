@@ -14,7 +14,7 @@ const WorkPage = ( props ) => (
   <Layout>
     <SEO title="Work" />
     <WorkBanner />
-    <Container>
+    <Container fluid>
       <Hero.Layer>
         <WorkOpportunities />
       </Hero.Layer>

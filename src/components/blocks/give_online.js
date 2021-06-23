@@ -14,7 +14,7 @@ const render = ({id, title, body, link}) => (
       </p>
     </div>
     <div className="card-footer border-0">
-      <a className="btn btn-outline-primary" href={link.url}>
+      <a className="btn btn-outline-primary btn-lg" href={link.url}>
         {link.title}
       </a>
     </div>

@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import { Row, Col } from "react-bootstrap"
 
 const Hero = ({children}) => (
@@ -42,6 +43,13 @@ Hero.Text = ({children}) => (
     {children}
   </p>
 )
+
+Hero.Link = ({to, children}) => (
+  <Link className="btn btn-lg btn-primary my-4" to={to}>
+    {children}
+  </Link>
+)
+
 
 export default Hero
 

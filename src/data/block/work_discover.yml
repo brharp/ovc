@@ -2,22 +2,31 @@ id: work_discover
 title: Discover the City of Guelph
 image: ../../images/work_discover.jpg
 links:
-  - title: About Guelph
-    url: "https://guelph.ca/"
   - title: Get Involved
     url: "https://guelph.ca/"
+    variant: default
   - title: Lifestyle
     url: "https://guelph.ca/"
+    variant: default
   - title: Getting Around
     url: "https://guelph.ca/"
+    variant: default
   - title: Entertainment
     url: "https://guelph.ca/"
+    variant: default
   - title: Cost of Living
     url: "https://guelph.ca/"
+    variant: default
   - title: Weather & Climate
     url: "https://guelph.ca/"
+    variant: default
   - title: Where to Eat
     url: "https://guelph.ca/"
+    variant: default
   - title: Open Spaces
     url: "https://guelph.ca/"
+    variant: default
+  - title: About Guelph
+    url: "https://guelph.ca/"
+    variant: primary
 

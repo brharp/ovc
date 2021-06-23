@@ -32,6 +32,7 @@ const StyledQuote = styled.div`
   padding: 24px;
   font-size: 1.2em;
   grid-area: quote;
+  text-align: center;
 `
 
 
@@ -48,7 +49,7 @@ function Expander({ children, eventKey, callback }) {
   return (
     <Button
       variant="link"
-      className={`toggle ${ isCurrentEventKey ? 'open' : '' }`}
+      className={`btn-lg toggle ${ isCurrentEventKey ? 'open' : '' }`}
       onClick={decoratedOnClick}
     >
       {children}
@@ -73,12 +74,12 @@ class Responsive extends React.Component {
             <div key={`t_${index}`} style={{
                   gridArea: `${Math.floor(index/cols)*2+1} / ${index%cols+1}`
               }}>
-              <Card style={{ borderLeft: "4px solid var(--red)", height: "100%" }}>
+              <Card style={{ borderLeft: "4px solid var(--blue)", height: "100%" }}>
                 <Card.Body>
                   <h4 className="text-dark">{node.unit}</h4>
                   <Card.Text>
                     <h6>{node.title}</h6>
-                    <h6>{node.name}</h6> 
+                    <h6 className="text-dark">{node.name}</h6> 
                   </Card.Text>
                 </Card.Body>
                 <Expander as={Button} variant="link" eventKey={`${index}`}>
@@ -93,7 +94,7 @@ class Responsive extends React.Component {
                              style={{gridArea: "photo" }}
                   />
                 <StyledBio style={{gridArea: "bio" }}>
-                  <h3>{node.name}</h3>
+                  <h3 className="text-dark">{node.name}</h3>
                   <h4>{node.title}</h4>
                   <p>{node.bio}</p>
                 </StyledBio>

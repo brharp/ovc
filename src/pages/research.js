@@ -34,7 +34,7 @@ const ResearchPage = (props) => (
       </Hero.Layer>
       <ResearchLearn />
       <ResearchGrad />
-      <Row>
+      <Row className="my-4">
         <Col md>
           <ResearchParticipate />
         </Col>

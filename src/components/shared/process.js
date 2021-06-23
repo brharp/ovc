@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "styled-components"
-import { Container, Accordion, Card, Button } from "react-bootstrap"
+import { Container, Accordion, Card, Button, Row, Col } from "react-bootstrap"
 
 const Section = styled.div`
   margin-top: 3rem;
@@ -67,7 +67,14 @@ class Process extends React.Component {
                     </Accordion.Toggle>
                   </Card.Header>
                   <Accordion.Collapse eventKey={index+1}>
-                    <Card.Body>{step.content}</Card.Body>
+                    <Card.Body>
+                      <Row className="justify-content-center">
+                        <Col md={8} offset={2}
+                             dangerouslySetInnerHTML={{
+                               __html: step.content
+                             }}></Col>
+                      </Row>
+                    </Card.Body>
                   </Accordion.Collapse>
                 </Card>
               )

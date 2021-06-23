@@ -18,7 +18,7 @@ const render = ({ id, image, title, subtitle, body, link }) => (
       <Hero.Text>
         {body}
       </Hero.Text>
-      <Link to={link.url} className="btn btn-primary btn-lg">
+      <Link to={link.url} className="btn btn-primary btn-lg my-4">
         {link.title}
       </Link>
     </Hero.Body>

@@ -3,7 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Jumbotron, Container, Row, Col } from "react-bootstrap"
 
-const row = ({ id, title, body, image }) => (
+const row = ({ id, title, subtitle, body, image }) => (
   <Col lg={true} className='py-4'>
     <Row>
       <Col md>
@@ -27,7 +27,10 @@ const row = ({ id, title, body, image }) => (
         <blockquote className='blockquote font-italic'>
           {body}
         </blockquote>
-        <p className='pt-4'><strong>{title}</strong></p>
+        <p className='pt-4'>
+          <strong>{title}</strong><br/>
+          <strong className='text-info'>{subtitle}</strong>
+        </p>
       </Col>
     </Row>
   </Col>
@@ -36,7 +39,7 @@ const row = ({ id, title, body, image }) => (
 const render = ({ edges }) => (
   <Jumbotron className="my-4">
     <Container>
-      <h2 className="text-center text-dark py-4">
+      <h2 className="text-center text-dark py-4 ">
         What staff are saying about working at the OVC
       </h2>
       <Row className="py-4">
@@ -53,6 +56,7 @@ const query = graphql`
         node {
           id
           title
+          subtitle
           body
           image {
             childImageSharp {
