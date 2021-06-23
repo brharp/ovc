@@ -5,7 +5,7 @@ import { Card } from "react-bootstrap"
 const render = ({ id, body, link }) => (
   <Card id={id} className="border-0 bg-blue-50 my-4 text-center">
     <Card.Body>
-      <Card.Text className="text-dark  lead col-md-10 offset-1 ">
+      <Card.Text className="text-dark lead col-md-10 offset-md-1 ">
         {body}
       </Card.Text>
       <Link to={link.url} className="btn btn-primary btn-lg">

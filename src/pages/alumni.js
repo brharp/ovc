@@ -53,10 +53,10 @@ const AlumniPage = () => (
         </Card>
       </CardGroup>
       <Row>
-        <Col md>
+        <Col md className="mb-4">
           <AlumniDonate />
         </Col>
-        <Col md>
+        <Col md className="mb-4">
           <AlumniConnect />
         </Col>
       </Row>

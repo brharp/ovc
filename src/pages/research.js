@@ -34,11 +34,11 @@ const ResearchPage = (props) => (
       </Hero.Layer>
       <ResearchLearn />
       <ResearchGrad />
-      <Row className="my-4">
-        <Col md>
+      <Row className="mt-4">
+        <Col md className="mb-4">
           <ResearchParticipate />
         </Col>
-        <Col md>
+        <Col md className="mb-4">
           <ResearchDonate />
         </Col>
       </Row>

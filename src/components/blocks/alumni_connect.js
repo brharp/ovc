@@ -1,25 +1,26 @@
 import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Card } from "react-bootstrap"
+import Banner from "../shared/banner"
 
 const render = ({ id, image, title, body, link }) => (
-  <Card id={id} className="border-0 overflow-hidden mb-4">
-    <GatsbyImage image={getImage(image)} className="card-img" alt=""/>
-    <Card.ImgOverlay className="p-4 bg-yellow-80">
-      <Card.Title as="h2" className="text-dark">
-        {title}
-      </Card.Title>
-      <Card.Text className="text-dark">
-        {body}
-      </Card.Text>
-      <Card.Text className="text-dark">
-        <Link to={link.url} className="btn btn-outline-dark">
+  <Banner>
+    <GatsbyImage image={getImage(image)} className="cover-img" alt=""
+                 style={{height: "500px"}}/>
+    <Banner.Overlay className="p-4 bg-red-80 ">
+      <div className="pl-3">
+        <h2 className="text-light">
+          {title}
+        </h2>
+        <p className="text-light">
+          {body}
+        </p>
+        <Link to={link.url} className="btn btn-primary btn-lg">
           {link.title}
         </Link>
-      </Card.Text>
-    </Card.ImgOverlay>
-  </Card>
+      </div>
+    </Banner.Overlay>
+  </Banner>
 )
 
 const query = graphql`
