@@ -26,13 +26,16 @@ process:
     - step: "Step 1"
       title: Look for options 
       content: |
-        Once you have a <a href="https://ovc.uoguelph.ca">diagnosis</a> of your pet's condition, your search for a clinical trial can begin! Talk to your veterinarian about your interest in companion animal trials and they can help determine suitability for enrolling. 
+        Once you have a diagnosis of your pet's condition, your search for a clinical trial can begin! Talk to your veterinarian about your interest in companion animal trials and they can help determine suitability for enrolling. A full list of our current clinical trials can be found <a href="http://ovchealthscience.icreate4.esolutionsgroup.ca/en/aboutovchealthsciences/ClinicalTrials.asp">here</a>.  
+
+        <a href=" ttps://ebusiness.avma.org/aahsd/study_search.aspx "> AVMA Animal Health Studies Database </a>  is a searchable database of publicly and privately funded veterinary clinical trials being performed in Canada and the United States.       
     - step: "Step 2"
       title: Look for options
       content: |
         Not every clinical trial will be right for you and your pet. Clinical trials have eligibility criteria that determine if your pet is a suitable candidate.  
 
         Some clinical trials seek companion animals that have specific illnesses or conditions, some trials are limited to a particular species e.g. dog or cat. Eligibility criteria may also include factors such as age, sex, the type and stage of a disease, previous treatment history, and any other medical conditions that your pet may have.  
+        Information about these requirements can be found <a href=" http://ovchealthscience.icreate4.esolutionsgroup.ca/en/aboutovchealthsciences/ClinicalTrials.asp "> here on our website</a> 
     - step: "Step 3"
       title: Review the study information sheet. 
       content: |
