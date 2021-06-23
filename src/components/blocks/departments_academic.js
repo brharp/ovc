@@ -19,7 +19,7 @@ const render = ({ id, image, title, subtitle, body, dropdown }) => (
       <Hero.Text>
         {body}
       </Hero.Text>
-      <DropdownButton id={`${id}__dropdown`} title={dropdown.title} size="lg">
+      <DropdownButton id={`${id}__dropdown`} title={dropdown.title} size="lg" className="my-4">
         {dropdown.items.map(({title, url}) => <Dropdown.Item href={url}>{title}</Dropdown.Item>)}
       </DropdownButton>
     </Hero.Body>

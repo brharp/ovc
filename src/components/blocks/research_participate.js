@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import { Card } from "react-bootstrap"
 import Banner from "../shared/banner"
 
 const render = ({ id, image, title, body, link }) => (
