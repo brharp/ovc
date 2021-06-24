@@ -99,7 +99,7 @@ const PageTemplate = ({data}) => (
   <Page id={data.nodePage.id}
         pageTitle={data.nodePage.title}
         siteTitle={data.site.siteMetadata.title}
-        image={data.nodePage.relationships.field_hero_image.relationships.field_media_image.localFile}
+        image={data.nodePage.relationships.field_hero_image?.relationships.field_media_image.localFile}
         widgets={data.nodePage.relationships.field_widgets}
         updated={data.nodePage.revision_timestamp}
         source={`${data.sitePlugin.pluginOptions.baseUrl}.${data.nodePage.fields.slug}`}

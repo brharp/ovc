@@ -22,6 +22,7 @@ const Block = styled.div`
 const Logos = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-items: center;
 `
 
 class Accreditations extends React.Component {
@@ -33,11 +34,12 @@ class Accreditations extends React.Component {
           <li>OVC faculty are also affiliated with a number of other centres and institutes.</li>
         </ul>
         <Logos>
-          <StaticImage alt="COE Logo" src="../../images/home/coe_logo.png" 
-                       transformOptions={{grayscale: true}}
+          <StaticImage alt="COE Logo" src="../../images/home/coe_logo.png"
+                       layout="fixed" transformOptions={{grayscale: true}}
                        />
           <StaticImage alt="AAHA Logo" src="../../images/home/aaha_logo_accredited.png" 
-                       transformOptions={{grayscale: true}}
+                       layout="fixed" transformOptions={{grayscale: true}}
+                       width={128}
                        />
         </Logos>
       </Block>

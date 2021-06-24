@@ -2,6 +2,7 @@ import React from "react";
 import { Link, StaticQuery, graphql } from "gatsby"
 import styled from "styled-components";
 import { FaSearch } from "react-icons/fa";
+import Media from "../shared/media"
 
 const Block = styled.div`
   & h2 {
@@ -21,10 +22,15 @@ const Block = styled.div`
 
 const render = ({title, links}) => (
   <Block>
-    <h2><FaSearch /> {title}</h2>
-    <ul>
-      {links.map(({title, url}) => <li><Link to={url}>{title}</Link></li>)}
-    </ul>
+    <div className="media">
+      <FaSearch className="display-4 mr-4" />
+      <div className="media-body">
+        <h2>{title}</h2>
+        <ul className="p-0 lead font-weight-bold">
+          {links.map(({title, url}) => <li><Link to={url}>{title}</Link></li>)}
+        </ul>
+      </div>
+    </div>
   </Block>
 )
 
