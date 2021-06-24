@@ -1,0 +1,90 @@
+id: clinical_trials_steps
+title: How to Participate in a Clinical Trial
+subtitle: Follow the step by step process to get involved.
+_children:
+  - id: step_1
+    title: "Step 1"
+    subtitle: Look for options 
+    body: |
+      <p>
+        Once you have a diagnosis of your pet's condition, your search
+        for a clinical trial can begin! Talk to your veterinarian about your interest in companion animal
+        trials and they can help determine suitability for enrolling.
+        A full list of our current clinical trials can be found 
+        <a href="http://ovchealthscience.icreate4.esolutionsgroup.ca/en/aboutovchealthsciences/ClinicalTrials.asp">here</a>.
+      </p> 
+      <p>
+        <a href=" ttps://ebusiness.avma.org/aahsd/study_search.aspx ">
+        AVMA Animal Health Studies Database </a>  is a searchable database
+        of publicly and privately funded veterinary clinical trials being performed in Canada and
+        the United States.
+      </p>
+  - id: step_2
+    title: "Step 2"
+    subtitle: Look for options
+    body: |
+      <p>
+        Not every clinical trial will be right for you and your
+        pet. Clinical trials have eligibility criteria that determine if
+        your pet is a suitable candidate.
+      </p>
+      <p>
+        Some clinical trials seek companion animals that have
+        specific illnesses or conditions, some trials are limited
+        to a particular species e.g. dog or cat. Eligibility
+        criteria may also include factors such as age, sex, the
+        type and stage of a disease, previous treatment history,
+        and any other medical conditions that your pet may have.
+        Information about these requirements can be found <a href="
+        http://ovchealthscience.icreate4.esolutionsgroup.ca/en/aboutovchealthsciences/ClinicalTrials.asp
+        "> here on our website</a>
+      </p>
+  - id: step_3
+    title: "Step 3"
+    subtitle: Review the study information sheet.  
+    body: |
+      <p>
+        Clinical trials follow a study protocol which describes the
+        study objectives and plan of action.   The protocol has been
+        approved by the University of Guelph Animal Care Committee and
+        OVC Companion Animal Hospital. Each protocol is designed with the
+        health of your pet in mind whilst ensuring that researchers are
+        able to obtain important study information. Review the protocol
+        information provided by the OVC Clinical trials team. Questions
+        to the team/veterinarian are encouraged!
+      </p>
+  - id: step_4
+    title: "Step 4"
+    subtitle: Contact the study organizers.  
+    body: |
+      <p>
+        If you think your pet may be a suitable candidate for a
+        particular study at the Ontario Veterinary College or you
+        wish to obtain more information regarding a study(s) please
+        contact Dr. Vicky Sabine (Clinical Trials Coordinator) at
+        ovc.clinicaltrials@uoguelph.ca or the contact name listed on
+        the study page
+      </p>
+  - id: step_5
+    title: "Step 5"
+    subtitle: Get enrolled!
+    body: |
+      <p>
+        Veterinary clinical trials are voluntary, your pet cannot be
+        enrolled into a trial without your knowledge or permission.
+        The enrollment process with the OVC Clinical Trials team, will
+        provide the information for you to understand the study and your
+        responsibilities.  In addition to the consent document and study
+        information sheet, the process may involve recruitment materials,
+        verbal instructions and further questions regarding your pet.
+      </p>
+      <p>
+        You must sign the client consent document to enroll your pet in
+        a trial and a copy of the signed consent form will be provided
+        for your records. Owners may withdraw their pet from a study
+        at any time, even if study participation has not finished. The
+        clinical care of your pet is not compromised regardless of study
+        participation status although financial incentives often require
+        completion of the study protocol.
+      </p>
+

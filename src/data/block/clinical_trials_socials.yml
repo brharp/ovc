@@ -1,0 +1,17 @@
+id: clinical_trials_socials
+title: Keep In Touch
+image: ../../images/people.jpg
+body: |
+  Help fund some of our initiative at the OVC helping improve the lives
+  of the animals we love.
+networks:
+  instagram:
+    title: Instagram
+    url: https://instagram.com
+  facebook:
+    title: Facebook
+    url: https://facebook.com
+  twitter:
+    title: Twitter
+    url: https://twitter.com
+

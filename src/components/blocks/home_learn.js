@@ -1,37 +1,19 @@
 import React from "react";
 import { Link, StaticQuery, graphql } from "gatsby"
-import styled from "styled-components";
 import { FaSearch } from "react-icons/fa";
-import Media from "../shared/media"
-
-const Block = styled.div`
-  & h2 {
-    color: var(--dark);
-  }
-  & ul {
-    list-style: none;
-    & li {
-      padding-top: 1.4rem;
-    }
-  }
-  & a {
-    color: var(--dark);
-    text-decoration: underline;
-  }
-`
+import { Media } from "react-bootstrap"
 
 const render = ({title, links}) => (
-  <Block>
-    <div className="media">
-      <FaSearch className="display-4 mr-4" />
-      <div className="media-body">
-        <h2>{title}</h2>
-        <ul className="p-0 lead font-weight-bold">
-          {links.map(({title, url}) => <li><Link to={url}>{title}</Link></li>)}
-        </ul>
-      </div>
-    </div>
-  </Block>
+  <Media>
+    <FaSearch className="display-4 mr-4" />
+    <Media.Body>
+      <h2 className="text-dark">{title}</h2>
+      <ul className="lead font-weight-bold list-unstyled">
+        {links.map(({title, url}) => 
+          <li><Link to={url} className="text-dark">{title}</Link></li>)}
+      </ul>
+    </Media.Body>
+  </Media>
 )
 
 const query = graphql`

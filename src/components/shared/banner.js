@@ -1,7 +1,7 @@
 import React from "react"
 
-const Banner = ({id, children}) => (
-  <div id={id} className="cover">
+const Banner = ({id, children, className}) => (
+  <div id={id} className={`cover ${className}`}>
     {children}
   </div>
 )

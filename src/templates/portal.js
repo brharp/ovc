@@ -9,7 +9,6 @@ import CallToAction from "../components/shared/calltoaction"
 import Resources from "../components/shared/resources"
 import Spotlight from "../components/shared/spotlight"
 import Partners from "../components/shared/partners"
-import Process from "../components/shared/process"
 import Features from "../components/shared/features"
 import Statistics from "../components/shared/statistics"
 
@@ -57,7 +56,6 @@ class PortalPage extends React.Component {
         { portal.resources && <Resources items={portal.resources} /> }
         { portal.spotlight && <Spotlight items={portal.spotlight} /> }
         { portal.partners && <Partners partners={portal.partners} /> }
-        { portal.process && <Process process={portal.process} /> }
         { portal.cta && <CallToAction cta={portal.cta} /> }
         </>
     return <Page page={{title: portal.title, header: header, content: content}} />
@@ -122,22 +120,6 @@ export const query = graphql`
                 layout: CONSTRAINED
               )
             }
-          }
-        }
-      }
-      process {
-        title
-        subtitle
-        steps {
-          step
-          title
-          content
-        }
-        help {
-          title
-          link {
-            title
-            url
           }
         }
       }

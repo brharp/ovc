@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from '../components/layout'
 import SEO from '../components/seo'
+
+import GiveDonate from "../components/blocks/give_donate"
 import GiveOnline from "../components/blocks/give_online"
 import GiveByMail from "../components/blocks/give_bymail"
 import GiveByPhone from "../components/blocks/give_byphone"
@@ -94,24 +96,6 @@ const Priorities = () => (
 )
 
 
-const DonateNow = () => (
-  <div className="row">
-    <div className="col">
-      <div className="bg-blue-50 p-4">
-        <h2 className="text-center text-dark my-4">
-          Make a donation to support OVC today
-        </h2>
-        <p className="text-center">
-          <a href="https://ovc.uoguelph.ca" className="btn btn-lg btn-primary">
-            Donate Now
-          </a>
-        </p>
-      </div>
-    </div>
-  </div>
-)
-
-
 const Contact = () => (
   <div className="card border-0 overflow-hidden mb-4">
     <StaticImage src="../images/contact.png" alt=""
@@ -137,7 +121,7 @@ const GivePage = ( props ) => (
     <Banner />
     <div className="container">
       <Priorities />
-      <DonateNow />
+      <GiveDonate />
       <OptionsForGiving />
       <HowToGive />
       <Contact />
