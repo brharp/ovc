@@ -1,0 +1,9 @@
+id: home_accreditations
+title: Accreditations
+body: OVC faculty are also affiliated with a number of other centres and institutes.
+images:
+  - src: ../../images/coe_logo.png
+    alt: COE Logo
+  - src: ../../images/aaha_logo.png
+    alt: AAHA Logo
+

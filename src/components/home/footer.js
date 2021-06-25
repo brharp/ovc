@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 import { Container } from "react-bootstrap"
 import HomeLearn from "../blocks/home_learn"
-import Connect from "./connect"
-import Accreditations from "./accreditations"
+import HomeConnect from "../blocks/home_connect"
+import HomeAccreditations from "../blocks/home_accreditations"
 
 const Section = styled.div`
   margin-top: 3rem;
@@ -40,10 +40,10 @@ const Footer = ( props ) =>
           <HomeLearn />
         </Region>
         <Region>
-          <Connect />
+          <HomeConnect />
         </Region>
         <Region>
-          <Accreditations />
+          <HomeAccreditations />
         </Region>
       </Template>
     </Container>
