@@ -7,8 +7,8 @@ import Hero from "../components/shared/hero2"
 import WorkBanner from "../components/blocks/work_banner"
 import WorkOpportunities from "../components/blocks/work_opportunities"
 import WorkTestimonials from "../components/blocks/work_testimonials"
-import WorkDiscover from "../components/blocks/work_discover"
-import WorkContact from "../components/blocks/work_contact"
+import Discover from "../components/blocks/discover"
+import Contact from "../components/blocks/contact"
 
 const WorkPage = ( props ) => (
   <Layout>
@@ -19,8 +19,8 @@ const WorkPage = ( props ) => (
         <WorkOpportunities />
       </Hero.Layer>
       <WorkTestimonials />
-      <WorkDiscover />
-      <WorkContact />
+      <Discover />
+      <Contact />
     </Container>
   </Layout>
 )

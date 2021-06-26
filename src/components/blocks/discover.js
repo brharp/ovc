@@ -39,7 +39,7 @@ const render = ({ id, image, title, links }) => (
 
 const query = graphql`
   query {
-    blockYaml(id: {eq: "work_discover"}) {
+    blockYaml(id: {eq: "discover"}) {
       id
       title
       image {
@@ -56,7 +56,7 @@ const query = graphql`
   }
 `
 
-export default function WorkDiscover () {
+export default function Discover () {
   return <StaticQuery query={query} render={({blockYaml}) => render(blockYaml)} />
 }
 

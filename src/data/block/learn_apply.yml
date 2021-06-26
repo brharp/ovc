@@ -1,0 +1,12 @@
+id: learn_apply
+title: Apply
+body: |
+  Ready to be part of a world-class network of researchers contributing
+  to the world of veterinary medicine? Find out more details about the
+  admission process.
+dropdown:
+  title: Explore Admissions
+  items:
+    - title: BIOM admissions
+      url: https://ovc.uoguelph.ca/biomedical-science-major/admission
+
