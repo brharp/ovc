@@ -20,7 +20,7 @@ const render_item = ({title, body, image}) => (
 )
 
 const render = (articles) => (
-  <Carousel style={{marginBottom: "-6px"}}>
+  <Carousel internal={0} style={{marginBottom: "-6px"}}>
     { articles.map((a) => render_item(a)) }
   </Carousel>
 )
