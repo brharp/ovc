@@ -21,7 +21,7 @@ const AlumniPage = () => (
   <Layout>
     <SEO title="Alumni" />
     <AlumniBanner/>
-    <Container>
+    <Container className="my-4">
       <AlumniSpotlight/>
       <AlumniWelcome />
       <Row>

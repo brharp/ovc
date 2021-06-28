@@ -107,7 +107,7 @@ const NewsComponent = ({ data }) => {
           <div className="col-md-6">
             {
               data.moreArticles.edges.map(( { node }, index ) => {
-                const image = getImage(articleImage(node).localFile.childImageSharp.gatsbyImageData)
+                const image = getImage(articleImage(node)?.localFile.childImageSharp.gatsbyImageData)
                 const tags = node.relationships?.field_tags.map(({ name }) => name).join(", ")
                 return <div key={`article_${index}`} style={{marginBottom: "32px"}}>
                          <Article title={node.title} summary={node.body.summary}
@@ -130,7 +130,7 @@ const NewsComponent = ({ data }) => {
 
 function articleImage(node) {
   //return node.relationships.field_image
-  return node.relationships.field_hero_image.relationships.field_media_image
+  return node.relationships.field_hero_image?.relationships.field_media_image
 }
 
 export default NewsComponent;

@@ -1,5 +1,5 @@
 import React from "react";
-import { GatsbyImage } from "gatsby-plugin-image";
+import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
 import ReadMore from "./readmore";
 
 export default function Article(props) {
@@ -8,7 +8,9 @@ export default function Article(props) {
       <div className="row" style={{marginBottom: "3rem"}}>
 	<div className={`col-lg-${isLead?12:6}`}>
 	  <div style={{position: "relative"}}>
-	    <GatsbyImage image={props.image} style={{maxWidth: "100%"}}/>
+	    { props.image ?
+	        <GatsbyImage image={props.image} style={{maxWidth: "100%"}}/> :
+	        <StaticImage src="./default.jpg" style={{maxWidth: "100%"}} /> }
 	    <small style={{
 	        position: "absolute",
 		left: "0",
