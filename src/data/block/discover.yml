@@ -2,31 +2,31 @@ id: discover
 title: Discover the City of Guelph
 image: ../../images/discover.jpg
 links:
-  - title: Get Involved
-    url: "https://guelph.ca/"
+  - title: Guelph Student Life
+    url: "https://admission.uoguelph.ca/studentlife"
     variant: default
   - title: Lifestyle
     url: "https://guelph.ca/"
     variant: default
   - title: Getting Around
-    url: "https://guelph.ca/"
+    url: "https://guelph.ca/living/getting-around/"
     variant: default
   - title: Entertainment
-    url: "https://guelph.ca/"
+    url: "https://visitguelphwellington.ca/listings/activities?cf=festivals"
     variant: default
-  - title: Cost of Living
-    url: "https://guelph.ca/"
+  - title: Arts & Culture
+    url: "https://guelph.ca/living/arts-and-culture/"
     variant: default
   - title: Weather & Climate
-    url: "https://guelph.ca/"
+    url: "https://weatherspark.com/y/19226/Average-Weather-in-Guelph-Canada-Year-Round"
     variant: default
   - title: Where to Eat
-    url: "https://guelph.ca/"
+    url: "https://visitguelphwellington.ca/listings/dining"
     variant: default
-  - title: Open Spaces
-    url: "https://guelph.ca/"
+  - title: Parks & Recreation
+    url: "https://guelph.ca/living/recreation/"
     variant: default
   - title: About Guelph
-    url: "https://guelph.ca/"
+    url: "https://visitguelphwellington.ca/"
     variant: primary
 
