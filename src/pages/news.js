@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import NewsBanner from "../components/blocks/news_banner"
 
-const render_row = ({title, body, image}) => (
+const render_row = ({title, body, image, slug}) => (
   <Row className="my-4">
     <Col md={4}>
       { image ?
@@ -16,7 +16,7 @@ const render_row = ({title, body, image}) => (
     <Col>
       <h3>{title}</h3>
       <p>{body}</p>
-      <Link to="https://ovc.uoguelph.ca/" className="btn btn-primary">
+      <Link to={slug} className="btn btn-primary">
         Read more<span className="sr-only"> about {title}</span>
       </Link>
     </Col>
@@ -75,6 +75,7 @@ function makeArticles({edges}) {
     title: node.title,
     body: node.body.summary,
     image: node.relationships.field_hero_image?.relationships.field_media_image.localFile,
+    slug: node.fields.slug,
   }))
 }
 

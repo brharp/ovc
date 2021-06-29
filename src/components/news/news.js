@@ -1,8 +1,8 @@
 // Framework and plugin imports
 import React from 'react';
-import { graphql, StaticQuery } from 'gatsby';
+import { graphql, StaticQuery, Link } from 'gatsby';
 import { getImage } from "gatsby-plugin-image";
-import { Button, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import styled from "styled-components";
 import Article from "./article";
 
@@ -100,7 +100,7 @@ const NewsComponent = ({ data }) => {
                 const image = getImage(articleImage(node).localFile.childImageSharp.gatsbyImageData)
                 const tags = node.relationships?.field_tags.map(({ name }) => name).join(", ")
                 return <Article key={`lead_article_${index}`} title={node.title} summary={node.body.summary}
-                                tags={tags} image={image} lead={true}/>
+                                tags={tags} image={image} lead={true} slug={node.fields.slug} />
               })
             }
           </div>
@@ -111,14 +111,14 @@ const NewsComponent = ({ data }) => {
                 const tags = node.relationships?.field_tags.map(({ name }) => name).join(", ")
                 return <div key={`article_${index}`} style={{marginBottom: "32px"}}>
                          <Article title={node.title} summary={node.body.summary}
-                                  tags={tags} image={image}/>
+                                  tags={tags} image={image} slug={node.fields.slug}/>
                        </div>
               })
             }
           <Newsfeed>
-	    <Button variant="outline-primary" size="lg">
+	    <Link to="/news" className="btn btn-outline-primary btn-lg">
 	      View Newsfeed
-	    </Button>
+	    </Link>
 	  </Newsfeed>
           </div>
         </div>

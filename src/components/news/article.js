@@ -1,6 +1,6 @@
 import React from "react";
+import { Link } from "gatsby"
 import { GatsbyImage, StaticImage } from "gatsby-plugin-image";
-import ReadMore from "./readmore";
 
 export default function Article(props) {
     const isLead = props.lead
@@ -26,7 +26,9 @@ export default function Article(props) {
 	<div className={`col-lg-${isLead?12:6}`}>
 	  <h3 style={{ color: "var(--dark)" }}>{props.title}</h3>
 	  <p>{ props.summary }</p>
-	  <ReadMore/>
+	  <Link to={props.slug} className="btn btn-primary">
+	    Read More<span className="sr-only"> about {props.title}</span>
+	  </Link>
 	</div>
       </div>
    )
