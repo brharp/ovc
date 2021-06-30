@@ -32,13 +32,10 @@ class UgHeader extends HTMLElement {
         }
       }
     });
-    while (this.firstElementChild) {
-      this.header.appendChild(this.firstElementChild)
-    }
     const observer = new MutationObserver((mutationList) => {
       for (const mutation of mutationList) {
         for (const added of mutation.addedNodes) {
-          this.header.appendChild(added);
+          this.header.appendChild(added.cloneNode(true));
         }
       }
     });
