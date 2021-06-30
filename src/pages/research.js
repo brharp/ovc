@@ -8,7 +8,6 @@ import ResearchBanner from "../components/blocks/research_banner"
 import ResearchCentres from "../components/blocks/research_centres"
 import ResearchAreas from "../components/blocks/research_areas"
 import ResearchExperts from "../components/blocks/research_experts"
-import ResearchPartners from "../components/blocks/research_partners"
 import ResearchLearn from "../components/blocks/research_learn"
 import ResearchGrad from "../components/blocks/research_grad"
 import ResearchParticipate from "../components/blocks/research_participate"
@@ -28,9 +27,6 @@ const ResearchPage = (props) => (
       </Hero.Layer>
       <Hero.Layer>
         <ResearchExperts />
-      </Hero.Layer>
-      <Hero.Layer reverse>
-        <ResearchPartners />
       </Hero.Layer>
       <ResearchLearn />
       <ResearchGrad />
