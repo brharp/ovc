@@ -1,15 +1,33 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { withPrefix } from 'gatsby';
+import { Link, withPrefix, StaticQuery, graphql } from 'gatsby';
 
-const Header = () => (
+const render = ({menu}) => (
   <>
     <Helmet>
       <script src={withPrefix("/web-components/ug-header.js")}></script>
     </Helmet>
     <div id="header-breakpoint"></div>
-    <ug-header className="unloaded"></ug-header>
+    <ug-header>
+      {menu.map((i) => <a href={i.path}>{i.title}</a>)}
+    </ug-header>
   </>
 )
 
-export default Header
+const query = graphql`
+  query {
+    site {
+      siteMetadata {
+        menu {
+          title
+          path
+        }
+      }
+    }
+  }
+`
+
+export default function Header() {
+  return <StaticQuery query={query} render={({site}) => render(site.siteMetadata)} />
+}
+

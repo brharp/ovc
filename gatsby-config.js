@@ -10,6 +10,16 @@ module.exports = {
     description: 'The oldest veterinary school in Canada.',
     slogan: 'A world leader in advancing veterinary science, learning and research to improve the lives of animals, people and our planet.',
     author: 'The OVC Authors',
+    menu: [
+      { title: "Home",     path: "/" },
+      { title: "Research", path: "/research" },
+      { title: "Alumni",   path: "/alumni" },
+      { title: "Hospital", path: "https://ovc.uoguelph.ca/hsc" },
+      { title: "People",   path: "/experts" },
+      { title: "Programs", path: "https://ovc.uoguelph.ca/" },
+      { title: "Partners", path: "/partners" },
+      { title: "Intranet", path: "https://uoguelphca.sharepoint.com/sites/OVC" },
+    ],
   },
   plugins: [
     `gatsby-transformer-sharp`,
