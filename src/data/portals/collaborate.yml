@@ -5,7 +5,7 @@ image: ../../images/collaborate/labrador-retriever.jpg
 cta:
   title: Contact to Collaborate
   url: https://ovc.uoguelph.ca/
-  image: ../../images/contact.png
+  image: ../../images/contact_red.png
 topics:
   - title: Researchers
     subtitle: Focus on innovation
