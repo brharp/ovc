@@ -1,4 +1,4 @@
-import React from 'react'
+pimport React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { StaticImage } from "gatsby-plugin-image"
@@ -16,7 +16,7 @@ import {
 
 const Banner = () => (
   <div className="cover">
-    <StaticImage className="cover-img" src="../images/university-centre.jpg" alt="" 
+    <StaticImage className="cover-img" src="../images/explore/30344872351_60c2261186_o.jpg" alt="" 
                  layout="fullWidth" style={{height: "600px"}}/>
     <div className="cover-img-overlay py-4 m-0 bg-black-50 h-100">
       <div className="container h-100">
