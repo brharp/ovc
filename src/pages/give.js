@@ -87,7 +87,7 @@ const Priorities = () => (
         health and well-being of animals, people and the environment.
       </p>
       <p>
-        <a href="https://ovc.uoguelph.ca/" className="btn btn-primary btn-lg">
+        <a href="https://ovc.uoguelph.ca/give" className="btn btn-primary btn-lg">
           Explore OVC's Priorities
         </a>
       </p>
