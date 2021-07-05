@@ -40,7 +40,6 @@ const LearnPage = (props) => (
         </Card>
       </CardGroup>
       <Discover />
-      <Contact />
     </Container>
   </Layout>
 )

@@ -1,4 +1,4 @@
-import React from 'react'
+pimport React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { StaticImage } from "gatsby-plugin-image"
@@ -16,7 +16,7 @@ import {
 
 const Banner = () => (
   <div className="cover">
-    <StaticImage className="cover-img" src="../images/university-centre.jpg" alt="" 
+    <StaticImage className="cover-img" src="../images/explore/30344872351_60c2261186_o.jpg" alt="" 
                  layout="fullWidth" style={{height: "600px"}}/>
     <div className="cover-img-overlay py-4 m-0 bg-black-50 h-100">
       <div className="container h-100">
@@ -45,7 +45,7 @@ const Welcome = () => (
   <div className="container my-4">
     <div className="row bg-blue-50 no-gutters">
       <div className="col-lg-4 order-lg-2">
-        <StaticImage src="../images/people.jpg" alt=""  />
+        <StaticImage src="../images/explore/Dean2.jpg" alt=""  />
       </div>
       <div className="col-lg-8 p-4">
         <div className="media">
@@ -81,7 +81,7 @@ const Welcome = () => (
 const Leaders = () => (
   <div className="container my-4">
     <div className="cover my-4">
-      <StaticImage src="../images/dog-banner.jpg"
+      <StaticImage src="../images/contact_blue.png"
                    className="cover-img" 
                    alt="">
       </StaticImage>
@@ -108,7 +108,7 @@ const Leaders = () => (
 const Initiatives = () => (
   <div className="container my-4">
     <div className="cover my-4">
-      <StaticImage src="../images/dog-banner.jpg"
+      <StaticImage src="../images/contact_blue.png"
                    className="cover-img" 
                    alt="">
       </StaticImage>
@@ -188,7 +188,7 @@ const Initiatives = () => (
 const Statistics = () => (
   <div className="container my-4">
     <div className="cover my-4">
-      <StaticImage src="../images/dog-banner.jpg"
+      <StaticImage src="../images/contact_blue.png"
                    className="cover-img" 
                    alt="">
       </StaticImage>
@@ -239,7 +239,7 @@ const Structure = () => (
   <div className="container">
     <div className="row py-4">
       <div className="col-md-7 order-md-2">
-        <StaticImage src="../images/dog-banner.jpg" />
+        <StaticImage src="../images/research/ovc_sign.jpg" />
       </div>
       <div className="col-md-5">
         <h2>Our Structure</h2>
@@ -266,7 +266,7 @@ const Success = () => (
   <div className="container">
     <div className="row py-4">
       <div className="col-md-7">
-        <StaticImage src="../images/dog-banner.jpg" />
+        <StaticImage src="../images/research/historical.jpg" />
       </div>
       <div className="col-md-5">
         <h2>Our Success</h2>
