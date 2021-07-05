@@ -30,7 +30,7 @@ const query = graphql`
       body
       image {
         childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
+          gatsbyImageData(layout: FULL_WIDTH, aspectRatio: 4)
         }
       }
     }
