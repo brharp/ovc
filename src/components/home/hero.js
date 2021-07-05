@@ -67,7 +67,7 @@ const Icons = styled.div`
   // On large displays, rotate social icons 90 deg
   @media (min-width: 1200px) {
     transform:  translate(8rem, -4rem) rotate(-90deg);
-    > svg { transform: rotate(90deg); }
+    & svg { transform: rotate(90deg); }
   }
 `
 
@@ -100,11 +100,26 @@ const HeroComponent = ( props ) =>
               </Masthead>
               <Icons>
                 <h3>Connect <Yellow>with OVC</Yellow></h3>
-                <FaInstagram/>
-                <FaLinkedin/>
-                <FaFacebookSquare />
-                <FaTwitterSquare />
-                <FaYoutubeSquare />
+                <a href="https://instagram.com/ontvetcollege/" className="text-light">
+                  <span className="sr-only">Connect with OVC on Instagram</span>
+                  <FaInstagram/>
+                </a>
+                <a href="https://www.linkedin.com/school/ontario-veterinary-college/" className="text-light">
+                  <span className="sr-only">Connect with OVC on LinkedIn</span>
+                  <FaLinkedin/>
+                </a>
+                <a href="http://www.facebook.com/ontvetcollege" className="text-light">
+                  <span className="sr-only">Connect with OVC on Facebook</span>
+                  <FaFacebookSquare />
+                </a>
+                <a href="http://twitter.com/OntVetCollege/" className="text-light">
+                  <span className="sr-only">Connect with OVC on Twitter</span>
+                  <FaTwitterSquare />
+                </a>
+                <a href="http://www.youtube.com/user/OntarioVetCollege" className="text-light">
+                  <span className="sr-only">Connect with OVC on YouTube</span>
+                  <FaYoutubeSquare />
+                </a>
               </Icons>
             </Content>
           </GridContainer>
