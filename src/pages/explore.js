@@ -1,4 +1,4 @@
-pimport React from 'react'
+import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { StaticImage } from "gatsby-plugin-image"
@@ -44,10 +44,10 @@ const Banner = () => (
 const Welcome = () => (
   <div className="container my-4">
     <div className="row bg-blue-50 no-gutters">
-      <div className="col-lg-4 order-lg-2">
-        <StaticImage src="../images/explore/Dean2.jpg" alt=""  />
+      <div className="col-lg-6 order-lg-2">
+        <StaticImage src="../images/explore/Dean2.jpg" alt="" className="h-100" />
       </div>
-      <div className="col-lg-8 p-4">
+      <div className="col-lg-6 p-4">
         <div className="media">
           <FaGraduationCap className="mr-4 display-3 text-info"/>
           <div className="media-body">
@@ -82,7 +82,7 @@ const Leaders = () => (
   <div className="container my-4">
     <div className="cover my-4">
       <StaticImage src="../images/contact_blue.png"
-                   className="cover-img" 
+                   className="cover-img" aspectRatio={4/1}
                    alt="">
       </StaticImage>
       <div className="cover-img-overlay bg-black-50 ">
@@ -109,7 +109,7 @@ const Initiatives = () => (
   <div className="container my-4">
     <div className="cover my-4">
       <StaticImage src="../images/contact_blue.png"
-                   className="cover-img" 
+                   className="cover-img" aspectRatio={4/1}
                    alt="">
       </StaticImage>
       <div className="cover-img-overlay bg-black-50 ">
@@ -189,7 +189,7 @@ const Statistics = () => (
   <div className="container my-4">
     <div className="cover my-4">
       <StaticImage src="../images/contact_blue.png"
-                   className="cover-img" 
+                   className="cover-img" aspectRatio={4/1}
                    alt="">
       </StaticImage>
       <div className="cover-img-overlay bg-black-50 ">
