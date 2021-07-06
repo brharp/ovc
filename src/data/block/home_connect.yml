@@ -2,11 +2,11 @@ id: home_connect
 title: Connect
 links:
   - title: Find us on a map
-    url: https://ovc.uoguelph.ca/
+    url: https://www.google.com/maps/place/Ontario+Veterinary+College+Health+Sciences+Centre/@43.5312879,-80.2345029,17z/data=!3m1!4b1!4m5!3m4!1s0x882b9ad624240187:0x95a5348b4bf4b543!8m2!3d43.5312879!4d-80.2323142
   - title: Take a tour
-    url: https://ovc.uoguelph.ca/
+    url: http://www.ovc.uoguelph.ca/recruitment/en/experienceovc/tours.asp
   - title: Contact
     url: https://ovc.uoguelph.ca/
   - title: Intranet
-    url: https://ovc.uoguelph.ca/
+    url: https://uoguelphca.sharepoint.com/sites/OntarioVeterinaryCollege
 
