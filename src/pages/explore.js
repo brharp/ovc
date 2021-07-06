@@ -16,7 +16,7 @@ import {
 
 const Banner = () => (
   <div className="cover">
-    <StaticImage className="cover-img" src="../images/explore/30344872351_60c2261186_o.jpg" alt="" 
+    <StaticImage className="cover-img" src="../images/explore/OVC_front.jpg" alt="" 
                  layout="fullWidth" style={{height: "600px"}}/>
     <div className="cover-img-overlay py-4 m-0 bg-black-50 h-100">
       <div className="container h-100">
