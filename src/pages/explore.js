@@ -92,7 +92,7 @@ const Leaders = () => (
               <h2 className="display-4 text-warning font-weight-bold">
                 Leadership at the OVC
               </h2>
-              <p className="text-light lead">
+              <p className="text-light lead font-weight-bold">
                 Excellence in innovation, education and service
               </p>
             </div>
