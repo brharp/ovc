@@ -21,7 +21,7 @@ _children:
       </p>
   - id: step_2
     title: "Step 2"
-    subtitle: Look for options
+    subtitle: Review eligibility criteria 
     body: |
       <p>
         Not every clinical trial will be right for you and your
@@ -35,6 +35,8 @@ _children:
         criteria may also include factors such as age, sex, the
         type and stage of a disease, previous treatment history,
         and any other medical conditions that your pet may have.
+       </p>
+       <p>
         Information about these requirements can be found <a href="
         http://ovchealthscience.icreate4.esolutionsgroup.ca/en/aboutovchealthsciences/ClinicalTrials.asp
         "> here on our website</a>
