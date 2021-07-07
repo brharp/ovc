@@ -32,7 +32,7 @@ steps:
     scriptType: 'pscore'
     scriptLocation: 'inlineScript'
     inlineScript: 'az storage blob service-properties update --account-name mainovcstorage --static-website  --index-document index.html'
-- task: AzureFileCopy@4
+- task: AzureFileCopy@3
   displayName: 'copy files'
   inputs:
     SourcePath: 'public'
