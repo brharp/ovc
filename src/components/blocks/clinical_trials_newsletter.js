@@ -15,6 +15,16 @@ const render = ({ id, image, title, body, link }) => (
         <p className="text-light">
           {body}
         </p>
+          <form method="POST"
+                className=""
+                action="https://maestro.uoguelph.ca/list/action/subscribeSupplyAddress.do?L-Soft.outsideSubscribe=true&lui=jc87gfpb&mContainer=332&mOwner=G1i1h&mListId=HL%23338">
+            <div className="form-group">
+              <label for="email" className="sr-only">Email address</label>
+              <input type="email" className="form-control mb-2" id="email" 
+                     name="mAddress" placeholder="Enter email" required></input>
+              <button type="submit" class="btn btn-primary">Subscribe</button>
+            </div>
+          </form>
       </div>
     </Banner.Overlay>
   </Banner>
