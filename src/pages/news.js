@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import NewsBanner from "../components/blocks/news_banner"
 
-const render_row = ({title, body, image, slug}) => (
+const render_row = ({title, body, image, changed, slug}) => (
   <Row className="my-4">
     <Col md={4}>
       { image ?
@@ -14,7 +14,8 @@ const render_row = ({title, body, image, slug}) => (
         <StaticImage src="../components/news/default.jpg"  alt="" /> }
     </Col>
     <Col>
-      <h3>{title}</h3>
+      <h3 className="text-dark mb-3">{title}</h3>
+      <p className="text-muted">{changed}</p>
       <p>{body}</p>
       <Link to={slug} className="btn btn-primary">
         Read more<span className="sr-only"> about {title}</span>
@@ -45,6 +46,7 @@ export const query = graphql`
           body {
             summary
           }
+          changed(formatString: "MMMM DD, YYYY")
           relationships {
             field_hero_image {
               relationships {
@@ -75,6 +77,7 @@ function makeArticles({edges}) {
     title: node.title,
     body: node.body.summary,
     image: node.relationships.field_hero_image?.relationships.field_media_image.localFile,
+    changed: node.changed,
     slug: node.fields.slug,
   }))
 }

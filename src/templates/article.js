@@ -6,7 +6,7 @@ import SEO from "../components/seo"
 import { Container } from "react-bootstrap"
 import Banner from "../components/shared/banner"
 
-const ArticlePage = ({title, body, image}) => (
+const ArticlePage = ({title, body, image, changed}) => (
   <Layout>
     <SEO title={title} />
     <Banner>
@@ -17,6 +17,7 @@ const ArticlePage = ({title, body, image}) => (
       </Banner.Overlay>
     </Banner>
     <Container className="py-4">
+      <p className="text-muted">{changed}</p>
       <div dangerouslySetInnerHTML={{__html: body}} />
     </Container>
   </Layout>
@@ -32,6 +33,7 @@ export const query = graphql`
       body {
         processed
       }
+      changed(formatString: "MMMM DD, YYYY")
       relationships {
         field_hero_image {
           relationships {
@@ -60,6 +62,7 @@ export default function DrupalArticlePage ({data}) {
   return <ArticlePage title={data.nodeArticle.title}
                body={data.nodeArticle.body.processed}
                image={data.nodeArticle.relationships.field_hero_image?.relationships.field_media_image.localFile}
+               changed={data.nodeArticle.changed}
                />
 }
 

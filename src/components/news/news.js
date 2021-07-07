@@ -47,6 +47,7 @@ const NewsComponent = ({ data }) => {
           body {
             summary
           }
+          changed(formatString: "MMMM DD, YYYY")
           relationships {
             field_hero_image {
               relationships {
@@ -100,7 +101,8 @@ const NewsComponent = ({ data }) => {
                 const image = getImage(articleImage(node).localFile.childImageSharp.gatsbyImageData)
                 const tags = node.relationships?.field_tags.map(({ name }) => name).join(", ")
                 return <Article key={`lead_article_${index}`} title={node.title} summary={node.body.summary}
-                                tags={tags} image={image} lead={true} slug={node.fields.slug} />
+                                tags={tags} image={image} lead={true} slug={node.fields.slug} 
+                                changed={node.changed} />
               })
             }
           </div>
@@ -111,7 +113,8 @@ const NewsComponent = ({ data }) => {
                 const tags = node.relationships?.field_tags.map(({ name }) => name).join(", ")
                 return <div key={`article_${index}`} style={{marginBottom: "32px"}}>
                          <Article title={node.title} summary={node.body.summary}
-                                  tags={tags} image={image} slug={node.fields.slug}/>
+                                  tags={tags} image={image} slug={node.fields.slug}
+                                  changed={node.changed} />
                        </div>
               })
             }

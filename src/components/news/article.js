@@ -24,7 +24,8 @@ export default function Article(props) {
 	  </div>
 	</div>
 	<div className={`col-lg-${isLead?12:6}`}>
-	  <h3 style={{ color: "var(--dark)" }}>{props.title}</h3>
+	  <h3 className="text-dark mb-3">{props.title}</h3>
+	  <p><span className="text-muted">{ props.changed }</span></p>
 	  <p>{ props.summary }</p>
 	  <Link to={props.slug} className="btn btn-primary">
 	    Read More<span className="sr-only"> about {props.title}</span>
