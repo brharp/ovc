@@ -1,6 +1,6 @@
 # Build, and deploy ovc.uoguelph.ca
 pool:
-  vmImage: ubuntu-latest
+  vmImage: windows-latest
   demands: npm
 
 steps:
