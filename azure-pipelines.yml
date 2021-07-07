@@ -8,16 +8,18 @@ steps:
   inputs:
     verbose: false
 - task: Npm@1
+  displayName: 'npm run build'
   inputs:
     command: 'custom'
     customCommand: 'run build'
 - task: AzureResourceManagerTemplateDeployment@3
+  displayName: 'az deploy'
   inputs:
     deploymentScope: 'Resource Group'
     azureResourceManagerConnection: 'Pay-As-You-Go(3a1e4cf8-5973-49b0-bebf-d31a390189cf)'
     subscriptionId: '3a1e4cf8-5973-49b0-bebf-d31a390189cf'
     action: 'Create Or Update Resource Group'
-    resourceGroupName: 'ovc-main-web'
+    resourceGroupName: 'ovcmainwebrg'
     location: 'Canada East'
     templateLocation: 'Linked artifact'
     csmFile: 'azuredeploy.json'
