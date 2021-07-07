@@ -4,6 +4,9 @@ body: OVC faculty are also affiliated with a number of other centres and institu
 images:
   - src: ../../images/coe_logo.png
     alt: COE Logo
+    link:
+      url: https://www.avma.org/
   - src: ../../images/aaha_logo.png
+    url: https://www.aaha.org/
     alt: AAHA Logo
 

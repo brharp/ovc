@@ -26,10 +26,10 @@ const Banner = () => (
               Explore OVC
             </h1>
             <p className="text-light lead font-weight-bold">
-              The Ontario Vetrinary College (OVC) at the University of Guelph is a
+              The Ontario Veterinary College (OVC) at the University of Guelph is a
               world leader in advancing veterinary science, learning and research to
-              improve the lives of animals, people and our plant. With a focus on
-              innovation and science-based discover, OVC is training the next
+              improve the lives of animals, people and our planet. With a focus on
+              innovation and science-based discovery, the xOVC is training the next
               generation of health leaders to find real-world solutions to global
               challenges.
             </p>
@@ -81,7 +81,7 @@ const Welcome = () => (
 const Leaders = () => (
   <div className="container my-4">
     <div className="cover my-4">
-      <StaticImage src="../images/contact_blue.png"
+      <StaticImage src="../images/explore/leadership.JPG"
                    className="cover-img" aspectRatio={4/1}
                    alt="">
       </StaticImage>
@@ -92,7 +92,7 @@ const Leaders = () => (
               <h2 className="display-4 text-warning font-weight-bold">
                 Leadership at the OVC
               </h2>
-              <p className="text-light lead">
+              <p className="text-light lead font-weight-bold">
                 Excellence in innovation, education and service
               </p>
             </div>
@@ -108,7 +108,7 @@ const Leaders = () => (
 const Initiatives = () => (
   <div className="container my-4">
     <div className="cover my-4">
-      <StaticImage src="../images/contact_blue.png"
+      <StaticImage src="../images/explore/hans-peter-gauster-3y1zF4hIPCg-unsplash.jpg"
                    className="cover-img" aspectRatio={4/1}
                    alt="">
       </StaticImage>
@@ -188,7 +188,7 @@ const Initiatives = () => (
 const Statistics = () => (
   <div className="container my-4">
     <div className="cover my-4">
-      <StaticImage src="../images/contact_blue.png"
+      <StaticImage src="../images/explore/OVC_front.jpg"
                    className="cover-img" aspectRatio={4/1}
                    alt="">
       </StaticImage>
