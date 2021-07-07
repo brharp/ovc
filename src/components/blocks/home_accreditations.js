@@ -11,7 +11,15 @@ const render = ({id, title, body, images}) => (
       <h2 className="text-dark">{title}</h2>
       <p>{body}</p>
       <Row>
-      { images.map(({src, alt}) => <Col><GatsbyImage image={getImage(src)} alt={alt} /></Col>) }
+        { 
+          images.map(({src, alt, url}) => (
+            <Col>
+              <a href={url}>
+                <GatsbyImage image={getImage(src)} alt={alt} />
+              </a>
+            </Col>
+          ))
+        }
       </Row>
     </Media.Body>
   </Media>
@@ -25,6 +33,7 @@ const query = graphql`
       body
       images {
         alt
+        url
         src {
           childImageSharp {
             gatsbyImageData(layout: FIXED, transformOptions: {grayscale: true}, width: 128)

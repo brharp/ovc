@@ -7,7 +7,6 @@ import Hero from "../components/shared/hero2"
 
 import ExpertsBanner from "../components/blocks/experts_banner"
 import ExpertsResearchers from "../components/blocks/experts_researchers"
-import ExpertsContact from "../components/blocks/experts_contact"
 
 const ExpertsPage = ( props ) => (
   <Layout>
@@ -19,7 +18,6 @@ const ExpertsPage = ( props ) => (
           <ExpertsResearchers />
         </Hero.Layer>
       </Hero>
-      <ExpertsContact />
     </Container>
   </Layout>
 )

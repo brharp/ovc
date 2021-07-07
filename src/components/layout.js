@@ -5,6 +5,7 @@ import DateModified from './dateModified'
 import Footer from './shared/footer'
 import Header from './shared/header'
 import FooterLogo from "../components/blocks/footer_logo"
+import FooterSocial from "../components/blocks/footer_social"
 import FooterAbout from "../components/blocks/footer_about"
 import FooterUnits from "../components/blocks/footer_units"
 import FooterNavigation from "../components/blocks/footer_navigation"
@@ -22,6 +23,7 @@ const Layout = ({ children, date }) => (
         <Row>
           <Col md={4}>
             <FooterLogo />
+            <FooterSocial />
           </Col>
           <Col md={8}>
             <Row>

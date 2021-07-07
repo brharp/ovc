@@ -1,20 +1,22 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
-import Banner from "../shared/banner"
 
-const render = ({ id, image, title, body, link }) => (
-  <Banner>
-    <GatsbyImage image={getImage(image)} className="cover-img" alt=""
-                 style={{height: "500px"}}/>
-    <Banner.Overlay className="p-4 bg-red-80 ">
-      <div className="pl-3">
-        <h2 className="text-light">
-          {title}
-        </h2>
-        <p className="text-light">
-          {body}
-        </p>
+const render = ({id, title, body, image}) => (
+  <div className="px-4 py-4 my-4">
+  <div id={id} className="cover" style={{boxShadow: "var(--gray) 8px 8px 16px"}}>
+    <GatsbyImage image={getImage(image)} alt="" className="cover-img" />
+    <div className="cover-img-overlay p-0">
+      <div className="container h-100">
+        <div className="row h-100 justify-content-start">
+          <div className="col-md-6 bg-black-50 p-4 h-100 d-flex flex-column justify-content-center">
+            <div className="p-4">
+              <h2 className="text-light text-uppercase">
+                {title}
+              </h2>
+              <p className="lead text-light">
+                {body}
+              </p>
           <form method="POST"
                 className=""
                 action="https://maestro.uoguelph.ca/list/action/subscribeSupplyAddress.do?L-Soft.outsideSubscribe=true&lui=jc87gfpb&mContainer=332&mOwner=G1i1h&mListId=HL%23338">
@@ -25,10 +27,15 @@ const render = ({ id, image, title, body, link }) => (
               <button type="submit" class="btn btn-primary">Subscribe</button>
             </div>
           </form>
+            </div>
+          </div>
+        </div>
       </div>
-    </Banner.Overlay>
-  </Banner>
+    </div>
+  </div>
+  </div>
 )
+
 
 const query = graphql`
   query {
@@ -38,7 +45,7 @@ const query = graphql`
       body
       image {
         childImageSharp {
-          gatsbyImageData(layout: CONSTRAINED)
+          gatsbyImageData(height: 500)
         }
       }
     }

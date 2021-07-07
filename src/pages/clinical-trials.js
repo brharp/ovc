@@ -16,7 +16,7 @@ import Contact from "../components/blocks/contact"
 
 const ClinicalTrialsPage = (props) => (
   <Layout>
-    <SEO title="ClinicalTrials Trials" />
+    <SEO title="Clinical Trials" />
     <ClinicalTrialsBanner />
     <Container>
       <div className="bg-white">
@@ -31,10 +31,10 @@ const ClinicalTrialsPage = (props) => (
         <ClinicalTrialsFaq />
       </div>
       <div className="bg-white">
-        <ClinicalTrialsDonate />
+        <ClinicalTrialsNewsletter />
         <Row>
           <Col md className="mb-4">
-            <ClinicalTrialsNewsletter />
+            <ClinicalTrialsDonate />
           </Col>
           <Col md className="mb-4">
             <ClinicalTrialsSocials />

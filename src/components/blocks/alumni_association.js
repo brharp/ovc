@@ -9,10 +9,10 @@ const render = ({ id, image, title, body }) => (
       <div className="container h-100">
         <div className="row h-100 justify-content-end align-content-end">
           <div className="p-4 text-right">
-            <h2 className="display-4 text-warning font-weight-bold">
+            <h2 className="display-2 text-warning font-weight-bold">
               {title}
             </h2>
-            <p className="text-light lead">
+            <p className="text-light display-4">
               {body}
             </p>
           </div>
@@ -30,7 +30,7 @@ const query = graphql`
       body
       image {
         childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
+          gatsbyImageData(aspectRatio: 4)
         }
       }
     }

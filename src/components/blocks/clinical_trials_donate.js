@@ -1,37 +1,28 @@
 import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import Banner from "../shared/banner"
 
-const render = ({id, title, subtitle, body, image, link}) => (
-  <div className="px-4 py-4 my-4">
-  <div id={id} className="cover" style={{boxShadow: "var(--gray) 8px 8px 16px"}}>
-    <GatsbyImage image={getImage(image)} alt="" className="cover-img" />
-    <div className="cover-img-overlay p-0">
-      <div className="container h-100">
-        <div className="row h-100 justify-content-start">
-          <div className="col-md-6 bg-black-50 p-4 h-100 d-flex flex-column justify-content-center">
-            <div className="p-4">
-              <h2 className="text-light text-uppercase">
-                {title}
-              </h2>
-              <h3 className="text-warning">
-                {subtitle}
-              </h3>
-              <p className="lead text-light">
-                {body}
-              </p>
+const render = ({ id, image, title, body, link }) => (
+  <Banner>
+    <GatsbyImage image={getImage(image)} className="cover-img" alt=""
+                 style={{height: "500px"}}/>
+    <Banner.Overlay className="p-4 bg-red-80 ">
+      <div className="pl-3">
+        <h2 className="text-light">
+          {title}
+        </h2>
+        <p className="text-light">
+          {body}
+        </p>
               <p>
                 <Link className="btn btn-lg btn-primary" href={link.url}>
                   {link.title}
                 </Link>
               </p>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
-  </div>
-  </div>
+    </Banner.Overlay>
+  </Banner>
 )
 
 const query = graphql`
@@ -39,11 +30,10 @@ const query = graphql`
     blockYaml(id: {eq: "clinical_trials_donate"}) {
       id
       title
-      subtitle
       body
       image {
         childImageSharp {
-          gatsbyImageData(height: 500)
+          gatsbyImageData(layout: CONSTRAINED)
         }
       }
       link {

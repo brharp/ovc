@@ -1,9 +1,9 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { Link, StaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const render = ({id, image }) => (
-  <GatsbyImage image={getImage(image)} alt="" />
+  <Link to="/"><GatsbyImage image={getImage(image)} alt="" /></Link>
 )
 
 const query = graphql`

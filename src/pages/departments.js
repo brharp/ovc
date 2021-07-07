@@ -8,7 +8,6 @@ import DepartmentsBanner from "../components/blocks/departments_banner"
 import DepartmentsAcademic from "../components/blocks/departments_academic"
 import DepartmentsHealthSciencesCentre from "../components/blocks/departments_hsc"
 import DepartmentsInstitutes from "../components/blocks/departments_institutes"
-import DepartmentsContact from "../components/blocks/departments_contact"
 
 const DepartmentsPage = ( props ) => (
   <Layout>
@@ -24,7 +23,6 @@ const DepartmentsPage = ( props ) => (
       <Hero.Layer>
         <DepartmentsInstitutes />
       </Hero.Layer>
-      <DepartmentsContact />
     </Container>
   </Layout>
 )

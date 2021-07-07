@@ -76,10 +76,10 @@ class Responsive extends React.Component {
               }}>
               <Card style={{ borderLeft: "4px solid var(--blue)", height: "100%" }}>
                 <Card.Body>
-                  <h4 className="text-dark">{node.unit}</h4>
+                  <h3 className="text-dark">{node.unit}</h3>
                   <Card.Text>
-                    <h6>{node.title}</h6>
-                    <h6 className="text-dark">{node.name}</h6> 
+                    <h4>{node.title}</h4>
+                    <h5 className="text-dark">{node.name}</h5> 
                   </Card.Text>
                 </Card.Body>
                 <Expander as={Button} variant="link" eventKey={`${index}`}>

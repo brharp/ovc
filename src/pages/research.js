@@ -12,7 +12,6 @@ import ResearchLearn from "../components/blocks/research_learn"
 import ResearchGrad from "../components/blocks/research_grad"
 import ResearchParticipate from "../components/blocks/research_participate"
 import ResearchDonate from "../components/blocks/research_donate"
-import ResearchContact from "../components/blocks/research_contact"
 
 const ResearchPage = (props) => (
   <Layout>
@@ -38,7 +37,6 @@ const ResearchPage = (props) => (
           <ResearchDonate />
         </Col>
       </Row>
-      <ResearchContact />
     </Container>
   </Layout>
 )

@@ -112,7 +112,7 @@ export default function Events(props) {
       render={data => {
         return (
           <Section>
-            <StaticImage src="../../images/dog-banner.jpg"
+            <StaticImage src="../../images/brick_leaf.jpg"
                          alt=""
                          layout="fixed"
                          style={{

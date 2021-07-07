@@ -15,17 +15,20 @@ import GiveScholarship from "../components/blocks/give_scholarship"
 
 
 const HowToGive = () => (
-  <div className="card-group my-4 text-center flex-gap-4">
-    <div className="card bg-light border-0">
-      <GiveOnline />
+  <>
+    <h2 className="text-center display-4 my-4 font-weight-bold">How to Give</h2>
+    <div className="card-group my-4 text-center flex-gap-4">
+      <div className="card bg-light border-0">
+        <GiveOnline />
+      </div>
+      <div className="card bg-blue-50 border-0 ">
+        <GiveByMail />
+      </div>
+      <div className="card bg-light border-0 ">
+        <GiveByPhone />
+      </div>
     </div>
-    <div className="card bg-blue-50 border-0 ">
-      <GiveByMail />
-    </div>
-    <div className="card bg-light border-0 ">
-      <GiveByPhone />
-    </div>
-  </div>
+  </>
 )
 
 

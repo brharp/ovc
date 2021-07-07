@@ -1,29 +1,26 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { FaGraduationCap } from "react-icons/fa"
 
-const render = ({id, title, body}) => (
-  <div id={id} className="cover my-4">
-    <StaticImage src="../../images/dog-banner.jpg"
-                 className="cover-img" layout="fullWidth"
-                 alt="">
-    </StaticImage>
-    <div className="cover-img-overlay p-0">
-      <div className="container h-100">
-        <div className="row h-100">
-          <div className="col-md-8 bg-black-50 p-4 d-flex align-items-center">
-            <div className="media">
-              <FaGraduationCap className="mx-4 display-2 text-info"/>
-              <div className="mt-2 media-body">
-                <h2 className="text-light">
-                  {title}
-                </h2>
-                <p className="text-light lead">
-                  {body}
-                </p>
-              </div>
-            </div>
+const render = ({id, title, body, image}) => (
+  <div id={id} className="container my-4">
+    <div className="row bg-blue-50 no-gutters">
+      <div className="col-lg-6 ">
+        <GatsbyImage image={getImage(image)}
+                 className="cover-img" 
+                 alt="" />
+      </div>
+      <div className="col-lg-6 p-4">
+        <div className="media">
+          <div className="media-body">
+            <h2 className="text-dark">
+              <FaGraduationCap className="mr-4 display-3 text-info"/> 
+              {title}
+            </h2>
+            <p>
+              {body}
+            </p>
           </div>
         </div>
       </div>
@@ -37,6 +34,11 @@ const query = graphql`
       id
       title
       body
+      image {
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
       link {
         title
         url

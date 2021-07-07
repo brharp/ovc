@@ -44,14 +44,16 @@ const Banner = () => (
 const Welcome = () => (
   <div className="container my-4">
     <div className="row bg-blue-50 no-gutters">
-      <div className="col-lg-6 order-lg-2">
+      <div className="col-lg-6 ">
         <StaticImage src="../images/explore/Dean2.jpg" alt="" className="h-100" />
       </div>
       <div className="col-lg-6 p-4">
         <div className="media">
-          <FaGraduationCap className="mr-4 display-3 text-info"/>
           <div className="media-body">
-            <h2 className="text-dark">A Dean's Welcome</h2>
+            <h2 className="text-dark">
+              <FaGraduationCap className="mr-4 display-3 text-info"/> 
+              A Dean's Welcome 
+            </h2>
             <p>
               For more than 160 years, the simple but powerful call
               to duty - Opus Veterinum Civibus - The Craft of the
@@ -89,10 +91,10 @@ const Leaders = () => (
         <div className="container h-100">
           <div className="row h-100 justify-content-end align-content-end">
             <div className="p-4 text-right">
-              <h2 className="display-4 text-warning font-weight-bold">
+              <h2 className="display-2 text-warning font-weight-bold">
                 Leadership at the OVC
               </h2>
-              <p className="text-light lead font-weight-bold">
+              <p className="text-light display-4">
                 Excellence in innovation, education and service
               </p>
             </div>
@@ -116,10 +118,10 @@ const Initiatives = () => (
         <div className="container h-100">
           <div className="row h-100 justify-content-end align-content-end">
             <div className="p-4 text-right">
-              <h2 className="display-4 text-warning font-weight-bold">
+              <h2 className="display-2 text-warning font-weight-bold">
                 OVC Strategic Initiatives
               </h2>
-              <p className="text-light lead font-weight-bold">
+              <p className="text-light display-4">
                 Improving life by creating healthier futures for animals,
                 people and the environment.
               </p>
@@ -238,10 +240,10 @@ const Statistics = () => (
 const Structure = () => (
   <div className="container">
     <div className="row py-4">
-      <div className="col-md-7 order-md-2">
+      <div className="col-md order-md-2">
         <StaticImage src="../images/research/ovc_sign.jpg" />
       </div>
-      <div className="col-md-5">
+      <div className="col-md">
         <h2>Our Structure</h2>
         <h3 className="text-dark">The sum of our parts</h3>
         <p>
@@ -265,10 +267,10 @@ const Structure = () => (
 const Success = () => (
   <div className="container">
     <div className="row py-4">
-      <div className="col-md-7">
+      <div className="col-md">
         <StaticImage src="../images/research/historical.jpg" />
       </div>
-      <div className="col-md-5">
+      <div className="col-md">
         <h2>Our Success</h2>
         <h3 className="text-dark">Building the pathway of discovery</h3>
         <p>
