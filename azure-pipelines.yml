@@ -24,3 +24,18 @@ steps:
     templateLocation: 'Linked artifact'
     csmFile: 'azuredeploy.json'
     deploymentMode: 'Complete'
+- task: AzureCLI@2
+  displayName: 'enable static website'
+  inputs:
+    azureSubscription: 'Pay-As-You-Go(3a1e4cf8-5973-49b0-bebf-d31a390189cf)'
+    scriptType: 'ps'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'az storage blob service-properties update --account-name mainovcstorage --static-website  --index-document index.html'
+- task: AzureFileCopy@4
+  displayName: 'copy files'
+  inputs:
+    SourcePath: 'public'
+    azureSubscription: 'Pay-As-You-Go(3a1e4cf8-5973-49b0-bebf-d31a390189cf)'
+    Destination: 'AzureBlob'
+    storage: 'mainovcstorage'
+    ContainerName: '$web'
