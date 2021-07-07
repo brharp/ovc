@@ -3,6 +3,13 @@ pool:
   vmImage: windows-latest
   demands: npm
 
+schedules:
+- cron: "0 0 * * *"
+  displayName: Daily midnight build
+  branches:
+    include:
+    - main
+
 steps:
 - task: Npm@1
   displayName: 'npm install'
