@@ -254,7 +254,7 @@ const Structure = () => (
           recognized expertise of our faculty and researchers.
         </p>
         <p>
-          <a href="https://ovc.uoguelph.ca" className="btn btn-primary btn-lg">
+          <a href="/departments" className="btn btn-primary btn-lg">
             Explore Departments &amp; Centres
           </a>
         </p>
