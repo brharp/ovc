@@ -8,7 +8,7 @@ const render = ({id, title, body, image}) => (
     <div className="row bg-blue-50 no-gutters">
       <div className="col-lg-6 ">
         <GatsbyImage image={getImage(image)}
-                 className="cover-img" 
+                 className="cover-img h-100" 
                  alt="" />
       </div>
       <div className="col-lg-6 p-4">

@@ -3,7 +3,7 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Carousel } from "react-bootstrap"
 
-const render_item = ({title, body, image}) => (
+const render_item = ({title, body, image, slug}) => (
   <Carousel.Item>
     { image ?
         <GatsbyImage image={getImage(image)} className="w-100" style={{height: "400px"}} alt="" /> :
@@ -12,7 +12,7 @@ const render_item = ({title, body, image}) => (
     <Carousel.Caption className="text-left pb-4 mb-4">
       <h3 className="text-light">{title}</h3>
       <p>{body}</p>
-      <Link to="https://ovc.uoguelph.ca/" className="btn btn-lg btn-primary">
+      <Link to={slug} className="btn btn-lg btn-primary">
         Read more<span className="sr-only"> about {title}</span>
       </Link>
     </Carousel.Caption>
@@ -67,6 +67,7 @@ function makeArticles({edges}) {
     title: node.title,
     body: node.body.summary,
     image: node.relationships.field_hero_image?.relationships.field_media_image.localFile,
+    slug: node.fields.slug,
   }))
 }
 
