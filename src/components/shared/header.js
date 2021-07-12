@@ -1,6 +1,6 @@
 import React from 'react';
 import Helmet from 'react-helmet';
-import { Link, withPrefix, StaticQuery, graphql } from 'gatsby';
+import { withPrefix, StaticQuery, graphql } from 'gatsby';
 
 const render = ({menu}) => (
   <>

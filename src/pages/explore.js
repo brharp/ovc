@@ -198,10 +198,10 @@ const Statistics = () => (
         <div className="container h-100">
           <div className="row h-100 justify-content-end align-content-end">
             <div className="p-4 text-right">
-              <h2 className="display-4 text-warning font-weight-bold">
+              <h2 className="display-2 text-warning font-weight-bold">
                 Inside the OVC
               </h2>
-              <p className="text-light lead font-weight-bold">
+              <p className="text-light display-4">
                 Our rich community and network of research expertise
               </p>
             </div>
@@ -241,7 +241,8 @@ const Structure = () => (
   <div className="container">
     <div className="row py-4">
       <div className="col-md order-md-2">
-        <StaticImage src="../images/research/ovc_sign.jpg" />
+        <StaticImage src="../images/research/ovc_sign.jpg" alt=""
+                     aspectRatio={4/3} />
       </div>
       <div className="col-md">
         <h2>Our Structure</h2>
@@ -268,7 +269,8 @@ const Success = () => (
   <div className="container">
     <div className="row py-4">
       <div className="col-md">
-        <StaticImage src="../images/research/historical.jpg" />
+        <StaticImage src="../images/research/historical.jpg" alt=""
+                     aspectRatio={4/3} />
       </div>
       <div className="col-md">
         <h2>Our Success</h2>

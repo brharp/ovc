@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from '../components/layout'
 import SEO from '../components/seo'
@@ -12,6 +11,7 @@ import GivePetTrust from "../components/blocks/give_pettrust"
 import GiveAlumni from "../components/blocks/give_alumni"
 import GiveLegacy from "../components/blocks/give_legacy"
 import GiveScholarship from "../components/blocks/give_scholarship"
+import Contact from "../components/blocks/contact"
 
 
 const HowToGive = () => (
@@ -78,7 +78,8 @@ const Banner = () => (
 const Priorities = () => (
   <div className="row py-4">
     <div className="col-md">
-      <StaticImage src="../images/people.jpg" alt="" />
+      <StaticImage src="../images/people.jpg" alt="" 
+                   aspectRatio={1.333333333333333} />
     </div>
     <div className="col-md order-md-first">
       <h2>Advancing the OVC's Mission</h2>
@@ -98,24 +99,6 @@ const Priorities = () => (
   </div>
 )
 
-
-const Contact = () => (
-  <div className="card border-0 overflow-hidden mb-4">
-    <StaticImage src="../images/contact.png" alt=""
-                 layout="fullWidth"
-                 style={{ maxHeight: "200px" }}
-                 className="card-img" />
-    <div className="card-img-overlay">
-      <div className="container h-100">
-        <div className="row h-100 justify-content-center align-content-center">
-          <Link to="/contact-0" className="btn btn-primary btn-cta">
-            Contact Us
-          </Link>
-        </div>
-      </div>
-    </div>
-  </div>
-)
 
 
 const GivePage = ( props ) => (

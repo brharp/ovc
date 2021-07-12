@@ -15,7 +15,7 @@ import AlumniAnnualReport from "../components/blocks/alumni_annual_report"
 import AlumniBoardMembers from "../components/blocks/alumni_board_members"
 import AlumniDonate from "../components/blocks/alumni_donate"
 import AlumniConnect from "../components/blocks/alumni_connect"
-import AlumniContact from "../components/blocks/alumni_contact"
+import Contact from "../components/blocks/contact"
 
 const AlumniPage = () => (
   <Layout>
@@ -60,7 +60,7 @@ const AlumniPage = () => (
           <AlumniConnect />
         </Col>
       </Row>
-      <AlumniContact />
+      <Contact />
     </Container>
   </Layout>
 )

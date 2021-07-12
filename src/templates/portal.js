@@ -1,16 +1,17 @@
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage} from "gatsby-plugin-image"
+import { Container } from "react-bootstrap"
 import React from "react"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Banner from "../components/shared/banner"
 import Topics from "../components/shared/topics"
-import CallToAction from "../components/shared/calltoaction"
 import Resources from "../components/shared/resources"
 import Spotlight from "../components/shared/spotlight"
 import Partners from "../components/shared/partners"
 import Features from "../components/shared/features"
 import Statistics from "../components/shared/statistics"
+import Contact from "../components/blocks/contact"
 
 
 class Page extends React.Component {
@@ -56,7 +57,9 @@ class PortalPage extends React.Component {
         { portal.resources && <Resources items={portal.resources} /> }
         { portal.spotlight && <Spotlight items={portal.spotlight} /> }
         { portal.partners && <Partners partners={portal.partners} /> }
-        { portal.cta && <CallToAction cta={portal.cta} /> }
+        <Container>
+          <Contact/>
+        </Container>
         </>
     return <Page page={{title: portal.title, header: header, content: content}} />
   }
@@ -91,7 +94,7 @@ export const query = graphql`
         summary
         image {
           childImageSharp {
-            gatsbyImageData
+            gatsbyImageData(aspectRatio: 1.333333333333333)
           }
         }
         links {

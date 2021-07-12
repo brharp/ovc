@@ -11,7 +11,6 @@ import LearnFinancialAid from "../components/blocks/learn_financial_aid"
 import LearnStudentLife from "../components/blocks/learn_student_life"
 import LearnApply from "../components/blocks/learn_apply"
 import Discover from "../components/blocks/discover"
-import Contact from "../components/blocks/contact"
 
 
 const LearnPage = (props) => (

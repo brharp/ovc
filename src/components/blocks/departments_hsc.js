@@ -38,7 +38,7 @@ const query = graphql`
       }
       image {
         childImageSharp {
-          gatsbyImageData(aspectRatio: 1.333333333)
+          gatsbyImageData(aspectRatio: 1.333333333333333)
         }
       }
     }

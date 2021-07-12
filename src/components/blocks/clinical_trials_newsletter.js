@@ -21,7 +21,7 @@ const render = ({id, title, body, image}) => (
                 className=""
                 action="https://maestro.uoguelph.ca/list/action/subscribeSupplyAddress.do?L-Soft.outsideSubscribe=true&lui=jc87gfpb&mContainer=332&mOwner=G1i1h&mListId=HL%23338">
             <div className="form-group">
-              <label for="email" className="sr-only">Email address</label>
+              <label htmlFor="email" className="sr-only">Email address</label>
               <input type="email" className="form-control mb-2" id="email" 
                      name="mAddress" placeholder="Enter email" required></input>
               <button type="submit" class="btn btn-primary">Subscribe</button>
