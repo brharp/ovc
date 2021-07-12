@@ -13,11 +13,11 @@ topics:
     summary: With an innovative, collaborative approach aimed at improving the health and well-being of animals, humans, and our ecosystems, research at OVC covers a broad range of disciplines. Our research strength stems from our collective expertise, collaborative partnerships, and a solid research infrastructure that have helped us grow world-class research programs.
     links:
       - title: Explore Faculty
-        url: https://ovc.uoguelph.ca/
+        url: /experts
   - title: Clients
     subtitle: Translational and transformative
     image: ../../images/collaborate/20171128_191323365_iOS.jpg
     summary: A leader in translational medicine, we are focused on the health and well-being of the animals in our care and continually seek opportunities to advance care and ultimately influence both animal and human health.
     links:
       - title: Explore Clinical Trials
-        url: https://ovc.uoguelph.ca/
+        url: /clinical-trials
