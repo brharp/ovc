@@ -1,7 +1,7 @@
 {
-  "name": "gatsby-starter-ug",
+  "name": "ovc-main-web",
   "private": true,
-  "description": "U of G starter for Gatsby",
+  "description": "Ontario Veterinary College",
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
