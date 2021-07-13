@@ -28,6 +28,7 @@ export default function HTML(props) {
         <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossOrigin="anonymous"></script>
         <script defer type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js" crossOrigin="anonymous"></script>
         <script src={`${withPrefix('/assets/modernizr.js')}`} type="text/javascript"></script>
+        <script defer src="https://platform.twitter.com/widgets.js" charSet="utf-8" crossOrigin="anonymous"></script>
       </body>
     </html>
   )

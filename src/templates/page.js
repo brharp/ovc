@@ -2,6 +2,7 @@ import React from "react"
 import { Helmet } from "react-helmet"
 import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { Container, Row, Col } from "react-bootstrap"
 import Layout from "../components/layout"
 import Banner from "../components/shared/banner"
 
@@ -32,9 +33,13 @@ const Page = ({id, pageTitle, siteTitle, image, widgets, updated, source}) => (
         </Banner.Title>
       </Banner.Overlay>
     </Banner>
-    <div className="container my-4">
-      {widgets.map((widget) => <Widget widget={widget} />)} 
-    </div>
+    <Container className="my-4">
+      <Row>
+        <Col md={8}>
+          {widgets.map((widget) => <Widget widget={widget} />)} 
+        </Col>
+      </Row>
+    </Container>
     <div className="container my-4 pt-4">
       <p className="small">
        Updated {updated} &nbsp;
