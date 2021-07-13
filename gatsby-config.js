@@ -20,6 +20,7 @@ module.exports = {
       { title: "Intranet", path: "https://uoguelphca.sharepoint.com/sites/OVC" },
     ],
   },
+  assetPrefix: process.env.ASSET_PREFIX,
   plugins: [
     `gatsby-transformer-sharp`,
     `gatsby-plugin-image`,
