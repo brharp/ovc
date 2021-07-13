@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Container } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 import Banner from "../components/shared/banner"
 
 const ArticlePage = ({title, body, image, changed}) => (
@@ -17,8 +17,12 @@ const ArticlePage = ({title, body, image, changed}) => (
       </Banner.Overlay>
     </Banner>
     <Container className="py-4">
-      <p className="text-muted">{changed}</p>
-      <div dangerouslySetInnerHTML={{__html: body}} />
+      <Row>
+        <Col lg={8}>
+          <p className="text-muted">{changed}</p>
+          <div dangerouslySetInnerHTML={{__html: body}} />
+        </Col>
+      </Row>
     </Container>
   </Layout>
 )

@@ -51,7 +51,7 @@ const render = (data) => (
 
 export const query = graphql`
   query {
-    allNodeArticle(filter: {sticky: {eq: false}, promote: {eq: true}}) {
+    allNodeArticle(limit: 10, filter: {sticky: {eq: false}, promote: {eq: true}}) {
       edges {
         node {
           fields {

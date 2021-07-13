@@ -6,8 +6,8 @@ import { Carousel } from "react-bootstrap"
 const render_item = ({title, body, image, slug}) => (
   <Carousel.Item>
     { image ?
-        <GatsbyImage image={getImage(image)} className="w-100" style={{height: "400px"}} alt="" /> :
-        <StaticImage src="../news/default.jpg"  className="w-100" style={{height: "400px"}} alt="" /> }
+        <GatsbyImage image={getImage(image)} className="w-100" style={{height: "600px"}} alt="" /> :
+        <StaticImage src="../news/default.jpg"  className="w-100" style={{height: "600px"}} alt="" /> }
     <div className="bg-black-50" style={{position: "absolute", top: "0", bottom: "6px", left: "0", right: "0"}} />
     <Carousel.Caption className="text-left pb-4 mb-4">
       <h3 className="text-light">{title}</h3>
@@ -27,7 +27,7 @@ const render = (articles) => (
 
 const query = graphql`
   query {
-    allNodeArticle(filter: {sticky: {eq: true}, promote: {eq: true}}) {
+    allNodeArticle(limit: 4, filter: {sticky: {eq: true}, promote: {eq: true}}) {
       edges {
         node {
           fields {
