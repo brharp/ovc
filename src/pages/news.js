@@ -26,9 +26,11 @@ const render_row = ({title, body, image, changed, slug}) => (
 
 const render = (data) => (
   <Layout>
-    <SEO title="News" />
+    <SEO title="Newsfeed" />
     <NewsBanner />
     <Container className="my-4">
+      <h1 className="text-dark">Recent Articles</h1>
+      <hr className="ml-0 w-25" />
       { data.map((i) => render_row(i)) }
     </Container>
   </Layout>

@@ -38,6 +38,11 @@ const render = (data) => (
           <h1 className="text-dark">Articles of Interest</h1>
           <hr className="w-25 ml-0" />
           { data.map((i) => render_row(i)) }
+          <p className="text-center py-4">
+            <Link to="/news" className="btn btn-outline-primary btn-cta">
+              View Newsfeed
+            </Link>
+          </p>
         </Col>
         <Col>
           <h1 className="text-dark">Social Feeds</h1>
