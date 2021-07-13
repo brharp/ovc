@@ -1,4 +1,12 @@
 # Build, and deploy ovc.uoguelph.ca
+
+variables:
+  SUBSCRIPTION_ID: '3a1e4cf8-5973-49b0-bebf-d31a390189cf'
+  AZURE_SUBSCRIPTION: 'Pay-As-You-Go(3a1e4cf8-5973-49b0-bebf-d31a390189cf)'
+  AZURE_RESOURCE_MANAGER_CONNECTION: 'Pay-As-You-Go(3a1e4cf8-5973-49b0-bebf-d31a390189cf)'
+  RESOURCE_GROUP_NAME: 'ovcmainwebrg'
+  STORAGE_ACCOUNT_NAME: 'mainovcstorage'
+
 pool:
   vmImage: windows-latest
   demands: npm
@@ -24,10 +32,10 @@ steps:
   displayName: 'az deploy'
   inputs:
     deploymentScope: 'Resource Group'
-    azureResourceManagerConnection: 'Pay-As-You-Go(3a1e4cf8-5973-49b0-bebf-d31a390189cf)'
-    subscriptionId: '3a1e4cf8-5973-49b0-bebf-d31a390189cf'
+    azureResourceManagerConnection: $(AZURE_RESOURCE_MANAGER_CONNECTION)
+    subscriptionId: $(SUBSCRIPTION_ID)
     action: 'Create Or Update Resource Group'
-    resourceGroupName: 'ovcmainwebrg'
+    resourceGroupName: $(RESOURCE_GROUP_NAME)
     location: 'Canada East'
     templateLocation: 'Linked artifact'
     csmFile: 'azuredeploy.json'
@@ -35,15 +43,15 @@ steps:
 - task: AzureCLI@2
   displayName: 'enable static website'
   inputs:
-    azureSubscription: 'Pay-As-You-Go(3a1e4cf8-5973-49b0-bebf-d31a390189cf)'
+    azureSubscription: $(AZURE_SUBSCRIPTION)
     scriptType: 'pscore'
     scriptLocation: 'inlineScript'
-    inlineScript: 'az storage blob service-properties update --account-name mainovcstorage --static-website  --index-document index.html'
+    inlineScript: 'az storage blob service-properties update --account-name $(STORAGE_ACCOUNT_NAME) --static-website  --index-document index.html'
 - task: AzureFileCopy@3
   displayName: 'copy files'
   inputs:
     SourcePath: 'public'
-    azureSubscription: 'Pay-As-You-Go(3a1e4cf8-5973-49b0-bebf-d31a390189cf)'
+    azureSubscription: $(AZURE_SUBSCRIPTION)
     Destination: 'AzureBlob'
-    storage: 'mainovcstorage'
+    storage: $(STORAGE_ACCOUNT_NAME)
     ContainerName: '$web'
