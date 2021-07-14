@@ -29,7 +29,7 @@ const row = ({ id, title, subtitle, body, image }) => (
         </blockquote>
         <p className='pt-4'>
           <strong>{title}</strong><br/>
-          <strong className='text-info'>{subtitle}</strong>
+          <strong className="text-danger">{subtitle}</strong>
         </p>
       </Col>
     </Row>

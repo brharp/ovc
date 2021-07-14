@@ -6,7 +6,7 @@ const render = ({id, title, body }) => (
     <h4 className="text-dark">
       {title}
     </h4>
-    <p className="text-muted">
+    <p>
       {body}
     </p>
   </div>

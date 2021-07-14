@@ -3,7 +3,7 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const render = ({id, image }) => (
-  <Link to="/"><GatsbyImage image={getImage(image)} alt="" /></Link>
+  <Link to="/"><GatsbyImage image={getImage(image)} alt="Home" /></Link>
 )
 
 const query = graphql`

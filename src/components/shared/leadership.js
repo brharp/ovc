@@ -83,7 +83,7 @@ class Responsive extends React.Component {
                   </Card.Text>
                 </Card.Body>
                 <Expander as={Button} variant="link" eventKey={`${index}`}>
-                  <FaAngleDown />
+                  <FaAngleDown /><span className="sr-only">Expand</span>
                 </Expander>
               </Card>
             </div>
