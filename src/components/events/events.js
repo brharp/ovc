@@ -95,7 +95,7 @@ export default function Events(props) {
     <StaticQuery
       query={graphql`
         query {
-          allNodeEvent(sort: {fields: field_date___value, order: ASC}) {
+          allNodeEvent(limit: 4, sort: {fields: field_date___value, order: ASC}) {
             edges {
               node {
                 field_date {

@@ -56,6 +56,7 @@ export const query = graphql`
                   localFile {
                     childImageSharp {
                       gatsbyImageData(
+                        aspectRatio: 1.333333333333333,
                         transformOptions: {cropFocus: ENTROPY},
                       )
                     }
