@@ -1,15 +1,17 @@
 id: footer_navigation
 title: Navigation
 links:
-  - title: Learn
-    url: /learn
-  - title: Work
-    url: /work
-  - title: Get Care
-    url: /care
   - title: Collaborate
     url: /collaborate
+  - title: Explore
+    url: /explore 
+  - title: Get Care
+    url: /care
   - title: Give
     url: /give
-  - title: Explore
-    url: /explore
+  - title: Learn
+    url: /learn
+  - title: News
+    url: /news
+  - title: Work
+    url: /work
