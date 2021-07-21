@@ -27,7 +27,7 @@ const render = (articles) => (
 
 const query = graphql`
   query {
-    allNodeArticle(filter: {relationships: {field_tags: {elemMatch: {name: {eq: "Alumni"}}}}}) {
+    allNodeArticle(filter: {relationships: {field_news_category: {elemMatch: {name: {eq: "Alumni"}}}}}) {
       edges {
         node {
           fields {
