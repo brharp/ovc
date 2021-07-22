@@ -110,7 +110,7 @@ const Leaders = () => (
 const Initiatives = () => (
   <div className="container my-4">
     <div className="cover my-4">
-      <StaticImage src="../images/explore/hans-peter-gauster-3y1zF4hIPCg-unsplash.jpg"
+      <StaticImage src="../images/explore/iStock-524706116.jpg"
                    className="cover-img" aspectRatio={4/1}
                    alt="">
       </StaticImage>

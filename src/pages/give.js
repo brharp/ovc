@@ -52,7 +52,7 @@ const OptionsForGiving = () => (
 
 const Banner = () => (
   <div className="cover" style={{height: "600px"}}>
-    <StaticImage className="cover-img" src="../images/university-centre.jpg" alt="" layout="fullWidth" />
+    <StaticImage className="cover-img" src="../images/home/2979_ovcWINDOW_10.jpg" alt="" layout="fullWidth" />
     <div className="cover-img-overlay py-4 m-0 bg-black-50 h-100">
       <div className="container h-100">
         <div className="row h-100 align-content-end">
