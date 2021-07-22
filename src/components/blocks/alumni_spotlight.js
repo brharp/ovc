@@ -3,13 +3,14 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Carousel } from "react-bootstrap"
 
-const render_item = ({title, body, image, slug}) => (
+const render_row = ({title, body, changed, image, slug}) => (
   <Carousel.Item>
     { image ?
         <GatsbyImage image={getImage(image)} className="w-100" style={{height: "400px"}} alt="" /> :
         <StaticImage src="../news/default.jpg"  className="w-100" style={{height: "400px"}} alt="" /> }
     <div className="bg-black-50" style={{position: "absolute", top: "0", bottom: "6px", left: "0", right: "0"}} />
     <Carousel.Caption className="text-left pb-4 mb-4">
+      <p className="text-warning font-weight-bold">{changed}</p>
       <h3 className="text-light">{title}</h3>
       <p>{body}</p>
       <Link to={slug} className="btn btn-lg btn-primary">
@@ -21,7 +22,7 @@ const render_item = ({title, body, image, slug}) => (
 
 const render = (articles) => (
   <Carousel internal={0} style={{marginBottom: "-6px"}}>
-    { articles.map((a) => render_item(a)) }
+    { articles.map((a) => render_row(a)) }
   </Carousel>
 )
 
@@ -37,6 +38,7 @@ const query = graphql`
           body {
             summary
           }
+          changed(fromNow: true, formatString: "MMMM DD, YYYY")
           relationships {
             field_hero_image {
               relationships {
@@ -68,6 +70,7 @@ function makeArticles({edges}) {
     body: node.body.summary,
     image: node.relationships.field_hero_image?.relationships.field_media_image.localFile,
     slug: node.fields.slug,
+    changed: node.changed,
   }))
 }
 
