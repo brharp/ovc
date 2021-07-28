@@ -11,16 +11,6 @@ export default function Article(props) {
 	    { props.image ?
 	        <GatsbyImage image={props.image} style={{maxWidth: "100%"}}/> :
 	        <StaticImage src="./default.jpg" style={{maxWidth: "100%"}} /> }
-	    <small style={{
-	        position: "absolute",
-		left: "0",
-		bottom: "24px",
-		background: "var(--yellow)",
-		color: "#333",
-		padding: "8px 64px 8px 16px",
-		fontWeight: "bold",
-		textTransform: "uppercase"
-	    }}>{props.tags}</small>
 	  </div>
 	</div>
 	<div className={`col-lg-${isLead?12:6}`}>

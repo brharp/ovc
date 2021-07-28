@@ -17,7 +17,6 @@ const render_row = ({title, body, image, changed, slug}) => (
     </Col>
     <Col>
       <h3 className="text-dark mb-3">{title}</h3>
-      <hr className="w-25 ml-0" />
       <p className="text-muted">{changed}</p>
       <p>{body}</p>
       <Link to={slug} className="btn btn-primary">
@@ -39,7 +38,7 @@ const render = (data) => (
           <hr className="w-25 ml-0" />
           { data.map((i) => render_row(i)) }
           <p className="text-center py-4">
-            <Link to="/newsfeed" className="btn btn-outline-primary btn-cta">
+            <Link to="/newsfeed" className="btn btn-outline-primary btn-lg">
               View Newsfeed
             </Link>
           </p>

@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -21,6 +21,7 @@ const ArticlePage = ({title, body, image, changed}) => (
         <Col lg={8}>
           <p className="text-muted">{changed}</p>
           <div dangerouslySetInnerHTML={{__html: body}} />
+          <p><Link to="/news">&larr; Read more news</Link></p>
         </Col>
       </Row>
     </Container>
