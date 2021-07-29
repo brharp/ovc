@@ -6,18 +6,16 @@ import Banner from "../shared/banner"
 const render_item = ({title, body, image, slug}) => (
   <Banner>
     { image ?
-        <GatsbyImage image={getImage(image)} className="cover-img" style={{height: "600px"}} alt="" /> :
-        <StaticImage src="../news/default.jpg"  className="cover-img" style={{height: "600px"}} alt="" /> }
-    <Banner.Overlay className="px-4">
-      <Banner.Title>
+        <GatsbyImage image={getImage(image)} className="cover-img" style={{maxHeight: "600px"}}  alt="" /> :
+        <StaticImage src="../news/default.jpg"  className="cover-img" style={{maxHeight: "600px"}} alt="" /> }
+    <Banner.Overlay className="px-2">
+      <h1 className="text-warning">
         {title}
-      </Banner.Title>
-      <Banner.Text>
-        <p>{body}</p>
+      </h1>
+        <p className="text-light lead font-weight-bold">{body}</p>
         <Link to={slug} className="btn btn-lg btn-primary">
           Read more<span className="sr-only"> about {title}</span>
         </Link>
-      </Banner.Text>
     </Banner.Overlay>
   </Banner>
 )
