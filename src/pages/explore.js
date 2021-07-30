@@ -110,7 +110,7 @@ const Leaders = () => (
 const Initiatives = () => (
   <div className="container my-4">
     <div className="cover my-4">
-      <StaticImage src="../images/explore/iStock-524706116.jpg"
+      <StaticImage src="../images/explore/puzzle_strat.jpg"
                    className="cover-img" aspectRatio={4/1}
                    alt="">
       </StaticImage>
