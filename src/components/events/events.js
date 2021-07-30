@@ -1,5 +1,5 @@
 import React from "react";
-import { graphql, StaticQuery } from "gatsby";
+import { graphql, StaticQuery, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
@@ -8,6 +8,7 @@ const EventWrapper = styled.div`
   align-self: center;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  position: relative;
   @media (min-width: 1432px) {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -90,6 +91,15 @@ const Mask = styled.div`
   display: grid;
 `
 
+const MoreLink = styled.div`
+  text-align: right;
+  @media (min-width: 768px) {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+  }
+`
+
 export default function Events(props) {
   return (
     <StaticQuery
@@ -125,6 +135,9 @@ export default function Events(props) {
             <Container>
                 <EventWrapper>
                   <h2>Upcoming Events</h2>
+                  <MoreLink>
+                    <Link to="/events" className="text-light">View Events Calendar</Link>
+                  </MoreLink>
                   <EventList>
                     {
                       data.allNodeEvent?.edges.map(({ node }, index ) => {

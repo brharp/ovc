@@ -23,7 +23,9 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
+  //
   // Create article pages
+  //
   const result = await graphql(`
     query {
       allNodeArticle {
@@ -46,7 +48,28 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
+
+  //
+  // Create event pages
+  //
+  const eventsQueryResult = await graphql(`
+    query { allNodeEvent { edges { node { id fields { slug } } } } }
+  `)
+  eventsQueryResult.data.allNodeEvent.edges.forEach(({ node }) => {
+    createPage({
+      path: node.fields.slug,
+      component: path.resolve(`./src/templates/event.js`),
+      context: {
+        id: node.id,
+        slug: node.fields.slug,
+      },
+    })
+  })
+
+
+  //
   // Create portal pages
+  //
   const portals = await graphql(`
     query {
       allPortalsYaml {
@@ -70,7 +93,9 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
 
+  //
   // Create basic pages
+  //
   const pageQueryResult = await graphql(`
     query { allNodePage { edges { node { fields { slug } } } } }
   `)
