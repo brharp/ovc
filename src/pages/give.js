@@ -60,7 +60,7 @@ const Banner = () => (
             <h1 className="display-3 text-warning font-weight-bold">
               Give
             </h1>
-            <p className="text-light lead font-weight-bold">
+            <p className="text-light lead font-weight-bold mb-4">
               Alumni, clients, corporate partners, donor and friends of the 
               Ontario Veterinary College enhance our capacity to be among the very best
               schools of veterinary medicine in the world, and to improve life by creating

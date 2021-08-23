@@ -1,8 +1,10 @@
 import React from 'react'
+import { Container } from "react-bootstrap"
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { StaticImage } from "gatsby-plugin-image"
 import Leadership from "../components/shared/leadership"
+import ExploreBanner from "../components/blocks/explore_banner"
 
 import { 
   FaUsers, 
@@ -12,33 +14,6 @@ import {
   FaCanadianMapleLeaf, 
   FaGraduationCap 
 } from "react-icons/fa"
-
-
-const Banner = () => (
-  <div className="cover">
-    <StaticImage className="cover-img" src="../images/explore/30344872351_60c2261186_o.jpg" alt="" 
-                 layout="fullWidth" style={{height: "600px"}}/>
-    <div className="cover-img-overlay py-4 m-0 bg-black-50 h-100">
-      <div className="container h-100">
-        <div className="row h-100 align-content-end">
-          <div className="col-md-8">
-            <h1 className="display-3 text-warning font-weight-bold">
-              Explore OVC
-            </h1>
-            <p className="text-light lead font-weight-bold">
-              The Ontario Veterinary College (OVC) at the University of Guelph is a
-              world leader in advancing veterinary science, learning and research to
-              improve the lives of animals, people and our planet. With a focus on
-              innovation and science-based discovery, the xOVC is training the next
-              generation of health leaders to find real-world solutions to global
-              challenges.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-)
 
 
 const Welcome = () => (
@@ -297,13 +272,15 @@ const Success = () => (
 const Page = ( props ) => (
   <Layout>
     <SEO title="Explore"/>
-    <Banner />
-    <Welcome />
-    <Leaders />
-    <Initiatives />
-    <Statistics />
-    <Structure />
-    <Success />
+    <ExploreBanner />
+    <Container className="my-4">
+      <Welcome />
+      <Leaders />
+      <Initiatives />
+      <Statistics />
+      <Structure />
+      <Success />
+    </Container>
   </Layout>
 )
 
