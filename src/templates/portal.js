@@ -6,7 +6,6 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Banner from "../components/shared/banner"
 import Topics from "../components/shared/topics"
-import Resources from "../components/shared/resources"
 import Spotlight from "../components/shared/spotlight"
 import Partners from "../components/shared/partners"
 import Features from "../components/shared/features"
@@ -54,7 +53,6 @@ class PortalPage extends React.Component {
         <div className="container">
         { portal.statistics && <Statistics children={portal.statistics.children} /> }
         </div>
-        { portal.resources && <Resources items={portal.resources} /> }
         { portal.spotlight && <Spotlight items={portal.spotlight} /> }
         { portal.partners && <Partners partners={portal.partners} /> }
         <Container>
@@ -97,15 +95,6 @@ export const query = graphql`
             gatsbyImageData(aspectRatio: 1.333333333333333)
           }
         }
-        links {
-          title
-          url
-        }
-      }
-      resources {
-        title
-        icon
-        description
         links {
           title
           url
