@@ -119,7 +119,7 @@ const NewsComponent = ({ data }) => {
               })
             }
           <Newsfeed>
-	    <Link to="/newsfeed" className="btn btn-outline-primary btn-lg">
+	    <Link to="/news" className="btn btn-outline-primary btn-lg">
 	      View Newsfeed
 	    </Link>
 	  </Newsfeed>
