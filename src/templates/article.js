@@ -1,32 +1,19 @@
 import React from "react"
-import { graphql, Link } from "gatsby"
-import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import { graphql } from "gatsby"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import { Container, Row, Col } from "react-bootstrap"
-import Banner from "../components/shared/banner"
+import Article from "../components/node/article"
 
-const ArticlePage = ({title, body, image, changed}) => (
-  <Layout>
-    <SEO title={title} />
-    <Banner>
-      <GatsbyImage image={getImage(image)} alt="" className="cover-img"
-                   style={{height: "400px"}} />
-      <Banner.Overlay>
-        <h1 className="text-warning">{title}</h1>
-      </Banner.Overlay>
-    </Banner>
-    <Container className="py-4">
-      <Row>
-        <Col lg={8}>
-          <p className="text-muted">{changed}</p>
-          <div dangerouslySetInnerHTML={{__html: body}} />
-          <p><Link to="/news">&larr; Read more news</Link></p>
-        </Col>
-      </Row>
-    </Container>
-  </Layout>
-)
+const ArticleTemplate = ({data}) => {
+  return (
+    <Layout>
+      <SEO title={data.nodeArticle.title} />
+      <Article {...data.nodeArticle} />
+    </Layout>
+  )
+}
+
+export default ArticleTemplate
 
 export const query = graphql`
   query($slug: String) {
@@ -63,11 +50,4 @@ export const query = graphql`
   }
 `
 
-export default function DrupalArticlePage ({data}) {
-  return <ArticlePage title={data.nodeArticle.title}
-               body={data.nodeArticle.body.processed}
-               image={data.nodeArticle.relationships.field_hero_image?.relationships.field_media_image.localFile}
-               changed={data.nodeArticle.changed}
-               />
-}
 
