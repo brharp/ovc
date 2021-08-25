@@ -79,7 +79,7 @@ const NewsComponent = ({ data }) => {
               }
             }
           }
-          moreArticles: allNodeArticle(skip: 1) {
+          moreArticles: allNodeArticle(skip: 1, limit: 2) {
             edges {
               node {
                 ...node__articleFragment
