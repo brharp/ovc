@@ -72,14 +72,14 @@ const NewsComponent = ({ data }) => {
           }
         }
         query {
-          leadArticle: allNodeArticle(limit: 1) {
+          leadArticle: allNodeArticle(limit: 1, sort: {fields: changed, order: DESC}) {
             edges {
               node {
                 ...node__articleFragment
               }
             }
           }
-          moreArticles: allNodeArticle(skip: 1, limit: 2) {
+          moreArticles: allNodeArticle(skip: 1, limit: 2, sort: {fields: changed, order: DESC}) {
             edges {
               node {
                 ...node__articleFragment
