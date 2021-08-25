@@ -6,17 +6,17 @@ class Body extends React.Component {
 
   render () {
     switch (this.props.format) {
-      case Body.SUMMARY: return this.renderSummary(); break;
-      default: return this.renderProcessed(); break;
+      case Body.SUMMARY: return this.renderSummary();
+      default: return this.renderProcessed();
     }
   }
 
   renderSummary() {
-    return this.props.summary
+    return <div dangerouslySetInnerHTML={{__html: this.props.summary}}></div>
   }
 
   renderProcessed() {
-    return this.props.processed
+    return <div dangerouslySetInnerHTML={{__html: this.props.processed}}></div>
   }
 
 }
