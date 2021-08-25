@@ -20,7 +20,8 @@ const Body = (props) => {
       }
     }
   `)
-  return HTMLReactParser(props.processed, {
+  return HTMLReactParser(
+    props.format === "summary" ? props.summary : props.processed, {
     replace: domNode => {
       if (domNode.name === 'img') {
         const uuid = domNode.attribs["data-entity-uuid"]

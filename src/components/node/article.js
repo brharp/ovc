@@ -38,7 +38,7 @@ class Article extends React.Component {
         <Col>
           <h3 className="text-dark mb-3">{this.props.title}</h3>
           <p className="text-muted">{this.props.changed}</p>
-          <Body {...this.props.body} format="summary" />
+          <p><Body {...this.props.body} format="summary" /></p>
           <Link to={this.props.fields.slug} className="btn btn-primary">
             Read more<span className="sr-only"> about {this.props.title}</span>
           </Link>
