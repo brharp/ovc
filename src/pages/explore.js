@@ -98,7 +98,7 @@ const Initiatives = () => (
               </h2>
               <p className="text-light display-4">
                 Improving life by creating healthier futures for animals,
-                people and the environment.
+                people and the environment
               </p>
             </div>
           </div>
@@ -251,7 +251,7 @@ const Success = () => (
         <h2>Our Success</h2>
         <h3 className="text-dark">Building the pathway of discovery</h3>
         <p>
-          The Ontario Veterinary College established in 1862 in
+          The Ontario Veterinary College, established in 1862 in
           Toronto, is the oldest veterinary college in Canada and the
           United States and the only veterinary college in Ontario.
           OVC graduates almost one-third of all Canadian-educated
