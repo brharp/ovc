@@ -1,7 +1,8 @@
 id: "give_online"
 title: "Online"
-body: "Make a donation to support OVC online today with our safe, convenient and easy giving page."
+body: "Make a donation to support OVC online today with our safe, convenient and easy giving page.
+Have questions? Email us at ovcadv@uoguelph.ca"
 link:
-  title: "View Give Page"
+  title: "Donate Now"
   url: "https://bbis.alumni.uoguelph.ca/BBIS_Cannon/give/uofg"
 
