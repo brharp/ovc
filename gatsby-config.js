@@ -11,11 +11,11 @@ module.exports = {
     slogan: 'A world leader in advancing veterinary science, learning and research to improve the lives of animals, people and our planet.',
     author: 'The OVC Authors',
     menu: [
-      { title: "Home",     path: "/" },
+      { title: "OVC Home",     path: "/" },
+      { title: "About",   path: "/explore" },
       { title: "Research", path: "/research" },
       { title: "Alumni",   path: "/alumni" },
       { title: "Hospital", path: "https://ovc.uoguelph.ca/hsc" },
-      { title: "Experts",   path: "/experts" },
       { title: "Learn", path: "/learn" },
       { title: "Intranet", path: "https://uoguelphca.sharepoint.com/sites/OntarioVeterinaryCollege/" },
     ],
