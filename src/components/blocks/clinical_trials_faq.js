@@ -10,7 +10,7 @@ const render = ({id, title, link}) => (
           {title}
         </h2>
         <p className="text-center">
-          <Link to={link.to} className="btn btn-lg btn-primary">
+          <Link to={link.url} className="btn btn-lg btn-primary">
             {link.title}
           </Link>
         </p>
