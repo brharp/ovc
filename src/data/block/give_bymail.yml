@@ -1,9 +1,12 @@
 id: "give_by_mail"
 title: "By Mail"
-body: "If you are more comfortable sending a donation by mail, we are happy to receive it. Here is our mailing address:
-       OVC Dean’s Office
-       University of Guelph
-       50 Stone Road
-       Guelph, Ontario, Canada
-       N1G 2W1"
+body: "If you are more comfortable sending a donation by mail, we are happy to receive it. Here is our mailing address:"
+address: 
+  line1: OVC Dean's Office
+  line2: University of Guelph
+  street: 50 Stone Road
+  city: Guelph
+  province: Ontario
+  country: Canada
+  postalcode: N1G 2W1
 

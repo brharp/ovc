@@ -2,7 +2,7 @@ import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { FaEnvelope } from "react-icons/fa"
 
-const render = ({id, title, body, link }) => (
+const render = ({id, title, body, address }) => (
   <>
     <FaEnvelope className="card-img-top display-4 text-danger mt-4"/>
     <div id={id} className="card-body">
@@ -12,11 +12,13 @@ const render = ({id, title, body, link }) => (
       <p className="card-text">
         {body}
       </p>
-    </div>
-    <div className="card-footer border-0">
-      <a className="btn btn-outline-dark btn-lg" href={link.url}>
-        {link.title}
-      </a>
+      <address className="lead">
+        {address.line1}<br/>
+        {address.line2}<br/>
+        {address.street}<br/>
+        {address.city}, {address.province}, {address.country}<br/>
+        {address.postalcode}<br/>
+      </address>
     </div>
   </>
 )
@@ -26,10 +28,15 @@ const query = graphql`
     blockYaml(id: {eq: "give_by_mail"}) { 
       title 
       body 
-      link { 
-        title 
-        url 
-      } 
+      address {
+        line1
+        line2
+        street
+        city
+        province
+        country
+        postalcode
+      }
     } 
   }
 `
