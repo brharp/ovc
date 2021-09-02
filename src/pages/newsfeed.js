@@ -32,6 +32,7 @@ const render = (data) => (
       <h1 className="text-dark">Recent Articles</h1>
       <hr className="ml-0 w-25" />
       { data.map((i) => render_row(i)) }
+      <p><Link to="/news">&larr; Back to News Hub</Link></p>
     </Container>
   </Layout>
 )
