@@ -7,7 +7,7 @@ const render = ({ id, image, title, body, link }) => (
   <Banner>
     <GatsbyImage image={getImage(image)} className="cover-img" alt=""
                  style={{height: "500px"}}/>
-    <Banner.Overlay className="p-4 bg-red-80 ">
+    <Banner.Overlay className="p-4 bg-black-80 ">
       <div className="pl-3">
         <h2 className="text-light">
           {title}
