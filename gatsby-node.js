@@ -26,19 +26,10 @@ exports.createPages = async ({ graphql, actions }) => {
   //
   // Create article pages
   //
-  const result = await graphql(`
-    query {
-      allNodeArticle {
-        edges {
-          node {
-            fields {
-              slug
-            }
-          }
-        }
-      }
+  const articleQueryResult = await graphql(`
+    query { allNodeArticle { edges { node { fields { slug } } } }
   }`)
-  result.data.allNodeArticle.edges.forEach(({ node }) => {
+  articleQueryResult.data.allNodeArticle.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
       component: path.resolve(`./src/templates/article.js`),
@@ -106,6 +97,23 @@ exports.createPages = async ({ graphql, actions }) => {
       context: {
         slug: node.fields.slug,
       },
+    })
+  })
+
+
+  //
+  // Create tag taxonomy pages
+  //
+  const tagQueryResult = await graphql(`
+    query { allTaxonomyTermTags { edges { node { drupal_id name } } } }
+  `)
+  tagQueryResult.data.allTaxonomyTermTags.edges.forEach(({node}) => {
+    createPage({
+      path: `/tag/{node.drupal_id}`,
+      component: path.resolve(`./src/templates/tag.js`),
+      context: {
+        tag: node.name
+      }
     })
   })
 }

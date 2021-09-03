@@ -1,10 +1,9 @@
 // Framework and plugin imports
 import React from 'react';
 import { graphql, StaticQuery, Link } from 'gatsby';
-import { getImage } from "gatsby-plugin-image";
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
-import Article from "./article";
+import Article from "../node/article";
 
 const Rule = styled.hr`
   width: 100px;
@@ -98,24 +97,14 @@ const NewsComponent = ({ data }) => {
           <div className="col-md-6">
             {
               data.leadArticle.edges.map(( { node }, index ) => {
-                const image = getImage(articleImage(node).localFile.childImageSharp.gatsbyImageData)
-                const tags = node.relationships?.field_tags.map(({ name }) => name).join(", ")
-                return <Article key={`lead_article_${index}`} title={node.title} summary={node.body.summary}
-                                tags={tags} image={image} lead={true} slug={node.fields.slug} 
-                                changed={node.changed} />
+                return <Article {...node} mode="lead" />
               })
             }
           </div>
           <div className="col-md-6">
             {
               data.moreArticles.edges.map(( { node }, index ) => {
-                const image = getImage(articleImage(node)?.localFile.childImageSharp.gatsbyImageData)
-                const tags = node.relationships?.field_tags.map(({ name }) => name).join(", ")
-                return <div key={`article_${index}`} style={{marginBottom: "32px"}}>
-                         <Article title={node.title} summary={node.body.summary}
-                                  tags={tags} image={image} slug={node.fields.slug}
-                                  changed={node.changed} />
-                       </div>
+                return <Article {...node} mode="teaser" />
               })
             }
           <Newsfeed>
@@ -129,11 +118,6 @@ const NewsComponent = ({ data }) => {
       )}
     />
   )
-}
-
-function articleImage(node) {
-  //return node.relationships.field_image
-  return node.relationships.field_hero_image?.relationships.field_media_image
 }
 
 export default NewsComponent;
