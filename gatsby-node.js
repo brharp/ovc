@@ -105,14 +105,14 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create tag taxonomy pages
   //
   const tagQueryResult = await graphql(`
-    query { allTaxonomyTermTags { edges { node { drupal_id name } } } }
+    query { allTaxonomyTermTags { edges { node { drupal_id } } } }
   `)
   tagQueryResult.data.allTaxonomyTermTags.edges.forEach(({node}) => {
     createPage({
-      path: `/tag/{node.drupal_id}`,
+      path: `/tag/${node.drupal_id}`,
       component: path.resolve(`./src/templates/tag.js`),
       context: {
-        tag: node.name
+        tag: node.drupal_id
       }
     })
   })

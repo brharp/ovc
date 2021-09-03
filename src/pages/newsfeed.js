@@ -39,7 +39,7 @@ const render = (data) => (
 
 export const query = graphql`
   query {
-    allNodeArticle {
+    allNodeArticle(sort: {order: DESC, fields: changed}) {
       edges {
         node {
           fields {

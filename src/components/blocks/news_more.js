@@ -21,7 +21,7 @@ const render = (data) => (
 
 const query = graphql`
   query {
-    allNodeArticle(skip: 1, limit: 6, filter: {promote: {eq: true}}) {
+    allNodeArticle(skip: 1, limit: 6, filter: {promote: {eq: true}}, sort: {order: DESC, fields: changed}) {
       edges {
         node {
           fields {
