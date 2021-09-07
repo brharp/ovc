@@ -25,7 +25,10 @@ function Body(props) {
       replace: domNode => {
         if (domNode.name === 'img') {
           const src = domNode.attribs['src'];
-          return <img src={`${baseUrl}.${src}`} alt="" />
+          if (src.charAt(0) === '/') 
+            return <img src={`${baseUrl}${src.substring(1)}`} alt="" />
+          else
+            return <img src={src} alt="" />
         }
         return undefined
       }
