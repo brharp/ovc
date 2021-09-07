@@ -26,9 +26,9 @@ function Body(props) {
         if (domNode.name === 'img') {
           const src = domNode.attribs['src'];
           if (src.charAt(0) === '/') 
-            return <img src={`${baseUrl}${src.substring(1)}`} alt="" />
+            return <img src={`${baseUrl}${src.substring(1)}`} alt="" className="img-fluid"/>
           else
-            return <img src={src} alt="" />
+            return <img src={src} alt="" className="img-fluid"/>
         }
         return undefined
       }

@@ -24,15 +24,14 @@ class Article extends React.Component {
   }
   renderFull() {
     return <React.Fragment>
-      <HeroImage {...this.props.relationships?.field_hero_image} format="banner">
-        <h1 className="text-warning">{this.props.title}</h1>
-      </HeroImage>
+      <HeroImage {...this.props.relationships?.field_hero_image} format="parallax"></HeroImage>
       <Container className="py-4">
         <Row>
-          <Col lg={8}>
+          <Col lg={9} className="bg-white mx-3 p-4 shadow-sm">
             <p><Tags {...this.props} /></p>
+            <h1>{this.props.title}</h1>
             <p className="text-muted">{this.props.changed}</p>
-            <Body {...this.props.body} />
+            <Body className="bg-white" {...this.props.body} />
             <p><Link to="/news">&larr; Read more news</Link></p>
           </Col>
         </Row>

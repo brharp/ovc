@@ -45,6 +45,7 @@
     "react-icons": "^4.2.0",
     "react-inlinesvg": "^2.2.2",
     "react-number-format": "^4.4.4",
+    "react-scroll-parallax": "^2.4.0",
     "react-slick": "^0.28.0",
     "sass": "^1.32.8",
     "slick-carousel": "^1.8.1",
