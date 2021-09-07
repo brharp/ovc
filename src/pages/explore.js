@@ -3,8 +3,10 @@ import { Container } from "react-bootstrap"
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import { StaticImage } from "gatsby-plugin-image"
-import Leadership from "../components/shared/leadership"
 import ExploreBanner from "../components/blocks/explore_banner"
+import ExploreWelcome from "../components/blocks/explore_welcome"
+import ExploreLeaders from "../components/blocks/explore_leaders"
+import ExploreInitiatives from "../components/blocks/explore_initiatives"
 
 import { 
   FaUsers, 
@@ -16,95 +18,9 @@ import {
 } from "react-icons/fa"
 
 
-const Welcome = () => (
-  <div className="container my-4">
-    <div className="row bg-blue-50 no-gutters">
-      <div className="col-lg-6 ">
-        <StaticImage src="../images/explore/Dean2.jpg" alt="" className="h-100" />
-      </div>
-      <div className="col-lg-6 p-4">
-        <div className="media">
-          <div className="media-body">
-            <h2 className="text-dark">
-              <FaGraduationCap className="mr-4 display-3 text-info"/> 
-              A Dean's Welcome 
-            </h2>
-            <p>
-              For more than 160 years, the simple but powerful call
-              to duty - Opus Veterinum Civibus - The Craft of the
-              Veterinarian is for the Good of the Nation - has guided to
-              Ontario Veterinary College on its journey to excellence,
-              supporting the evolving relationship between humans and
-              animals, advancing veterinary medicine and tackling our
-              most pressing health and food security issues.
-            </p>
-            <p>
-              Today, more than ever, innovation and science-based
-              discovery are critical to the health and sustainability
-              of our planet. Our students, our researchers and our
-              graduates boast a broad skillset, creativity and passion
-              to ensure the health and wellbing of our changing world
-              and to ensure we are prepared for whatever the future
-              holds.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-)
-
-
-const Leaders = () => (
-  <div className="container my-4">
-    <div className="cover my-4">
-      <StaticImage src="../images/explore/leadership.JPG"
-                   className="cover-img" aspectRatio={4/1}
-                   alt="">
-      </StaticImage>
-      <div className="cover-img-overlay bg-black-50 ">
-        <div className="container h-100">
-          <div className="row h-100 justify-content-end align-content-end">
-            <div className="p-4 text-right">
-              <h2 className="display-2 text-warning font-weight-bold">
-                Leadership at the OVC
-              </h2>
-              <p className="text-light display-4">
-                Excellence in innovation, education and service
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <Leadership />
-  </div>
-)
-
-
 const Initiatives = () => (
   <div className="container my-4">
-    <div className="cover my-4">
-      <StaticImage src="../images/explore/puzzle_strat.jpg"
-                   className="cover-img" aspectRatio={4/1}
-                   alt="">
-      </StaticImage>
-      <div className="cover-img-overlay bg-black-50 ">
-        <div className="container h-100">
-          <div className="row h-100 justify-content-end align-content-end">
-            <div className="p-4 text-right">
-              <h2 className="display-2 text-warning font-weight-bold">
-                OVC Strategic Initiatives
-              </h2>
-              <p className="text-light display-4">
-                Improving life by creating healthier futures for animals,
-                people and the environment
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <ExploreInitiatives />
     <div className="row">
       {[
         {
@@ -274,8 +190,8 @@ const Page = ( props ) => (
     <SEO title="Explore"/>
     <ExploreBanner />
     <Container className="my-4">
-      <Welcome />
-      <Leaders />
+      <ExploreWelcome />
+      <ExploreLeaders />
       <Initiatives />
       <Statistics />
       <Structure />
