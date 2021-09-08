@@ -39,6 +39,24 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
+  //
+  // Create news feed pages
+  //
+  const articles = articleQueryResult.data.allNodeArticle.edges
+  const articlesPerPage = 5
+  const numArticlePages = Math.ceil(articles.length / articlesPerPage)
+  Array.from({ length: numArticlePages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? "/newsfeed" : `/newsfeed/${i + 1}`,
+      component: path.resolve("./src/templates/newsfeed.js"),
+      context: {
+        limit: articlesPerPage,
+        skip: i * articlesPerPage,
+        numPages: numArticlePages,
+        currentPage: i + 1,
+      },
+    })
+  })    
 
   //
   // Create event pages
