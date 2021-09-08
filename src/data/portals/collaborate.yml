@@ -1,7 +1,6 @@
 path: /collaborate
 title: Collaborate
-summary: The OVC has a long tradition of partnerships in research, development, teaching and learning. Working in collaboration with different industries can create a valuable network of organizations supporting each other across multiple disciplines.
-image: ../../images/collaborate/Mask_group_8.png
+summary: Using a science-based approach to cutting-edge discovery, OVC values collaborations and partnerships to help us solve critical local and global health issues.image: ../../images/collaborate/Mask_group_8.png
 cta:
   title: Contact to Collaborate
   url: https://ovc.uoguelph.ca/
@@ -10,11 +9,11 @@ topics:
   - title: Researchers
     subtitle: Focus on innovation
     image: ../../images/collaborate/KW29_4028.jpg
-    summary: With an innovative, collaborative approach aimed at improving the health and well-being of animals, humans, and our ecosystems, research at OVC covers a broad range of disciplines. Our research strength stems from our collective expertise, collaborative partnerships, and a solid research infrastructure that have helped us grow world-class research programs.
+    summary: Research at OVC covers a broad range of disciplines. Our strength stems from our collective expertise, collaborative partnerships, and a solid research infrastructure that serves our world-class programs.
     links:
       - title: Explore Faculty
         url: /experts
-  - title: Clients
+  - title: Clinical Trials
     subtitle: Translational and transformative
     image: ../../images/collaborate/20171128_191323365_iOS.jpg
     summary: A leader in translational medicine, we are focused on the health and well-being of the animals in our care and continually seek opportunities to advance care and ultimately influence both animal and human health.
