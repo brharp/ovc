@@ -82,13 +82,10 @@ const Priorities = () => (
                    aspectRatio={1.333333333333333} />
     </div>
     <div className="col-md order-md-first">
-      <h2>Advancing the OVC's Mission</h2>
+      <h2>Advancing OVC's Mission</h2>
       <h3 className="text-dark">Your support makes a difference</h3>
       <p class="lead">
-        Donations help the Ontario Veterinary College advance its
-        mission to educate veterinarians and scientists, create new
-        knowledge and provide expert services to improve the 
-        health and well-being of animals, people and the environment.
+        Donations help OVC advance its mission to educate veterinarians and scientists, create knowledge through research, and provide expert services.
       </p>
       <p>
         <a href="https://ovc.uoguelph.ca/give" className="btn btn-primary btn-lg">
