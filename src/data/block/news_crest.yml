@@ -1,10 +1,7 @@
 id: news_crest
 image: ../../images/partners/IMG_9272.jpg
 title: The Crest
-
-OVC's magazine
-body: 
-link:
+body: OVC's magazinelink:
   title: Read latest issue
   url: "https://ovc.uoguelph.ca/crest"
 
