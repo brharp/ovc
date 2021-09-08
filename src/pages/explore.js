@@ -90,7 +90,7 @@ const Statistics = () => (
           <div className="row h-100 justify-content-end align-content-end">
             <div className="p-4 text-right">
               <h2 className="display-2 text-warning font-weight-bold">
-                Inside the OVC
+                Inside OVC
               </h2>
               <p className="text-light display-4">
                 Our rich community and network of research expertise
@@ -137,13 +137,9 @@ const Structure = () => (
       </div>
       <div className="col-md">
         <h2>Our Structure</h2>
-        <h3 className="text-dark">The sum of our parts</h3>
+        <h3 className="text-dark">More than the sum of our parts</h3>
         <p>
-          The Ontario Veterinary College is organized into four
-          dynamic academic departments, along with world-leading
-          research centres and institutes that promote collaboration,
-          catalyze discovery and reflect the internationally
-          recognized expertise of our faculty and researchers.
+            OVC is organized into four dynamic academic departments, eight world-leading research centres and institutes, and our renowned Health Sciences Centre, where we promote collaboration, catalyze discovery and reflect the internationally recognized expertise of our faculty and researchers.
         </p>
         <p>
           <a href="/departments" className="btn btn-primary btn-lg">
@@ -167,15 +163,11 @@ const Success = () => (
         <h2>Our Success</h2>
         <h3 className="text-dark">Building the pathway of discovery</h3>
         <p>
-          The Ontario Veterinary College, established in 1862 in
-          Toronto, is the oldest veterinary college in Canada and the
-          United States and the only veterinary college in Ontario.
-          OVC graduates almost one-third of all Canadian-educated
-          veterinarians.
+          OVC is the oldest veterinary college in Canada and the United States, and the only veterinary college in Ontario. We graduate almost one-third of all Canadian-educated veterinarians.
         </p>
         <p>
           <a href="https://barkerveterinarymuseum.uoguelph.ca/blog/" className="btn btn-primary btn-lg">
-            Explore the Vault
+            Explore our History
           </a>
         </p>
       </div>
