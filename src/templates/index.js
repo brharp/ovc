@@ -8,7 +8,7 @@ import { graphql } from 'gatsby';
 import Hero from "../components/home/hero"
 import ImproveLife from "../components/home/improvelife"
 import MoreInfo from "../components/home/moreinfo"
-import Events from "../components/events/events"
+import Events from "../components/views/events"
 import News from "../components/news/news"
 import Footer from "../components/home/footer"
 
@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => (
     <ImproveLife />
     <MoreInfo />
     <News/>
-    <Events/>
+    <Events {...data} />
     <Footer/>
   </Layout>
 )
@@ -29,11 +29,27 @@ const IndexPage = ({ data }) => (
 export default IndexPage
 
 export const query = graphql`
-  query {
+  query($now: Date!) {
     site {
       siteMetadata {
         title
         slogan
+      }
+    }
+    allNodeEvent(
+      limit: 4, 
+      sort: {fields: field_date___value, order: ASC},
+      filter: {field_date: {end_value: {gte: $now}}}
+    ) {
+      edges {
+        node {
+          field_date {
+            value
+            month: value(formatString: "MMM")
+            date: value(formatString: "D")
+          }
+          title
+        }
       }
     }
   }

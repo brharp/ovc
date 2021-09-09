@@ -3,6 +3,7 @@ import { graphql, StaticQuery, Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
+import Event from "../node/event";
 
 const EventWrapper = styled.div`
   align-self: center;
@@ -22,51 +23,6 @@ const EventList = styled.ul`
   padding: 1em 0;
   margin: 0;
   list-style: none;
-`
-
-const EventListItem = styled.li`
-  display: grid;
-  grid-template-columns: 6em auto;
-  grid-template-rows: 6em;
-  box-shadow: var(--dark) 1px 1px;
-`
-
-const EventDate = styled.div`
-  padding: 12px;
-  border: solid 8px var(--yellow);
-  text-transform: uppercase;
-  text-align: center;
-  color: white;
-  text-shadow: var(--dark) 2px 2px;
-`
-
-const Month = styled.div`
-`
-
-const Date = styled.div`
-  font-size: 1.5em;
-  font-weight: 700;
-`
-
-const EventDetails = styled.div`
-  font-weight: 700;
-  font-size: 1em;
-  background: white;
-  padding: 1em;
-  overflow: hidden;
-  position: relative;
-`
-
-const EventDetailsMask = styled.div`
-  background: linear-gradient(0deg,white,transparent 2.5em);
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-`
-
-const EventDetailsContent = styled.div`
 `
 
 const Section = styled.div`
@@ -141,18 +97,7 @@ export default function Events(props) {
                   <EventList>
                     {
                       data.allNodeEvent?.edges.map(({ node }, index ) => {
-                        return <EventListItem key={index}>
-                                 <EventDate>
-                                   <Month>{node.field_date.month}</Month>
-                                   <Date>{node.field_date.date}</Date>
-                                 </EventDate>
-                                 <EventDetails>
-                                   <EventDetailsContent>
-                                     {node.title}
-                                   </EventDetailsContent>
-                                   <EventDetailsMask />
-                                 </EventDetails>
-                               </EventListItem>
+                        return <Event {...node} mode="card" />
                       })
                     }
                   </EventList>

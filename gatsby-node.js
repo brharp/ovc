@@ -24,6 +24,33 @@ exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
   //
+  // Get current date string (for filtering events, etc.)
+  //
+  const date = new Date()
+  const timezoneOffset = date.getTimezoneOffset()
+  const now = (new Date(date.getTime() - timezoneOffset * 60 * 1000)
+                  .toISOString().substring(0, 19))
+            + (timezoneOffset > 0 ? "-" : "+")
+            + (timezoneOffset / 60 < 10 ? "0" : "")
+            + (timezoneOffset / 60)
+            + ":"
+            + (timezoneOffset % 60 < 10 ? "0" : "")
+            + (timezoneOffset % 60)
+
+  console.log(now)
+
+  //
+  // Create home page
+  //
+  createPage({
+    path: "/",
+    component: path.resolve("./src/templates/index.js"),
+    context: {
+      now: "2021-10-02T14:30:00-04:00"
+    },
+  })
+  
+  //
   // Create article pages
   //
   const articleQueryResult = await graphql(`
