@@ -4,7 +4,7 @@ import Article from "../node/article"
 
 const render = (data) => (
   <div className="news-more">
-    <h1 className="text-dark">Articles of Interest</h1>
+    <h1 className="text-dark">Latest OVC News</h1>
     <hr className="w-25 ml-0" />
     {
       data.allNodeArticle.edges.map(({node}) => (
@@ -48,7 +48,7 @@ const query = graphql`
               }
             }
             field_tags {
-              id
+              drupal_id
               name
             }
           }

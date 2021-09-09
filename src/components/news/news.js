@@ -54,10 +54,8 @@ const NewsComponent = ({ data }) => {
                   localFile {
                     childImageSharp {
                       gatsbyImageData(
-                        width: 640,
-                        height: 480,
                         transformOptions: {cropFocus: ENTROPY},
-                        layout: CONSTRAINED
+                        layout: FULL_WIDTH
                       )
                     }
                   }
@@ -65,7 +63,7 @@ const NewsComponent = ({ data }) => {
               }
             }
             field_tags {
-              id
+              drupal_id
               name
             }
           }
@@ -94,14 +92,14 @@ const NewsComponent = ({ data }) => {
             <Rule/>
           </Title>
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-xl-5">
             {
               data.leadArticle.edges.map(( { node }, index ) => {
                 return <Article {...node} mode="lead" />
               })
             }
           </div>
-          <div className="col-md-6">
+          <div className="col-xl-7">
             {
               data.moreArticles.edges.map(( { node }, index ) => {
                 return <Article {...node} mode="teaser" />

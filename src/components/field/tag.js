@@ -9,7 +9,8 @@ class Tag extends React.Component {
     }
   }
   renderDefault() {
-    return <Link to={`/tag/${this.props.drupal_id}`} className="badge badge-primary mr-1">{this.props.name}</Link>
+    return <Link to={`/tag/${this.props.drupal_id}`} 
+                 className="badge badge-secondary mr-1">{this.props.name}</Link>
   }
 }
 
