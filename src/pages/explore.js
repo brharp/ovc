@@ -81,7 +81,7 @@ const Initiatives = () => (
 const Statistics = () => (
   <div className="container my-4">
     <div className="cover my-4">
-      <StaticImage src="../images/explore/OVC_front.jpg"
+      <StaticImage src="../images/explore/insideOVC.jpg"
                    className="cover-img" aspectRatio={4/1}
                    alt="">
       </StaticImage>
@@ -105,12 +105,14 @@ const Statistics = () => (
       <div className="cover-img-overlay bg-black-50 p-4">
         <div className="row">
           {[
-            { figure: "480", label: "DVM students" },
-            { figure: "#1 in Canada", label: "College Ranking" }, 
-            { figure: "118", label: "Faculty" }, 
-            { figure: "4", label: "Research Chairs" }, 
-            { figure: "$85,000", label: "Total Research Funding" }, 
-            { figure: "8", label: "# of Centres" }
+            { figure: "482", label: "DVM students" },
+            { figure: "390", label: "Graduate Students" }, 
+            { figure: "#1 College", label: "in Canada" }, 
+            { figure: "#5 College", label: "in North America" }, 
+            { figure: "#7 College", label: "in the world" }, 
+            { figure: "116", label: "Faculty" } 
+            { figure: "20,829", label: "Animal & Equine Patient Visits" }, 
+            { figure: "6522", label: "Food Animal & Field Service Patient Visits" }
           ].map((node, index) => (
             <div className="col-md-4 text-center p-4">
               <div className="display-4 text-warning font-weight-bold">
