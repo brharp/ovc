@@ -56,36 +56,58 @@ const MoreLink = styled.div`
   }
 `
 
-export default function Events(props) {
-  return <React.Fragment>
-    <Section>
-      <StaticImage src="../../images/brick_leaf.jpg"
-                   alt=""
-                   layout="fixed"
-                   style={{
-                     position: "absolute",
-                     top: "50%",
-                     left: "50%",
-                     transform: "translateX(-50%) translateY(-50%)"
-                   }} />
-      <Mask>
-        <Container>
-          <EventWrapper>
-            <h2>Upcoming Events</h2>
-            <MoreLink>
-              <Link to="/events" className="text-light">View Events Calendar</Link>
-            </MoreLink>
-            <EventList>
-              {
-                props.allNodeEvent?.edges.map(({ node }, index ) => {
-                  return <Event {...node} mode="card" />
-                })
-              }
-            </EventList>
-          </EventWrapper>
-        </Container>
-      </Mask>
-    </Section>
-  </React.Fragment>
+class Events extends React.Component {
+
+  render() {
+    switch ( this.props.display ) {
+      case 'cards': return this.renderCards()
+      default: return this.renderDefault()
+    }
+  }
+
+  renderCards() {
+    return <React.Fragment>
+      <Section>
+        <StaticImage src="../../images/brick_leaf.jpg"
+                     alt=""
+                     layout="fixed"
+                     style={{
+                       position: "absolute",
+                       top: "50%",
+                       left: "50%",
+                       transform: "translateX(-50%) translateY(-50%)"
+                     }} />
+        <Mask>
+          <Container>
+            <EventWrapper>
+              <h2>Upcoming Events</h2>
+              <MoreLink>
+                <Link to="/events" className="text-light">View Events Calendar</Link>
+              </MoreLink>
+              <EventList>
+                {
+                  this.props.allNodeEvent?.edges.map(({ node }, index ) => {
+                    return <Event {...node} mode="card" />
+                  })
+                }
+              </EventList>
+            </EventWrapper>
+          </Container>
+        </Mask>
+      </Section>
+    </React.Fragment>
+  }
+
+  renderDefault( ) {
+    return (
+      <React.Fragment>
+        { this.props.allNodeEvent?.edges.map(({node}) => (
+          <Event {...node} mode="teaser" />
+        )) }
+      </React.Fragment>
+    )
+  }
 }
+
+export default Events
 

@@ -1,21 +1,10 @@
 import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 import { Row, Col } from "react-bootstrap"
+import Events from "../views/events"
 
-const render = (events) => (
-  <div className="events-list">
-    {
-      events.map(({title, body, date, slug}) => (
-        <Row className="my-4">
-          <Col lg={7}>
-            <Link to={slug}><h2 className="mb-3">{title}</h2></Link>
-            <p className="text-muted">{date}</p>
-            <p>{body}</p>
-          </Col>
-        </Row>
-      ))
-    }
-  </div>
+const render = (data) => (
+  <Events {...data} />
 )
 
 const query = graphql`
@@ -32,6 +21,7 @@ const query = graphql`
           title
           body {
             summary
+            processed
           }
         }
       }
@@ -39,18 +29,9 @@ const query = graphql`
   }
 `
 
-function makeEvents({edges}) {
-  return edges.map(({node}) => ({
-    title: node.title,
-    body: node.body?.summary,
-    date: node.field_date.value,
-    slug: node.fields.slug,
-  }))
-}
-
 class EventsList extends React.Component {
   render () {
-    return <StaticQuery query={query} render={({allNodeEvent}) => render(makeEvents(allNodeEvent))} />
+    return <StaticQuery query={query} render={(data) => render(data)} />
   }
 }
 

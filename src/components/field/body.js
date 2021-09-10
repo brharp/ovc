@@ -21,6 +21,9 @@ function Body(props) {
 
   const renderProcessed = () => {
     const baseUrl = data.sitePlugin.pluginOptions.baseUrl
+    if (typeof props.processed !== 'string') {
+      return <></>
+    }
     return HTMLReactParser(props.processed, {
       replace: domNode => {
         if (domNode.name === 'img') {

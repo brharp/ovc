@@ -3,6 +3,7 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import { Container, Row, Col } from "react-bootstrap"
+import Event from "../components/node/event"
 
 class EventPage extends React.Component {
   render ()  {
@@ -13,16 +14,7 @@ class EventPage extends React.Component {
     return (
       <Layout>
         <Seo title={title} />
-        <Container className="py-4">
-          <h1>{title}</h1>
-          <Row>
-            <Col lg={8}>
-              <p className="text-muted">{date}</p>
-              <div dangerouslySetInnerHTML={{__html: details}} />
-              <p><Link to="/events">&larr; More events</Link></p>
-            </Col>
-          </Row>
-        </Container>
+        <Event {...node} />
       </Layout>
     )
   }
@@ -37,6 +29,7 @@ export const query = graphql`
       title
       body {
         summary
+        processed
       }
     }
   }

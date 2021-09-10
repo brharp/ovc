@@ -21,7 +21,7 @@ const IndexPage = ({ data }) => (
     <ImproveLife />
     <MoreInfo />
     <News/>
-    <Events {...data} />
+    <Events {...data} display="cards" />
     <Footer/>
   </Layout>
 )

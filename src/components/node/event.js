@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "gatsby"
 import styled from "styled-components";
-import { Row, Col } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 import HeroImage from "../field/hero_image"
 import Body from "../field/body"
 
@@ -63,6 +63,21 @@ class Event extends React.Component {
   }
 
   renderFull() {
+    return <React.Fragment>
+      <HeroImage {...this.props.relationships?.field_hero_image} format="parallax"></HeroImage>
+      <div className="bg-light">
+        <Container className="py-4">
+          <Row>
+            <Col lg={9} className="bg-white mx-3 p-4 shadow-sm">
+              <h1 className="text-dark">{this.props.title}</h1>
+              <p className="text-muted">{this.props.field_date.value}</p>
+              <Body className="bg-white" {...this.props.body} />
+              <Link to="/events">&larr; More events</Link>
+            </Col>
+          </Row>
+        </Container>
+      </div>
+    </React.Fragment>
   }
 
   renderTeaser() {
@@ -76,7 +91,7 @@ class Event extends React.Component {
             <h3 className="text-dark mb-2">{this.props.title}</h3>
           </Link>
           <p className="text-muted mb-1">{this.props.field_date.value}</p>
-          <p><Body {...this.props.body} format="summary" /></p>
+          <p><Body {...this.props.body} /></p>
         </Col>
       </Row>
     </React.Fragment>
