@@ -78,7 +78,7 @@ const Banner = () => (
 const Priorities = () => (
   <div className="row py-4">
     <div className="col-md">
-      <StaticImage src="../images/people.jpg" alt="" 
+      <StaticImage src="../images/work/givefeature.jpeg" alt="" 
                    aspectRatio={1.333333333333333} />
     </div>
     <div className="col-md order-md-first">
