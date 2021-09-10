@@ -62,6 +62,20 @@ class Event extends React.Component {
   }
 
   renderTeaser() {
+    return <React.Fragment>
+      <Row className="my-4">
+        <Col>
+          <HeroImage {...this.props.relationships?.field_hero_image} />
+        </Col>
+        <Col>
+          <Link to={this.props.fields?.slug}>
+            <h3 className="text-dark mb-2">{this.props.title}</h3>
+          </Link>
+          <p className="text-muted mb-1">{this.props.field_date.value}</p>
+          <p><Body {...this.props.body} format="summary" /></p>
+        </Col>
+      </Row>
+    </React.Fragment>
   }
 
   renderCard() {
