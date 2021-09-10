@@ -3,7 +3,7 @@ import { Link } from "gatsby";
 import { StaticImage } from "gatsby-plugin-image";
 import { Container } from "react-bootstrap";
 import styled from "styled-components";
-import Event from "../node/event";
+import Event from "../node/event"
 
 const EventWrapper = styled.div`
   align-self: center;

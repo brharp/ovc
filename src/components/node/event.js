@@ -1,5 +1,9 @@
 import React from "react";
+import { Link } from "gatsby"
 import styled from "styled-components";
+import { Row, Col } from "react-bootstrap"
+import HeroImage from "../field/hero_image"
+import Body from "../field/body"
 
 const EventCard = styled.li`
   display: grid;
