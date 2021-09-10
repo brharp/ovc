@@ -1,6 +1,5 @@
 import React from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
-import { Row, Col } from "react-bootstrap"
+import { StaticQuery, graphql } from "gatsby"
 import Events from "../views/events"
 
 const render = (data) => (
