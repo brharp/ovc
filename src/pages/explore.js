@@ -110,7 +110,7 @@ const Statistics = () => (
             { figure: "#1 College", label: "in Canada" }, 
             { figure: "#5 College", label: "in North America" }, 
             { figure: "#7 College", label: "in the world" }, 
-            { figure: "116", label: "Faculty" } 
+            { figure: "116", label: "Faculty" } ,
             { figure: "20,829", label: "Animal & Equine Patient Visits" }, 
             { figure: "6522", label: "Food Animal & Field Service Patient Visits" }
           ].map((node, index) => (
