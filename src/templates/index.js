@@ -1,7 +1,7 @@
 // Framework and plugin imports
 import Layout from '../components/layout';
 import React from 'react';
-import SEO from '../components/seo';
+import Seo from '../components/seo';
 import { graphql } from 'gatsby';
 
 // Custom component imports
@@ -16,7 +16,7 @@ import Footer from "../components/home/footer"
 // Index page component
 const IndexPage = ({ data }) => (
   <Layout>
-    <SEO title="Home" />
+    <Seo title="Home" />
     <Hero />
     <ImproveLife />
     <MoreInfo />

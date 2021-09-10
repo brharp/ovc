@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Card, CardGroup } from "react-bootstrap"
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 import Hero from "../components/shared/hero2"
 import LearnBanner from "../components/blocks/learn_banner"
 import LearnDvm from "../components/blocks/learn_dvm"
@@ -15,7 +15,7 @@ import Discover from "../components/blocks/discover"
 
 const LearnPage = (props) => (
   <Layout>
-    <SEO title="Learn" />
+    <Seo title="Learn" />
     <LearnBanner />
     <Container>
       <Hero.Layer>

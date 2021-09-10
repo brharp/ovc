@@ -2,7 +2,7 @@ import React from "react";
 import { Link, graphql } from "gatsby"
 import { Container } from "react-bootstrap"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Articles from "../components/views/articles"
 
 class TagTemplate extends React.Component {
@@ -10,7 +10,7 @@ class TagTemplate extends React.Component {
     const name = this.props.data.taxonomyTermTags.name
     return (
       <Layout>
-        <SEO title={`${name} News`} />
+        <Seo title={`${name} News`} />
         <Container>
           <h1 className="my-4">{name} News</h1>
           <Articles {...this.props.data} mode="teaser" /> 

@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from "react-bootstrap"
 
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 import Hero from "../components/shared/hero2"
 import ResearchBanner from "../components/blocks/research_banner"
 import ResearchCentres from "../components/blocks/research_centres"
@@ -15,7 +15,7 @@ import ResearchDonate from "../components/blocks/research_donate"
 
 const ResearchPage = (props) => (
   <Layout>
-    <SEO title="Research" />
+    <Seo title="Research" />
     <ResearchBanner />
     <Container>
       <Hero.Layer>

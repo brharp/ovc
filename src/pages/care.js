@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, CardGroup, Card } from "react-bootstrap"
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 import Hero from "../components/shared/hero2"
 import CareBanner from "../components/blocks/care_banner"
 import CareSpotlight from "../components/blocks/care_spotlight"
@@ -13,7 +13,7 @@ import Contact from "../components/blocks/contact"
 
 const CarePage = () => (
   <Layout>
-    <SEO title="Get Care" />
+    <Seo title="Get Care" />
     <CareBanner />
     <Container className="my-4">
       <CareSpotlight />

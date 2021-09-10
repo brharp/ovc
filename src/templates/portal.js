@@ -3,7 +3,7 @@ import { GatsbyImage, getImage} from "gatsby-plugin-image"
 import { Container } from "react-bootstrap"
 import React from "react"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Banner from "../components/shared/banner"
 import Topics from "../components/shared/topics"
 import Spotlight from "../components/shared/spotlight"
@@ -18,7 +18,7 @@ class Page extends React.Component {
     const page = this.props.page
 
     return <Layout>
-      <SEO title={page.title} />
+      <Seo title={page.title} />
 
       <header role="banner">
         { page.header }

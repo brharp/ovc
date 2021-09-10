@@ -2,7 +2,7 @@ import React from "react";
 import { Link, graphql } from "gatsby"
 import { Container, Row, Col } from "react-bootstrap"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import NewsBanner from "../components/blocks/news_banner"
 import Article from "../components/node/article"
 
@@ -16,7 +16,7 @@ export default function NewsFeed (props) {
   const nextPage = baseUrl + (currentPage + 1).toString()
   return (
     <Layout>
-      <SEO title="Newsfeed" />
+      <Seo title="Newsfeed" />
       <NewsBanner />
       <Container className="my-4">
         <h1 className="text-dark">Recent Articles</h1>

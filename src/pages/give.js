@@ -1,7 +1,7 @@
 import React from 'react'
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 
 import GiveDonate from "../components/blocks/give_donate"
 import GiveOnline from "../components/blocks/give_online"
@@ -100,7 +100,7 @@ const Priorities = () => (
 
 const GivePage = ( props ) => (
   <Layout>
-    <SEO title="Give" />
+    <Seo title="Give" />
     <Banner />
     <div className="container">
       <Priorities />

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container } from "react-bootstrap"
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 import { StaticImage } from "gatsby-plugin-image"
 import ExploreBanner from "../components/blocks/explore_banner"
 import ExploreWelcome from "../components/blocks/explore_welcome"
@@ -179,7 +179,7 @@ const Success = () => (
 // Explore page component
 const Page = ( props ) => (
   <Layout>
-    <SEO title="Explore"/>
+    <Seo title="Explore"/>
     <ExploreBanner />
     <Container className="my-4">
       <ExploreWelcome />

@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import { Container, Row, Col } from "react-bootstrap"
 
 class EventPage extends React.Component {
@@ -12,7 +12,7 @@ class EventPage extends React.Component {
     const details = node.body?.summary
     return (
       <Layout>
-        <SEO title={title} />
+        <Seo title={title} />
         <Container className="py-4">
           <h1>{title}</h1>
           <Row>

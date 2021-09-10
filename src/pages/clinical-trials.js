@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col } from "react-bootstrap"
 
 import Layout from '../components/layout'
-import SEO from '../components/seo'
+import Seo from '../components/seo'
 import Hero from "../components/shared/hero2"
 import ClinicalTrialsBanner from "../components/blocks/clinical_trials_banner"
 import ClinicalTrialsParticipate from "../components/blocks/clinical_trials_participate"
@@ -16,7 +16,7 @@ import Contact from "../components/blocks/contact"
 
 const ClinicalTrialsPage = (props) => (
   <Layout>
-    <SEO title="Clinical Trials" />
+    <Seo title="Clinical Trials" />
     <ClinicalTrialsBanner />
     <Container>
       <div className="bg-white">
