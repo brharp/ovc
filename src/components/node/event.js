@@ -99,18 +99,20 @@ class Event extends React.Component {
 
   renderCard() {
     return <React.Fragment>
-      <EventCard>
-        <EventDate>
-          <Month>{this.props.field_date.month}</Month>
-          <Date>{this.props.field_date.date}</Date>
-        </EventDate>
-        <EventDetails>
-          <EventDetailsContent>
-            {this.props.title}
-          </EventDetailsContent>
-          <EventDetailsMask />
-        </EventDetails>
-      </EventCard>
+      <Link to={this.props.fields?.slug} className="btn p-0 border-0 text-left">
+        <EventCard>
+          <EventDate>
+            <Month>{this.props.field_date.month}</Month>
+            <Date>{this.props.field_date.date}</Date>
+          </EventDate>
+          <EventDetails>
+            <EventDetailsContent>
+              {this.props.title}
+            </EventDetailsContent>
+            <EventDetailsMask />
+          </EventDetails>
+        </EventCard>
+      </Link>
     </React.Fragment>
   }
 }

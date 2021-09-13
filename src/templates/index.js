@@ -49,6 +49,9 @@ export const query = graphql`
             date: value(formatString: "D")
           }
           title
+          fields {
+            slug
+          }
         }
       }
     }

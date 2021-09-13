@@ -20,12 +20,10 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     }
 }
 
-exports.createPages = async ({ graphql, actions }) => {
-  const { createPage } = actions
-
-  //
-  // Get current date string (for filtering events, etc.)
-  //
+//
+// Get current date string (for filtering events, etc.)
+//
+function getCurrentDateString() {
   const date = new Date()
   const timezoneOffset = date.getTimezoneOffset()
   const now = (new Date(date.getTime() - timezoneOffset * 60 * 1000)
@@ -36,8 +34,13 @@ exports.createPages = async ({ graphql, actions }) => {
             + ":"
             + (timezoneOffset % 60 < 10 ? "0" : "")
             + (timezoneOffset % 60)
+  return now
+}
 
-  console.log(now)
+exports.createPages = async ({ graphql, actions }) => {
+
+  const { createPage } = actions
+  const now = getCurrentDateString()
 
   //
   // Create home page
@@ -46,7 +49,7 @@ exports.createPages = async ({ graphql, actions }) => {
     path: "/",
     component: path.resolve("./src/templates/index.js"),
     context: {
-      now: "2021-10-02T14:30:00-04:00"
+      now: now
     },
   })
   
@@ -54,8 +57,12 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create article pages
   //
   const articleQueryResult = await graphql(`
-    query { allNodeArticle { edges { node { fields { slug } } } }
-  }`)
+    query {
+      allNodeArticle {
+        edges { node { fields { slug } } }
+      }
+    }
+  `)
   articleQueryResult.data.allNodeArticle.edges.forEach(({ node }) => {
     createPage({
       path: node.fields.slug,
@@ -65,6 +72,7 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+
 
   //
   // Create news feed pages
@@ -85,11 +93,14 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })    
 
+
   //
   // Create event pages
   //
   const eventsQueryResult = await graphql(`
-    query { allNodeEvent { edges { node { id fields { slug } } } } }
+    query { allNodeEvent( filter: {field_date: {end_value: {gte: "${now}"}}} ) {
+      edges { node { id fields { slug } } } } 
+    }
   `)
   eventsQueryResult.data.allNodeEvent.edges.forEach(({ node }) => {
     createPage({
@@ -102,9 +113,29 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
+  //
+  // Create events listing pages
+  //
+  const events = eventsQueryResult.data.allNodeEvent.edges
+  const eventsPerPage = 2
+  const numEventPages = Math.ceil(events.length / eventsPerPage)
+  Array.from({ length: numEventPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? "/events/" : `/events/${i + 1}`,
+      component: path.resolve("./src/templates/events.js"),
+      context: {
+        limit: eventsPerPage,
+        skip: i * eventsPerPage,
+        numPages: numEventPages,
+        currentPage: i + 1,
+        now: now,
+      },
+    })
+  })    
+
 
   //
-  // Create portal pages
+  // Create portal pages (deprecated)
   //
   const portals = await graphql(`
     query {
