@@ -15,9 +15,9 @@ function NewsCarouselItem (props) {
     <Carousel.Item>
       { image ?
           <GatsbyImage image={getImage(image)} className="w-100" style={{height: "400px"}} alt="" /> :
-          <StaticImage src="../news/default.jpg"  className="w-100" style={{height: "400px"}} alt="" /> 
+          <StaticImage src="../../images/news/default.jpg"  className="w-100" style={{height: "400px"}} alt="" /> 
       }
-      <div className="bg-black-50" style={{position: "absolute", top: "0", bottom: "6px", left: "0", right: "0"}} />
+      <div className="bg-black-50" style={{position: "absolute", top: "0", bottom: "0", left: "0", right: "0"}} />
       <Carousel.Caption className="text-left pb-4 mb-4">
         <p className="text-warning font-weight-bold">{changed}</p>
         <h3 className="text-light">{title}</h3>
