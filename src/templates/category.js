@@ -5,9 +5,9 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Articles from "../components/views/articles"
 
-class TagTemplate extends React.Component {
+class CategoryTemplate extends React.Component {
   render() {
-    const name = this.props.data.taxonomyTermTags.name
+    const name = this.props.data.taxonomyTermNewsCategory.name
     return (
       <Layout>
         <Seo title={`${name} News`} />
@@ -21,14 +21,14 @@ class TagTemplate extends React.Component {
   }
 }
 
-export default TagTemplate
+export default CategoryTemplate
 
 export const query = graphql`
   query($tag:String) {
-    taxonomyTermTags(drupal_id: {eq: $tag}) {
+    taxonomyTermNewsCategory(drupal_id: {eq: $tag}) {
       name
     }
-    allNodeArticle(filter: {relationships: {field_tags: {elemMatch: {drupal_id: {eq: $tag}}}}},
+    allNodeArticle(filter: {relationships: {field_news_category: {elemMatch: {drupal_id: {eq: $tag}}}}},
                    sort: {order: DESC, fields: created}) {
       edges {
         node {

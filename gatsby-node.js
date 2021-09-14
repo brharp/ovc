@@ -185,8 +185,25 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
   tagQueryResult.data.allTaxonomyTermTags.edges.forEach(({node}) => {
     createPage({
-      path: `/tag/${node.drupal_id}`,
+      path: `/news/${node.drupal_id}`,
       component: path.resolve(`./src/templates/tag.js`),
+      context: {
+        tag: node.drupal_id
+      }
+    })
+  })
+
+
+  //
+  // Create news category pages
+  //
+  const newsCategoryQueryResult = await graphql(`
+    query { allTaxonomyTermNewsCategory { edges { node { drupal_id } } } }
+  `)
+  newsCategoryQueryResult.data.allTaxonomyTermNewsCategory.edges.forEach(({node}) => {
+    createPage({
+      path: `/news/${node.drupal_id}`,
+      component: path.resolve(`./src/templates/category.js`),
       context: {
         tag: node.drupal_id
       }
