@@ -4,6 +4,7 @@ import { Container, Row, Col } from "react-bootstrap"
 import Body from "../field/body"
 import HeroImage from "../field/hero_image"
 import Tag from "../field/tag"
+import Created from "../field/created"
 
 class Tags extends React.Component {
   render () {
@@ -31,7 +32,7 @@ class Article extends React.Component {
           <Col lg={9} className="bg-white mx-3 p-4 shadow-sm">
             <h1 className="text-dark">{this.props.title}</h1>
             <p><Tags {...this.props} /></p>
-            <p className="text-muted">{this.props.changed}</p>
+            <Created {...this.props} />
             <Body className="bg-white" {...this.props.body} />
             <Link to="/news">&larr; Read more news</Link>
           </Col>
@@ -48,8 +49,8 @@ class Article extends React.Component {
         </Col>
         <Col>
           <h3 className="text-dark mb-2">{this.props.title}</h3>
-            <p><Tags {...this.props} /></p>
-          <p className="text-muted mb-1">{this.props.changed}</p>
+          <p><Tags {...this.props} /></p>
+          <Created {...this.props} />
           <p><Body {...this.props.body} format="summary" /></p>
           <Link to={this.props.fields?.slug} className="btn btn-primary">
             Read more<span className="sr-only"> about {this.props.title}</span>
@@ -68,7 +69,7 @@ class Article extends React.Component {
       <Row>
         <Col>
           <h3 className="text-dark mb-3">{this.props.title}</h3>
-          <p className="text-muted">{this.props.changed}</p>
+          <Created {...this.props} />
           <p><Body {...this.props.body} format="summary" /></p>
           <Link to={this.props.fields?.slug} className="btn btn-primary">
             Read more<span className="sr-only"> about {this.props.title}</span>

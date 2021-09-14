@@ -46,7 +46,7 @@ const NewsComponent = ({ data }) => {
           body {
             summary
           }
-          changed(formatString: "MMMM DD, YYYY")
+          created(formatString: "MMMM DD, YYYY")
           relationships {
             field_hero_image {
               relationships {
@@ -69,14 +69,14 @@ const NewsComponent = ({ data }) => {
           }
         }
         query {
-          leadArticle: allNodeArticle(limit: 1, sort: {fields: changed, order: DESC}) {
+          leadArticle: allNodeArticle(limit: 1, sort: {fields: created, order: DESC}) {
             edges {
               node {
                 ...node__articleFragment
               }
             }
           }
-          moreArticles: allNodeArticle(skip: 1, limit: 2, sort: {fields: changed, order: DESC}) {
+          moreArticles: allNodeArticle(skip: 1, limit: 2, sort: {fields: created, order: DESC}) {
             edges {
               node {
                 ...node__articleFragment

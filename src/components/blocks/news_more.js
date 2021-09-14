@@ -21,14 +21,14 @@ const render = (data) => (
 
 const query = graphql`
   query {
-    allNodeArticle(skip: 1, limit: 6, filter: {promote: {eq: true}}, sort: {order: DESC, fields: changed}) {
+    allNodeArticle(skip: 1, limit: 6, filter: {promote: {eq: true}}, sort: {order: DESC, fields: created}) {
       edges {
         node {
           fields {
             slug
           }
           title
-          changed(formatString: "MMMM DD, YYYY")
+          created(formatString: "MMMM DD, YYYY")
           body {
             summary
           }

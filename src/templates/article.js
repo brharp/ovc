@@ -25,7 +25,7 @@ export const query = graphql`
       body {
         processed
       }
-      changed(formatString: "MMMM DD, YYYY")
+      created(formatString: "MMMM DD, YYYY")
       relationships {
         field_hero_image {
           relationships {

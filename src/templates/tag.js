@@ -29,7 +29,7 @@ export const query = graphql`
       name
     }
     allNodeArticle(filter: {relationships: {field_tags: {elemMatch: {drupal_id: {eq: $tag}}}}},
-                   sort: {order: DESC, fields: changed}) {
+                   sort: {order: DESC, fields: created}) {
       edges {
         node {
           fields {

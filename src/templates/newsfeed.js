@@ -39,7 +39,7 @@ export default function NewsFeed (props) {
 export const query = graphql`
   query ($skip: Int!, $limit: Int!) {
     allNodeArticle(
-      sort: {order: DESC, fields: changed},
+      sort: {order: DESC, fields: created},
       limit: $limit,
       skip: $skip
     ) {
@@ -52,7 +52,7 @@ export const query = graphql`
           body {
             summary
           }
-          changed(formatString: "MMMM DD, YYYY")
+          created(formatString: "MMMM DD, YYYY")
           relationships {
             field_hero_image {
               relationships {
