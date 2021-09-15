@@ -6,14 +6,42 @@ import Seo from "../components/seo"
 import NewsBanner from "../components/blocks/news_banner"
 import Article from "../components/node/article"
 
+function Pagination (props) {
+  let items = [];
+  if ( ! ( props.currentPage === 1 ) ) {
+    const prevPage = props.currentPage - 1 === 1 ? props.baseUrl : props.baseUrl + (props.currentPath - 1)
+    items.push(
+      <li className="page-item">
+        <Link to={prevPage} className="page-link">&laquo; Newer Articles</Link>
+      </li>
+    )
+  }
+  for ( let number = 1; number <= props.numPages; number++ ) {
+    const numberPage = number === 1 ? props.baseUrl : props.baseUrl + number.toString()
+    const activeClass = number === props.currentPage ? " active" : ""
+    items.push(
+      <li className={`page-item${activeClass}`} key={number}>
+        <Link to={numberPage} className={`page-link`}>{number}</Link>
+      </li>
+    )
+  }
+  if ( ! ( props.currentPage === props.numPages ) ) {
+    const nextPage = props.baseUrl + (props.currentPage + 1)
+    items.push(
+      <li className="page-item">
+        <Link to={nextPage} className="page-link">Older Articles &raquo;</Link>
+      </li>
+    )
+  }
+  const pagination = (
+    <div className="pagination justify-content-center">{items}</div>
+  )
+  return pagination
+}
+
 export default function NewsFeed (props) {
-  const baseUrl = "/newsfeed/"
   const data = props.data
   const { currentPage, numPages } = props.pageContext
-  const isFirst = currentPage === 1
-  const isLast = currentPage === numPages
-  const prevPage = currentPage - 1 === 1 ? baseUrl : baseUrl + (currentPage - 1).toString()
-  const nextPage = baseUrl + (currentPage + 1).toString()
   return (
     <Layout>
       <Seo title="Newsfeed" />
@@ -23,12 +51,13 @@ export default function NewsFeed (props) {
         <hr className="ml-0 w-25" />
         { data.allNodeArticle.edges.map(({node}) => <Article {...node} mode="teaser" />) }
         <Row>
-          <Col className="text-left">
-            { isFirst && <Link to="/news">&larr; Back to News Hub</Link> }
-            { !isFirst && <Link to={prevPage} rel="prev"> &larr; Newer Articles </Link> }
+          <Col>
+            <Link to="/news">&larr; Back to News Hub</Link>
           </Col>
-          <Col className="text-right">
-            { !isLast && <Link to={nextPage} rel="next"> Older Articles &rarr; </Link> }
+        </Row>
+        <Row>
+          <Col>
+            <Pagination baseUrl="/newsfeed/" currentPage={currentPage} numPages={numPages} />
           </Col>
         </Row>
       </Container>

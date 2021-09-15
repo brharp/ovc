@@ -37,10 +37,14 @@ function getCurrentDateString() {
   return now
 }
 
+
+
+
 exports.createPages = async ({ graphql, actions }) => {
 
   const { createPage } = actions
   const now = getCurrentDateString()
+  const defaultPageSize = 5
 
   //
   // Create home page
@@ -117,9 +121,9 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create events listing pages
   //
   const events = eventsQueryResult.data.allNodeEvent.edges
-  const eventsPerPage = 2
+  const eventsPerPage = defaultPageSize
   const numEventPages = Math.ceil(events.length / eventsPerPage)
-  Array.from({ length: numEventPages }).forEach((_, i) => {
+  for (let i = 0; i < numEventPages; i++) {
     createPage({
       path: i === 0 ? "/events/" : `/events/${i + 1}`,
       component: path.resolve("./src/templates/events.js"),
@@ -131,7 +135,7 @@ exports.createPages = async ({ graphql, actions }) => {
         now: now,
       },
     })
-  })    
+  }
 
 
   //
@@ -180,18 +184,43 @@ exports.createPages = async ({ graphql, actions }) => {
   //
   // Create tag taxonomy pages
   //
-  const tagQueryResult = await graphql(`
+  const allTagQueryResult = await graphql(`
     query { allTaxonomyTermTags { edges { node { drupal_id } } } }
   `)
-  tagQueryResult.data.allTaxonomyTermTags.edges.forEach(({node}) => {
-    createPage({
-      path: `/news/${node.drupal_id}`,
-      component: path.resolve(`./src/templates/tag.js`),
-      context: {
-        tag: node.drupal_id
+  const tagEdges = allTagQueryResult.data.allTaxonomyTermTags.edges
+  for (let i = 0; i < tagEdges.length; i++) {
+    const node = tagEdges[i].node
+    const tagQueryResult = await graphql(`
+      query {
+        allNodeArticle(
+            filter: {relationships: {field_tags: {elemMatch: {drupal_id: {eq: "${node.drupal_id}"}}}}}
+        ) {
+          edges {
+            node {
+              id
+            }
+          }
+        }
       }
-    })
-  })
+    `)
+    const resultCount = tagQueryResult.data.allNodeArticle.edges.length
+    const pageSize = defaultPageSize
+    const pageCount = Math.ceil( resultCount / pageSize )
+    const basePath = `/news/${node.drupal_id}`
+    for (let j = 0; j < pageCount; j++) {
+      createPage({
+        path: j === 0 ? basePath : `${basePath}/${j + 1}`,
+        component: path.resolve(`./src/templates/tag.js`),
+        context: {
+          limit: pageSize,
+          skip: j * pageSize,
+          numPages: pageCount,
+          currentPage: j + 1,
+          tag: node.drupal_id,
+        }
+      })
+    }
+  }
 
 
   //
@@ -200,14 +229,33 @@ exports.createPages = async ({ graphql, actions }) => {
   const newsCategoryQueryResult = await graphql(`
     query { allTaxonomyTermNewsCategory { edges { node { drupal_id } } } }
   `)
-  newsCategoryQueryResult.data.allTaxonomyTermNewsCategory.edges.forEach(({node}) => {
-    createPage({
-      path: `/news/${node.drupal_id}`,
-      component: path.resolve(`./src/templates/category.js`),
-      context: {
-        tag: node.drupal_id
+  const catEdges = newsCategoryQueryResult.data.allTaxonomyTermNewsCategory.edges
+  for (let i = 0; i < catEdges.length; i++) {
+    const node = catEdges[i].node
+    const catQueryResults = await graphql(`
+      query {
+        allNodeArticle(
+            filter: {relationships: {field_news_category: {elemMatch: {drupal_id: {eq: "${node.drupal_id}"}}}}}
+        ) { edges { node { id } } }
       }
-    })
-  })
+    `)
+    const resultCount = catQueryResults.data.allNodeArticle.edges.length
+    const pageSize = defaultPageSize
+    const pageCount = Math.ceil( resultCount / pageSize )
+    const basePath = `/news/${node.drupal_id}`
+    for (let j = 0; j < pageCount; j++) {
+      createPage({
+        path: j === 0 ? basePath : `${basePath}/${j + 1}`,
+        component: path.resolve(`./src/templates/category.js`),
+        context: {
+          limit: pageSize,
+          skip: j * pageSize,
+          numPages: pageCount,
+          currentPage: j + 1,
+          tag: node.drupal_id,
+        }
+      })
+    }
+  }
 }
 

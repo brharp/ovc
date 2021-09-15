@@ -1,9 +1,10 @@
 import React from "react";
 import { Link, graphql } from "gatsby"
-import { Container } from "react-bootstrap"
+import { Container, Row, Col } from "react-bootstrap"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Articles from "../components/views/articles"
+import Pagination from "../components/shared/pagination"
 
 class TagTemplate extends React.Component {
   render() {
@@ -11,10 +12,18 @@ class TagTemplate extends React.Component {
     return (
       <Layout>
         <Seo title={`${name} News`} />
-        <Container>
+        <Container className="my-4">
           <h1 className="my-4">{name} News</h1>
           <Articles {...this.props.data} mode="teaser" /> 
           <p><Link to="/news">&larr; Back to News Hub</Link></p>
+          <Row>
+            <Col>
+              <Pagination numPages={this.props.pageContext.numPages}
+                          currentPage={this.props.pageContext.currentPage} 
+                          baseUrl={`/news/${this.props.pageContext.tag}/`}
+                          />
+            </Col>
+          </Row>
         </Container>
       </Layout>
     )
@@ -24,11 +33,13 @@ class TagTemplate extends React.Component {
 export default TagTemplate
 
 export const query = graphql`
-  query($tag:String) {
+  query($tag:String, $limit: Int!, $skip: Int!) {
     taxonomyTermTags(drupal_id: {eq: $tag}) {
       name
     }
-    allNodeArticle(filter: {relationships: {field_tags: {elemMatch: {drupal_id: {eq: $tag}}}}},
+    allNodeArticle(limit: $limit,
+                   skip: $skip,
+                   filter: {relationships: {field_tags: {elemMatch: {drupal_id: {eq: $tag}}}}},
                    sort: {order: DESC, fields: created}) {
       edges {
         node {

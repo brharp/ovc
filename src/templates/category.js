@@ -4,6 +4,7 @@ import { Container } from "react-bootstrap"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import Articles from "../components/views/articles"
+import Pagination from "../components/shared/pagination"
 
 class CategoryTemplate extends React.Component {
   render() {
@@ -11,10 +12,14 @@ class CategoryTemplate extends React.Component {
     return (
       <Layout>
         <Seo title={`${name} News`} />
-        <Container>
+        <Container className="my-4">
           <h1 className="my-4">{name} News</h1>
           <Articles {...this.props.data} mode="teaser" /> 
           <p><Link to="/news">&larr; Back to News Hub</Link></p>
+          <Pagination numPages={this.props.pageContext.numPages}
+            currentPage={this.props.pageContext.currentPage}
+            baseUrl={`/news/${this.props.pageContext.tag}/`}
+            />
         </Container>
       </Layout>
     )
@@ -24,11 +29,13 @@ class CategoryTemplate extends React.Component {
 export default CategoryTemplate
 
 export const query = graphql`
-  query($tag:String) {
+  query($tag:String, $limit:Int!, $skip:Int!) {
     taxonomyTermNewsCategory(drupal_id: {eq: $tag}) {
       name
     }
-    allNodeArticle(filter: {relationships: {field_news_category: {elemMatch: {drupal_id: {eq: $tag}}}}},
+    allNodeArticle(limit: $limit,
+                   skip: $skip,
+                   filter: {relationships: {field_news_category: {elemMatch: {drupal_id: {eq: $tag}}}}},
                    sort: {order: DESC, fields: created}) {
       edges {
         node {
