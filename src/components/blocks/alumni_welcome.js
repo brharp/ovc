@@ -18,7 +18,7 @@ const render = ({id, title, body, image}) => (
               <FaGraduationCap className="mr-4 display-3 text-info"/> 
               {title}
             </h2>
-            <p>
+            <p className="lead">
               {body}
             </p>
           </div>
