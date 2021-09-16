@@ -28,6 +28,8 @@ export default function NewsPage(data) { return (
           <NewsCategoryBlock />
         </Col>
       </Row>
+      <h1 className="text-dark">Our Publications</h1>
+      <hr className="w-25 ml-0" />
       <Row>
         <Col>
           <NewsBestFriends />
