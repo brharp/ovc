@@ -87,7 +87,7 @@ class Event extends React.Component {
           <HeroImage {...this.props.relationships?.field_hero_image} />
         </Col>
         <Col>
-          <Link to={this.props.fields?.slug}>
+          <Link to={`/events/${this.props.drupal_id}`}>
             <h3 className="text-dark mb-2">{this.props.title}</h3>
           </Link>
           <p className="text-muted mb-1">{this.props.field_date.value}</p>
@@ -99,7 +99,7 @@ class Event extends React.Component {
 
   renderCard() {
     return <React.Fragment>
-      <Link to={this.props.fields?.slug} className="btn p-0 border-0 text-left">
+      <Link to={`/events/${this.props.drupal_id}`} className="btn p-0 border-0 text-left">
         <EventCard>
           <EventDate>
             <Month>{this.props.field_date.month}</Month>

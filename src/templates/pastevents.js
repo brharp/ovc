@@ -6,24 +6,24 @@ import Seo from "../components/seo"
 import Event from "../components/node/event"
 import Pagination from "../components/shared/pagination"
 
-export default function Events (props) {
+export default function PastEvents (props) {
   const data = props.data
   const { currentPage, numPages } = props.pageContext
   const baseUrl = "/events/"
   return (
     <Layout>
-      <Seo title="Upcoming Events" />
+      <Seo title="Past Events" />
       <Container className="my-4">
-        <h1 className="text-dark">Upcoming Events</h1>
+        <h1 className="text-dark">Past Events</h1>
         <hr className="ml-0 w-25" />
         <ul className="nav nav-tabs">
           <li className="nav-item">
-            <Link to="/events" className="nav-link active">
+            <Link to="/events" className="nav-link">
               Upcoming Events
             </Link>
           </li>
           <li className="nav-item">
-            <Link to="/events/past" className="nav-link">
+            <Link to="/events/past" className="nav-link active">
               Past Events
             </Link>
           </li>
@@ -38,8 +38,8 @@ export default function Events (props) {
 export const query = graphql`
   query ($skip: Int!, $limit: Int!, $now: Date!) {
     allNodeEvent(
-      filter: {field_date: {end_value: {gte: $now}}},
-      sort: {fields: field_date___value, order: ASC},
+      filter: {field_date: {end_value: {lt: $now}}},
+      sort: {fields: field_date___value, order: DESC},
       limit: $limit,
       skip: $skip
     ) {

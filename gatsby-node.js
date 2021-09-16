@@ -102,13 +102,13 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create event pages
   //
   const eventsQueryResult = await graphql(`
-    query { allNodeEvent( filter: {field_date: {end_value: {gte: "${now}"}}} ) {
-      edges { node { id fields { slug } } } } 
+    query { allNodeEvent {
+      edges { node { id drupal_id fields { slug } } } } 
     }
   `)
   eventsQueryResult.data.allNodeEvent.edges.forEach(({ node }) => {
     createPage({
-      path: node.fields.slug,
+      path: `/events/${node.drupal_id}`,
       component: path.resolve(`./src/templates/event.js`),
       context: {
         id: node.id,
@@ -118,19 +118,50 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 
   //
-  // Create events listing pages
+  // Create Upcoming Events pages
   //
-  const events = eventsQueryResult.data.allNodeEvent.edges
-  const eventsPerPage = defaultPageSize
-  const numEventPages = Math.ceil(events.length / eventsPerPage)
-  for (let i = 0; i < numEventPages; i++) {
+  const upcomingEventsQueryResult = await graphql(`
+    query { allNodeEvent( filter: {field_date: {end_value: {gte: "${now}"}}} ) {
+      edges { node { id fields { slug } } } } 
+    }
+  `)
+  const upcomingEvents = upcomingEventsQueryResult.data.allNodeEvent.edges
+  const upcomingEventsPerPage = defaultPageSize
+  const numUpcomingEventPages = Math.ceil(upcomingEvents.length / upcomingEventsPerPage)
+  for (let i = 0; i < numUpcomingEventPages; i++) {
     createPage({
       path: i === 0 ? "/events/" : `/events/${i + 1}`,
       component: path.resolve("./src/templates/events.js"),
       context: {
-        limit: eventsPerPage,
-        skip: i * eventsPerPage,
-        numPages: numEventPages,
+        limit: upcomingEventsPerPage,
+        skip: i * upcomingEventsPerPage,
+        numPages: numUpcomingEventPages,
+        currentPage: i + 1,
+        now: now,
+      },
+    })
+  }
+
+
+  //
+  // Create Past Events pages
+  //
+  const pastEventsQueryResult = await graphql(`
+    query { allNodeEvent( filter: {field_date: {end_value: {lt: "${now}"}}} ) {
+      edges { node { id fields { slug } } } } 
+    }
+  `)
+  const pastEvents = pastEventsQueryResult.data.allNodeEvent.edges
+  const pastEventsPerPage = defaultPageSize
+  const numPastEventPages = Math.ceil(pastEvents.length / pastEventsPerPage)
+  for (let i = 0; i < numPastEventPages; i++) {
+    createPage({
+      path: i === 0 ? "/events/past" : `/events/past/${i + 1}`,
+      component: path.resolve("./src/templates/pastevents.js"),
+      context: {
+        limit: pastEventsPerPage,
+        skip: i * pastEventsPerPage,
+        numPages: numPastEventPages,
         currentPage: i + 1,
         now: now,
       },

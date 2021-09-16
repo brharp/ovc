@@ -98,7 +98,7 @@ export const query = graphql`
               }
             }
             field_tags {
-              id
+              drupal_id
               name
             }
           }
