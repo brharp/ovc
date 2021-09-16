@@ -81,7 +81,7 @@ const Initiatives = () => (
 const Statistics = () => (
   <div className="container my-4">
     <div className="cover my-4">
-      <StaticImage src="../images/explore/insideOVC.jpg"
+      <StaticImage src="../images/explore/ovc_inside.jpg"
                    className="cover-img" aspectRatio={4/1}
                    alt="">
       </StaticImage>
