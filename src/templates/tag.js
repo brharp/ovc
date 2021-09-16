@@ -50,7 +50,7 @@ export const query = graphql`
           body {
             summary
           }
-          changed(formatString: "MMMM DD, YYYY")
+          created(formatString: "MMMM DD, YYYY")
           relationships {
             field_hero_image {
               relationships {
