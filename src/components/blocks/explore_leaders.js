@@ -5,7 +5,7 @@ import Leadership from "../shared/leadership"
 const Block = () => (
   <div className="container my-4">
     <div className="cover my-4">
-      <StaticImage src="../../images/explore/ovc_inside.jpg"
+      <StaticImage src="../../images/explore/explorebanner.jpg"
                    className="cover-img" aspectRatio={4/1}
                    alt="">
       </StaticImage>
