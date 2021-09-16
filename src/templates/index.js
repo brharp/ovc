@@ -48,6 +48,7 @@ export const query = graphql`
             month: value(formatString: "MMM")
             date: value(formatString: "D")
           }
+          drupal_id
           title
           fields {
             slug
