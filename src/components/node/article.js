@@ -49,7 +49,7 @@ class Article extends React.Component {
         </Col>
         <Col>
           <h3 className="text-dark mb-2">{this.props.title}</h3>
-          <p><Tags {...this.props} /></p>
+          <p><Tag {...this.props.relationships?.field_tags[0]} /></p>
           <Created {...this.props} />
           <p><Body {...this.props.body} format="summary" /></p>
           <Link to={this.props.fields?.slug} className="btn btn-primary">
