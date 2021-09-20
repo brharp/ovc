@@ -29,6 +29,7 @@ export default function Events (props) {
           </li>
         </ul>
         { data.allNodeEvent.edges.map(({node}) => <Event {...node} mode="teaser" />) }
+        <Link to="/news">&larr; Back to News Hub</Link>
         <Pagination currentPage={currentPage} numPages={numPages} baseUrl={baseUrl} />
       </Container>
     </Layout>

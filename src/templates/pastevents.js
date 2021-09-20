@@ -9,7 +9,7 @@ import Pagination from "../components/shared/pagination"
 export default function PastEvents (props) {
   const data = props.data
   const { currentPage, numPages } = props.pageContext
-  const baseUrl = "/events/"
+  const baseUrl = "/events/past/"
   return (
     <Layout>
       <Seo title="Past Events" />
@@ -29,6 +29,7 @@ export default function PastEvents (props) {
           </li>
         </ul>
         { data.allNodeEvent.edges.map(({node}) => <Event {...node} mode="teaser" />) }
+        <Link to="/news">&larr; Back to News Hub</Link>
         <Pagination currentPage={currentPage} numPages={numPages} baseUrl={baseUrl} />
       </Container>
     </Layout>
