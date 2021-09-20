@@ -19,7 +19,7 @@ const Section = styled.div`
   color: var(--light);
   & h1 {
     color: var(--yellow);
-    font-size: 3em;
+    font-size: 7.68rem;
   }
   & p { 
     padding-top: 1rem;
