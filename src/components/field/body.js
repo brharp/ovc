@@ -15,6 +15,22 @@ function Body(props) {
     }
   `)
 
+  const inlineImageSrc = (src, base) => {
+    if (src.charAt(0) === '/') 
+      return `${base}${src.substring(1)}`
+    else
+      return src
+  }
+
+  const inlineImageClass = (clazz) => {
+    if (clazz === 'align-left')
+      return 'd-block img-fluid float-lg-left img-thumbnail mx-auto mr-lg-4 mt-1 mb-3'
+    else if (clazz === 'align-right')
+      return 'd-block img-fluid float-lg-right img-thumbnail mx-auto ml-lg-4 mt-1 mb-3'
+    else
+      return 'img-fluid'
+  }
+
   const renderSummary = () => {
     return <div dangerouslySetInnerHTML={{__html: props.summary}}></div>
   }
@@ -24,18 +40,19 @@ function Body(props) {
     if (typeof props.processed !== 'string') {
       return <></>
     }
-    return HTMLReactParser(props.processed, {
+    const parsed = HTMLReactParser(props.processed, {
       replace: domNode => {
         if (domNode.name === 'img') {
           const src = domNode.attribs['src'];
-          if (src.charAt(0) === '/') 
-            return <img src={`${baseUrl}${src.substring(1)}`} alt="" className="img-fluid"/>
-          else
-            return <img src={src} alt="" className="img-fluid"/>
+          const clazz = domNode.attribs['class'];
+          const imgClass = inlineImageClass(clazz);
+          const imgSrc   = inlineImageSrc(src, baseUrl);
+          return <img src={imgSrc} alt="" className={imgClass}/>
         }
         return undefined
       }
     })
+    return <div className="clearfix">{parsed}</div>
   }
 
   switch (props.format) {

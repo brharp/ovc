@@ -33,7 +33,7 @@ class Article extends React.Component {
             <h1 className="text-dark">{this.props.title}</h1>
             <p><Tags {...this.props} /></p>
             <Created {...this.props} />
-            <Body className="bg-white" {...this.props.body} />
+            <Body className="bg-white clearfix" {...this.props.body} />
             <Link to="/news">&larr; Read more news</Link>
           </Col>
         </Row>
