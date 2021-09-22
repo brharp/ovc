@@ -5,8 +5,10 @@ import Seo from '../components/seo'
 import { StaticImage } from "gatsby-plugin-image"
 import ExploreBanner from "../components/blocks/explore_banner"
 import ExploreWelcome from "../components/blocks/explore_welcome"
+import ExploreLeadership from "../components/blocks/explore_leadership"
 import ExploreLeaders from "../components/blocks/explore_leaders"
 import ExploreInitiatives from "../components/blocks/explore_initiatives"
+import ExploreStatistics from "../components/blocks/explore_statistics"
 
 import { 
   FaUsers, 
@@ -19,7 +21,7 @@ import {
 
 
 const Initiatives = () => (
-  <div className="container my-4">
+  <div className="my-4">
     <ExploreInitiatives />
     <div className="row">
       {[
@@ -79,9 +81,9 @@ const Initiatives = () => (
 
 
 const Statistics = () => (
-  <div className="container my-4">
+  <div className="my-4">
     <div className="cover my-4">
-      <StaticImage src="../images/explore/ovc_inside.jpg"
+      <StaticImage src="../images/explore/insideOVC.jpg"
                    className="cover-img" aspectRatio={4/1}
                    alt="">
       </StaticImage>
@@ -100,38 +102,13 @@ const Statistics = () => (
         </div>
       </div>
     </div>
-    <div className="cover">
-      <StaticImage src="../images/portico--banner.jpg" alt="" className="cover-img" />
-      <div className="cover-img-overlay bg-black-50 p-4">
-        <div className="row">
-          {[
-            { figure: "482", label: "DVM students" },
-            { figure: "390", label: "Graduate Students" }, 
-            { figure: "#1 College", label: "in Canada" }, 
-            { figure: "#5 College", label: "in North America" }, 
-            { figure: "#7 College", label: "in the world" }, 
-            { figure: "116", label: "Faculty" } ,
-            { figure: "20,829", label: "Animal & Equine Patient Visits" }, 
-            { figure: "6522", label: "Food Animal & Field Service Patient Visits" }
-          ].map((node, index) => (
-            <div className="col-md-4 text-center p-4">
-              <div className="display-4 text-warning font-weight-bold">
-                {node.figure}
-              </div>
-              <div className="text-uppercase text-light font-weight-bold">
-                {node.label}
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-    </div>
+    <ExploreStatistics />
   </div>
 )
 
 
 const Structure = () => (
-  <div className="container">
+  <div className="">
     <div className="row py-4">
       <div className="col-md order-md-2">
         <StaticImage src="../images/research/ovc_sign.jpg" alt=""
@@ -155,7 +132,7 @@ const Structure = () => (
 
 
 const Success = () => (
-  <div className="container">
+  <div className="">
     <div className="row py-4">
       <div className="col-md">
         <StaticImage src="../images/research/historical.jpg" alt=""
@@ -185,6 +162,7 @@ const Page = ( props ) => (
     <ExploreBanner />
     <Container className="my-4">
       <ExploreWelcome />
+      <ExploreLeadership />
       <ExploreLeaders />
       <Initiatives />
       <Statistics />

@@ -4,7 +4,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { FaGraduationCap } from "react-icons/fa"
 
 const render = ({id, title, body_html, image}) => (
-  <div className="container my-4">
+  <div className="my-4">
     <div className="row bg-blue-50 no-gutters">
       <div className="col-lg-6 ">
         <GatsbyImage image={getImage(image)} alt="" className="h-100" />
