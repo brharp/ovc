@@ -11,6 +11,7 @@ const query = graphql`
     allNodeArticle(filter: {relationships: {field_news_category: {elemMatch: {name: {eq: "Get Care"}}}}}) {
       edges {
         node {
+          drupal_id
           fields {
             slug
           }

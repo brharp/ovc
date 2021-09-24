@@ -24,6 +24,7 @@ const query = graphql`
     allNodeArticle(skip: 1, limit: 6, filter: {promote: {eq: true}}, sort: {order: DESC, fields: created}) {
       edges {
         node {
+          drupal_id
           fields {
             slug
           }

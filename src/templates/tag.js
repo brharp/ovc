@@ -43,6 +43,7 @@ export const query = graphql`
                    sort: {order: DESC, fields: created}) {
       edges {
         node {
+          drupal_id
           fields {
             slug
           }

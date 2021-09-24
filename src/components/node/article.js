@@ -52,7 +52,7 @@ class Article extends React.Component {
           <p><Tag {...this.props.relationships?.field_tags[0]} /></p>
           <Created {...this.props} />
           <p><Body {...this.props.body} format="summary" /></p>
-          <Link to={this.props.fields?.slug} className="btn btn-primary">
+          <Link to={`/news/${this.props.drupal_id}`} className="btn btn-primary">
             Read more<span className="sr-only"> about {this.props.title}</span>
           </Link>
         </Col>
@@ -71,7 +71,7 @@ class Article extends React.Component {
           <h3 className="text-dark mb-3">{this.props.title}</h3>
           <Created {...this.props} />
           <p><Body {...this.props.body} format="summary" /></p>
-          <Link to={this.props.fields?.slug} className="btn btn-primary">
+          <Link to={`/news/${this.props.drupal_id}`} className="btn btn-primary">
             Read more<span className="sr-only"> about {this.props.title}</span>
           </Link>
         </Col>

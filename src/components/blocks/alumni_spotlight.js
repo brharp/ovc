@@ -8,7 +8,7 @@ function NewsCarouselItem (props) {
   const title   = node.title;
   const body    = node.body.summary;
   const image   = node.relationships.field_hero_image?.relationships.field_media_image.localFile;
-  const slug    = node.fields.slug;
+  const slug    = `/news/${node.drupal_id}`;
   const changed = node.changed;
 
   return (
@@ -52,6 +52,7 @@ const query = graphql`
     allNodeArticle(filter: {relationships: {field_news_category: {elemMatch: {name: {eq: "Alumni"}}}}}) {
       edges {
         node {
+          drupal_id
           fields {
             slug
           }

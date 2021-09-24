@@ -39,6 +39,7 @@ const NewsComponent = ({ data }) => {
     <StaticQuery
       query={graphql`
         fragment node__articleFragment on node__article {
+          drupal_id
           fields {
             slug
           }

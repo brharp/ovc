@@ -18,7 +18,7 @@ class NewsCarousel extends React.Component {
     const title   = node.title;
     const body    = node.body.summary;
     const image   = node.relationships.field_hero_image?.relationships.field_media_image.localFile;
-    const slug    = node.fields.slug;
+    const slug    = `/news/${node.drupal_id}`;
     const changed = node.changed;
     return (
       <Carousel.Item>

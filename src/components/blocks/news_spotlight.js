@@ -29,6 +29,7 @@ const query = graphql`
     allNodeArticle(limit: 1, filter: {promote: {eq: true}}) {
       edges {
         node {
+          drupal_id
           fields {
             slug
           }
@@ -66,7 +67,7 @@ function makeArticles({edges}) {
     title: node.title,
     body: node.body.summary,
     image: node.relationships.field_hero_image?.relationships.field_media_image.localFile,
-    slug: node.fields.slug,
+    slug: `/news/${node.drupal_id}`,
   }))
 }
 
