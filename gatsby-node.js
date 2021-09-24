@@ -63,13 +63,13 @@ exports.createPages = async ({ graphql, actions }) => {
   const articleQueryResult = await graphql(`
     query {
       allNodeArticle {
-        edges { node { drupal_id fields { slug } } }
+        edges { node { fields { slug } } }
       }
     }
   `)
   articleQueryResult.data.allNodeArticle.edges.forEach(({ node }) => {
     createPage({
-      path: `/news/${node.drupal_id}`,
+      path: `/news${node.fields.slug}`,
       component: path.resolve(`./src/templates/article.js`),
       context: {
         slug: node.fields.slug,

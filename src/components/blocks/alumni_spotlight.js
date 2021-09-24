@@ -8,7 +8,7 @@ function NewsCarouselItem (props) {
   const title   = node.title;
   const body    = node.body.summary;
   const image   = node.relationships.field_hero_image?.relationships.field_media_image.localFile;
-  const slug    = `/news/${node.drupal_id}`;
+  const slug    = `/news${node.fields.slug}`;
   const changed = node.changed;
 
   return (

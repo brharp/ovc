@@ -67,7 +67,7 @@ function makeArticles({edges}) {
     title: node.title,
     body: node.body.summary,
     image: node.relationships.field_hero_image?.relationships.field_media_image.localFile,
-    slug: `/news/${node.drupal_id}`,
+    slug: `/news${node.fields.slug}`,
   }))
 }
 
