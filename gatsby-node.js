@@ -108,7 +108,7 @@ exports.createPages = async ({ graphql, actions }) => {
   `)
   eventsQueryResult.data.allNodeEvent.edges.forEach(({ node }) => {
     createPage({
-      path: `/events/${node.drupal_id}`,
+      path: `/events${node.fields.slug}`,
       component: path.resolve(`./src/templates/event.js`),
       context: {
         id: node.id,
