@@ -5,39 +5,7 @@ import Layout from "../components/layout"
 import Seo from "../components/seo"
 import NewsBanner from "../components/blocks/news_banner"
 import Article from "../components/node/article"
-
-function Pagination (props) {
-  let items = [];
-  if ( ! ( props.currentPage === 1 ) ) {
-    const prevPage = props.currentPage - 1 === 1 ? props.baseUrl : props.baseUrl + (props.currentPath - 1)
-    items.push(
-      <li className="page-item">
-        <Link to={prevPage} className="page-link">&laquo; Newer Articles</Link>
-      </li>
-    )
-  }
-  for ( let number = 1; number <= props.numPages; number++ ) {
-    const numberPage = number === 1 ? props.baseUrl : props.baseUrl + number.toString()
-    const activeClass = number === props.currentPage ? " active" : ""
-    items.push(
-      <li className={`page-item${activeClass}`} key={number}>
-        <Link to={numberPage} className={`page-link`}>{number}</Link>
-      </li>
-    )
-  }
-  if ( ! ( props.currentPage === props.numPages ) ) {
-    const nextPage = props.baseUrl + (props.currentPage + 1)
-    items.push(
-      <li className="page-item">
-        <Link to={nextPage} className="page-link">Older Articles &raquo;</Link>
-      </li>
-    )
-  }
-  const pagination = (
-    <div className="pagination justify-content-center">{items}</div>
-  )
-  return pagination
-}
+import Pagination from "../components/shared/pagination"
 
 export default function NewsFeed (props) {
   const data = props.data

@@ -5,7 +5,7 @@ import { Container, Row, Col } from "react-bootstrap"
 import HeroImage from "../field/hero_image"
 import Body from "../field/body"
 
-const EventCard = styled.li`
+const EventCard = styled.div`
   display: grid;
   grid-template-columns: 6em auto;
   grid-template-rows: 6em;
@@ -99,8 +99,9 @@ class Event extends React.Component {
 
   renderCard() {
     return <React.Fragment>
-      <Link to={`/events${this.props.fields.slug}`} className="btn p-0 border-0 text-left">
-        <EventCard>
+      <li>
+      <Link to={`/events${this.props.fields.slug}`}>
+        <EventCard className="btn p-0 border-0 text-left">
           <EventDate>
             <Month>{this.props.field_date.month}</Month>
             <Date>{this.props.field_date.date}</Date>
@@ -113,6 +114,7 @@ class Event extends React.Component {
           </EventDetails>
         </EventCard>
       </Link>
+      </li>
     </React.Fragment>
   }
 }

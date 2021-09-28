@@ -29,7 +29,7 @@ export default function Pagination (props) {
     )
   }
   const pagination = (
-    <div className="pagination justify-content-center">{items}</div>
+    <ul className="pagination justify-content-center">{items}</ul>
   )
   return pagination
 }
