@@ -1,5 +1,7 @@
 id: explore_banner
-image: ../../images/explore/30344872351_60c2261186_o.jpg
+image:
+  src: ../../images/explore/30344872351_60c2261186_o.jpg
+  alt: ""
 title: Explore OVC
 body: |
   OVC is a world leader in advancing veterinary science, learning, and research to improve the lives of animals, people, and our planet.

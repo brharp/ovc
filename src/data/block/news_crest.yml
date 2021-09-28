@@ -1,5 +1,7 @@
 id: news_crest
-image: ../../images/partners/DSC00139.jpg
+image:
+  src: ../../images/partners/DSC00139.jpg
+  alt: ""
 title: The Crest
 body: OVC's magazine
 link:

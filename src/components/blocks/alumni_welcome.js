@@ -7,9 +7,9 @@ const render = ({id, title, body, image}) => (
   <div id={id} className="container my-4">
     <div className="row bg-blue-50 no-gutters">
       <div className="col-lg-6 ">
-        <GatsbyImage image={getImage(image)}
+        <GatsbyImage image={getImage(image.src)}
                  className="cover-img h-100" 
-                 alt="" />
+                 alt={image.alt} />
       </div>
       <div className="col-lg-6 p-4">
         <div className="media">
@@ -35,9 +35,12 @@ const query = graphql`
       title
       body
       image {
-        childImageSharp {
-          gatsbyImageData
+        src {
+          childImageSharp {
+            gatsbyImageData
+          }
         }
+        alt
       }
       link {
         title

@@ -1,6 +1,8 @@
 id: clinical_trials_socials
 title: Keep In Touch
-image: ../../images/care/priscilla-du-preez-OEdkPaxYMXU-unsplash.jpg
+image:
+  src: ../../images/care/priscilla-du-preez-OEdkPaxYMXU-unsplash.jpg
+  alt: ""
 body: |
   Help fund some of our initiative at the OVC helping improve the lives
   of the animals we love.

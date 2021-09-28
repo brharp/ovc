@@ -21,7 +21,8 @@ class BackgroundImage extends React.Component {
               top: "50%",
               left: "50%"
             }}
-            image={this.props.image}
+            image={this.props.image.src}
+            alt={this.props.image.alt}
           />
         <div style={{
             background: "rgba(0, 0, 0, 0.6)",
@@ -61,7 +62,7 @@ class Features extends React.Component {
     return (
       this.props.features.map((item, index) =>
         <Container key={index}>
-          <BackgroundImage image={getImage(item.image)}>
+          <BackgroundImage image={getImage(item.image.src)}>
             <h2 className="p-4 text-right text-warning display-2 font-weight-bold">
               {item.title}
             </h2>

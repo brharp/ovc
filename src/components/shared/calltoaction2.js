@@ -5,7 +5,7 @@ import { Container, Row, Card } from "react-bootstrap"
 
 const CallToAction = ({id, image, link}) => (
   <Card id={id} className="border-0 overflow-hidden mb-4">
-    <GatsbyImage image={getImage(image)} alt="" style={{ maxHeight: "200px" }} className="card-img" />
+    <GatsbyImage image={getImage(image.src)} alt={image.alt} style={{ maxHeight: "200px" }} className="card-img" />
     <Card.ImgOverlay>
       <Container className="h-100">
         <Row className="h-100 justify-content-center align-content-center">

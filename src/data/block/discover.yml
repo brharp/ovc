@@ -1,6 +1,8 @@
 id: discover
 title: Discover the City of Guelph
-image: ../../images/discover.jpg
+image:
+  src: ../../images/discover.jpg
+  alt: ""
 links:
   - title: Guelph Student Life
     url: "https://admission.uoguelph.ca/studentlife"

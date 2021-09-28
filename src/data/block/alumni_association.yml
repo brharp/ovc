@@ -1,5 +1,7 @@
 id: alumni_association
-image: ../../images/partners/IMG_9230.jpg
+image:
+  src: ../../images/partners/IMG_9230.jpg
+  alt: ""
 title: OVC Alumni Association
 body: Stay connected with your class and your school
 

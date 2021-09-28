@@ -5,7 +5,7 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image"
 const render = ({id, title, body, image}) => (
   <div className="px-4 py-4 my-4">
   <div id={id} className="cover" style={{boxShadow: "var(--gray) 8px 8px 16px"}}>
-    <GatsbyImage image={getImage(image)} alt="" className="cover-img" />
+    <GatsbyImage image={getImage(image.src)} alt={image.alt} className="cover-img" />
     <div className="cover-img-overlay p-0">
       <div className="container h-100">
         <div className="row h-100 justify-content-start">
@@ -44,9 +44,12 @@ const query = graphql`
       title
       body
       image {
-        childImageSharp {
-          gatsbyImageData(height: 500)
+        src {
+          childImageSharp {
+            gatsbyImageData(height: 500)
+          }
         }
+        alt
       }
     }
   }

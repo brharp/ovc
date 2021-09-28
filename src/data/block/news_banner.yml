@@ -1,5 +1,7 @@
 id: news_banner
-image: ../../images/university-centre.jpg
+image:
+  src: ../../images/university-centre.jpg
+  alt: ""
 title: News
 body: 
 

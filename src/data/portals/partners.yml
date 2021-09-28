@@ -4,11 +4,15 @@ summary: |
   OVC is and continuously strives to be an exemplary world leader in innovative,
   collaborative research that improves the health and well-being of animals, 
   humans, and the environment.
-image: ../../images/research/laboratory.jpg
+image:
+  src: ../../images/research/laboratory.jpg
+  alt: ""
 cta:
   title: Contact to Re
   url: https://ovc.uoguelph.ca/
-  image: ../../images/research/contact-research.jpg
+  image:
+    src: ../../images/research/contact-research.jpg
+    alt: ""
 partners:
   title: Our Partners
   subtitle: A network dedicated to solving problems
@@ -17,15 +21,34 @@ partners:
     vulputate accumsan facilisi molestie vivamus, malesuada pretium
     sapien fames suspendisse.
   logos:
-    - image: ../../images/partners/hhgg.png
-    - image: ../../images/partners/hhgg.png
-    - image: ../../images/partners/hhgg.png
-    - image: ../../images/partners/hhgg.png
-    - image: ../../images/partners/hhgg.png
-    - image: ../../images/partners/hhgg.png
-    - image: ../../images/partners/hhgg.png
-    - image: ../../images/partners/hhgg.png
-    - image: ../../images/partners/hhgg.png
-    - image: ../../images/partners/hhgg.png
-    - image: ../../images/partners/hhgg.png
+    - image: 
+        src: ../../images/partners/hhgg.png
+        alt: ""
+    - image:
+        src: ../../images/partners/hhgg.png
+        alt: ""
+    - image:
+        src: ../../images/partners/hhgg.png
+        alt: ""
+    - image:
+        src: ../../images/partners/hhgg.png
+        alt: ""
+    - image:
+        src: ../../images/partners/hhgg.png
+        alt: ""
+    - image:
+        src: ../../images/partners/hhgg.png
+        alt: ""
+    - image:
+        src: ../../images/partners/hhgg.png
+        alt: ""
+    - image:
+        src: ../../images/partners/hhgg.png
+        alt: ""
+    - image:
+        src: ../../images/partners/hhgg.png
+        alt: ""
+    - image:
+        src: ../../images/partners/hhgg.png
+        alt: ""
 

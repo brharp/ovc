@@ -1,5 +1,7 @@
 id: alumni_connect
-image: ../../images/partners/IMG_9549.jpg
+image:
+  src: ../../images/partners/IMG_9549.jpg
+  alt: ""
 title: Connect With Us
 body: |
   Want to share a great story about an OVC graduate or get involved with the OVC Alumni Association?

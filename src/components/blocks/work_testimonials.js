@@ -7,7 +7,7 @@ const row = ({ id, title, subtitle, body, image }) => (
   <Col lg={true} className='py-4'>
     <Row>
       <Col md>
-        <GatsbyImage image={getImage(image)} alt="" 
+        <GatsbyImage image={getImage(image.src)} alt={image.alt} 
                      className="rounded-circle"
                      imgStyle={{
                        transform: "rotate(-45deg)",
@@ -59,9 +59,12 @@ const query = graphql`
           subtitle
           body
           image {
-            childImageSharp {
-              gatsbyImageData(aspectRatio: 1)
+            src {
+              childImageSharp {
+                gatsbyImageData(aspectRatio: 1)
+              }
             }
+            alt
           }
         }
       }

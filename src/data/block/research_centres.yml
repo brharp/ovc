@@ -1,5 +1,7 @@
 id: research_centres
-image: ../../images/research/KW23_3962.jpg
+image:
+  src: ../../images/research/KW23_3962.jpg
+  alt: ""
 title: Centres, Institutes and Networks
 subtitle: Pillars of research excellence
 body: |

@@ -1,5 +1,7 @@
 id: research_donate
-image: ../../images/research/iStock_000080768503_Large young couple in park.jpg
+image:
+  src: ../../images/research/iStock_000080768503_Large young couple in park.jpg
+  alt: ""
 title: Donate to Our Initiatives
 body: |
   We're grateful for your support in funding various initiatives that help OVC improve the lives of the animals we love.

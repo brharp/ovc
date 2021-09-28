@@ -1,5 +1,7 @@
 id: research_experts
-image: ../../images/research/collablab.jpg
+image:
+  src: ../../images/research/collablab.jpg
+  alt: ""
 title: Our Researchers
 subtitle: Brilliant minds at work
 body: |

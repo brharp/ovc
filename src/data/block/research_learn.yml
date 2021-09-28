@@ -1,5 +1,7 @@
 id: research_learn
-image: ../../images/learn/studentsstudying.jpg
+image:
+  src: ../../images/learn/studentsstudying.jpg
+  alt: ""
 title: Learn With Us
 body: Join the next generation of health leaders
 

@@ -1,5 +1,7 @@
 id: explore_leadership
-image: ../../images/explore/leadership.JPG
+image:
+  src: ../../images/explore/leadership.JPG
+  alt: ""
 title: Leadership at the OVC
 subtitle: Excellence in innovation, education and service
 

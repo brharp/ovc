@@ -36,8 +36,8 @@ class PortalPage extends React.Component {
     const portal = data.portalsYaml
     const header =
       <Banner>
-        <GatsbyImage image={getImage(portal.image)} className="cover-img"
-                   style={{height: "600px"}} alt="" />
+        <GatsbyImage image={getImage(portal.image.src)} className="cover-img"
+                   style={{height: "600px"}} alt={portal.image.alt} />
         <Banner.Overlay>
           <Banner.Title>
             {portal.title}
@@ -73,17 +73,23 @@ export const query = graphql`
       title
       summary
       image {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
+        src {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
+          }
         }
+        alt
       }
       cta {
         title
         url
         image {
-          childImageSharp {
-            gatsbyImageData(layout: FULL_WIDTH)
+          src {
+            childImageSharp {
+              gatsbyImageData(layout: FULL_WIDTH)
+            }
           }
+          alt
         }
       }
       topics {
@@ -91,9 +97,12 @@ export const query = graphql`
         subtitle
         summary
         image {
-          childImageSharp {
-            gatsbyImageData(aspectRatio: 1.333333333333333)
+          src {
+            childImageSharp {
+              gatsbyImageData(aspectRatio: 1.333333333333333)
+            }
           }
+          alt
         }
         links {
           title
@@ -106,12 +115,15 @@ export const query = graphql`
         description
         logos {
           image {
-            childImageSharp {
-              gatsbyImageData(
-                transformOptions: {grayscale: true},
-                layout: CONSTRAINED
-              )
+            src {
+              childImageSharp {
+                gatsbyImageData(
+                  transformOptions: {grayscale: true},
+                  layout: CONSTRAINED
+                )
+              }
             }
+            alt
           }
         }
       }

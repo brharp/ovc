@@ -11,7 +11,7 @@ import {
 
 const render = ({ id, image, title, body, networks }) => (
   <Banner>
-    <GatsbyImage image={getImage(image)} className="cover-img" alt=""
+    <GatsbyImage image={getImage(image.src)} className="cover-img" alt={image.alt}
                  style={{height: "500px"}}/>
     <Banner.Overlay className="p-4 bg-black-80 ">
       <div className="pl-3">
@@ -47,9 +47,12 @@ const query = graphql`
         twitter { title url }
       }
       image {
-        childImageSharp {
-          gatsbyImageData(layout: CONSTRAINED)
+        src {
+          childImageSharp {
+            gatsbyImageData(layout: CONSTRAINED)
+          }
         }
+        alt
       }
     }
   }

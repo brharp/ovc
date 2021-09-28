@@ -1,5 +1,7 @@
 id: care_hsc
-image: ../../images/care/Cardio_operating room.jpeg
+image:
+  src: ../../images/care/Cardio_operating room.jpeg
+  alt: ""
 title: OVC Health Sciences Centre
 subtitle: 150 years of caring for our beloved animals.
 body: |

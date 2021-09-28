@@ -1,7 +1,9 @@
 id: learn_dvm
 title: Doctor of Veterinary Medicine
 subtitle: Find your calling
-image: ../../images/learn/IMG_9665.JPG
+image:
+  src: ../../images/learn/IMG_9665.JPG
+  alt: ""
 body: |
   The study of veterinary medicine is a dynamic blend of science,
   technology and experience. At OVC, students can follow their passion,

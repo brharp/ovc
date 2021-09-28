@@ -1,5 +1,7 @@
 id: experts_researchers
-image: ../../images/explore/Dr_Tami_Martino_headshot.jpg
+image:
+  src: ../../images/explore/Dr_Tami_Martino_headshot.jpg
+  alt: ""
 title: Our Researchers
 subtitle: Catalyzing discovery, advancing knowledge
 body: |

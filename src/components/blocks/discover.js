@@ -5,7 +5,7 @@ import { Row, Col } from "react-bootstrap"
 
 const render = ({ id, image, title, links }) => (
   <div id={id} className="cover my-4">
-    <GatsbyImage image={getImage(image)} className="cover-img" alt=""
+    <GatsbyImage image={getImage(image.src)} className="cover-img" alt={image.alt}
                  style={{
                  }} 
     />
@@ -43,9 +43,12 @@ const query = graphql`
       id
       title
       image {
-        childImageSharp {
-          gatsbyImageData
+        src {
+          childImageSharp {
+            gatsbyImageData
+          }
         }
+        alt
       }
       links {
         title

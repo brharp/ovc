@@ -42,11 +42,11 @@ class Hero extends React.Component {
     const gradient = `linear-gradient(${angle}, black, transparent)`
     return (
       <Section>
-        <GatsbyImage image={this.props.image}
+        <GatsbyImage image={this.props.image.src}
                      style={{gridArea: "1/1", maxHeight: "600px"}}
                      layout="fullWidth"
                      aspectRatio={3/1}
-                     alt=""
+                     alt={this.props.image.alt}
         />
         <Mask style={{background: gradient}}>
           <Container style={{position: "relative", display: "grid"}}>

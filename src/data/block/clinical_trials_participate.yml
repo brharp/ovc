@@ -1,7 +1,9 @@
 id: clinical_trials_participate
 title: The Purpose of Clinical Trials
 subtitle: Collaborating for the best care
-image: ../../images/learn/lecture.jpg
+image:
+  src: ../../images/learn/lecture.jpg
+  alt: ""
 body: |
   We want to provide the highest standard of care for your pet. Veterinary
   clinical trials are specifically designed to benefit your pet while

@@ -1,6 +1,8 @@
 id: explore_welcome
 title: "Welcome from OVC’s Dean" 
-image: ../../images/explore/Dean2.jpg
+image:
+  src: ../../images/explore/Dean2.jpg
+  alt: ""
 body_html: |
   <p>
     For more than 160 years, the simple but powerful call

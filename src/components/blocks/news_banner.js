@@ -5,7 +5,7 @@ import Banner from "../shared/banner"
 
 const render = ({ id, image, title, body }) => (
   <Banner id={id}>
-    <GatsbyImage image={getImage(image)} className="cover-img" alt="" style={{height: "300px"}} />
+    <GatsbyImage image={getImage(image.src)} className="cover-img" alt={image.alt} style={{height: "300px"}} />
     <Banner.Overlay>
       <Banner.Title>
         {title}
@@ -24,9 +24,12 @@ const query = graphql`
       title
       body
       image {
-        childImageSharp {
-          gatsbyImageData
+        src {
+          childImageSharp {
+            gatsbyImageData
+          }
         }
+        alt
       }
     }
   }

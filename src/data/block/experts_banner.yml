@@ -1,5 +1,7 @@
 id: experts_banner
-image: ../../images/explore/thisisengineering-raeng-qqp5_2Onf6o-unsplash.jpg
+image:
+  src: ../../images/explore/thisisengineering-raeng-qqp5_2Onf6o-unsplash.jpg
+  alt: ""
 title: Our Experts
 body: |
   With a focus on innovation and science-based discovery, OVC is training the next generation of health leaders to find real-world solutions to global challenges.

@@ -1,5 +1,7 @@
 id: research_banner
-image: ../../images/research/Cell.png
+image:
+  src: ../../images/research/Cell.png
+  alt: ""
 title: Research
 body: |
   OVC is a world leader in innovative, collaborative research that improves the health and well-being of animals, humans, and the environment.

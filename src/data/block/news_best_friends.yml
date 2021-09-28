@@ -1,5 +1,7 @@
 id: news_best_friends
-image: ../../images/partners/OVCpettrust.jpg
+image:
+  src: ../../images/partners/OVCpettrust.jpg
+  alt: ""
 title: Best Friends
 body: OVC Pet Trust's magazine
 link:

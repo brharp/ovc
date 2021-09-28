@@ -1,5 +1,7 @@
 id: clinical_trials_donate
-image: ../../images/care/IMG_2249.JPG
+image:
+  src: ../../images/care/IMG_2249.JPG
+  alt: ""
 title: Donate
 subtitle: Give back to the pets we love
 body: |

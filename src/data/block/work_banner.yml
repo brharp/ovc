@@ -1,5 +1,7 @@
 id: work_banner
-image: ../../images/work/Heather-Murphy-InLab.jpg
+image:
+  src: ../../images/work/Heather-Murphy-InLab.jpg
+  alt: ""
 title: Work
 body: |
   Our people are our most valuable resource. OVC staff work side-by-side with a network of passionate individuals dedicated to producing quality research and delivering leading-edge healthcare and excellence in education.

@@ -1,5 +1,7 @@
 id: work_opportunities
-image: ../../images/work/KW14_3871.jpg
+image:
+  src: ../../images/work/KW14_3871.jpg
+  alt: ""
 title: Explore Current Opportunities
 subtitle: Be part of our vision
 body: |

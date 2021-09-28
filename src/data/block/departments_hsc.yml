@@ -1,5 +1,7 @@
 id: departments_hsc
-image: ../../images/explore/OVCOMPBUILDING.jpeg
+image:
+  src: ../../images/explore/OVCOMPBUILDING.jpeg
+  alt: ""
 title: OVC Health Sciences Centre
 subtitle: Ensuring the best services
 body: |

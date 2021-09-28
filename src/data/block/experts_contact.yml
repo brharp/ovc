@@ -1,5 +1,7 @@
 id: experts_contact
-image: ../../images/contact.png
+image:
+  src: ../../images/contact.png
+  alt: ""
 link:
   title: Contact To Collaborate
   url: /contact-0

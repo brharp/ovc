@@ -6,7 +6,7 @@ import Hero from "../shared/hero2"
 const render = ({ id, image, title, subtitle, body, link }) => (
   <>
     <Hero.Image>
-      <GatsbyImage image={getImage(image)} alt="" />
+      <GatsbyImage image={getImage(image.src)} alt={image.alt} />
     </Hero.Image>
     <Hero.Body id={id}>
       <Hero.Title>
@@ -37,9 +37,12 @@ const query = graphql`
         url
       }
       image {
-        childImageSharp {
-          gatsbyImageData(aspectRatio: 1.333333333333333)
+        src {
+          childImageSharp {
+            gatsbyImageData(aspectRatio: 1.333333333333333)
+          }
         }
+        alt
       }
     }
   }

@@ -1,5 +1,7 @@
 id: research_participate
-image: ../../images/research/IMG_9796.JPG
+image:
+  src: ../../images/research/IMG_9796.JPG
+  alt: ""
 title: Take Part in Our Research
 body: |
   Learn how you can participate in OVC research through clinical trials, surveys, or as a trainee.

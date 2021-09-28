@@ -1,7 +1,9 @@
 id: learn_grad
 title: Graduate Studies
 subtitle: Road to innovation and discovery
-image: ../../images/learn/vet_screens.jpg
+image:
+  src: ../../images/learn/vet_screens.jpg
+  alt: ""
 body: |
   Never has innovation and science-based discovery been more critical
   to the health and sustainability of our world. Pursue your passion

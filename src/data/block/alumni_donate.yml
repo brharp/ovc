@@ -1,5 +1,7 @@
 id: alumni_donate
-image: ../../images/partners/IMG_9272.jpg
+image:
+  src: ../../images/partners/IMG_9272.jpg
+  alt: ""
 title: Students
 body: Support future OVC students.
 link:

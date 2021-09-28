@@ -52,7 +52,7 @@ class Partners extends React.Component {
           <Grid>
             {
               partners.logos?.map((item, index) =>
-                <GatsbyImage image={getImage(item.image)} alt="" />
+                <GatsbyImage image={getImage(item.image.src)} alt={item.image.alt} />
               )
             }
           </Grid>

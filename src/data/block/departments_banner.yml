@@ -1,5 +1,7 @@
 id: departments_banner
-image: ../../images/explore/departments&centres.jpg
+image:
+  src: ../../images/explore/departments&centres.jpg
+  alt: ""
 title: Departments and Centres
 body: |
   OVC is more than the sum of its parts. Learn more about the academic departments, research centres and institutes, and clinical facilities that set us apart.

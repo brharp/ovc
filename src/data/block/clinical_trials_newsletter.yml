@@ -1,6 +1,8 @@
 id: clinical_trials_newsletter
 title: Stay Up To Date
-image: ../../images/care/20171128_190342263_iOS.jpg
+image:
+  src: ../../images/care/20171128_190342263_iOS.jpg
+  alt: ""
 body: |
   Get our weekly newsletters to do...
 

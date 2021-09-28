@@ -1,5 +1,7 @@
 id: departments_academic
-image: ../../images/explore/pathobiology.jpg
+image:
+  src: ../../images/explore/pathobiology.jpg
+  alt: ""
 title: Academic Departments
 subtitle: Advancing Knowledge
 body: |

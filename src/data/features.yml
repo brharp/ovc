@@ -1,30 +1,42 @@
 - title: Explore
   subtitle: Start your journey
   description: The OVC
-  image: ../images/explore/30344872351_60c2261186_o.jpg
+  image:
+    src: ../images/explore/30344872351_60c2261186_o.jpg
+    alt: ""
   link: /explore
 - title: Learn
   subtitle: Find your passion 
   description: The OVC
-  image: ../images/home/Joanne Hewson 2nd choice IMG_4982.jpg
+  image:
+    src: ../images/home/Joanne Hewson 2nd choice IMG_4982.jpg
+    alt: ""
   link: /learn
 - title: Get Care
   subtitle: Ensuring the best services
   description: The OVC
-  image: ../images/home/Dog 0.50.jpg
+  image:
+    src: ../images/home/Dog 0.50.jpg
+    alt: ""
   link: /care
 - title: Work
   subtitle: People are our power
   description: The OVC
-  image: ../images/work/Heather-Murphy-InLab.jpg
+  image:
+    src: ../images/work/Heather-Murphy-InLab.jpg
+    alt: ""
   link: /work
 - title: Collaborate
   subtitle: Help improve life
   description: The OVC
-  image: ../images/collaborate/Mask_group_8.png
+  image:
+    src: ../images/collaborate/Mask_group_8.png
+    alt: ""
   link: /collaborate
 - title: Give
   subtitle: Share our vision
   description: The OVC
-  image: ../images/home/2979_ovcWINDOW_10.jpg
+  image:
+    src: ../images/home/2979_ovcWINDOW_10.jpg
+    alt: ""
   link: /give

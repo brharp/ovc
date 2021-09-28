@@ -11,9 +11,12 @@ const query = graphql`
     blockYaml(id: {eq: "work_contact"}) {
       id
       image {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
+        src {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
+          }
         }
+        alt
       }
       link {
         title

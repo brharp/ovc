@@ -1,5 +1,7 @@
 id: departments_institutes
-image: ../../images/explore/departments.jpg
+image:
+  src: ../../images/explore/departments.jpg
+  alt: ""
 title: Centres & Institutes
 subtitle: Collaborative expertise
 body: |

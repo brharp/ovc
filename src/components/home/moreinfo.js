@@ -101,7 +101,7 @@ function MoreInfo(props) {
     const c = p[ i % p.length ]
     return (
       <Item style={{gridArea: `${r}/${c[0]}/${r+1}/${c[1]}`}}>
-        <GatsbyImage image={getImage(props.image)} alt=""
+        <GatsbyImage image={getImage(props.image.src)} alt={props.image.alt}
                      layout="fullWidth" style={{gridArea: "1/1"}} />
 	<ItemContent>
 	  <TextBox>
@@ -133,9 +133,12 @@ class MoreInfoComponent extends React.Component {
                 description
                 link
                 image {
-                  childImageSharp {
-                    gatsbyImageData
+                  src {
+                    childImageSharp {
+                      gatsbyImageData
+                    }
                   }
+                  alt
                 }
               }
             }

@@ -1,5 +1,7 @@
 id: research_areas
-image: ../../images/research/horseCTscan.jpg
+image:
+  src: ../../images/research/horseCTscan.jpg
+  alt: ""
 title: Major Research Areas
 subtitle: Advancing One Health
 body: |

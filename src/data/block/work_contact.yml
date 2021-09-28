@@ -1,5 +1,7 @@
 id: work_contact
-image: ../../images/contact_red.png
+image:
+  src: ../../images/contact_red.png
+  alt: ""
 link:
   title: Contact to Work
   url: "/contact-0"

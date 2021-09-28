@@ -1,5 +1,7 @@
 id: events_banner
-image: ../../images/partners/joshua-hoehne-iggWDxHTAUQ-unsplash.jpg/
+image:
+  src: ../../images/partners/joshua-hoehne-iggWDxHTAUQ-unsplash.jpg/
+  alt: ""
 title: Upcoming Events
 body: |
   Attend one of our events.

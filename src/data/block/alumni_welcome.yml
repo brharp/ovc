@@ -2,7 +2,9 @@ id: "alumni_welcome"
 title: Welcome OVC Alumni
 body: |
   Our reputation as a world-renowned college of veterinary medicine is built on the many successes of our esteemed alumni. Wherever your OVC degree takes you, you are always part of our family.
-image: ../../images/partners/OVCAA.jpg
+image:
+  src: ../../images/partners/OVCAA.jpg
+  alt: ""
 link:
   title: Read More
   url: https://ovc.uoguelph.ca

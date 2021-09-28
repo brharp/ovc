@@ -54,9 +54,9 @@ class Spotlight extends React.Component {
           {
             this.props.items.map((item, index) =>
               <Layout key={`spotlight_${index}`}>
-                <GatsbyImage image={getImage(item.image)}
+                <GatsbyImage image={getImage(item.image.src)}
                              layout="fullWidth"
-                             alt=""
+                             alt={item.image.alt}
                              style={{maxHeight: "500px", gridArea: "1/1/2/3"}}
                              />
                 <Content style={{gridArea: "1/1/2/2"}}>

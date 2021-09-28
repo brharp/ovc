@@ -2,5 +2,7 @@ id: learn_banner
 title: Learn
 body: |
   OVC is a world leader in advancing veterinary science, learning, and research to improve the lives of animals, people, and our planet
-image: ../../images/home/Joanne Hewson 2nd choice IMG_4982.jpg
+image:
+  src: ../../images/home/Joanne Hewson 2nd choice IMG_4982.jpg
+  alt: ""
 

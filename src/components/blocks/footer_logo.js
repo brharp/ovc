@@ -3,7 +3,7 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 
 const render = ({id, image }) => (
-  <Link to="/"><GatsbyImage image={getImage(image)} alt="Home" /></Link>
+  <Link to="/"><GatsbyImage image={getImage(image.src)} alt={image.alt} /></Link>
 )
 
 const query = graphql`
@@ -11,9 +11,12 @@ const query = graphql`
     blockYaml(id: {eq: "footer_logo"}) { 
       id
       image {
-        childImageSharp {
-          gatsbyImageData
+        src {
+          childImageSharp {
+            gatsbyImageData
+          }
         }
+        alt
       }
     } 
   }

@@ -52,7 +52,7 @@ class Topic extends React.Component {
       <TopicLayout>
         <GatsbyImage image={this.props.image}
                      layout="fullWidth"
-                     alt="" />
+                     alt={this.props.alt} />
         <div>
           <Content>
             <h2>{this.props.title}</h2>
@@ -89,7 +89,8 @@ class Topics extends React.Component {
                        title={topic.title}
                        subtitle={topic.subtitle}
                        summary={topic.summary}
-                       image={getImage(topic.image)}
+                       image={getImage(topic.image.src)}
+                       alt={topic.image.alt}
                        links={topic.links} />
               )
             }

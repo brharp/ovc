@@ -5,7 +5,7 @@ import { Container, Row, Card } from "react-bootstrap"
 
 const render = ({ id, image, link }) => (
   <Card id={id} className="border-0 overflow-hidden mb-4">
-    <GatsbyImage image={getImage(image)} alt="" style={{ maxHeight: "200px" }} className="card-img" />
+    <GatsbyImage image={getImage(image.src)} alt={image.alt} style={{ maxHeight: "200px" }} className="card-img" />
     <Card.ImgOverlay>
       <Container className="h-100">
         <Row className="h-100 justify-content-center align-content-center">
@@ -23,9 +23,12 @@ const query = graphql`
     blockYaml(id: {eq: "alumni_contact"}) {
       id
       image {
-        childImageSharp {
-          gatsbyImageData(layout: FULL_WIDTH)
+        src {
+          childImageSharp {
+            gatsbyImageData(layout: FULL_WIDTH)
+          }
         }
+        alt
       }
       link {
         title

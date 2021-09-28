@@ -1,5 +1,7 @@
 id: alumni_banner
-image: ../../images/partners/joshua-hoehne-iggWDxHTAUQ-unsplash.jpg
+image:
+  src: ../../images/partners/joshua-hoehne-iggWDxHTAUQ-unsplash.jpg
+  alt: ""
 title: OVC Alumni
 body: |
   You are a student for a few short years, but a member of our alumni family for life. OVC graduates are spread across the globe, impacting every aspect of animal, human, and environmental health.

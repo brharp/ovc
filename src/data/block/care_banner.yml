@@ -1,5 +1,7 @@
 id: care_banner
-image: ../../images/care/Dog 0.50.jpg
+image:
+  src: ../../images/care/Dog 0.50.jpg
+  alt: ""
 title: Get Care
 body: |
   Our dedicated and specialized veterinary team in OVC’s Health Sciences Centre provides leading edge animal care with advanced diagnostic and treatment capabilities.

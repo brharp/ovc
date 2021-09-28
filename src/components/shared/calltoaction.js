@@ -34,10 +34,10 @@ class CallToAction extends React.Component {
     return (
       <Container>
         <Section>
-          <GatsbyImage image={getImage(cta.image)}
+          <GatsbyImage image={getImage(cta.image.src)}
                      style={{gridArea: "1/1", maxHeight: "200px"}}
                      layout="fullWidth"
-                     alt=""
+                     alt={cta.image.alt}
           />
           <Layout>
             <Content>
