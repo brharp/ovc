@@ -9,12 +9,11 @@ body: |
 dropdown:
   title: Explore by Department
   items:
-    - title: Pathobiology
-      url: "https://ovc.uoguelph.ca/pathobiology/people/faculty"
     - title: Biomededical Sciences
       url: "https://ovc.uoguelph.ca/biomedical-sciences/people/faculty"
-    - title: Population Medicine
-      url: "https://ovc.uoguelph.ca/population-medicine/faculty"
     - title: Clinical Studies
       url: "https://ovc.uoguelph.ca/clinical-studies/faculty"
-
+    - title: Pathobiology
+      url: "https://ovc.uoguelph.ca/pathobiology/people/faculty"
+    - title: Population Medicine
+      url: "https://ovc.uoguelph.ca/population-medicine/faculty"
