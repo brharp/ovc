@@ -9,20 +9,24 @@ body: |
 dropdown:
   title: "Explore Centres & Institutes"
   items:
+    - title: Canadian Wildlife Health Cooperative
+      url: "http://www.cwhc-rcsf.ca/"
     - title: Campbell Centre for the Study of Animal Welfare
       url: "https://www.uoguelph.ca/ccsaw/"
     - title: Cardiovascular Centre 
       url: "http://www.uoguelph.ca/CardiovascularResearch/"
     - title: Centre for Public Health and Zoonoses 
       url: "https://www.cphaz.uoguelph.ca/"
+    - title: Comparative and Translational Regenerative Medicine Network 
+      url: "https://ovc.uoguelph.ca/ctrmn/"
+    - title: Dairy at Guelph – The Centre for Dairy Research and Innovation  
+      url: "https://dairyatguelph.ca/"
     - title: Equine Guelph 
       url: "https://www.equineguelph.ca/"
     - title: Institute for Comparative Cancer Investigation 
       url: "https://icci.uoguelph.ca/"
-    - title: Poultry Health Research Network 
-      url: "http://phrn.net/"
-    - title: Dairy at Guelph – The Centre for Dairy Research and Innovation  
-      url: "https://dairyatguelph.ca/"
     - title: Ontario Swine Research Network   
       url: "https://www.uoguelph.ca/osrn/"
+    - title: Poultry Health Research Network 
+      url: "http://phrn.net/"
 
