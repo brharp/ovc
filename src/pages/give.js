@@ -61,10 +61,7 @@ const Banner = () => (
               Give
             </h1>
             <p className="text-light lead font-weight-bold mb-4">
-              Alumni, clients, corporate partners, donor and friends of the 
-              Ontario Veterinary College enhance our capacity to be among the very best
-              schools of veterinary medicine in the world, and to improve life by creating
-              healthier futures for animals, people and the environment.
+              We’re grateful for the OVC alumni, clients, partners and friends who support us to achieve our mission as one of the world’s leading veterinary schools and research institutions
             </p>
           </div>
         </div>
@@ -78,7 +75,7 @@ const Banner = () => (
 const Priorities = () => (
   <div className="row py-4">
     <div className="col-md">
-      <StaticImage src="../images/work/givefeature.jpeg" alt="" 
+      <StaticImage src="../images/give_feature.jpeg" alt="A couple standing caringly over their dog" 
                    aspectRatio={1.333333333333333} />
     </div>
     <div className="col-md order-md-first">
