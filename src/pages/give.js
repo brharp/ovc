@@ -88,7 +88,7 @@ const Priorities = () => (
         Donations help OVC advance its mission to educate veterinarians and scientists, create knowledge through research, and provide expert services.
       </p>
       <p>
-        <a href="https://ovc.uoguelph.ca/give" className="btn btn-primary btn-lg">
+        <a href="#give_donate" className="btn btn-primary btn-lg">
           Explore OVC's Priorities
         </a>
       </p>
