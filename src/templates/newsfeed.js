@@ -19,8 +19,11 @@ export default function NewsFeed (props) {
         <hr className="ml-0 w-25" />
         { data.allNodeArticle.edges.map(({node}) => <Article {...node} mode="teaser" />) }
         <Row>
-          <Col>
+          <Col className="mb-2">
             <Link to="/news">&larr; Back to News Hub</Link>
+          </Col>
+          <Col className="text-right mb-2">
+            <a href="https://bulletin.ovc.uoguelph.ca/">View Legacy Articles &rarr;</a>
           </Col>
         </Row>
         <Row>
