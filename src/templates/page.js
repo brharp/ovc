@@ -58,11 +58,13 @@ export const query = graphql`
       title
       relationships {
         field_widgets {
-          internal {
-            type
-          }
-          field_general_text {
-            processed
+          ... on paragraph__general_text {
+            internal {
+              type
+            }
+            field_general_text {
+              processed
+            }
           }
         }
       }
