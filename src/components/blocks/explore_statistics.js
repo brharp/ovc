@@ -29,16 +29,16 @@ export default function ExploreStatistics( props ) {
       <div className="cover-img-overlay bg-black-50 p-4 text-center">
         <Row>
           <Statistic>
-            <Figure>116</Figure>
-            <Label>Faculty</Label>
+            <Figure>482</Figure>
+            <Label>DVM Students</Label>
           </Statistic>
           <Statistic>
-            <Figure>20,829</Figure>
-            <Label>Animal &amp; Equine</Label>
+            <Figure>127</Figure>
+            <Label>Faculty & Veterinarians</Label>
           </Statistic>
           <Statistic>
-            <Figure>390</Figure>
-            <Label>Graduate Students</Label>
+            <Figure>1,336</Figure>
+            <Label>Graduate & B.Sc. Students</Label>
           </Statistic>
         </Row>
           <Statistic>
@@ -50,8 +50,8 @@ export default function ExploreStatistics( props ) {
         </Row>
         <Row>
           <Statistic>
-            <Figure>482</Figure>
-            <Label>DVM Students</Label>
+            <Figure>20,829</Figure>
+            <Label>Pet & Equine Patient Visits</Label>
           </Statistic>
           <Statistic>
             <Figure>$43,672,071</Figure>
@@ -59,7 +59,7 @@ export default function ExploreStatistics( props ) {
           </Statistic>
           <Statistic>
             <Figure>6,522</Figure>
-            <Label>Food Animal &amp; Field</Label>
+            <Label>Food Animal & Field Service Patient Visits</Label>
           </Statistic>
         </Row>
       </div>
