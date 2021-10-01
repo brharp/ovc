@@ -11,7 +11,7 @@ const GeneralText = ({processed}) => (
 )
 
 const Widget = ({widget}) => {
-  switch (widget.internal.type) {
+  switch (widget.internal?.type) {
   case "paragraph__general_text":
     return <GeneralText processed={widget.field_general_text.processed} />
   default:
