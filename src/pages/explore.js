@@ -111,7 +111,7 @@ const Structure = () => (
   <div className="">
     <div className="row py-4">
       <div className="col-md order-md-2">
-        <StaticImage src="../images/research/ovc_sign.jpg" alt=""
+        <StaticImage src="../images/research/ovc_sign.jpg" alt="brick building on the property of the Ontario Veterinary College"
                      aspectRatio={4/3} />
       </div>
       <div className="col-md">
@@ -135,7 +135,7 @@ const Success = () => (
   <div className="">
     <div className="row py-4">
       <div className="col-md">
-        <StaticImage src="../images/research/historical.jpg" alt=""
+        <StaticImage src="../images/research/historical.jpg" alt="Historical black and white image of the Ontario Veterinary College"
                      aspectRatio={4/3} />
       </div>
       <div className="col-md">
