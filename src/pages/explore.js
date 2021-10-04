@@ -56,7 +56,7 @@ const Initiatives = () => (
           copy: "Expanding high-calibre research and graduate training to grow impact and enhance our global standing",
         }
       ].map((item, index) =>
-          <div className="col-md-6">
+          <div className="col-md-6" key={index}>
             <div className="media m-4">
               <item.icon className="display-4 text-danger mx-4"/>
               <div className="media-body">

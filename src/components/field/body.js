@@ -32,7 +32,7 @@ function Body(props) {
   }
 
   const renderSummary = () => {
-    return <div dangerouslySetInnerHTML={{__html: props.summary}}></div>
+    return <div className={props.className} dangerouslySetInnerHTML={{__html: props.summary}}></div>
   }
 
   const renderProcessed = () => {
@@ -52,7 +52,9 @@ function Body(props) {
         return undefined
       }
     })
-    return <div className="clearfix">{parsed}</div>
+    return <div className={props.className}>
+      <div className="clearfix">{parsed}</div>
+    </div>
   }
 
   switch (props.format) {

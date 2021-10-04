@@ -1,6 +1,7 @@
 import React from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import { Card } from "react-bootstrap"
+import Link from "../shared/link"
 
 const render = ({ id, body, link }) => (
   <Card id={id} className="border-0 bg-blue-50 my-4 text-center">

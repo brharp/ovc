@@ -36,7 +36,7 @@ const Page = ({id, pageTitle, siteTitle, image, widgets, updated, source}) => (
     <Container className="my-4">
       <Row>
         <Col md={8}>
-          {widgets.map((widget) => <Widget widget={widget} />)} 
+          {widgets.map((widget, index) => <Widget widget={widget} key={index} />)} 
         </Col>
       </Row>
     </Container>

@@ -96,14 +96,14 @@ const NewsComponent = ({ data }) => {
           <div className="col-xl-5">
             {
               data.leadArticle.edges.map(( { node }, index ) => {
-                return <Article {...node} mode="lead" />
+                return <Article {...node} mode="lead" key={index} />
               })
             }
           </div>
           <div className="col-xl-7">
             {
               data.moreArticles.edges.map(( { node }, index ) => {
-                return <Article {...node} mode="teaser" />
+                return <Article {...node} mode="teaser" key={index} />
               })
             }
           <Newsfeed>

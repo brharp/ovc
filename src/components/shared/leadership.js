@@ -70,17 +70,17 @@ class Responsive extends React.Component {
         }}>
         {
           data.allLeadersYaml.edges.map(({node},index) => (
-          <>
+          <React.Fragment key={index}>
             <div key={`t_${index}`} style={{
                   gridArea: `${Math.floor(index/cols)*2+1} / ${index%cols+1}`
               }}>
               <Card style={{ borderLeft: "4px solid var(--blue)", height: "100%" }}>
                 <Card.Body>
                   <h3 className="text-dark">{node.unit}</h3>
-                  <Card.Text>
+                  <div className="card-text mb-3">
                     <h4>{node.title}</h4>
                     <h5 className="text-dark">{node.name}</h5> 
-                  </Card.Text>
+                  </div>
                 </Card.Body>
                 <Expander as={Button} variant="link" eventKey={`${index}`}>
                   <FaAngleDown /><span className="sr-only">Expand</span>
@@ -91,7 +91,7 @@ class Responsive extends React.Component {
               style={{ gridArea: `${Math.floor(index/cols)*2+2} / 1 / ${Math.floor(index/cols)*2+2} / ${cols+1}` }}>
               <StyledProfile>
                 <GatsbyImage image={getImage(node.photo)} layout="fullWidth"
-                             style={{gridArea: "photo" }}
+                             style={{gridArea: "photo" }} alt={node.name}
                   />
                 <StyledBio style={{gridArea: "bio" }}>
                   <h3 className="text-dark">{node.name}</h3>
@@ -103,7 +103,7 @@ class Responsive extends React.Component {
                 </StyledQuote>
               </StyledProfile>
             </Accordion.Collapse>
-            </>
+            </React.Fragment>
           ))
         }
       </Accordion>

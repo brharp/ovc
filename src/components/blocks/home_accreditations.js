@@ -12,8 +12,8 @@ const render = ({id, title, body, images}) => (
       <p>{body}</p>
       <Row>
         { 
-          images.map(({src, alt, url}) => (
-            <Col>
+          images.map(({src, alt, url}, index) => (
+            <Col key={index}>
               <a href={url}>
                 <GatsbyImage image={getImage(src)} alt={alt} />
               </a>

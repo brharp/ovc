@@ -76,6 +76,7 @@ export default function Events(props) {
         }
       `}
       render={data => {
+        if (data.allNodeEvent?.edges.length > 0)
         return (
           <Section>
             <StaticImage src="../../images/brick_leaf.jpg"
@@ -88,21 +89,21 @@ export default function Events(props) {
                            transform: "translateX(-50%) translateY(-50%)"
                          }} />
               <Mask>
-            <Container>
-                <EventWrapper>
-                  <h2>Upcoming Events</h2>
-                  <MoreLink>
-                    <Link to="/events" className="text-light">View Events Calendar</Link>
-                  </MoreLink>
-                  <EventList>
-                    {
-                      data.allNodeEvent?.edges.map(({ node }, index ) => {
-                        return <Event {...node} mode="card" />
-                      })
-                    }
-                  </EventList>
-                </EventWrapper>
-            </Container>
+                <Container>
+                  <EventWrapper>
+                    <h2>Upcoming Events</h2>
+                    <MoreLink>
+                      <Link to="/events" className="text-light">View Events Calendar</Link>
+                    </MoreLink>
+                    <EventList>
+                      {
+                        data.allNodeEvent?.edges.map(({ node }, index ) => {
+                          return <Event {...node} mode="card" />
+                        })
+                      }
+                    </EventList>
+                  </EventWrapper>
+                </Container>
               </Mask>
           </Section>
         )

@@ -1,7 +1,8 @@
 import React from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Row, Col } from "react-bootstrap"
+import Link from "../shared/link"
 
 const render = ({ id, image, title, links }) => (
   <div id={id} className="cover my-4">
@@ -21,8 +22,8 @@ const render = ({ id, image, title, links }) => (
               {title}
             </h2>
             <Row className="no-gutters my-2">
-              {links.map(({title,url,variant}) => (
-                <Col md={4}>
+              {links.map(({title,url,variant}, index) => (
+                <Col md={4} key={index}>
                   <Link to={url} className={`btn btn-block ${variant === 'primary' ? 'btn-primary' : 'btn-outline-light'}  py-3`}
                         style={{borderColor: "rgba(248, 249, 250, .25)"}}>
                     {title}

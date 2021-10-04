@@ -12,7 +12,7 @@ const render = ({ id, title, body, phone }) => (
       <p className="card-text">
         {body}
       </p>
-      <p class="lead">{phone}</p>
+      <p className="lead">{phone}</p>
     </div>
   </div>
 )

@@ -7,7 +7,7 @@ const render = ({id, title, links }) => (
       {title}
     </h4>
     <ul>
-      { links.map(({title, url}) => <li><Link to={url}>{title}</Link></li>) }
+      { links.map(({title, url}, index) => <li key={index}><Link to={url}>{title}</Link></li>) }
     </ul>
   </div>
 )

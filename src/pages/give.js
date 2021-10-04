@@ -75,13 +75,13 @@ const Banner = () => (
 const Priorities = () => (
   <div className="row py-4">
     <div className="col-md">
-      <StaticImage src="../images/give_feature.jpeg" alt="A couple standing caringly over their dog" 
+      <StaticImage src="../images/give_feature.jpg" alt="A couple standing caringly over their dog" 
                    aspectRatio={1.333333333333333} />
     </div>
     <div className="col-md order-md-first">
       <h2>Advancing OVC's Mission</h2>
       <h3 className="text-dark">Your support makes a difference</h3>
-      <p class="lead">
+      <p className="lead">
         Donations help OVC advance its mission to educate veterinarians and scientists, create knowledge through research, and provide expert services.
       </p>
       <p>

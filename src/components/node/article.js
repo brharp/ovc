@@ -8,7 +8,7 @@ import Created from "../field/created"
 
 class Tags extends React.Component {
   render () {
-    return this.props.relationships?.field_tags.map((tag) => <Tag {...tag} />)
+    return this.props.relationships?.field_tags.map((tag, index) => <Tag {...tag} key={index} />)
   }
 }
 
@@ -51,7 +51,7 @@ class Article extends React.Component {
           <h3 className="text-dark mb-2">{this.props.title}</h3>
           <p><Tag {...this.props.relationships?.field_tags[0]} /></p>
           <Created {...this.props} />
-          <p><Body {...this.props.body} format="summary" /></p>
+          <Body {...this.props.body} format="summary" className="mb-3" />
           <Link to={this.getLink()} className="btn btn-primary">
             Read more<span className="sr-only"> about {this.props.title}</span>
           </Link>
@@ -70,7 +70,7 @@ class Article extends React.Component {
         <Col>
           <h3 className="text-dark mb-3">{this.props.title}</h3>
           <Created {...this.props} />
-          <p><Body {...this.props.body} format="summary" /></p>
+          <Body {...this.props.body} format="summary" className="mb-2" />
           <Link to={this.getLink()} className="btn btn-primary">
             Read more<span className="sr-only"> about {this.props.title}</span>
           </Link>

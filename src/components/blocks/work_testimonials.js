@@ -3,8 +3,8 @@ import { StaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Jumbotron, Container, Row, Col } from "react-bootstrap"
 
-const row = ({ id, title, subtitle, body, image }) => (
-  <Col lg={true} className='py-4'>
+const row = ({ id, title, subtitle, body, image }, index) => (
+  <Col lg={true} className='py-4' key={index}>
     <Row>
       <Col md>
         <GatsbyImage image={getImage(image.src)} alt={image.alt} 
@@ -43,7 +43,7 @@ const render = ({ edges }) => (
         What staff are saying about working at the OVC
       </h2>
       <Row className="py-4">
-        { edges.map(({node}) => row(node)) }
+        { edges.map(({node}, index) => row(node, index)) }
       </Row>
     </Container>
   </Jumbotron>

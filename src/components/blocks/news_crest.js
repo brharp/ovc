@@ -1,7 +1,8 @@
 import React from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Banner from "../shared/banner"
+import Link from "../shared/link"
 
 const render = ({ id, image, title, body, link }) => (
   <Banner>

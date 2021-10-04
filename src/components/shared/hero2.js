@@ -1,6 +1,6 @@
 import React from "react"
-import { Link } from "gatsby"
 import { Row, Col } from "react-bootstrap"
+import Link from "./link"
 
 const Hero = ({children}) => (
   <>

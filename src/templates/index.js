@@ -21,7 +21,8 @@ const IndexPage = ({ data }) => (
     <ImproveLife />
     <MoreInfo />
     <News/>
-    <Events {...data} display="cards" />
+    { data.allNodeEvent?.edges.length > 0 &&
+      <Events {...data} display="cards" /> }
     <Footer/>
   </Layout>
 )

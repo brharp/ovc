@@ -99,7 +99,7 @@ class Events extends React.Component {
   }
 
   renderDefault( ) {
-    return (
+    return ( 
       <React.Fragment>
         { this.props.allNodeEvent?.edges.map(({node}) => (
           <Event {...node} mode="teaser" />

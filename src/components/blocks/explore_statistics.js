@@ -25,7 +25,7 @@ function Statistic( props ) {
 export default function ExploreStatistics( props ) {
   return (
     <div className="cover">
-      <StaticImage src="../images/porticobannerfullsize.jpg" alt="" className="cover-img" />
+      <StaticImage src="../../images/porticobannerfullsize.jpg" alt="" className="cover-img" />
       <div className="cover-img-overlay bg-black-50 p-4 text-center">
         <Row>
           <Statistic>

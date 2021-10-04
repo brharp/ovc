@@ -3,8 +3,8 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 import Banner from "../shared/banner"
 
-const render_item = ({title, body, image, slug}) => (
-  <Banner>
+const render_item = ({drupal_id, title, body, image, slug}) => (
+  <Banner key={drupal_id}>
     { image ?
         <GatsbyImage image={getImage(image)} className="cover-img" style={{maxHeight: "600px"}}  alt="" /> :
         <StaticImage src="../news/default.jpg"  className="cover-img" style={{maxHeight: "600px"}} alt="" /> }
@@ -64,6 +64,7 @@ const query = graphql`
 
 function makeArticles({edges}) {
   return edges.map(({node}) => ({
+    drupal_id: node.drupal_id,
     title: node.title,
     body: node.body.summary,
     image: node.relationships.field_hero_image?.relationships.field_media_image.localFile,

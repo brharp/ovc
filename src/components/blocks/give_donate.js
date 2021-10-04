@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql, Link } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import { Row, Col } from "react-bootstrap"
 import Block from "../shared/block"
 
@@ -12,9 +12,9 @@ const render = ({id, title, link}) => (
             {title}
           </h2>
           <p className="text-center">
-            <Link to={link.url} className="btn btn-cta btn-primary">
+            <a href={link.url} className="btn btn-cta btn-primary">
               {link.title}
-            </Link>
+            </a>
           </p>
         </div>
       </Col>

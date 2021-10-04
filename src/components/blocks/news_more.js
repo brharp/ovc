@@ -7,8 +7,8 @@ const render = (data) => (
     <h1 className="text-dark">Latest OVC News</h1>
     <hr className="w-25 ml-0" />
     {
-      data.allNodeArticle.edges.map(({node}) => (
-        <Article {...node} mode="teaser" />
+      data.allNodeArticle.edges.map(({node}, index) => (
+        <Article {...node} mode="teaser" key={index} />
       ))
     }
     <p className="text-center py-4">

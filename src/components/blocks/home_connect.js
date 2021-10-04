@@ -1,7 +1,8 @@
 import React from "react";
-import { Link, StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import { FaLocationArrow } from "react-icons/fa";
 import { Media } from "react-bootstrap"
+import Link from "../shared/link"
 
 const render = ({title, links}) => (
   <Media>
@@ -9,8 +10,8 @@ const render = ({title, links}) => (
     <Media.Body>
       <h2 className="text-light">{title}</h2>
       <ul className="lead font-weight-bold list-unstyled">
-        {links.map(({title, url}) => 
-          <li><Link to={url} className="text-light">{title}</Link></li>)}
+        {links.map(({title, url}, index) => 
+          <li key={index}><Link to={url} className="text-light">{title}</Link></li>)}
       </ul>
     </Media.Body>
   </Media>

@@ -9,7 +9,7 @@ const render = ({menu}) => (
     </Helmet>
     <div id="header-breakpoint"></div>
     <ug-header>
-      {menu.map((i) => <a href={i.path}>{i.title}</a>)}
+      {menu.map((item,i) => <a key={i} href={item.path}>{item.title}</a>)}
     </ug-header>
   </>
 )

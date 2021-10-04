@@ -16,7 +16,7 @@ const render = ({id, title, body, dropdown }) => (
     </div>
     <div className="card-footer border-0">
       <DropdownButton id={`${id}__dropdown`} title={dropdown.title} size="lg" variant="outline-primary">
-        {dropdown.items.map(({title, url}) => <Dropdown.Item href={url}>{title}</Dropdown.Item>)}
+        {dropdown.items.map(({title, url}, index) => <Dropdown.Item href={url} key={index}>{title}</Dropdown.Item>)}
       </DropdownButton>
     </div>
   </>
