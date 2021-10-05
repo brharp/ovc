@@ -48,7 +48,7 @@ const Initiatives = () => (
         {
           icon: FaCanadianMapleLeaf,
           heading: "For the Good of the Nation",
-          copy: "Growing our veterinary healthcase workforce to address the evolving health, welfare, food safety and security needs of Ontario and Canada",
+          copy: "Growing our veterinary healthcare workforce to address the evolving health, welfare, food safety and security needs of Ontario and Canada",
         },
         {
           icon: FaGraduationCap,
