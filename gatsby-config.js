@@ -13,10 +13,11 @@ module.exports = {
     menu: [
       { title: "OVC Home",     path: "/" },
       { title: "About",   path: "/explore" },
+      { title: "Learn",   path: "/learn" },
       { title: "Research", path: "/research" },
-      { title: "Alumni",   path: "/alumni" },
       { title: "Hospital", path: "https://ovc.uoguelph.ca/hsc" },
-      { title: "Learn", path: "/learn" },
+      { title: "Alumni",   path: "/alumni" },
+      { title: "Give", path: "/give" },
       { title: "Intranet", path: "https://uoguelphca.sharepoint.com/sites/OntarioVeterinaryCollege/" },
     ],
   },
