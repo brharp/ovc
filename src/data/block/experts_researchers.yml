@@ -9,7 +9,7 @@ body: |
 dropdown:
   title: Explore by Department
   items:
-    - title: Biomededical Sciences
+    - title: Biomedical Sciences
       url: "https://ovc.uoguelph.ca/biomedical-sciences/people/faculty"
     - title: Clinical Studies
       url: "https://ovc.uoguelph.ca/clinical-studies/faculty"
