@@ -6,9 +6,9 @@ dropdown:
   title: Explore Admissions
   items:
     - title: BioMed admissions
-      url: https://ovc.uoguelph.ca/biomedical-science-major/admission
+      url: https://graduatestudies.uoguelph.ca/programs/biom
     - title: Graduate admissions
-      url: http://www.ovc.uoguelph.ca/research/en/researchtrainingopportunities/Admissions.asp
+      url: /admissions
     - title: DVM admissions
-      url: http://www.ovc.uoguelph.ca/recruitment/en/applyingtodvm/admissionrequirements.asp
+      url: http://www.ovc.uoguelph.ca/recruitment/en/applyingtodvm.asp
 
