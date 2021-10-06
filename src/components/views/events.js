@@ -66,6 +66,7 @@ class Events extends React.Component {
   }
 
   renderCards() {
+    const noResults = (this.props.allNodeEvent?.edges.length === 0)
     return <React.Fragment>
       <Section>
         <StaticImage src="../../images/brick_leaf.jpg"
@@ -81,16 +82,28 @@ class Events extends React.Component {
           <Container>
             <EventWrapper>
               <h2>Upcoming Events</h2>
-              <MoreLink>
-                <Link to="/events" className="text-light">View Events Calendar</Link>
-              </MoreLink>
-              <EventList>
-                {
-                  this.props.allNodeEvent?.edges.map(({ node }, index ) => {
-                    return <Event {...node} mode="card" />
-                  })
-                }
-              </EventList>
+              { 
+                !noResults &&
+                <MoreLink>
+                  <Link to="/events" className="text-light">View Events Calendar</Link>
+                </MoreLink>
+              }
+              {
+                !noResults &&
+                <EventList>
+                  {
+                    this.props.allNodeEvent?.edges.map(({ node }, index ) => {
+                      return <Event {...node} mode="card" />
+                    })
+                  }
+                </EventList>
+              }
+              {
+                noResults &&
+                <p className="text-light lead text-center py-2">
+                  <em>No upcoming events. Check back later for more.</em>
+                </p>
+              }
             </EventWrapper>
           </Container>
         </Mask>
