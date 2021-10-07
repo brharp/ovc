@@ -6,7 +6,7 @@ dropdown:
   title: Explore Admissions
   items:
     - title: Bio-Med admissions
-      url: https://graduatestudies.uoguelph.ca/programs/biom
+      url: https://bsc.uoguelph.ca/future_students/biom
     - title: Graduate admissions
       url: /admissions
     - title: DVM admissions
