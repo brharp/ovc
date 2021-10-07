@@ -15,7 +15,7 @@ export default function NewsPage(data) { return (
     <Container className="my-4">
       <NewsSpotlight />
       <Row className="py-4">
-        <Col lg={7}>
+        <Col lg={8}>
           <NewsMore />
         </Col>
         <Col>

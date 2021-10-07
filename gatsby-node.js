@@ -128,7 +128,18 @@ exports.createPages = async ({ graphql, actions }) => {
   const upcomingEvents = upcomingEventsQueryResult.data.allNodeEvent.edges
   const upcomingEventsPerPage = defaultPageSize
   const numUpcomingEventPages = Math.ceil(upcomingEvents.length / upcomingEventsPerPage)
-  for (let i = 0; i < numUpcomingEventPages; i++) {
+  createPage({
+    path: "/events/",
+    component: path.resolve("./src/templates/events.js"),
+    context: {
+      limit: upcomingEventsPerPage,
+      skip: 0,
+      numPages: numUpcomingEventPages,
+      currentPage: 1,
+      now: now,
+    },
+  })
+  for (let i = 1; i < numUpcomingEventPages; i++) {
     createPage({
       path: i === 0 ? "/events/" : `/events/${i + 1}`,
       component: path.resolve("./src/templates/events.js"),

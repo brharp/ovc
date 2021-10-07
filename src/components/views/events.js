@@ -83,9 +83,8 @@ class Events extends React.Component {
             <EventWrapper>
               <h2>Upcoming Events</h2>
               { 
-                !noResults &&
                 <MoreLink>
-                  <Link to="/events" className="text-light">View Events Calendar</Link>
+                  <Link to="/events/past" className="text-light">View Past Events</Link>
                 </MoreLink>
               }
               {

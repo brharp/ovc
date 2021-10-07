@@ -28,6 +28,9 @@ export default function Events (props) {
             </Link>
           </li>
         </ul>
+        { data.allNodeEvent?.edges.length === 0 &&
+          <p className="text-center my-3"><em>No upcoming events. Check back later for more.</em></p>
+        }
         { data.allNodeEvent.edges.map(({node}) => <Event {...node} mode="teaser" />) }
         <Link to="/news">&larr; Back to News Hub</Link>
         <Pagination currentPage={currentPage} numPages={numPages} baseUrl={baseUrl} />
