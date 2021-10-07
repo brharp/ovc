@@ -5,7 +5,7 @@ body: |
 dropdown:
   title: Explore Admissions
   items:
-    - title: BioMed admissions
+    - title: Bio-Med admissions
       url: https://graduatestudies.uoguelph.ca/programs/biom
     - title: Graduate admissions
       url: /admissions
