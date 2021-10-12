@@ -7,7 +7,7 @@ export default function Pagination (props) {
     const prevPage = props.currentPage - 1 === 1 ? props.baseUrl : props.baseUrl + (props.currentPage - 1)
     items.push(
       <li className="page-item">
-        <Link to={prevPage} className="page-link">&laquo; Newer Articles</Link>
+        <Link to={prevPage} className="page-link">&laquo; Previous Page</Link>
       </li>
     )
   }
@@ -16,15 +16,17 @@ export default function Pagination (props) {
     const activeClass = number === props.currentPage ? " active" : ""
     items.push(
       <li className={`page-item${activeClass}`} key={number}>
-        <Link to={numberPage} className={`page-link`}>{number}</Link>
+        <Link to={numberPage} className={`page-link`}>
+          <span className="sr-only">Page </span>{number}
+        </Link>
       </li>
     )
   }
-  if ( ! ( props.currentPage === props.numPages ) ) {
+  if ( props.numPages > 0 && props.currentPage < props.numPages ) {
     const nextPage = props.baseUrl + (props.currentPage + 1)
     items.push(
       <li className="page-item">
-        <Link to={nextPage} className="page-link">Older Articles &raquo;</Link>
+        <Link to={nextPage} className="page-link">Next Page &raquo;</Link>
       </li>
     )
   }
