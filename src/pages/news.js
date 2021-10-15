@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 import { Container, Row, Col } from "react-bootstrap"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
@@ -23,9 +24,12 @@ export default function NewsPage(data) { return (
           <hr className="w-25 ml-0" />
           <NewsTwitter />
           <div className="mb-4"></div>
-          <h1 className="text-dark">News Categories</h1>
+          <h1 className="text-dark">News Topics</h1>
           <hr className="w-25 ml-0" />
           <NewsCategoryBlock />
+          <h1 className="text-dark">Events</h1>
+          <hr className="w-25 ml-0" />
+          <Link to="/events" className="btn btn-outline-primary btn-lg">View Events at OVC</Link>
         </Col>
       </Row>
       <h1 className="text-dark">Our Publications</h1>

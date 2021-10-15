@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 import { Container, Row, Col } from "react-bootstrap"
 import Body from "../field/body"
 import HeroImage from "../field/hero_image"
@@ -84,4 +84,25 @@ class Article extends React.Component {
 }
 
 export default Article
+
+export const query = graphql`
+  fragment node__articleFragment on node__article {
+    fields {
+      slug
+    }
+    title
+    body {
+      processed
+    }
+    created(formatString: "MMMM DD, YYYY")
+    relationships {
+      field_hero_image {
+        ...media__imageFragment
+      }
+      field_tags {
+        ...taxonomy_term__tagsFragment
+      }
+    }
+  }
+`
 

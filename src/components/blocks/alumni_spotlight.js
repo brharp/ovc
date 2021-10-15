@@ -49,7 +49,10 @@ const render = (data) => (
 
 const query = graphql`
   query {
-    allNodeArticle(filter: {relationships: {field_news_category: {elemMatch: {name: {eq: "Alumni"}}}}}) {
+    allNodeArticle(
+      filter: { relationships: {field_news_category: {elemMatch: {name: {eq: "Alumni"}}}}}
+      sort: {fields: created, order: DESC}
+      ) {
       edges {
         node {
           drupal_id

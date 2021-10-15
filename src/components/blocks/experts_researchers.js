@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import { Dropdown, DropdownButton } from "react-bootstrap"
 import Hero from "../shared/hero2"
@@ -19,9 +19,12 @@ const render = ({ id, image, title, subtitle, body, dropdown }) => (
       <Hero.Text>
         {body}
       </Hero.Text>
-      <DropdownButton id={`${id}__dropdown`} title={dropdown.title} size="lg" className="my-4">
+      <DropdownButton id={`${id}__dropdown`} title={dropdown.title} size="lg" className="my-4 mr-2 d-inline-block">
         {dropdown.items.map(({title, url}, index) => <Dropdown.Item href={url} key={index}>{title}</Dropdown.Item>)}
       </DropdownButton>
+      <Link to="/research-chairs" className="btn btn-outline-primary btn-lg mr-2">
+        View Research Chairs
+      </Link>
     </Hero.Body>
   </>
 )

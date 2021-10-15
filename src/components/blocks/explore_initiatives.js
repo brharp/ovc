@@ -1,9 +1,16 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
+import styled from "styled-components"
+
+const Anchor = styled.div`
+  position: relative;
+  top: -85px;
+  padding-top: 85px;
+`
 
 const render = ({id, title, subtitle, image}) => (
-  <div className="cover my-4">
+  <Anchor id={id} className="cover my-4">
     <GatsbyImage image={getImage(image.src)} className="cover-img" alt={image.alt} />
     <div className="cover-img-overlay bg-black-50 ">
       <div className="container h-100">
@@ -19,7 +26,7 @@ const render = ({id, title, subtitle, image}) => (
         </div>
       </div>
     </div>
-  </div>
+  </Anchor>
 )
 
 const query = graphql`

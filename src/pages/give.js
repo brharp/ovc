@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 import Layout from '../components/layout'
 import Seo from '../components/seo'
@@ -85,9 +86,9 @@ const Priorities = () => (
         Donations help OVC advance its mission to educate veterinarians and scientists, create knowledge through research, and provide expert services.
       </p>
       <p>
-        <a href="#give_donate" className="btn btn-primary btn-lg">
+        <Link to="/explore#explore_initiatives" className="btn btn-primary btn-lg">
           Explore OVC's Priorities
-        </a>
+        </Link>
       </p>
     </div>
   </div>

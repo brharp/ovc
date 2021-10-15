@@ -47,7 +47,9 @@ function Body(props) {
           const clazz = domNode.attribs['class'];
           const imgClass = inlineImageClass(clazz);
           const imgSrc   = inlineImageSrc(src, baseUrl);
-          return <img src={imgSrc} alt="" className={imgClass}/>
+          const width    = domNode.attributes['width'];
+          const height   = domNode.attributes['height'];
+          return <img src={imgSrc} alt="" className={imgClass} width={width} height={height} />
         }
         return undefined
       }

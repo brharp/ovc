@@ -2,9 +2,9 @@ import React from "react"
 import { Row, Col } from "react-bootstrap"
 import Link from "./link"
 
-const Hero = ({children}) => (
+const Hero = (props) => (
   <>
-    {children}
+    {props.children}
   </>
 )
 
@@ -45,7 +45,7 @@ Hero.Text = ({children}) => (
 )
 
 Hero.Link = ({to, children}) => (
-  <Link className="btn btn-lg btn-primary my-4" to={to}>
+  <Link className="btn btn-lg btn-primary my-4 mr-2" to={to}>
     {children}
   </Link>
 )

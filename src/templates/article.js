@@ -18,34 +18,7 @@ export default ArticleTemplate
 export const query = graphql`
   query($slug: String) {
     nodeArticle(fields: {slug: {eq: $slug}}) {
-      fields {
-        slug
-      }
-      title
-      body {
-        processed
-      }
-      created(formatString: "MMMM DD, YYYY")
-      relationships {
-        field_hero_image {
-          relationships {
-            field_media_image {
-              localFile {
-                childImageSharp {
-                  gatsbyImageData(
-                    transformOptions: {cropFocus: ENTROPY},
-                    layout: FULL_WIDTH,
-                  )
-                }
-              }
-            }
-          }
-        }
-        field_tags {
-          drupal_id
-          name
-        }
-      }
+      ...node__articleFragment
     }
   }
 `

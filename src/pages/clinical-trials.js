@@ -11,7 +11,6 @@ import ClinicalTrialsFaq from "../components/blocks/clinical_trials_faq"
 import ClinicalTrialsDonate from "../components/blocks/clinical_trials_donate"
 import ClinicalTrialsNewsletter from "../components/blocks/clinical_trials_newsletter"
 import ClinicalTrialsSocials from "../components/blocks/clinical_trials_socials"
-import Contact from "../components/blocks/contact"
 
 
 const ClinicalTrialsPage = (props) => (
@@ -40,7 +39,6 @@ const ClinicalTrialsPage = (props) => (
             <ClinicalTrialsSocials />
           </Col>
         </Row>
-        <Contact />
       </div>
     </Container>
   </Layout>

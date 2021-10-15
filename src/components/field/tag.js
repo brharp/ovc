@@ -1,5 +1,5 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql } from "gatsby"
 
 class Tag extends React.Component {
   render() {
@@ -15,4 +15,11 @@ class Tag extends React.Component {
 }
 
 export default Tag
+
+export const query = graphql`
+  fragment taxonomy_term__tagsFragment on taxonomy_term__tags {
+    drupal_id
+    name
+  }
+`
 

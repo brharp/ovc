@@ -1,4 +1,5 @@
 import React from "react"
+import { graphql } from "gatsby"
 import { Parallax } from "react-scroll-parallax"
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 import Banner from "../shared/banner"
@@ -45,4 +46,18 @@ class HeroImage extends React.Component {
 }
 
 export default HeroImage
+
+export const query = graphql`
+  fragment media__imageFragment on media__image {
+    relationships {
+      field_media_image {
+        localFile {
+          childImageSharp {
+            gatsbyImageData(transformOptions: {cropFocus: ENTROPY}, layout: FULL_WIDTH)
+          }
+        }
+      }
+    }
+  }
+`
 

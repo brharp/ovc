@@ -21,6 +21,10 @@ const render = ({ id, image, title, body, networks }) => (
         <p className="text-light">
           {body}
         </p>
+        <a href="https://ovcclinicaltrials.uoguelph.ca/contact-us/"
+           className="btn btn-primary btn-lg mr-2">
+          Contact Us
+        </a>
         <Link to={networks.instagram.url}>
           <FaInstagram className="display-4 text-light" />
         </Link>

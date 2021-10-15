@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import { Link, StaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Hero from "../shared/hero2"
 
@@ -21,6 +21,9 @@ const render = ({ id, image, title, subtitle, body, link }) => (
       <Hero.Link to={link.url}>
         {link.title}
       </Hero.Link>
+      <Link to="/surveys" className="btn btn-lg btn-primary">
+        Explore Clinical Surveys
+      </Link>
     </Hero.Body>
   </>
 )

@@ -38,7 +38,7 @@ const NewsComponent = ({ data }) => {
   return (
     <StaticQuery
       query={graphql`
-        fragment node__articleFragment on node__article {
+        fragment news__articleFragment on node__article {
           drupal_id
           fields {
             slug
@@ -73,14 +73,14 @@ const NewsComponent = ({ data }) => {
           leadArticle: allNodeArticle(limit: 1, sort: {fields: created, order: DESC}) {
             edges {
               node {
-                ...node__articleFragment
+                ...news__articleFragment
               }
             }
           }
           moreArticles: allNodeArticle(skip: 1, limit: 2, sort: {fields: created, order: DESC}) {
             edges {
               node {
-                ...node__articleFragment
+                ...news__articleFragment
               }
             }
           }
