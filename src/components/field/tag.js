@@ -10,7 +10,7 @@ class Tag extends React.Component {
   }
   renderDefault() {
     return <Link to={`/news/${this.props.drupal_id}`} 
-                 className="badge badge-secondary mr-1">{this.props.name}</Link>
+                 className="badge badge-secondary mr-1 mb-1">{this.props.name}</Link>
   }
 }
 
