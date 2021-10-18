@@ -1,18 +1,8 @@
 id: clinical_trials_socials
-title: Keep In Touch
+title: Get In Touch
 image:
   src: ../../images/care/priscilla-du-preez-OEdkPaxYMXU-unsplash.jpg
   alt: ""
 body: |
-  Get updates and stories about clinical trials right to your newsfeed. Follow us!
+  Have further questions about clinical trials at OVC? Reach out to us via email!
 networks:
-  instagram:
-    title: Instagram
-    url: https://www.instagram.com/ovcclintrials/
-  facebook:
-    title: Facebook
-    url: https://www.facebook.com/ovcclintrials
-  twitter:
-    title: Twitter
-    url: https://twitter.com/ovcclintrials
-
