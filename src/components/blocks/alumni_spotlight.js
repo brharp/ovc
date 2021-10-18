@@ -50,7 +50,10 @@ const render = (data) => (
 const query = graphql`
   query {
     allNodeArticle(
-      filter: { relationships: {field_news_category: {elemMatch: {name: {eq: "Alumni"}}}}}
+      filter: {
+        relationships: {field_news_category: {elemMatch: {name: {eq: "Alumni"}}}},
+        sticky: {eq: true}
+      }
       sort: {fields: created, order: DESC}
       ) {
       edges {
