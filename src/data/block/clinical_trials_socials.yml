@@ -6,3 +6,6 @@ image:
 body: |
   Have further questions about clinical trials at OVC? Reach out to us via email!
 networks:
+  instagram:
+    title: Instagram
+    url: https://www.instagram.com/ovcclintrials/
