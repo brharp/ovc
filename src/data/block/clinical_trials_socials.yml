@@ -1,5 +1,5 @@
 id: clinical_trials_socials
-title: Get In Touch
+title: Keep In Touch
 image:
   src: ../../images/care/priscilla-du-preez-OEdkPaxYMXU-unsplash.jpg
   alt: ""
@@ -9,3 +9,9 @@ networks:
   instagram:
     title: Instagram
     url: https://www.instagram.com/ovcclintrials/
+  facebook:
+    title: Facebook
+    url: https://www.facebook.com/ovcclintrials
+  twitter:
+    title: Twitter
+    url: https://twitter.com/ovcclintrials
