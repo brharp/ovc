@@ -7,7 +7,7 @@ const render_item = ({drupal_id, title, body, image, slug}) => (
   <Banner key={drupal_id}>
     { image ?
         <GatsbyImage image={getImage(image)} className="cover-img" style={{maxHeight: "600px"}}  alt="" /> :
-        <StaticImage src="../news/default.jpg"  className="cover-img" style={{maxHeight: "600px"}} alt="" /> }
+        <StaticImage src="../../images/news/default.jpg"  className="cover-img" style={{maxHeight: "600px"}} alt="" /> }
     <Banner.Overlay className="px-2">
       <h1 className="text-warning">
         {title}
