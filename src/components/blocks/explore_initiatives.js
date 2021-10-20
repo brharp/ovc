@@ -7,6 +7,7 @@ const Anchor = styled.div`
   position: relative;
   top: -85px;
   padding-top: 85px;
+  z-index: -1;
 `
 
 const render = ({id, title, subtitle, image}) => (
