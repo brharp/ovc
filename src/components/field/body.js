@@ -1,6 +1,6 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import HTMLReactParser from "html-react-parser"
+import HTMLReactParser, { domToReact } from "html-react-parser"
 
 function Body(props) {
 
@@ -31,6 +31,41 @@ function Body(props) {
       return 'img-fluid'
   }
 
+  const inlineFigureClass = (clazz) => {
+    const c = 'figure';
+    if (clazz && clazz.match(/align-left/g))
+      return c + ' border p-1 float-lg-left mx-auto mr-lg-4 mt-1 mb-3'
+    else if (clazz && clazz.match(/align-right/g))
+      return c + ' border p-1 float-lg-right mx-auto ml-lg-4 mt-1 mb-3'
+    else
+      return c
+  }
+
+  const replaceInlineImages = (domNode, baseUrl) => {
+    if (domNode.name === 'img') {
+      const src = domNode.attribs['src'];
+      const clazz = domNode.attribs['class'];
+      const imgClass = inlineImageClass(clazz);
+      const imgSrc   = inlineImageSrc(src, baseUrl);
+      const width    = domNode.attributes['width'];
+      const height   = domNode.attributes['height'];
+      return <img src={imgSrc} alt="" className={imgClass} width={width} height={height} />
+    }
+    if (domNode.name === 'figure') {
+      const clazz = domNode.attribs['class'];
+      const figclass = inlineFigureClass(clazz);
+      return <figure className={figclass}>
+        {domNode.children.map(child => replaceInlineImages(child, baseUrl))}
+      </figure>
+    }
+    if (domNode.name === 'figcaption') {
+      return <figcaption class="figure-caption">
+        {domToReact(domNode.children)}
+      </figcaption>
+    }
+    return undefined
+  }
+
   const renderSummary = () => {
     return <div className={props.className} dangerouslySetInnerHTML={{__html: props.summary}}></div>
   }
@@ -41,18 +76,7 @@ function Body(props) {
       return <></>
     }
     const parsed = HTMLReactParser(props.processed, {
-      replace: domNode => {
-        if (domNode.name === 'img') {
-          const src = domNode.attribs['src'];
-          const clazz = domNode.attribs['class'];
-          const imgClass = inlineImageClass(clazz);
-          const imgSrc   = inlineImageSrc(src, baseUrl);
-          const width    = domNode.attributes['width'];
-          const height   = domNode.attributes['height'];
-          return <img src={imgSrc} alt="" className={imgClass} width={width} height={height} />
-        }
-        return undefined
-      }
+      replace: domNode => replaceInlineImages(domNode, baseUrl)
     })
     return <div className={props.className}>
       <div className="clearfix">{parsed}</div>
