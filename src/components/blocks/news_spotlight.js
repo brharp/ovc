@@ -26,7 +26,7 @@ const render = (articles) => (
 
 const query = graphql`
   query {
-    allNodeArticle(limit: 1, filter: {promote: {eq: true}}) {
+    allNodeArticle(limit: 1, filter: {promote: {eq: true}}, sort: {order: DESC, fields: created}) {
       edges {
         node {
           drupal_id

@@ -1,13 +1,7 @@
 import React from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import Banner from "../shared/banner"
-
-import {
-  FaInstagram,
-  FaFacebookSquare,
-  FaTwitterSquare,
-} from "react-icons/fa";
 
 const render = ({ id, image, title, body, networks }) => (
   <Banner>
@@ -25,15 +19,6 @@ const render = ({ id, image, title, body, networks }) => (
            className="btn btn-primary btn-lg mr-2">
           Contact Us
         </a>
-        <Link to={networks.instagram.url}>
-          <FaInstagram className="display-4 text-light" />
-        </Link>
-        <Link to={networks.facebook.url}>
-          <FaFacebookSquare className="display-4 text-light" />
-        </Link>
-        <Link to={networks.twitter.url}>
-          <FaTwitterSquare className="display-4 text-light" />
-        </Link>
       </div>
     </Banner.Overlay>
   </Banner>
