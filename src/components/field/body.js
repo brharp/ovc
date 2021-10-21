@@ -32,11 +32,11 @@ function Body(props) {
   }
 
   const inlineFigureClass = (clazz) => {
-    const c = 'figure';
+    const c = 'figure border p-1';
     if (clazz && clazz.match(/align-left/g))
-      return c + ' border p-1 float-lg-left mx-auto mr-lg-4 mt-1 mb-3'
+      return c + ' float-lg-left mx-auto mr-lg-4 mt-1 mb-3'
     else if (clazz && clazz.match(/align-right/g))
-      return c + ' border p-1 float-lg-right mx-auto ml-lg-4 mt-1 mb-3'
+      return c + ' float-lg-right mx-auto ml-lg-4 mt-1 mb-3'
     else
       return c
   }
