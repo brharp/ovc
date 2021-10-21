@@ -17,6 +17,7 @@ schedules:
   branches:
     include:
     - main
+  always: true
 
 steps:
 - task: NodeTool@0
