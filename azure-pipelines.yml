@@ -14,14 +14,14 @@ pool:
   demands: npm
 
 schedules:
-- cron: "0 0 * * *"
-  displayName: Daily midnight build
+- cron: "0 4 * * *"
+  displayName: Daily midnight EST build
   branches:
     include:
     - main
   always: true
-- cron: "0 9-18 * * *"
-  displayName: Hourly build (9am - 6pm)
+- cron: "0 13-22 * * *"
+  displayName: Hourly build (9am - 6pm EST)
   branches:
     include:
     - main
