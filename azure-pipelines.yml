@@ -18,6 +18,12 @@ schedules:
     include:
     - main
   always: true
+- cron: "0 9-18 * * *"
+  displayName: Hourly build (9am - 6pm)
+  branches:
+    include:
+    - main
+  always: true
 
 steps:
 - task: NodeTool@0
