@@ -6,17 +6,26 @@ variables:
   AZURE_RESOURCE_MANAGER_CONNECTION: 'Pay-As-You-Go(3a1e4cf8-5973-49b0-bebf-d31a390189cf)'
   RESOURCE_GROUP_NAME: 'ovcmainwebrg'
   STORAGE_ACCOUNT_NAME: 'mainovcstorage'
+  CDN_PROFILE_NAME: 'mainovccdn'
+  CDN_ENDPOINT_NAME: 'mainovcendpoint'
 
 pool:
   vmImage: windows-latest
   demands: npm
 
 schedules:
-- cron: "0 0 * * *"
-  displayName: Daily midnight build
+- cron: "0 4 * * *"
+  displayName: Daily midnight EST build
   branches:
     include:
     - main
+  always: true
+- cron: "0 13-22 * * *"
+  displayName: Hourly build (9am - 6pm EST)
+  branches:
+    include:
+    - main
+  always: true
 
 steps:
 - task: NodeTool@0
@@ -58,3 +67,10 @@ steps:
     Destination: 'AzureBlob'
     storage: $(STORAGE_ACCOUNT_NAME)
     ContainerName: '$web'
+- task: AzureCLI@2
+  displayName: 'purge cdn cache'
+  inputs:
+    azureSubscription: $(AZURE_SUBSCRIPTION)
+    scriptType: 'pscore'
+    scriptLocation: 'inlineScript'
+    inlineScript: 'az cdn endpoint purge --resource-group $(RESOURCE_GROUP_NAME) --profile-name $(CDN_PROFILE_NAME) --name $(CDN_ENDPOINT_NAME) --content-paths "/*"'
