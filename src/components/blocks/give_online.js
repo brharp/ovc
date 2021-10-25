@@ -9,8 +9,11 @@ const render = ({id, title, body_html, link}) => (
       <h3 className="card-title text-dark">
         {title}
       </h3>
-      <p className="card-text" dangerouslySetInnerHTML={{__html: body_html}}>
+      <p class="card-text">
+        Donate today using our safe, convenient, and easy-to-use giving page.
       </p>
+      <p class="card-text lead">Have questions?</p>
+      <p class="card-text lead">Email us at <a href="ovcadv@uoguelph.ca">ovcadv@uoguelph.ca</a></p>
     </div>
     <div className="card-footer border-0 bg-light">
       <a className="btn btn-outline-primary btn-lg" href={link.url}>
@@ -25,7 +28,6 @@ const query = graphql`
     blockYaml(id: {eq: "give_online"}) { 
       id
       title 
-      body_html
       link { 
         title 
         url 
