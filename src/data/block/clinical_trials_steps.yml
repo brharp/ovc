@@ -11,7 +11,7 @@ _children:
         for a clinical trial can begin! Talk to your veterinarian about your interest in companion animal
         trials and they can help determine suitability for enrolling.
         A full list of our current clinical trials can be found 
-        <a href="http://ovchealthscience.icreate4.esolutionsgroup.ca/en/aboutovchealthsciences/ClinicalTrials.asp">here</a>.
+        <a href="https://ovcclinicaltrials.uoguelph.ca/">here</a>.
       </p> 
       <p>
   - id: step_2
@@ -20,7 +20,7 @@ _children:
     body: |
      <p>
         Not every clinical trial will be right for you and your pet. Clinical trials may have certain eligibility (or inclusion) criteria that determine if your pet is a candidate.
-        These may include specific illness or disease conditions, species, age, sex, the type and stage of a disease, previous treatment history, and any other medical conditions that your pet may have. We also have studies that recruit only healthy patients. Inclusion criteria can be found in the study listings on our website.
+        These may include specific illness or disease conditions, species, age, sex, the type and stage of a disease, previous treatment history, and any other medical conditions that your pet may have. We also have studies that recruit only healthy patients. Inclusion criteria can be found in the study listings on <a href="https://ovcclinicaltrials.uoguelph.ca/">our website.</a>
      </p>
   - id: step_3
     title: "Step 3"
@@ -34,8 +34,8 @@ _children:
     subtitle: Contact the study organizers.  
     body: |
       <p>
-        If you think your pet may be a suitable candidate for a particular study at the Ontario Veterinary College or you wish to obtain more information regarding a study(s) please contact our Clinical Trials team at ovc.clinicaltrials@uoguelph.ca.
-      </p>
+        If you think your pet may be a suitable candidate for a particular study at the Ontario Veterinary College or you wish to obtain more information regarding a study(s) please contact our Clinical Trials team at listings on <a href="mailto:ovc.clinicaltrials@uoguelph.ca">ovc.clinicaltrials@uoguelph.ca.</a>
+      </p
   - id: step_5
     title: "Step 5"
     subtitle: Get enrolled!
