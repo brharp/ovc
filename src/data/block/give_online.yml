@@ -1,9 +1,11 @@
 id: "give_online"
 title: "Online"
 body_html: |
-  <p>Donate today using our safe, convenient, and easy-to-use giving page.</p>
-  <p class="lead">Have questions?</p>
-  <p class="lead">Email us at <a href="ovcadv@uoguelph.ca">ovcadv@uoguelph.ca</a></p>
+  <div>
+    <p>Donate today using our safe, convenient, and easy-to-use giving page.</p>
+    <p class="lead">Have questions?</p>
+    <p class="lead">Email us at <a href="ovcadv@uoguelph.ca">ovcadv@uoguelph.ca</a></p>
+  </div>
 link:
   title: "Donate Now"
   url: "https://bbis.alumni.uoguelph.ca/BBIS_Cannon/give/uofg?f=231005"
