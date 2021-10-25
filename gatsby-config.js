@@ -7,7 +7,7 @@
 module.exports = {
   siteMetadata: {
     title: 'Ontario Veterinary College',
-    description: 'The oldest veterinary school in Canada.',
+    description: 'A world leader in advancing veterinary science, learning and research to improve the lives of animals, people and our planet.',
     slogan: 'A world leader in advancing veterinary science, learning and research to improve the lives of animals, people and our planet.',
     author: 'The OVC Authors',
     menu: [
