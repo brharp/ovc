@@ -16,7 +16,7 @@ function Seo({ description, lang, meta, keywords, title }) {
               lang,
             }}
             title={title}
-            titleTemplate={`%s - ${data.site.siteMetadata.title}`}
+            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
             meta={[
               {
                 name: `twitter:image`,
