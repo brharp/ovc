@@ -16,8 +16,16 @@ function Seo({ description, lang, meta, keywords, title }) {
               lang,
             }}
             title={title}
-            titleTemplate={`%s | ${data.site.siteMetadata.title}`}
+            titleTemplate={`%s - ${data.site.siteMetadata.title}`}
             meta={[
+              {
+                name: `twitter:image`,
+                content: `https://ovc.uoguelph.ca/assets/meta.jpg`,
+              },
+              {
+                name: `og:image`,
+                content: `https://ovc.uoguelph.ca/assets/meta.jpg`,
+              },
               {
                 name: `description`,
                 content: metaDescription,
