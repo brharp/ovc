@@ -15,7 +15,7 @@ module.exports = {
       { title: "About",   path: "/explore" },
       { title: "Learn",   path: "/learn" },
       { title: "Research", path: "/research" },
-      { title: "Hospital", path: "https://ovc.uoguelph.ca/hsc" },
+      { title: "Hospital", path: "/care" },
       { title: "Alumni",   path: "/alumni" },
       { title: "Give", path: "/give" },
       { title: "Intranet", path: "https://uoguelphca.sharepoint.com/sites/OntarioVeterinaryCollege/" },
