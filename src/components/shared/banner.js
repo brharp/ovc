@@ -10,7 +10,7 @@ Banner.Overlay = ({children, className}) => (
   <div className={`cover-img-overlay py-4 m-0 bg-black-65 h-100 ${className}`}>
     <div className="container h-100">
       <div className="row h-100 align-content-end">
-        <div className="col-md-8">
+        <div className="col-md-9">
           {children}
         </div>
       </div>

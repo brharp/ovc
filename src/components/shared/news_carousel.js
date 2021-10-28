@@ -26,8 +26,8 @@ class NewsCarousel extends React.Component {
         <div className="bg-black-50" style={{position: "absolute", top: "0", bottom: "6px", left: "0", right: "0"}} />
         <Carousel.Caption className="text-left pb-4 mb-4">
           <p className="text-warning font-weight-bold">{changed}</p>
-          <h3 className="text-light">{title}</h3>
-          <p>{body}</p>
+          <h3 className="text-light mb-sm-3 mb-md-2">{title}</h3>
+          <p className="d-none d-lg-block">{body}</p>
           <Link to={slug} className="btn btn-lg btn-primary">
             Read more<span className="sr-only"> about {title}</span>
           </Link>
