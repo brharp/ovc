@@ -204,6 +204,10 @@ $kbd-padding-y:                     .32rem;
 $kbd-padding-x:                     .64rem;
 
 
+// Enable responsive font sizes
+$enable-responsive-font-sizes: true;
+
+
 // Bring in Bootstrap
 
 @import "../../node_modules/bootstrap/scss/bootstrap";
