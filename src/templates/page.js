@@ -42,10 +42,7 @@ const Page = ({id, pageTitle, siteTitle, image, widgets, updated, source}) => (
     </Container>
     <div className="container my-4 pt-4">
       <p className="small">
-       Updated {updated} &nbsp;
-       <a href={source}>
-         Edit this page
-       </a>
+       Updated {updated}
       </p>
     </div>
   </Layout>
