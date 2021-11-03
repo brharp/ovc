@@ -5,7 +5,7 @@ import Banner from "../shared/banner"
 import Link from "../shared/link"
 
 const render = ({ id, image, title, body, link }) => (
-  <Banner>
+  <Banner className="mb-4">
     <GatsbyImage image={getImage(image.src)} className="cover-img" alt={image.alt}
                  style={{height: "500px"}}/>
     <Banner.Overlay className="p-4 bg-black-80 ">
