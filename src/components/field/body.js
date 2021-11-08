@@ -47,8 +47,8 @@ function Body(props) {
       const clazz = domNode.attribs['class'];
       const imgClass = inlineImageClass(clazz);
       const imgSrc   = inlineImageSrc(src, baseUrl);
-      const width    = domNode.attributes['width'];
-      const height   = domNode.attributes['height'];
+      const width    = domNode.attribs['width'];
+      const height   = domNode.attribs['height'];
       return <img src={imgSrc} alt="" className={imgClass} width={width} height={height} />
     }
     if (domNode.name === 'figure') {
