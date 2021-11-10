@@ -67,6 +67,7 @@ export const query = graphql`
       }
       drupal_internal__nid
       revision_timestamp(fromNow: true)
+      changed(fromNow: true)
       fields {
         slug
       }
@@ -105,7 +106,7 @@ const PageTemplate = ({data}) => (
         siteTitle={data.site.siteMetadata.title}
         image={data.nodePage.relationships.field_hero_image?.relationships.field_media_image.localFile}
         widgets={data.nodePage.relationships.field_widgets}
-        updated={data.nodePage.revision_timestamp}
+        updated={data.nodePage.changed}
         source={`${data.sitePlugin.pluginOptions.baseUrl}.${data.nodePage.fields.slug}`}
   ></Page>
 )
