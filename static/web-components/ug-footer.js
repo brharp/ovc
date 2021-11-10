@@ -14,8 +14,6 @@ class UgFooter extends HTMLElement {
   constructor() {
     super();
     this.shadow = this.attachShadow({mode: 'open'});
-    this.link('//www.uoguelph.ca/css/UofG-styles-dist.css');
-    this.import('//www.uoguelph.ca/web-components/UofGFooter-dist.js');
     let _footer = document.createElement('uofg-footer');
     _footer.setAttribute("style", "--uog-yellow: var(--yellow); --uog-blue: var(--blue);");
     this.shadow.appendChild(_footer);
