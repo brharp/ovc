@@ -15,6 +15,7 @@ const StyledBlock = styled.div`
   position: relative;
   top: -85px;
   padding-top: 85px;
+  z-index: -1;
 `
 
 export default function Block (props) {
