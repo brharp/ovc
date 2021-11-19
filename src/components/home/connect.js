@@ -24,10 +24,10 @@ class Connect extends React.Component {
       <Block>
         <h2><FaLocationArrow /> Connect</h2>
         <ul>
-          <li><a href="https://ovc.uoguelph.ca">Find us on a map</a></li>
-          <li><a href="https://ovc.uoguelph.ca">Take a tour</a></li>
-          <li><a href="https://ovc.uoguelph.ca">Contact</a></li>
-          <li><a href="https://ovc.uoguelph.ca">Intranet</a></li>
+          <li><a className="text-decoration-none" href="https://ovc.uoguelph.ca">Find us on a map</a></li>
+          <li><a className="text-decoration-none" href="https://ovc.uoguelph.ca">Take a tour</a></li>
+          <li><a className="text-decoration-none" href="https://ovc.uoguelph.ca">Contact</a></li>
+          <li><a className="text-decoration-none" href="https://ovc.uoguelph.ca">Intranet</a></li>
         </ul>
       </Block>
     )

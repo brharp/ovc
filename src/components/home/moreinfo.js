@@ -107,7 +107,7 @@ function MoreInfo(props) {
 	  <TextBox>
 	    <h3>{props.subtitle}</h3>
             <h2>{props.title}</h2>
-            <Link to={props.link} className='stretched-link'>
+            <Link to={props.link} className='stretched-link text-decoration-none'>
 	      See More <FaAngleRight />
 	    </Link>
 	  </TextBox>

@@ -10,7 +10,7 @@ const render = ({title, links}) => (
       <h2 className="text-dark">{title}</h2>
       <ul className="lead font-weight-bold list-unstyled">
         {links.map(({title, url}, index) => 
-          <li key={index}><Link to={url} className="text-dark">{title}</Link></li>)}
+          <li key={index}><Link to={url} className="text-dark text-decoration-none">{title}</Link></li>)}
       </ul>
     </Media.Body>
   </Media>

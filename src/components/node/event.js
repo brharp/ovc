@@ -50,6 +50,7 @@ const EventDetailsMask = styled.div`
 const EventDetailsContent = styled.div`
 `
 
+
 class Event extends React.Component {
   render() {
     switch (this.props.mode) {
@@ -97,7 +98,7 @@ class Event extends React.Component {
   renderCard() {
     return <React.Fragment>
       <li>
-      <Link to={`/events${this.props.fields.slug}`}>
+      <Link to={`/events${this.props.fields.slug}`} className="text-decoration-none">
         <EventCard className="btn p-0 border-0 text-left">
           <EventDate>
             <Month>{this.props.field_date.month}</Month>

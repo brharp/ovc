@@ -23,7 +23,7 @@ const render = ({title, links}) => (
   <Block>
     <h2><FaSearch /> {title}</h2>
     <ul>
-      {links.map(({title, url}) => <li><Link to={url}>{title}</Link></li>)}
+      {links.map(({title, url}) => <li><Link to={url} className="text-decoration-none">{title}</Link></li>)}
     </ul>
   </Block>
 )
