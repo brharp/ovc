@@ -18,7 +18,7 @@ class CategoryTemplate extends React.Component {
           <p><Link to="/news">&larr; Back to News Hub</Link></p>
           <Pagination numPages={this.props.pageContext.numPages}
             currentPage={this.props.pageContext.currentPage}
-            baseUrl={`/news/${this.props.pageContext.tag}/`}
+            baseUrl={this.props.pageContext.basePath}
             />
         </Container>
       </Layout>

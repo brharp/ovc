@@ -85,7 +85,7 @@ class Event extends React.Component {
     return <React.Fragment>
       <Row className="my-4">
         <Col>
-          <Link to={`/events${this.props.fields.slug}`}>
+          <Link to={`/events${this.props.fields.slug}`} className="text-decoration-none">
             <h3 className="text-dark mb-2">{this.props.title}</h3>
           </Link>
           <p className="text-muted mb-1">{this.props.field_date.value}</p>

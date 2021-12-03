@@ -20,7 +20,7 @@ class TagTemplate extends React.Component {
             <Col>
               <Pagination numPages={this.props.pageContext.numPages}
                           currentPage={this.props.pageContext.currentPage} 
-                          baseUrl={`/news/${this.props.pageContext.tag}/`}
+                          baseUrl={this.props.pageContext.basePath}
                           />
             </Col>
           </Row>

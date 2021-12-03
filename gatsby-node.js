@@ -248,10 +248,10 @@ exports.createPages = async ({ graphql, actions }) => {
     const resultCount = tagQueryResult.data.allNodeArticle.edges.length
     const pageSize = defaultPageSize
     const pageCount = Math.ceil( resultCount / pageSize )
-    const basePath = `/news/tag/${node.drupal_internal__tid}`
+    const basePath = `/news/tag/${node.drupal_internal__tid}/`
     for (let j = 0; j < pageCount; j++) {
       createPage({
-        path: j === 0 ? basePath : `${basePath}/${j + 1}`,
+        path: j === 0 ? basePath : `${basePath}${j + 1}`,
         component: path.resolve(`./src/templates/tag.js`),
         context: {
           limit: pageSize,
@@ -259,6 +259,7 @@ exports.createPages = async ({ graphql, actions }) => {
           numPages: pageCount,
           currentPage: j + 1,
           tag: node.drupal_id,
+          basePath: basePath,
         }
       })
     }
@@ -284,10 +285,10 @@ exports.createPages = async ({ graphql, actions }) => {
     const resultCount = catQueryResults.data.allNodeArticle.edges.length
     const pageSize = defaultPageSize
     const pageCount = Math.ceil( resultCount / pageSize )
-    const basePath = `/news/category/${node.drupal_internal__tid}`
+    const basePath = `/news/category/${node.drupal_internal__tid}/`
     for (let j = 0; j < pageCount; j++) {
       createPage({
-        path: j === 0 ? basePath : `${basePath}/${j + 1}`,
+        path: j === 0 ? basePath : `${basePath}${j + 1}`,
         component: path.resolve(`./src/templates/category.js`),
         context: {
           limit: pageSize,
@@ -295,6 +296,7 @@ exports.createPages = async ({ graphql, actions }) => {
           numPages: pageCount,
           currentPage: j + 1,
           tag: node.drupal_id,
+          basePath: basePath,
         }
       })
     }
