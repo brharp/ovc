@@ -50,6 +50,7 @@ const query = graphql`
             }
             field_tags {
               drupal_id
+              drupal_internal__tid
               name
             }
           }

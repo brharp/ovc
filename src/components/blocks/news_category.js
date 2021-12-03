@@ -8,6 +8,7 @@ export default function NewsCategoryBlock () {
         edges {
           node {
             drupal_id
+            drupal_internal__tid
             name
           }
         }
@@ -16,7 +17,7 @@ export default function NewsCategoryBlock () {
   `)
   return <div className="mb-4">
   { data.allTaxonomyTermNewsCategory.edges.map(({node}, index) => (
-    <Link to={`/news/${node.drupal_id}`} className="btn btn-sm btn-secondary mr-1 mb-1" key={index}
+    <Link to={`/news/category/${node.drupal_internal__tid}`} className="btn btn-sm btn-secondary mr-1 mb-1" key={index}
       >{node.name}</Link>
   ))} </div>
 }

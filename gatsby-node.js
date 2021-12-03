@@ -227,7 +227,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create tag taxonomy pages
   //
   const allTagQueryResult = await graphql(`
-    query { allTaxonomyTermTags { edges { node { drupal_id } } } }
+    query { allTaxonomyTermTags { edges { node { drupal_id drupal_internal__tid name } } } }
   `)
   const tagEdges = allTagQueryResult.data.allTaxonomyTermTags.edges
   for (let i = 0; i < tagEdges.length; i++) {
@@ -248,7 +248,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const resultCount = tagQueryResult.data.allNodeArticle.edges.length
     const pageSize = defaultPageSize
     const pageCount = Math.ceil( resultCount / pageSize )
-    const basePath = `/news/${node.drupal_id}`
+    const basePath = `/news/tag/${node.drupal_internal__tid}`
     for (let j = 0; j < pageCount; j++) {
       createPage({
         path: j === 0 ? basePath : `${basePath}/${j + 1}`,
@@ -269,7 +269,7 @@ exports.createPages = async ({ graphql, actions }) => {
   // Create news category pages
   //
   const newsCategoryQueryResult = await graphql(`
-    query { allTaxonomyTermNewsCategory { edges { node { drupal_id } } } }
+    query { allTaxonomyTermNewsCategory { edges { node { drupal_id drupal_internal__tid name } } } }
   `)
   const catEdges = newsCategoryQueryResult.data.allTaxonomyTermNewsCategory.edges
   for (let i = 0; i < catEdges.length; i++) {
@@ -284,7 +284,7 @@ exports.createPages = async ({ graphql, actions }) => {
     const resultCount = catQueryResults.data.allNodeArticle.edges.length
     const pageSize = defaultPageSize
     const pageCount = Math.ceil( resultCount / pageSize )
-    const basePath = `/news/${node.drupal_id}`
+    const basePath = `/news/category/${node.drupal_internal__tid}`
     for (let j = 0; j < pageCount; j++) {
       createPage({
         path: j === 0 ? basePath : `${basePath}/${j + 1}`,

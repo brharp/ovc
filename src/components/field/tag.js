@@ -9,7 +9,7 @@ class Tag extends React.Component {
     }
   }
   renderDefault() {
-    return <Link to={`/news/${this.props.drupal_id}`} 
+    return <Link to={`/news/tag/${this.props.drupal_internal__tid}`} 
                  className="btn badge badge-secondary mr-1 mb-1">{this.props.name}</Link>
   }
 }
@@ -19,6 +19,7 @@ export default Tag
 export const query = graphql`
   fragment taxonomy_term__tagsFragment on taxonomy_term__tags {
     drupal_id
+    drupal_internal__tid
     name
   }
 `

@@ -65,6 +65,7 @@ const NewsComponent = ({ data }) => {
             }
             field_tags {
               drupal_id
+              drupal_internal__tid
               name
             }
           }
