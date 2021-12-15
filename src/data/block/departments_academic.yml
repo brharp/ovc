@@ -10,12 +10,12 @@ dropdown:
   title: Explore by Department
   items:
     - title: Biomedical Sciences
-      url: "https://ovc.uoguelph.ca/population-medicine"
+      url: "https://ovc.uoguelph.ca/biomedical-sciences"
     - title: Clinical Studies
       url: "https://ovc.uoguelph.ca/clinical-studies"
     - title: Pathobiology
       url: "https://ovc.uoguelph.ca/pathobiology"
     - title: Population Medicine
-      url: "https://ovc.uoguelph.ca/biomedical-sciences"
+      url: "https://ovc.uoguelph.ca/population-medicine"
 
 
