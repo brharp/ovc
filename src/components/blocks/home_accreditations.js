@@ -4,12 +4,12 @@ import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import { FaCertificate } from "react-icons/fa";
 import { Media, Row, Col } from "react-bootstrap"
 
-const render = ({id, title, body, images}) => (
+const render = ({id, title, body_html, images}) => (
   <Media>
     <FaCertificate className="display-4 mr-4 text-dark" />
     <Media.Body>
       <h2 className="text-dark">{title}</h2>
-      <p>{body}</p>
+      <div dangerouslySetInnerHTML={{__html: body_html}}></div>
       <Row>
         { 
           images.map(({src, alt, url}, index) => (
@@ -30,7 +30,7 @@ const query = graphql`
     blockYaml(id: {eq: "home_accreditations"}) {
       id
       title
-      body
+      body_html
       images {
         alt
         url

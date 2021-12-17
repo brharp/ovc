@@ -1,6 +1,6 @@
 id: home_accreditations
 title: Accreditations
-body: OVC is an accredited institution, and faculty members are affiliated with a number of other centres and institutes.
+body_html: <p>OVC is an <a href="/accreditation">accredited institution</a>, and faculty members are affiliated with a number of other centres and institutes.</p>
 images:
   - src: ../../images/coe_logo.png
     alt: COE Logo
