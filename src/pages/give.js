@@ -90,16 +90,6 @@ const Priorities = () => (
           Explore OVC's Priorities
         </Link>
       </p>
-      <h3 className="text-dark">Double your impact</h3>
-      <p className="lead">
-        Support the creation of new infrastructure in the OVC Companion Animal Hospital to help and treat the sickest pets who require emergency, critical and advanced care, offering patients and their families access to world-class veterinary medicine. 
-        Thanks to a generous donor, all gifts made in support of Critical Care and Specialty Services at OVC by December 31 will be matched – dollar for dollar.      
-      </p>
-      <p>
-        <Link to="https://alumni.uoguelph.ca/building-brighter-future-pets" className="btn btn-primary btn-lg">
-          Make a gift
-        </Link>
-      </p>
     </div>
   </div>
 )
