@@ -23,14 +23,21 @@ class UgHeader extends HTMLElement {
     this.import("//www.uoguelph.ca/web-components/UofGWebComponents-dist.js");
     this.header = document.createElement('uofg-header');
     this.shadow.appendChild(this.header);
-    const observer = new MutationObserver((mutationList) => {
-      for (const mutation of mutationList) {
-        for (const added of mutation.addedNodes) {
-          this.header.appendChild(added.cloneNode(true));
-        }
-      }
-    });
+    const observer = new MutationObserver(this.onChildAdded.bind(this));
     observer.observe(this, { childList: true });
+  }
+  connectedCallback() {
+    //Move all children to page specific locations
+    while (this.firstElementChild) {
+       this.header.appendChild(this.firstElementChild);
+    }
+  }
+  onChildAdded(mutationList) {
+    for (const mutation of mutationList) {
+      for (const added of mutation.addedNodes) {
+        this.header.appendChild(added.cloneNode(true));
+      }
+    }
   }
 }
 
